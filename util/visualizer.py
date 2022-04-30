@@ -87,12 +87,12 @@ class Visualizer():
 
         if self.use_wandb:
             if self.is_resume_wandb:
-                self.wandb_run = wandb.init(id=self.wandb_fold_id, project='CycleGAN-and-pix2pix', resume='allow',
+                self.wandb_run = wandb.init(id=self.wandb_fold_id, project=opt.project, resume='allow',
                                             name=opt.name, config=opt) if not wandb.run else wandb.run
             else:
-                self.wandb_run = wandb.init(id=self.wandb_fold_id, project='CycleGAN-and-pix2pix', name=opt.name,
+                self.wandb_run = wandb.init(id=self.wandb_fold_id, project=opt.project, name=opt.name,
                                             config=opt) if not wandb.run else wandb.run
-            self.wandb_run._label(repo='CycleGAN-and-pix2pix')
+            self.wandb_run._label(repo=opt.project)
 
             # id_wandb = wandb.util.generate_id()
             # if opt.isResume_wandb:

@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 """General-purpose training script for image-to-image translation.
 
 This script works for various models (with option '--model': e.g., pix2pix, cyclegan, colorization) and
@@ -18,7 +21,7 @@ See options/base_options.py and options/train_options.py for more training optio
 See training and test tips at: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/docs/tips.md
 See frequently asked questions at: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/docs/qa.md
 """
-import time
+import time,os
 import numpy as np
 import torch
 from options.train_options import TrainOptions
@@ -27,6 +30,7 @@ from data import create_dataset
 from models import create_model
 from util.visualizer import Visualizer
 from util.stats import calculate_divergences, calculate_l1_and_l2_norm_errors
+import json
 
 #def calculate_divergences( real_samples, fake_samples ):
 #  kl, js = calculate_divergences(real_samples, fake_samples)
@@ -38,6 +42,22 @@ from util.stats import calculate_divergences, calculate_l1_and_l2_norm_errors
 
 if __name__ == '__main__':
     opt = TrainOptions().parse()   # get training options
+    
+    if opt.job:
+        print('Reading sort/test from %s'%opt.job)
+        job  = json.load(open(opt.job, 'r'))
+        opt.sort = job['sort']
+        opt.test = job['test']
+        print('Sort: %d , Test: %d'%(opt.sort, opt.test))
+        opt.name = 'test_%d_sort_%d' %(opt.test, opt.sort)
+        opt.wandb_fold_id = opt.name
+        is_test = True if 'LOCAL_TEST' in os.environ.keys() else False
+        if is_test:
+            opt.n_epochs = 1
+            opt.n_epochs_decay = 0
+        
+    
+    
     dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
     #opt.train_dataset = False      #fliping train dataset flag for defining val dataset
     #dataset_val = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
