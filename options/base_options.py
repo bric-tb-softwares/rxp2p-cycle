@@ -145,13 +145,20 @@ class BaseOptions():
         # set gpu ids
         str_ids = opt.gpu_ids.split(',')
 
+        device = -1
+
         if opt.gpu_ids == 'auto':
             device = int(os.environ['CUDA_VISIBLE_DEVICES'])
-            torch.cuda.set_device(device)
         else:
             device = int(opt.gpu_ids)
-            if device>=0:
-                torch.cuda.set_device(device)
+            
+        print ('GPU auto with device %d'%device)
+
+        if device>=0:
+            torch.cuda.set_device(device)
+            opt.gpu_ids = [device]
+        else:
+            opt.gpu_ids = []
 
         self.opt = opt
         return self.opt
