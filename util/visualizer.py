@@ -88,10 +88,10 @@ class Visualizer():
         if self.use_wandb:
             if self.is_resume_wandb:
                 self.wandb_run = wandb.init(id=self.wandb_fold_id, project=opt.project, resume='allow',
-                                            name=opt.name, config=opt, entity=opt.entity) if not wandb.run else wandb.run
+                                            name=opt.name, config=opt, entity=opt.wandb_entity) if not wandb.run else wandb.run
             else:
                 self.wandb_run = wandb.init(id=self.wandb_fold_id, project=opt.project, name=opt.name,
-                                            config=opt, entity=opt.entity) if not wandb.run else wandb.run
+                                            config=opt, entity=opt.wandb_entity) if not wandb.run else wandb.run
             self.wandb_run._label(repo=opt.project)
 
             # id_wandb = wandb.util.generate_id()
