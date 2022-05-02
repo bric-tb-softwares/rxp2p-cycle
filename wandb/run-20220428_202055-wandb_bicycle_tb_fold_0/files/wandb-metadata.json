@@ -1,0 +1,38 @@
+{
+    "os": "Linux-5.4.188+-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.7.13",
+    "heartbeatAt": "2022-04-28T20:21:02.705119",
+    "startedAt": "2022-04-28T20:20:55.379239",
+    "docker": null,
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "cpu_count": 2,
+    "cuda": null,
+    "args": [
+        "--dataroot",
+        "/content/gdrive/MyDrive/pix2pix/data/CXR_images_combined_0/TB",
+        "--model",
+        "bicycle_gan",
+        "--direction",
+        "AtoB",
+        "--gpu_ids",
+        "0",
+        "--use_wandb",
+        "--wandb_fold_id",
+        "wandb_bicycle_tb_fold_0",
+        "--name",
+        "bicycle_fold0_tb"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/junyanz/BicycleGAN.git",
+        "commit": "40b9d52c27b9831f56c1c7c7a6ddde8bc9149067"
+    },
+    "email": null,
+    "root": "/content/gdrive/MyDrive/pix2pix/pix2pixTB/BicycleGAN",
+    "host": "e4f47baf97bc",
+    "username": "root",
+    "executable": "/usr/bin/python3"
+}

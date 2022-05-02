@@ -1,0 +1,245 @@
+
+create web directory ./checkpoints/bicycle_kfold_fold0_tb/web...
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 1, iters: 100, time: 0.178, data: 9.595) G_GAN: 0.631 D: 0.858 G_GAN2: 0.673 D2: 0.965 G_L1: 2.302 z_L1: 0.337 kl: 0.001
+(epoch: 1, iters: 200, time: 0.207, data: 1.406) G_GAN: 1.358 D: 0.336 G_GAN2: 1.042 D2: 0.716 G_L1: 1.200 z_L1: 0.405 kl: 0.001
+skip this batch
+End of epoch 1 / 200 	 Time Taken: 122 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 2, iters: 80, time: 0.239, data: 0.005) G_GAN: 1.145 D: 0.328 G_GAN2: 1.252 D2: 0.442 G_L1: 2.069 z_L1: 0.358 kl: 0.005
+(epoch: 2, iters: 180, time: 1.732, data: 1.025) G_GAN: 1.823 D: 0.641 G_GAN2: 0.904 D2: 0.833 G_L1: 2.437 z_L1: 0.525 kl: 0.001
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+skip this batch
+End of epoch 2 / 200 	 Time Taken: 94 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 3, iters: 60, time: 0.199, data: 0.005) G_GAN: 0.735 D: 0.845 G_GAN2: 0.643 D2: 1.006 G_L1: 2.814 z_L1: 0.456 kl: 0.001
+(epoch: 3, iters: 160, time: 0.208, data: 0.003) G_GAN: 0.580 D: 1.175 G_GAN2: 0.622 D2: 1.343 G_L1: 2.725 z_L1: 0.398 kl: 0.004
+skip this batch
+End of epoch 3 / 200 	 Time Taken: 93 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 4, iters: 40, time: 0.199, data: 1.741) G_GAN: 0.462 D: 1.365 G_GAN2: 0.622 D2: 1.082 G_L1: 1.746 z_L1: 0.459 kl: 0.008
+(epoch: 4, iters: 140, time: 1.598, data: 2.271) G_GAN: 0.377 D: 1.139 G_GAN2: 0.525 D2: 1.108 G_L1: 2.562 z_L1: 0.395 kl: 0.013
+skip this batch
+End of epoch 4 / 200 	 Time Taken: 94 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 5, iters: 20, time: 0.209, data: 0.007) G_GAN: 0.453 D: 0.929 G_GAN2: 0.613 D2: 0.927 G_L1: 3.294 z_L1: 0.511 kl: 0.026
+(epoch: 5, iters: 120, time: 0.192, data: 0.016) G_GAN: 0.613 D: 0.802 G_GAN2: 0.659 D2: 1.120 G_L1: 2.079 z_L1: 0.354 kl: 0.018
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+skip this batch
+End of epoch 5 / 200 	 Time Taken: 94 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 6, iters: 100, time: 1.740, data: 2.892) G_GAN: 0.467 D: 1.048 G_GAN2: 0.522 D2: 1.006 G_L1: 1.247 z_L1: 0.449 kl: 0.046
+(epoch: 6, iters: 200, time: 0.198, data: 0.005) G_GAN: 0.290 D: 1.190 G_GAN2: 0.291 D2: 1.166 G_L1: 1.651 z_L1: 0.616 kl: 0.032
+skip this batch
+End of epoch 6 / 200 	 Time Taken: 95 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 7, iters: 80, time: 0.178, data: 1.653) G_GAN: 0.437 D: 0.929 G_GAN2: 0.509 D2: 1.133 G_L1: 1.654 z_L1: 0.535 kl: 0.052
+(epoch: 7, iters: 180, time: 0.188, data: 1.611) G_GAN: 0.529 D: 0.992 G_GAN2: 0.581 D2: 0.841 G_L1: 1.363 z_L1: 0.476 kl: 0.027
+skip this batch
+End of epoch 7 / 200 	 Time Taken: 94 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 8, iters: 60, time: 1.607, data: 0.002) G_GAN: 0.814 D: 1.072 G_GAN2: 0.330 D2: 1.146 G_L1: 1.022 z_L1: 0.204 kl: 0.030
+(epoch: 8, iters: 160, time: 0.215, data: 0.004) G_GAN: 0.824 D: 1.246 G_GAN2: 0.636 D2: 0.959 G_L1: 1.669 z_L1: 0.519 kl: 0.039
+skip this batch
+End of epoch 8 / 200 	 Time Taken: 93 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 9, iters: 40, time: 0.229, data: 0.006) G_GAN: 0.494 D: 0.997 G_GAN2: 0.420 D2: 1.098 G_L1: 0.975 z_L1: 0.306 kl: 0.044
+(epoch: 9, iters: 140, time: 0.208, data: 0.788) G_GAN: 0.612 D: 1.029 G_GAN2: 0.655 D2: 1.024 G_L1: 1.631 z_L1: 0.626 kl: 0.040
+skip this batch
+End of epoch 9 / 200 	 Time Taken: 93 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 10, iters: 20, time: 1.756, data: 1.056) G_GAN: 1.064 D: 0.814 G_GAN2: 0.624 D2: 0.947 G_L1: 1.342 z_L1: 0.421 kl: 0.033
+(epoch: 10, iters: 120, time: 0.212, data: 0.011) G_GAN: 0.480 D: 1.036 G_GAN2: 0.397 D2: 0.803 G_L1: 1.664 z_L1: 0.460 kl: 0.052
+skip this batch
+End of epoch 10 / 200 	 Time Taken: 95 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 11, iters: 100, time: 0.205, data: 3.371) G_GAN: 0.681 D: 1.033 G_GAN2: 0.602 D2: 0.918 G_L1: 1.804 z_L1: 0.547 kl: 0.045
+(epoch: 11, iters: 200, time: 2.189, data: 0.016) G_GAN: 1.072 D: 1.182 G_GAN2: 0.573 D2: 1.031 G_L1: 1.051 z_L1: 0.484 kl: 0.035
+skip this batch
+End of epoch 11 / 200 	 Time Taken: 94 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 12, iters: 80, time: 0.201, data: 0.008) G_GAN: 0.275 D: 1.218 G_GAN2: 0.669 D2: 1.078 G_L1: 1.311 z_L1: 0.611 kl: 0.040
+(epoch: 12, iters: 180, time: 0.205, data: 2.279) G_GAN: 0.365 D: 1.260 G_GAN2: 0.417 D2: 0.970 G_L1: 3.183 z_L1: 0.201 kl: 0.043
+skip this batch
+End of epoch 12 / 200 	 Time Taken: 93 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 13, iters: 60, time: 0.208, data: 0.493) G_GAN: 0.607 D: 1.051 G_GAN2: 0.539 D2: 0.952 G_L1: 1.539 z_L1: 0.368 kl: 0.032
+(epoch: 13, iters: 160, time: 1.187, data: 0.012) G_GAN: 0.534 D: 1.099 G_GAN2: 0.662 D2: 0.876 G_L1: 1.315 z_L1: 0.329 kl: 0.034
+skip this batch
+End of epoch 13 / 200 	 Time Taken: 91 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 14, iters: 40, time: 0.186, data: 0.008) G_GAN: 0.340 D: 1.197 G_GAN2: 0.482 D2: 0.971 G_L1: 1.217 z_L1: 0.411 kl: 0.049
+(epoch: 14, iters: 140, time: 0.235, data: 0.101) G_GAN: 0.659 D: 0.868 G_GAN2: 0.511 D2: 0.930 G_L1: 1.588 z_L1: 0.569 kl: 0.024
+skip this batch
+End of epoch 14 / 200 	 Time Taken: 91 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 15, iters: 20, time: 0.196, data: 0.001) G_GAN: 0.746 D: 1.209 G_GAN2: 0.536 D2: 1.048 G_L1: 1.106 z_L1: 0.388 kl: 0.029
+(epoch: 15, iters: 120, time: 1.166, data: 1.229) G_GAN: 0.424 D: 1.030 G_GAN2: 0.609 D2: 1.017 G_L1: 1.103 z_L1: 0.474 kl: 0.027
+skip this batch
+End of epoch 15 / 200 	 Time Taken: 92 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 16, iters: 100, time: 0.207, data: 3.655) G_GAN: 0.429 D: 1.108 G_GAN2: 0.315 D2: 1.061 G_L1: 0.947 z_L1: 0.222 kl: 0.021
+(epoch: 16, iters: 200, time: 0.231, data: 1.391) G_GAN: 0.652 D: 1.033 G_GAN2: 0.712 D2: 1.106 G_L1: 1.467 z_L1: 0.286 kl: 0.033
+skip this batch
+End of epoch 16 / 200 	 Time Taken: 91 sec
+learning rate = 0.0002000
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+/usr/local/lib/python3.7/dist-packages/torchvision/transforms/transforms.py:333: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  "Argument interpolation should be of type InterpolationMode instead of int. "
+(epoch: 17, iters: 80, time: 1.219, data: 0.011) G_GAN: 0.471 D: 0.920 G_GAN2: 0.602 D2: 0.927 G_L1: 1.402 z_L1: 0.377 kl: 0.036
+Traceback (most recent call last):
+  File "train.py", line 37, in <module>
+    for i, data in enumerate(dataset):  # inner loop within one epoch
+  File "/content/gdrive/MyDrive/pix2pix/pix2pixTB/BicycleGAN/data/__init__.py", line 90, in __iter__
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py", line 530, in __next__
+    data = self._next_data()
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py", line 1224, in _next_data
+    return self._process_data(data)
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py", line 1250, in _process_data
+    data.reraise()
+  File "/usr/local/lib/python3.7/dist-packages/torch/_utils.py", line 457, in reraise
+    raise exception
+FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 3.
+Original Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/content/gdrive/MyDrive/pix2pix/pix2pixTB/BicycleGAN/data/skfold_dataset.py", line 133, in __getitem__
+  File "/usr/local/lib/python3.7/dist-packages/PIL/Image.py", line 2843, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/content/gdrive/MyDrive/pix2pix/data/unaligned/AB/CHNCXR_0247_0.png'

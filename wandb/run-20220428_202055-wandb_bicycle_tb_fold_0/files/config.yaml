@@ -1,0 +1,237 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.15
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.13
+    start_time: 1651177255
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      3:
+      - 13
+      - 14
+      - 16
+      4: 3.7.13
+      5: 0.12.15
+      8:
+      - 5
+      9:
+        2: BicycleGAN
+batch_size:
+  desc: null
+  value: 2
+beta1:
+  desc: null
+  value: 0.5
+center_crop:
+  desc: null
+  value: false
+checkpoints_dir:
+  desc: null
+  value: ./checkpoints
+conditional_D:
+  desc: null
+  value: false
+continue_train:
+  desc: null
+  value: false
+crop_size:
+  desc: null
+  value: 256
+dataroot:
+  desc: null
+  value: /content/gdrive/MyDrive/pix2pix/data/CXR_images_combined_0/TB
+dataset_mode:
+  desc: null
+  value: aligned
+direction:
+  desc: null
+  value: AtoB
+display_env:
+  desc: null
+  value: main
+display_freq:
+  desc: null
+  value: 400
+display_id:
+  desc: null
+  value: 1
+display_ncols:
+  desc: null
+  value: 4
+display_port:
+  desc: null
+  value: 8097
+display_server:
+  desc: null
+  value: http://localhost
+display_winsize:
+  desc: null
+  value: 256
+epoch:
+  desc: null
+  value: latest
+epoch_count:
+  desc: null
+  value: 1
+gan_mode:
+  desc: null
+  value: lsgan
+gpu_ids:
+  desc: null
+  value:
+  - 0
+init_gain:
+  desc: null
+  value: 0.02
+init_type:
+  desc: null
+  value: xavier
+input_nc:
+  desc: null
+  value: 3
+isTrain:
+  desc: null
+  value: true
+is_resume_wandb:
+  desc: null
+  value: false
+lambda_GAN:
+  desc: null
+  value: 1.0
+lambda_GAN2:
+  desc: null
+  value: 1.0
+lambda_L1:
+  desc: null
+  value: 10.0
+lambda_kl:
+  desc: null
+  value: 0.01
+lambda_z:
+  desc: null
+  value: 0.5
+load_size:
+  desc: null
+  value: 286
+lr:
+  desc: null
+  value: 0.0002
+lr_decay_iters:
+  desc: null
+  value: 100
+lr_policy:
+  desc: null
+  value: linear
+max_dataset_size:
+  desc: null
+  value: .inf
+model:
+  desc: null
+  value: bicycle_gan
+name:
+  desc: null
+  value: bicycle_fold0_tb
+ndf:
+  desc: null
+  value: 64
+nef:
+  desc: null
+  value: 64
+netD:
+  desc: null
+  value: basic_256_multi
+netD2:
+  desc: null
+  value: basic_256_multi
+netE:
+  desc: null
+  value: resnet_256
+netG:
+  desc: null
+  value: unet_256
+ngf:
+  desc: null
+  value: 64
+niter:
+  desc: null
+  value: 100
+niter_decay:
+  desc: null
+  value: 100
+nl:
+  desc: null
+  value: relu
+no_flip:
+  desc: null
+  value: false
+no_html:
+  desc: null
+  value: false
+norm:
+  desc: null
+  value: instance
+num_Ds:
+  desc: null
+  value: 2
+num_threads:
+  desc: null
+  value: 4
+nz:
+  desc: null
+  value: 8
+output_nc:
+  desc: null
+  value: 3
+phase:
+  desc: null
+  value: train
+preprocess:
+  desc: null
+  value: resize_and_crop
+print_freq:
+  desc: null
+  value: 100
+save_epoch_freq:
+  desc: null
+  value: 5
+save_latest_freq:
+  desc: null
+  value: 10000
+serial_batches:
+  desc: null
+  value: false
+suffix:
+  desc: null
+  value: ''
+update_html_freq:
+  desc: null
+  value: 4000
+upsample:
+  desc: null
+  value: basic
+use_dropout:
+  desc: null
+  value: false
+use_same_D:
+  desc: null
+  value: false
+use_wandb:
+  desc: null
+  value: true
+verbose:
+  desc: null
+  value: false
+wandb_fold_id:
+  desc: null
+  value: wandb_bicycle_tb_fold_0
+where_add:
+  desc: null
+  value: all
