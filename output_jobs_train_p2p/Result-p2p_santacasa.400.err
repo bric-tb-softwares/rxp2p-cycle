@@ -1,20 +1,0 @@
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 8021.41it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 8355.19it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 8320.20it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 8458.15it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 8825.98it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10485.76it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10071.70it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 8132.00it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 8561.75it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 8636.18it/s]
-Traceback (most recent call last):
-  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/train.py", line 69, in <module>
-    dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
-  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/data/__init__.py", line 57, in create_dataset
-    data_loader = CustomDatasetDataLoader(opt)
-  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/data/__init__.py", line 73, in __init__
-    self.dataset = dataset_class(opt)
-  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/data/santacasaskfold_dataset.py", line 87, in __init__
-    training_data = df.iloc[splits[opt.sort][0]]
-IndexError: list index out of range

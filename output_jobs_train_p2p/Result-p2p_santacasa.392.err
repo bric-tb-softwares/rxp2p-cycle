@@ -1,154 +1,0 @@
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10058.28it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10488.67it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10538.45it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 9696.57it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10427.83it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10556.13it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 9900.01it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10482.85it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10739.33it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10302.60it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 9369.26it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 9856.07it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10474.12it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10133.89it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10517.90it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 8809.51it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 9597.95it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10424.95it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 10139.33it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 9411.30it/s]
-Setting up a new session...
-Traceback (most recent call last):
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
-    conn = connection.create_connection(
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
-    raise err
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
-    sock.connect(sa)
-ConnectionRefusedError: [Errno 111] Connection refused
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
-    httplib_response = self._make_request(
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
-    conn.request(method, url, **httplib_request_kw)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
-    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
-  File "/usr/lib/python3.9/http/client.py", line 1255, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.9/http/client.py", line 1301, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.9/http/client.py", line 1250, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.9/http/client.py", line 1010, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.9/http/client.py", line 950, in send
-    self.connect()
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
-    conn = self._new_conn()
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
-    raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f3464a303d0>: Failed to establish a new connection: [Errno 111] Connection refused
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
-    resp = conn.urlopen(
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
-    retries = retries.increment(
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
-    raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /env/main (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3464a303d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/visdom/__init__.py", line 692, in _send
-    return self._handle_post(
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/visdom/__init__.py", line 656, in _handle_post
-    r = self.session.post(url, data=data)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/requests/sessions.py", line 635, in post
-    return self.request("POST", url, data=data, json=json, **kwargs)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
-    r = adapter.send(request, **kwargs)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
-    raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /env/main (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3464a303d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-[Errno 111] Connection refused
-on_close() takes 1 positional argument but 3 were given
-wandb: Currently logged in as: otavares. Use `wandb login --relogin` to force relogin
-wandb: ERROR Error while calling W&B API: invalid run name wandb_id-%x.%j, cannot contain character "%" (<Response [400]>)
-wandb: - Waiting for wandb.init()...Thread SenderThread:
-Traceback (most recent call last):
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/apis/normalize.py", line 26, in wrapper
-    return func(*args, **kwargs)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 1516, in upsert_run
-    response = self.gql(
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
-    result = self._call_fn(*args, **kwargs)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 210, in execute
-    return self.client.execute(*args, **kwargs)  # type: ignore
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
-    result = self._get_result(document, *args, **kwargs)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
-    return self.transport.execute(document, *args, **kwargs)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 39, in execute
-    request.raise_for_status()
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/requests/models.py", line 1021, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/internal/internal_util.py", line 50, in run
-    self._run()
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/internal/internal_util.py", line 101, in _run
-    self._process(record)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/internal/internal.py", line 308, in _process
-    self._sm.send(record)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 305, in send
-    send_handler(record)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 797, in send_run
-    self._init_run(run, config_value_dict)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 823, in _init_run
-    server_run, inserted, server_messages = self._api.upsert_run(
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/apis/normalize.py", line 28, in wrapper
-    raise CommError(err.response, err)
-wandb.errors.CommError: <Response [400]>
-wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: ERROR Internal wandb error: file data was not synced
-wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...Traceback (most recent call last):
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1078, in init
-    run = wi.init()
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 697, in init
-    result = handle.wait(
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/lib/mailbox.py", line 259, in wait
-    raise MailboxError("transport failed")
-wandb.errors.MailboxError: transport failed
-wandb: ERROR Abnormal program exit
-Traceback (most recent call last):
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1078, in init
-    run = wi.init()
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 697, in init
-    result = handle.wait(
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/lib/mailbox.py", line 259, in wait
-    raise MailboxError("transport failed")
-wandb.errors.MailboxError: transport failed
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/train.py", line 83, in <module>
-    visualizer = Visualizer(opt)   # create a visualizer that display/save images and plots
-  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/util/visualizer.py", line 93, in __init__
-    self.wandb_run = wandb.init(id=self.wandb_fold_id, project=opt.project, name=opt.name,
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1116, in init
-    raise Exception("problem") from error_seen
-Exception: problem
-wandb: While tearing down the service manager. The following error has occured: [Errno 32] Broken pipe

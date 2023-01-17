@@ -1,24 +1,0 @@
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 15039.34it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16695.59it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18087.56it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17839.67it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18157.16it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17300.06it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17680.91it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17606.69it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17967.03it/s]
-  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 15689.42it/s]
-Traceback (most recent call last):
-  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/generate_synth.py", line 86, in <module>
-    model.setup(opt)               # regular setup: load and print networks; create schedulers
-  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/models/base_model.py", line 90, in setup
-    self.load_networks(load_suffix)
-  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/models/base_model.py", line 203, in load_networks
-    state_dict = torch.load(load_path, map_location=str(self.device))
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/serialization.py", line 699, in load
-    with _open_file_like(f, 'rb') as opened_file:
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
-    return _open_file(name_or_buffer, mode)
-  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
-    super(_open_file, self).__init__(open(name, mode))
-FileNotFoundError: [Errno 2] No such file or directory: '/home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/experiment_name/job.test_0.sort_0/checkpoints/test_0_sort_0/latest_net_G.pth'
