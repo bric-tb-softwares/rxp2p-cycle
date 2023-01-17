@@ -136,6 +136,10 @@ wandb/
 versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1
 versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_BtoA.r1
 versions/v1/user.otavares.SantaCasa.pix2pix.v1_iltbi.r1
+cycle_shenzhen_iltbi_extendido_jobs/
+cycle_shenzhen_iltbi_jobs/
+output_jobs_train_cycle/
+output_jobs_train_p2p/
 
 # others
 *.txt
