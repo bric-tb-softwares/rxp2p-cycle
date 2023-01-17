@@ -1,0 +1,1050 @@
+----------------- Options ---------------
+               batch_size: 1                             
+                    beta1: 0.5                           
+          checkpoints_dir: /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints
+           continue_train: False                         
+                crop_size: 256                           
+       custom_images_path: /home/otto.tavares/public/iltbi/train/images/santa_casa_pares/	[default: None]
+        custom_masks_path: None                          
+       custom_paired_path: None                          
+                 dataroot: /home/otto.tavares/public/iltbi/train/images/santa_casa_pares/	[default: None]
+           dataset_action: False                         
+     dataset_download_dir: /home/otto.tavares/public/iltbi/rxpixp2pixcycle
+             dataset_mode: santacasaskfold               	[default: aligned]
+             dataset_name: Shenzhen                      
+                direction: AtoB                          
+              display_env: main                          
+             display_freq: 400                           
+               display_id: 1                             
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
+            download_imgs: False                         
+                    epoch: latest                        
+              epoch_count: 1                             
+                 gan_mode: lsgan                         	[default: vanilla]
+  generate_paths_data_csv: False                         
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                     isTB: False                         
+                  isTrain: True                          	[default: None]
+          is_resume_wandb: False                         
+                      job: None                          
+                lambda_L1: 50.0                          	[default: 100.0]
+                load_iter: 0                             	[default: 0]
+                load_size: 256                           	[default: 286]
+                       lr: 0.0002                        
+           lr_decay_iters: 50                            
+                lr_policy: linear                        
+         max_dataset_size: inf                           
+                    model: pix2pix                       	[default: cycle_gan]
+                 n_epochs: 100                           
+           n_epochs_decay: 100                           
+                  n_folds: 10                            
+               n_layers_D: 3                             
+                     name: santacasa_test_0_sort_1       	[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: unet_256                      
+                      ngf: 64                            
+               no_dropout: False                         
+                  no_flip: False                         
+                  no_html: False                         
+                     norm: batch                         
+              num_threads: 4                             
+                  num_val: 400                           
+                output_nc: 3                             
+                    phase: train                         
+                pool_size: 0                             
+               preprocess: resize_and_scale_width        	[default: resize_and_crop]
+               print_freq: 100                           
+                  project: p2p_santacasa                 	[default: None]
+             save_by_iter: False                         
+          save_epoch_freq: 5                             
+         save_latest_freq: 5000                          
+                     seed: 512                           	[default: 512]
+           serial_batches: False                         
+                     sort: 1                             	[default: 0]
+                   suffix:                               
+                     test: 0                             
+                    token:                               
+            train_dataset: True                          
+         update_html_freq: 1000                          
+                use_wandb: True                          	[default: False]
+                 val_freq: 10                            	[default: 400]
+                  verbose: False                         
+             wandb_entity: otavares                      	[default: brics-tb]
+            wandb_fold_id: wandb_def_id_test_0_sort_1    	[default: None]
+----------------- End -------------------
+GPU with device 0
+                 images    gauss  ... all_together target
+0   20220315_184023.jpg      seg  ...          seg      0
+1   20220315_184432.jpg      seg  ...          seg      0
+2   20220315_184701.jpg  not seg  ...          seg      0
+3   20220315_184740.jpg      seg  ...          seg      0
+4   20220315_185230.jpg      seg  ...          seg      0
+..                  ...      ...  ...          ...    ...
+83         IMG_5503.JPG  not seg  ...      not seg      0
+84         IMG_5505.JPG      seg  ...          seg      0
+85         IMG_5507.JPG      seg  ...          seg      0
+86         IMG_5509.JPG      seg  ...          seg      0
+87         IMG_5604.JPG      seg  ...          seg      0
+
+[88 rows x 5 columns]
+bins selected for val: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+dataset [SantaCasaSkfoldDataset] was created
+                 images    gauss  ... all_together target
+0   20220315_184023.jpg      seg  ...          seg      0
+1   20220315_184432.jpg      seg  ...          seg      0
+2   20220315_184701.jpg  not seg  ...          seg      0
+3   20220315_184740.jpg      seg  ...          seg      0
+4   20220315_185230.jpg      seg  ...          seg      0
+..                  ...      ...  ...          ...    ...
+83         IMG_5503.JPG  not seg  ...      not seg      0
+84         IMG_5505.JPG      seg  ...          seg      0
+85         IMG_5507.JPG      seg  ...          seg      0
+86         IMG_5509.JPG      seg  ...          seg      0
+87         IMG_5604.JPG      seg  ...          seg      0
+
+[88 rows x 5 columns]
+bins selected for val: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+dataset [SantaCasaSkfoldDataset] was created
+The number of training images = 40
+The number of val images = 6
+initialize network with normal
+initialize network with normal
+model [Pix2PixModel] was created
+---------- Networks initialized -------------
+[Network G] Total number of parameters : 54.414 M
+[Network D] Total number of parameters : 2.769 M
+-----------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+
+
+Could not connect to Visdom server. 
+ Trying to start a server....
+Command: /usr/bin/python3 -m visdom.server -p 8097 &>/dev/null &
+create web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/santacasa_test_0_sort_1/web...
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.4855840504169464), ('G_L1_val', 17.541202545166016), ('D_real_val', 0.4015458822250366), ('D_fake_val', 0.4091693162918091), ('KL_realB_fakeB_val', 0.24127988435066877)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.40068909525871277), ('G_L1_val', 13.262036323547363), ('D_real_val', 0.3328947424888611), ('D_fake_val', 0.3541725277900696), ('KL_realB_fakeB_val', 0.17369790700882204)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5300326943397522), ('G_L1_val', 13.304814338684082), ('D_real_val', 0.4762820899486542), ('D_fake_val', 0.3611961901187897), ('KL_realB_fakeB_val', 0.37696163409876077)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.37920376658439636), ('G_L1_val', 6.918613433837891), ('D_real_val', 0.3459043502807617), ('D_fake_val', 0.35508859157562256), ('KL_realB_fakeB_val', 0.27332898635275893)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.48883506655693054), ('G_L1_val', 10.313340187072754), ('D_real_val', 0.4305537939071655), ('D_fake_val', 0.37218913435935974), ('KL_realB_fakeB_val', 0.4656025844165871)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5272752046585083), ('G_L1_val', 10.4721040725708), ('D_real_val', 0.4586946964263916), ('D_fake_val', 0.46579793095588684), ('KL_realB_fakeB_val', 0.3772217128694453)])
+end of validation step
+End of epoch 1 / 200 	 Time Taken: 5 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.3864913582801819), ('G_L1_val', 9.40973949432373), ('D_real_val', 0.35693156719207764), ('D_fake_val', 0.3132000267505646), ('KL_realB_fakeB_val', 0.27455298695100905)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3695838153362274), ('G_L1_val', 11.822744369506836), ('D_real_val', 0.3174162805080414), ('D_fake_val', 0.24442902207374573), ('KL_realB_fakeB_val', 0.1668639117708399)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.35726502537727356), ('G_L1_val', 8.492629051208496), ('D_real_val', 0.2712336480617523), ('D_fake_val', 0.27608340978622437), ('KL_realB_fakeB_val', 0.10215195200772074)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3296608626842499), ('G_L1_val', 5.6133551597595215), ('D_real_val', 0.29498571157455444), ('D_fake_val', 0.28997159004211426), ('KL_realB_fakeB_val', 0.09290773159051148)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.40410277247428894), ('G_L1_val', 10.310651779174805), ('D_real_val', 0.34611672163009644), ('D_fake_val', 0.31129252910614014), ('KL_realB_fakeB_val', 0.21732969493183182)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3799564838409424), ('G_L1_val', 9.152759552001953), ('D_real_val', 0.32346320152282715), ('D_fake_val', 0.3196954131126404), ('KL_realB_fakeB_val', 0.21835250268169076)])
+end of validation step
+End of epoch 2 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3883017301559448), ('G_L1', 9.006760597229004), ('D_real', 0.3792247176170349), ('D_fake', 0.3270265758037567), ('KL_realB_fakeB', 0.18917444976148656)])
+(epoch: 3, iters: 20, time: 0.076, data: 0.665) G_GAN: 0.388 G_L1: 9.007 D_real: 0.379 D_fake: 0.327 KL_realB_fakeB: 0.189 
+OrderedDict([('G_GAN_val', 0.2800906300544739), ('G_L1_val', 4.410542011260986), ('D_real_val', 0.25836363434791565), ('D_fake_val', 0.3044680655002594), ('KL_realB_fakeB_val', 0.39832678390489185)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.31523966789245605), ('G_L1_val', 12.303115844726562), ('D_real_val', 0.24783459305763245), ('D_fake_val', 0.2766304016113281), ('KL_realB_fakeB_val', 0.1470151055593723)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3412857949733734), ('G_L1_val', 6.473361015319824), ('D_real_val', 0.3198273777961731), ('D_fake_val', 0.3152255713939667), ('KL_realB_fakeB_val', 0.11308230740067576)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3083338141441345), ('G_L1_val', 7.957486629486084), ('D_real_val', 0.26087674498558044), ('D_fake_val', 0.2791852355003357), ('KL_realB_fakeB_val', 0.15664528549460155)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.31987902522087097), ('G_L1_val', 4.7168755531311035), ('D_real_val', 0.2919849455356598), ('D_fake_val', 0.3263022005558014), ('KL_realB_fakeB_val', 0.10926589331009884)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.33927321434020996), ('G_L1_val', 8.65849494934082), ('D_real_val', 0.3036663830280304), ('D_fake_val', 0.29972147941589355), ('KL_realB_fakeB_val', 0.09560889728908403)])
+end of validation step
+End of epoch 3 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.28250184655189514), ('G_L1_val', 5.275485992431641), ('D_real_val', 0.2567892074584961), ('D_fake_val', 0.30507948994636536), ('KL_realB_fakeB_val', 0.13113550645063754)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.25683990120887756), ('G_L1_val', 5.134110927581787), ('D_real_val', 0.24651746451854706), ('D_fake_val', 0.32452142238616943), ('KL_realB_fakeB_val', 0.09236550929330103)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.25088009238243103), ('G_L1_val', 4.783634662628174), ('D_real_val', 0.2377028465270996), ('D_fake_val', 0.3044925928115845), ('KL_realB_fakeB_val', 0.25813026226232777)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.28640517592430115), ('G_L1_val', 10.138809204101562), ('D_real_val', 0.23708881437778473), ('D_fake_val', 0.31382814049720764), ('KL_realB_fakeB_val', 0.14161477891640295)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.29596301913261414), ('G_L1_val', 6.267270565032959), ('D_real_val', 0.2738727629184723), ('D_fake_val', 0.3112894892692566), ('KL_realB_fakeB_val', 0.11096432397473105)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.29695582389831543), ('G_L1_val', 7.569542407989502), ('D_real_val', 0.29911118745803833), ('D_fake_val', 0.3069040775299072), ('KL_realB_fakeB_val', 0.11236383200474434)])
+end of validation step
+End of epoch 4 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.28968530893325806), ('G_L1', 4.023338317871094), ('D_real', 0.2638603150844574), ('D_fake', 0.27457407116889954), ('KL_realB_fakeB', 0.5410407399067307)])
+(epoch: 5, iters: 40, time: 0.075, data: 1.620) G_GAN: 0.290 G_L1: 4.023 D_real: 0.264 D_fake: 0.275 KL_realB_fakeB: 0.541 
+OrderedDict([('G_GAN_val', 0.320119708776474), ('G_L1_val', 7.1509809494018555), ('D_real_val', 0.305880069732666), ('D_fake_val', 0.32334187626838684), ('KL_realB_fakeB_val', 0.12721458532910015)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3196353614330292), ('G_L1_val', 8.992819786071777), ('D_real_val', 0.3078654706478119), ('D_fake_val', 0.2737002372741699), ('KL_realB_fakeB_val', 0.1325629049346159)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.29431217908859253), ('G_L1_val', 8.457825660705566), ('D_real_val', 0.26586073637008667), ('D_fake_val', 0.3010474443435669), ('KL_realB_fakeB_val', 0.11869100084529952)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3205479681491852), ('G_L1_val', 6.953381061553955), ('D_real_val', 0.30033281445503235), ('D_fake_val', 0.3570350110530853), ('KL_realB_fakeB_val', 0.09122268027268113)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3067794740200043), ('G_L1_val', 6.059805870056152), ('D_real_val', 0.29684698581695557), ('D_fake_val', 0.3119544982910156), ('KL_realB_fakeB_val', 0.5859515215532128)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2971574664115906), ('G_L1_val', 5.986313343048096), ('D_real_val', 0.2643835246562958), ('D_fake_val', 0.280458927154541), ('KL_realB_fakeB_val', 0.1643973813628553)])
+end of validation step
+saving the model at the end of epoch 5, iters 200
+End of epoch 5 / 200 	 Time Taken: 11 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.23009361326694489), ('G_L1_val', 4.853689670562744), ('D_real_val', 0.22834360599517822), ('D_fake_val', 0.32571953535079956), ('KL_realB_fakeB_val', 0.12278025934561472)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2900310754776001), ('G_L1_val', 6.299086093902588), ('D_real_val', 0.2946456968784332), ('D_fake_val', 0.300994336605072), ('KL_realB_fakeB_val', 0.10778485545076319)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.24010905623435974), ('G_L1_val', 4.216423511505127), ('D_real_val', 0.22486832737922668), ('D_fake_val', 0.3069938123226166), ('KL_realB_fakeB_val', 0.19015256912519976)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2615918517112732), ('G_L1_val', 7.271389484405518), ('D_real_val', 0.243698850274086), ('D_fake_val', 0.3189149498939514), ('KL_realB_fakeB_val', 0.13383510220636677)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2851899266242981), ('G_L1_val', 5.895114898681641), ('D_real_val', 0.23291127383708954), ('D_fake_val', 0.2797502279281616), ('KL_realB_fakeB_val', 0.1339289263073718)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.25542911887168884), ('G_L1_val', 8.721854209899902), ('D_real_val', 0.19534601271152496), ('D_fake_val', 0.29756978154182434), ('KL_realB_fakeB_val', 0.1415564266524139)])
+end of validation step
+End of epoch 6 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.3941590189933777), ('G_L1_val', 5.088750839233398), ('D_real_val', 0.32851284742355347), ('D_fake_val', 0.30771857500076294), ('KL_realB_fakeB_val', 0.09304185685342137)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3748379945755005), ('G_L1_val', 6.465967178344727), ('D_real_val', 0.3592521846294403), ('D_fake_val', 0.34706032276153564), ('KL_realB_fakeB_val', 0.17331253663113005)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3627168536186218), ('G_L1_val', 4.237466812133789), ('D_real_val', 0.34437859058380127), ('D_fake_val', 0.3402401804924011), ('KL_realB_fakeB_val', 0.1712108387081543)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3595958948135376), ('G_L1_val', 8.770964622497559), ('D_real_val', 0.2881971597671509), ('D_fake_val', 0.31422585248947144), ('KL_realB_fakeB_val', 0.13635973062254914)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.39802277088165283), ('G_L1_val', 6.713303089141846), ('D_real_val', 0.43235182762145996), ('D_fake_val', 0.3502923250198364), ('KL_realB_fakeB_val', 0.11149247314056818)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3890523612499237), ('G_L1_val', 4.523249626159668), ('D_real_val', 0.37301215529441833), ('D_fake_val', 0.3868362605571747), ('KL_realB_fakeB_val', 0.15755709543354818)])
+end of validation step
+End of epoch 7 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.2990366220474243), ('G_L1', 3.589078903198242), ('D_real', 0.2294418066740036), ('D_fake', 0.28120678663253784), ('KL_realB_fakeB', 0.15056868662742662)])
+(epoch: 8, iters: 20, time: 0.076, data: 0.092) G_GAN: 0.299 G_L1: 3.589 D_real: 0.229 D_fake: 0.281 KL_realB_fakeB: 0.151 
+OrderedDict([('G_GAN_val', 0.29711219668388367), ('G_L1_val', 4.325381755828857), ('D_real_val', 0.2841646373271942), ('D_fake_val', 0.2592504024505615), ('KL_realB_fakeB_val', 0.5852271075275257)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2932756841182709), ('G_L1_val', 3.7385098934173584), ('D_real_val', 0.2796674966812134), ('D_fake_val', 0.28443044424057007), ('KL_realB_fakeB_val', 0.07806089465968154)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.32722508907318115), ('G_L1_val', 5.723730564117432), ('D_real_val', 0.32913222908973694), ('D_fake_val', 0.2501717209815979), ('KL_realB_fakeB_val', 0.10581833172780396)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3098136782646179), ('G_L1_val', 7.060586452484131), ('D_real_val', 0.29132047295570374), ('D_fake_val', 0.2904428541660309), ('KL_realB_fakeB_val', 0.11055918749554776)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3219800293445587), ('G_L1_val', 6.656996250152588), ('D_real_val', 0.26522669196128845), ('D_fake_val', 0.2542590796947479), ('KL_realB_fakeB_val', 0.42379793938842586)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.32508671283721924), ('G_L1_val', 8.012394905090332), ('D_real_val', 0.2745654284954071), ('D_fake_val', 0.30444464087486267), ('KL_realB_fakeB_val', 0.11478169717260982)])
+end of validation step
+End of epoch 8 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.3361261188983917), ('G_L1_val', 3.1317055225372314), ('D_real_val', 0.304610937833786), ('D_fake_val', 0.24329586327075958), ('KL_realB_fakeB_val', 0.2003697543137112)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3139781057834625), ('G_L1_val', 6.379264831542969), ('D_real_val', 0.2736019194126129), ('D_fake_val', 0.2822919487953186), ('KL_realB_fakeB_val', 0.10747755628068148)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2993497848510742), ('G_L1_val', 3.0898711681365967), ('D_real_val', 0.2831204831600189), ('D_fake_val', 0.29400724172592163), ('KL_realB_fakeB_val', 0.11079560779702555)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.34961700439453125), ('G_L1_val', 5.018484592437744), ('D_real_val', 0.2711430788040161), ('D_fake_val', 0.22351084649562836), ('KL_realB_fakeB_val', 0.1054904564854426)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.38609063625335693), ('G_L1_val', 3.823287010192871), ('D_real_val', 0.3614203631877899), ('D_fake_val', 0.2809640169143677), ('KL_realB_fakeB_val', 0.09468153277684327)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.33085009455680847), ('G_L1_val', 8.72010612487793), ('D_real_val', 0.24650068581104279), ('D_fake_val', 0.2563104033470154), ('KL_realB_fakeB_val', 0.12736947015381833)])
+end of validation step
+End of epoch 9 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.31609198451042175), ('G_L1', 4.008050441741943), ('D_real', 0.3298088610172272), ('D_fake', 0.18977126479148865), ('KL_realB_fakeB', 0.39899842015929726)])
+(epoch: 10, iters: 40, time: 0.877, data: 1.445) G_GAN: 0.316 G_L1: 4.008 D_real: 0.330 D_fake: 0.190 KL_realB_fakeB: 0.399 
+OrderedDict([('G_GAN_val', 0.3592270314693451), ('G_L1_val', 4.780395984649658), ('D_real_val', 0.2776069939136505), ('D_fake_val', 0.2520030736923218), ('KL_realB_fakeB_val', 0.11757106782476019)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3289409875869751), ('G_L1_val', 5.894660949707031), ('D_real_val', 0.28369632363319397), ('D_fake_val', 0.2985479235649109), ('KL_realB_fakeB_val', 0.12049048157903008)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.34746578335762024), ('G_L1_val', 3.7128653526306152), ('D_real_val', 0.31276601552963257), ('D_fake_val', 0.3101089298725128), ('KL_realB_fakeB_val', 0.09222356790625857)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3101566731929779), ('G_L1_val', 3.3200278282165527), ('D_real_val', 0.28962722420692444), ('D_fake_val', 0.3105984330177307), ('KL_realB_fakeB_val', 0.13792434136603524)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.32506808638572693), ('G_L1_val', 3.1381380558013916), ('D_real_val', 0.2816470265388489), ('D_fake_val', 0.2756960391998291), ('KL_realB_fakeB_val', 0.20139182146539708)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.321400910615921), ('G_L1_val', 8.347945213317871), ('D_real_val', 0.2776547968387604), ('D_fake_val', 0.3087581396102905), ('KL_realB_fakeB_val', 0.12067734932466176)])
+end of validation step
+saving the model at the end of epoch 10, iters 400
+End of epoch 10 / 200 	 Time Taken: 10 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.30853840708732605), ('G_L1_val', 3.716773509979248), ('D_real_val', 0.27977055311203003), ('D_fake_val', 0.23063313961029053), ('KL_realB_fakeB_val', 0.09820121908736852)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.25299379229545593), ('G_L1_val', 3.257436752319336), ('D_real_val', 0.21499726176261902), ('D_fake_val', 0.28044500946998596), ('KL_realB_fakeB_val', 0.11178563389735464)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.321812242269516), ('G_L1_val', 5.096686840057373), ('D_real_val', 0.2173355370759964), ('D_fake_val', 0.2064901739358902), ('KL_realB_fakeB_val', 0.09099711515679265)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2861669957637787), ('G_L1_val', 7.750514030456543), ('D_real_val', 0.21639707684516907), ('D_fake_val', 0.2596611976623535), ('KL_realB_fakeB_val', 0.13622215559429032)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.28716593980789185), ('G_L1_val', 3.3068294525146484), ('D_real_val', 0.23466995358467102), ('D_fake_val', 0.23256124556064606), ('KL_realB_fakeB_val', 0.23538109918942643)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2894016206264496), ('G_L1_val', 5.666813373565674), ('D_real_val', 0.22460941970348358), ('D_fake_val', 0.25112074613571167), ('KL_realB_fakeB_val', 0.1578459147568311)])
+end of validation step
+End of epoch 11 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.19592228531837463), ('G_L1_val', 3.195286512374878), ('D_real_val', 0.1770496666431427), ('D_fake_val', 0.36837735772132874), ('KL_realB_fakeB_val', 0.12893375873853172)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.20242561399936676), ('G_L1_val', 3.1448047161102295), ('D_real_val', 0.17076073586940765), ('D_fake_val', 0.33097875118255615), ('KL_realB_fakeB_val', 0.11057943338918257)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.17076824605464935), ('G_L1_val', 8.14525032043457), ('D_real_val', 0.13742421567440033), ('D_fake_val', 0.4082944989204407), ('KL_realB_fakeB_val', 0.12932777895889397)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.20935794711112976), ('G_L1_val', 5.336978435516357), ('D_real_val', 0.16778765618801117), ('D_fake_val', 0.37714284658432007), ('KL_realB_fakeB_val', 0.15944177327958228)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.22912892699241638), ('G_L1_val', 4.129833698272705), ('D_real_val', 0.16023576259613037), ('D_fake_val', 0.3197740316390991), ('KL_realB_fakeB_val', 0.1308859906672744)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.20735155045986176), ('G_L1_val', 4.295336723327637), ('D_real_val', 0.19936595857143402), ('D_fake_val', 0.32914742827415466), ('KL_realB_fakeB_val', 0.18532317720368457)])
+end of validation step
+End of epoch 12 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.35357433557510376), ('G_L1', 3.356271982192993), ('D_real', 0.3279934525489807), ('D_fake', 0.31981927156448364), ('KL_realB_fakeB', 0.07251138828409719)])
+(epoch: 13, iters: 20, time: 0.076, data: 0.440) G_GAN: 0.354 G_L1: 3.356 D_real: 0.328 D_fake: 0.320 KL_realB_fakeB: 0.073 
+OrderedDict([('G_GAN_val', 0.2879585027694702), ('G_L1_val', 7.561715126037598), ('D_real_val', 0.24059711396694183), ('D_fake_val', 0.26873666048049927), ('KL_realB_fakeB_val', 0.12734100300653226)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.32236918807029724), ('G_L1_val', 4.041927337646484), ('D_real_val', 0.26957350969314575), ('D_fake_val', 0.26091986894607544), ('KL_realB_fakeB_val', 0.1283995592218469)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.28295665979385376), ('G_L1_val', 3.4430363178253174), ('D_real_val', 0.2722787857055664), ('D_fake_val', 0.2892664670944214), ('KL_realB_fakeB_val', 0.19141486662483237)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.34537985920906067), ('G_L1_val', 4.603273868560791), ('D_real_val', 0.35936394333839417), ('D_fake_val', 0.3184528946876526), ('KL_realB_fakeB_val', 0.18650054096614097)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3099701702594757), ('G_L1_val', 5.770537853240967), ('D_real_val', 0.2637629508972168), ('D_fake_val', 0.28057754039764404), ('KL_realB_fakeB_val', 0.13219832263753492)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.30818814039230347), ('G_L1_val', 3.044940233230591), ('D_real_val', 0.2899644672870636), ('D_fake_val', 0.2663526237010956), ('KL_realB_fakeB_val', 0.11960893321763555)])
+end of validation step
+End of epoch 13 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.25270506739616394), ('G_L1_val', 5.451514720916748), ('D_real_val', 0.1975601613521576), ('D_fake_val', 0.2918783724308014), ('KL_realB_fakeB_val', 0.1201959842283026)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.21742665767669678), ('G_L1_val', 7.631916046142578), ('D_real_val', 0.17035828530788422), ('D_fake_val', 0.3402499854564667), ('KL_realB_fakeB_val', 0.10132147982838624)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2944364547729492), ('G_L1_val', 4.196247100830078), ('D_real_val', 0.2192017287015915), ('D_fake_val', 0.25042492151260376), ('KL_realB_fakeB_val', 0.3048030827027415)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.29197958111763), ('G_L1_val', 3.5986881256103516), ('D_real_val', 0.2759436070919037), ('D_fake_val', 0.2393401712179184), ('KL_realB_fakeB_val', 0.0838512244497785)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.25066453218460083), ('G_L1_val', 3.097072124481201), ('D_real_val', 0.2227586954832077), ('D_fake_val', 0.2898347079753876), ('KL_realB_fakeB_val', 0.10656923077437705)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2862890362739563), ('G_L1_val', 3.127819776535034), ('D_real_val', 0.23667407035827637), ('D_fake_val', 0.25091150403022766), ('KL_realB_fakeB_val', 0.22242057070019486)])
+end of validation step
+End of epoch 14 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.29394447803497314), ('G_L1', 3.1780149936676025), ('D_real', 0.17777127027511597), ('D_fake', 0.2920491695404053), ('KL_realB_fakeB', 0.6648755102397397)])
+(epoch: 15, iters: 40, time: 0.075, data: 1.611) G_GAN: 0.294 G_L1: 3.178 D_real: 0.178 D_fake: 0.292 KL_realB_fakeB: 0.665 
+OrderedDict([('G_GAN_val', 0.27164560556411743), ('G_L1_val', 3.005025863647461), ('D_real_val', 0.23900219798088074), ('D_fake_val', 0.2584947347640991), ('KL_realB_fakeB_val', 0.10718761038859516)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3307647109031677), ('G_L1_val', 4.226945877075195), ('D_real_val', 0.23491182923316956), ('D_fake_val', 0.20034709572792053), ('KL_realB_fakeB_val', 0.10128308104782141)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2855944335460663), ('G_L1_val', 5.622276782989502), ('D_real_val', 0.21149663627147675), ('D_fake_val', 0.2639847993850708), ('KL_realB_fakeB_val', 0.11531946190416095)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2516847550868988), ('G_L1_val', 6.998523235321045), ('D_real_val', 0.193543940782547), ('D_fake_val', 0.2834532558917999), ('KL_realB_fakeB_val', 0.08266552332117066)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.29338309168815613), ('G_L1_val', 3.306318759918213), ('D_real_val', 0.24174360930919647), ('D_fake_val', 0.22362667322158813), ('KL_realB_fakeB_val', 0.1801866920691904)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3215722143650055), ('G_L1_val', 3.860675573348999), ('D_real_val', 0.29917168617248535), ('D_fake_val', 0.23249077796936035), ('KL_realB_fakeB_val', 0.12406350534691735)])
+end of validation step
+saving the model at the end of epoch 15, iters 600
+End of epoch 15 / 200 	 Time Taken: 10 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.3471302390098572), ('G_L1_val', 3.9397201538085938), ('D_real_val', 0.28061234951019287), ('D_fake_val', 0.19913429021835327), ('KL_realB_fakeB_val', 0.4801033987832986)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3473165035247803), ('G_L1_val', 2.6737020015716553), ('D_real_val', 0.2900142967700958), ('D_fake_val', 0.19211900234222412), ('KL_realB_fakeB_val', 0.17228787742246304)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3278350234031677), ('G_L1_val', 2.9583985805511475), ('D_real_val', 0.2591727077960968), ('D_fake_val', 0.2229984700679779), ('KL_realB_fakeB_val', 0.09678968924174237)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.29603177309036255), ('G_L1_val', 7.053795337677002), ('D_real_val', 0.2360963523387909), ('D_fake_val', 0.2719137966632843), ('KL_realB_fakeB_val', 0.20784557934453907)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3605221211910248), ('G_L1_val', 3.2235212326049805), ('D_real_val', 0.3438684046268463), ('D_fake_val', 0.19155046343803406), ('KL_realB_fakeB_val', 0.09777173632187217)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3169885277748108), ('G_L1_val', 5.173731803894043), ('D_real_val', 0.2503795027732849), ('D_fake_val', 0.23314538598060608), ('KL_realB_fakeB_val', 0.11069648245053715)])
+end of validation step
+End of epoch 16 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.30180901288986206), ('G_L1_val', 6.458097457885742), ('D_real_val', 0.24830661714076996), ('D_fake_val', 0.32735201716423035), ('KL_realB_fakeB_val', 0.20497828235214832)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.30006274580955505), ('G_L1_val', 3.8084871768951416), ('D_real_val', 0.25640928745269775), ('D_fake_val', 0.2702666223049164), ('KL_realB_fakeB_val', 0.308190793494248)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.32614049315452576), ('G_L1_val', 6.8433685302734375), ('D_real_val', 0.23496142029762268), ('D_fake_val', 0.3045029044151306), ('KL_realB_fakeB_val', 0.24277754348275932)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.32644689083099365), ('G_L1_val', 4.341835021972656), ('D_real_val', 0.31049928069114685), ('D_fake_val', 0.2953411340713501), ('KL_realB_fakeB_val', 0.08462220623889853)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.36480632424354553), ('G_L1_val', 5.927609920501709), ('D_real_val', 0.23944760859012604), ('D_fake_val', 0.28938761353492737), ('KL_realB_fakeB_val', 0.13651070122997314)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4215301275253296), ('G_L1_val', 4.635112762451172), ('D_real_val', 0.2810383439064026), ('D_fake_val', 0.20981116592884064), ('KL_realB_fakeB_val', 0.2836747091158586)])
+end of validation step
+End of epoch 17 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.40713411569595337), ('G_L1', 3.9352967739105225), ('D_real', 0.2886074483394623), ('D_fake', 0.10264825075864792), ('KL_realB_fakeB', 0.5529635865600666)])
+(epoch: 18, iters: 20, time: 0.075, data: 0.083) G_GAN: 0.407 G_L1: 3.935 D_real: 0.289 D_fake: 0.103 KL_realB_fakeB: 0.553 
+OrderedDict([('G_GAN_val', 0.3109564185142517), ('G_L1_val', 7.026838302612305), ('D_real_val', 0.3237113058567047), ('D_fake_val', 0.2742692530155182), ('KL_realB_fakeB_val', 0.10042933330053011)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.49514004588127136), ('G_L1_val', 4.62001371383667), ('D_real_val', 0.32522842288017273), ('D_fake_val', 0.16445687413215637), ('KL_realB_fakeB_val', 0.0824354131436743)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.41808998584747314), ('G_L1_val', 5.30988883972168), ('D_real_val', 0.3094140589237213), ('D_fake_val', 0.2414429783821106), ('KL_realB_fakeB_val', 0.13443135838712747)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.36085858941078186), ('G_L1_val', 2.9130499362945557), ('D_real_val', 0.3097938001155853), ('D_fake_val', 0.24632735550403595), ('KL_realB_fakeB_val', 0.14166425005213637)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3859412968158722), ('G_L1_val', 3.1913745403289795), ('D_real_val', 0.3037698566913605), ('D_fake_val', 0.22821584343910217), ('KL_realB_fakeB_val', 0.10308320482791411)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4128016233444214), ('G_L1_val', 2.788705825805664), ('D_real_val', 0.29589658975601196), ('D_fake_val', 0.20852410793304443), ('KL_realB_fakeB_val', 0.1466051537764479)])
+end of validation step
+End of epoch 18 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.4419061243534088), ('G_L1_val', 3.8264193534851074), ('D_real_val', 0.35560595989227295), ('D_fake_val', 0.17560142278671265), ('KL_realB_fakeB_val', 0.0967563762466558)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3895283043384552), ('G_L1_val', 3.615680694580078), ('D_real_val', 0.3949386775493622), ('D_fake_val', 0.17181861400604248), ('KL_realB_fakeB_val', 0.20342174416722542)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.37829169631004333), ('G_L1_val', 5.31946325302124), ('D_real_val', 0.30753621459007263), ('D_fake_val', 0.20037439465522766), ('KL_realB_fakeB_val', 0.21689665710193792)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.39670759439468384), ('G_L1_val', 3.153496265411377), ('D_real_val', 0.3530651032924652), ('D_fake_val', 0.18923550844192505), ('KL_realB_fakeB_val', 0.24846652406511632)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.38241028785705566), ('G_L1_val', 2.949371576309204), ('D_real_val', 0.34776002168655396), ('D_fake_val', 0.18004687130451202), ('KL_realB_fakeB_val', 0.17176159216930525)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3527807593345642), ('G_L1_val', 7.036264896392822), ('D_real_val', 0.2939375638961792), ('D_fake_val', 0.3091140389442444), ('KL_realB_fakeB_val', 0.12002070865133752)])
+end of validation step
+End of epoch 19 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.28554171323776245), ('G_L1', 2.7221574783325195), ('D_real', 0.3499623239040375), ('D_fake', 0.14968858659267426), ('KL_realB_fakeB', 0.12420403329597401)])
+(epoch: 20, iters: 40, time: 0.509, data: 1.448) G_GAN: 0.286 G_L1: 2.722 D_real: 0.350 D_fake: 0.150 KL_realB_fakeB: 0.124 
+OrderedDict([('G_GAN_val', 0.32736051082611084), ('G_L1_val', 4.154503345489502), ('D_real_val', 0.2729688286781311), ('D_fake_val', 0.20591263473033905), ('KL_realB_fakeB_val', 0.5535727832098448)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.27344027161598206), ('G_L1_val', 3.1330597400665283), ('D_real_val', 0.238774374127388), ('D_fake_val', 0.2622574269771576), ('KL_realB_fakeB_val', 0.1028222180906043)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.207957923412323), ('G_L1_val', 6.197759628295898), ('D_real_val', 0.21403570473194122), ('D_fake_val', 0.34715530276298523), ('KL_realB_fakeB_val', 0.17374918711175996)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2989232540130615), ('G_L1_val', 4.011302471160889), ('D_real_val', 0.3374807834625244), ('D_fake_val', 0.22809092700481415), ('KL_realB_fakeB_val', 0.07178612118911883)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.28921055793762207), ('G_L1_val', 3.673846960067749), ('D_real_val', 0.27499160170555115), ('D_fake_val', 0.230830118060112), ('KL_realB_fakeB_val', 0.4926306210727365)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3014048635959625), ('G_L1_val', 6.725238800048828), ('D_real_val', 0.223719984292984), ('D_fake_val', 0.2322859764099121), ('KL_realB_fakeB_val', 0.1383450749242786)])
+end of validation step
+saving the model at the end of epoch 20, iters 800
+End of epoch 20 / 200 	 Time Taken: 11 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.34016379714012146), ('G_L1_val', 2.9132497310638428), ('D_real_val', 0.3044411242008209), ('D_fake_val', 0.227965846657753), ('KL_realB_fakeB_val', 0.2817785985261475)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.37604615092277527), ('G_L1_val', 4.237612247467041), ('D_real_val', 0.2884216010570526), ('D_fake_val', 0.19159871339797974), ('KL_realB_fakeB_val', 0.13479460538325072)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3336379826068878), ('G_L1_val', 3.303267002105713), ('D_real_val', 0.28047245740890503), ('D_fake_val', 0.21996338665485382), ('KL_realB_fakeB_val', 0.23876295176869378)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3503749370574951), ('G_L1_val', 5.328115940093994), ('D_real_val', 0.2807766795158386), ('D_fake_val', 0.2259630560874939), ('KL_realB_fakeB_val', 0.2199656524902272)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2722786068916321), ('G_L1_val', 7.894511699676514), ('D_real_val', 0.29540228843688965), ('D_fake_val', 0.286120742559433), ('KL_realB_fakeB_val', 0.15892196656882468)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.32279708981513977), ('G_L1_val', 2.5043277740478516), ('D_real_val', 0.2688663899898529), ('D_fake_val', 0.24642936885356903), ('KL_realB_fakeB_val', 0.09875394547809949)])
+end of validation step
+End of epoch 21 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.17574551701545715), ('G_L1_val', 5.847210884094238), ('D_real_val', 0.1575736552476883), ('D_fake_val', 0.39555883407592773), ('KL_realB_fakeB_val', 0.321530464633076)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.26082831621170044), ('G_L1_val', 2.9816031455993652), ('D_real_val', 0.18598613142967224), ('D_fake_val', 0.31339243054389954), ('KL_realB_fakeB_val', 0.08813627714428733)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.25636395812034607), ('G_L1_val', 3.68035888671875), ('D_real_val', 0.24284186959266663), ('D_fake_val', 0.3369341492652893), ('KL_realB_fakeB_val', 0.06733298951181471)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2915206253528595), ('G_L1_val', 3.7291579246520996), ('D_real_val', 0.19533362984657288), ('D_fake_val', 0.28256821632385254), ('KL_realB_fakeB_val', 0.4482027006700575)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.27034470438957214), ('G_L1_val', 4.686528205871582), ('D_real_val', 0.17524176836013794), ('D_fake_val', 0.3176819980144501), ('KL_realB_fakeB_val', 0.11871305541881963)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.25029298663139343), ('G_L1_val', 3.0594916343688965), ('D_real_val', 0.2022225707769394), ('D_fake_val', 0.32864251732826233), ('KL_realB_fakeB_val', 0.4582875473021596)])
+end of validation step
+End of epoch 22 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.31832537055015564), ('G_L1', 2.581339120864868), ('D_real', 0.309179425239563), ('D_fake', 0.20433734357357025), ('KL_realB_fakeB', 0.0987419476732087)])
+(epoch: 23, iters: 20, time: 0.076, data: 0.245) G_GAN: 0.318 G_L1: 2.581 D_real: 0.309 D_fake: 0.204 KL_realB_fakeB: 0.099 
+OrderedDict([('G_GAN_val', 0.20447085797786713), ('G_L1_val', 3.9807136058807373), ('D_real_val', 0.1839844435453415), ('D_fake_val', 0.467026025056839), ('KL_realB_fakeB_val', 0.6115328474528128)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3017958104610443), ('G_L1_val', 4.813945293426514), ('D_real_val', 0.2198716551065445), ('D_fake_val', 0.46199190616607666), ('KL_realB_fakeB_val', 0.9476327375087849)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.24056054651737213), ('G_L1_val', 3.014085292816162), ('D_real_val', 0.21250101923942566), ('D_fake_val', 0.46964240074157715), ('KL_realB_fakeB_val', 0.2017723556534528)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.23861972987651825), ('G_L1_val', 3.941525459289551), ('D_real_val', 0.22051839530467987), ('D_fake_val', 0.5135338306427002), ('KL_realB_fakeB_val', 0.14179895134825043)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.23456618189811707), ('G_L1_val', 6.319045066833496), ('D_real_val', 0.1868807077407837), ('D_fake_val', 0.684526264667511), ('KL_realB_fakeB_val', 1.1198479818246079)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.25098323822021484), ('G_L1_val', 5.883899211883545), ('D_real_val', 0.1848713755607605), ('D_fake_val', 0.47487887740135193), ('KL_realB_fakeB_val', 0.35980844939197437)])
+end of validation step
+End of epoch 23 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.3694584369659424), ('G_L1_val', 3.0321531295776367), ('D_real_val', 0.365029513835907), ('D_fake_val', 0.1719600111246109), ('KL_realB_fakeB_val', 0.10377963592241259)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3848293423652649), ('G_L1_val', 4.1519775390625), ('D_real_val', 0.4228620231151581), ('D_fake_val', 0.17951175570487976), ('KL_realB_fakeB_val', 0.15286773032465834)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4092445373535156), ('G_L1_val', 4.8775954246521), ('D_real_val', 0.3425649106502533), ('D_fake_val', 0.16407087445259094), ('KL_realB_fakeB_val', 0.16803888862312066)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2977839708328247), ('G_L1_val', 6.312551498413086), ('D_real_val', 0.3256596624851227), ('D_fake_val', 0.2628430426120758), ('KL_realB_fakeB_val', 0.09563463254871549)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4112643301486969), ('G_L1_val', 4.320703029632568), ('D_real_val', 0.3933488130569458), ('D_fake_val', 0.15336042642593384), ('KL_realB_fakeB_val', 0.09675616087875014)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.35913243889808655), ('G_L1_val', 2.9193413257598877), ('D_real_val', 0.3448905050754547), ('D_fake_val', 0.18624581396579742), ('KL_realB_fakeB_val', 0.13626534827110368)])
+end of validation step
+End of epoch 24 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.39001521468162537), ('G_L1', 3.134824275970459), ('D_real', 0.22899770736694336), ('D_fake', 0.3332423269748688), ('KL_realB_fakeB', 0.3140894479006781)])
+(epoch: 25, iters: 40, time: 0.076, data: 1.498) G_GAN: 0.390 G_L1: 3.135 D_real: 0.229 D_fake: 0.333 KL_realB_fakeB: 0.314 
+OrderedDict([('G_GAN_val', 0.43124228715896606), ('G_L1_val', 4.2761664390563965), ('D_real_val', 0.3952646851539612), ('D_fake_val', 0.16480278968811035), ('KL_realB_fakeB_val', 0.12606280915704374)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4658094644546509), ('G_L1_val', 3.0498406887054443), ('D_real_val', 0.35274645686149597), ('D_fake_val', 0.12046858668327332), ('KL_realB_fakeB_val', 0.14241702262916797)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5001969337463379), ('G_L1_val', 3.938328504562378), ('D_real_val', 0.38776713609695435), ('D_fake_val', 0.11930902302265167), ('KL_realB_fakeB_val', 0.08909747956819719)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3410758674144745), ('G_L1_val', 6.670721054077148), ('D_real_val', 0.3386151194572449), ('D_fake_val', 0.27917754650115967), ('KL_realB_fakeB_val', 0.10359537445262391)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.41209134459495544), ('G_L1_val', 3.102355480194092), ('D_real_val', 0.35752078890800476), ('D_fake_val', 0.15537090599536896), ('KL_realB_fakeB_val', 0.16480011456261714)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.45126909017562866), ('G_L1_val', 5.407617568969727), ('D_real_val', 0.33293646574020386), ('D_fake_val', 0.152062326669693), ('KL_realB_fakeB_val', 0.14315166513278432)])
+end of validation step
+saving the model at the end of epoch 25, iters 1000
+End of epoch 25 / 200 	 Time Taken: 12 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.24176989495754242), ('G_L1_val', 6.175176620483398), ('D_real_val', 0.22622591257095337), ('D_fake_val', 0.3063025176525116), ('KL_realB_fakeB_val', 0.15714044882409325)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.36091148853302), ('G_L1_val', 3.584343910217285), ('D_real_val', 0.2431582361459732), ('D_fake_val', 0.19471947848796844), ('KL_realB_fakeB_val', 0.10659861477034)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2967890799045563), ('G_L1_val', 3.0572166442871094), ('D_real_val', 0.22976410388946533), ('D_fake_val', 0.2606077194213867), ('KL_realB_fakeB_val', 0.09558705974474853)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.28670498728752136), ('G_L1_val', 2.519409418106079), ('D_real_val', 0.20032742619514465), ('D_fake_val', 0.2533646523952484), ('KL_realB_fakeB_val', 0.1443325409293135)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3112267553806305), ('G_L1_val', 4.841920852661133), ('D_real_val', 0.20773756504058838), ('D_fake_val', 0.24617739021778107), ('KL_realB_fakeB_val', 0.10919529836105599)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2658226191997528), ('G_L1_val', 2.652204751968384), ('D_real_val', 0.21241649985313416), ('D_fake_val', 0.28469911217689514), ('KL_realB_fakeB_val', 0.11068398529055515)])
+end of validation step
+End of epoch 26 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.45492497086524963), ('G_L1_val', 2.6882669925689697), ('D_real_val', 0.32142043113708496), ('D_fake_val', 0.16421431303024292), ('KL_realB_fakeB_val', 0.12262862851569092)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4915243983268738), ('G_L1_val', 3.769867181777954), ('D_real_val', 0.31501641869544983), ('D_fake_val', 0.1291103959083557), ('KL_realB_fakeB_val', 0.1133615455207147)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2416796088218689), ('G_L1_val', 6.035267353057861), ('D_real_val', 0.28039729595184326), ('D_fake_val', 0.2882828712463379), ('KL_realB_fakeB_val', 0.1178169613969883)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.43043363094329834), ('G_L1_val', 2.9250845909118652), ('D_real_val', 0.3514802157878876), ('D_fake_val', 0.15895536541938782), ('KL_realB_fakeB_val', 0.16331651711448986)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.45568469166755676), ('G_L1_val', 2.124326467514038), ('D_real_val', 0.3079030215740204), ('D_fake_val', 0.14109402894973755), ('KL_realB_fakeB_val', 0.10646878645157742)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.40730294585227966), ('G_L1_val', 5.253205299377441), ('D_real_val', 0.2777211368083954), ('D_fake_val', 0.19118337333202362), ('KL_realB_fakeB_val', 0.1113750750702396)])
+end of validation step
+End of epoch 27 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3847712576389313), ('G_L1', 2.5988972187042236), ('D_real', 0.1535259485244751), ('D_fake', 0.25566810369491577), ('KL_realB_fakeB', 0.08321921920196762)])
+(epoch: 28, iters: 20, time: 0.074, data: 0.337) G_GAN: 0.385 G_L1: 2.599 D_real: 0.154 D_fake: 0.256 KL_realB_fakeB: 0.083 
+OrderedDict([('G_GAN_val', 0.31535252928733826), ('G_L1_val', 2.5485894680023193), ('D_real_val', 0.2281010001897812), ('D_fake_val', 0.21178457140922546), ('KL_realB_fakeB_val', 0.1421601880014419)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3573026657104492), ('G_L1_val', 2.8571648597717285), ('D_real_val', 0.2482106238603592), ('D_fake_val', 0.2019275575876236), ('KL_realB_fakeB_val', 0.13922744835794215)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.371934711933136), ('G_L1_val', 3.6803629398345947), ('D_real_val', 0.23910824954509735), ('D_fake_val', 0.16996616125106812), ('KL_realB_fakeB_val', 0.08770366377421879)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2754654586315155), ('G_L1_val', 5.62177848815918), ('D_real_val', 0.23139876127243042), ('D_fake_val', 0.2521341145038605), ('KL_realB_fakeB_val', 0.09398101513647372)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3208344280719757), ('G_L1_val', 3.2425265312194824), ('D_real_val', 0.28741055727005005), ('D_fake_val', 0.2060050666332245), ('KL_realB_fakeB_val', 0.14481309171479462)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3371504843235016), ('G_L1_val', 5.8435211181640625), ('D_real_val', 0.21754954755306244), ('D_fake_val', 0.20130808651447296), ('KL_realB_fakeB_val', 0.17141620630473828)])
+end of validation step
+End of epoch 28 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.30359727144241333), ('G_L1_val', 2.6060900688171387), ('D_real_val', 0.2526211142539978), ('D_fake_val', 0.23037029802799225), ('KL_realB_fakeB_val', 0.09467356743249217)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3259817957878113), ('G_L1_val', 2.622262716293335), ('D_real_val', 0.2237882912158966), ('D_fake_val', 0.21268661320209503), ('KL_realB_fakeB_val', 0.2578784867251728)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.21328751742839813), ('G_L1_val', 6.699076175689697), ('D_real_val', 0.2331617921590805), ('D_fake_val', 0.3818686902523041), ('KL_realB_fakeB_val', 0.2882953592537773)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.317282110452652), ('G_L1_val', 4.801687717437744), ('D_real_val', 0.23486347496509552), ('D_fake_val', 0.22616872191429138), ('KL_realB_fakeB_val', 0.11231609805353959)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.35202014446258545), ('G_L1_val', 4.188390254974365), ('D_real_val', 0.258726567029953), ('D_fake_val', 0.20468221604824066), ('KL_realB_fakeB_val', 0.14346103962985618)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3137035667896271), ('G_L1_val', 3.0016846656799316), ('D_real_val', 0.2574470043182373), ('D_fake_val', 0.2620905339717865), ('KL_realB_fakeB_val', 0.08689595521739393)])
+end of validation step
+End of epoch 29 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.2964705526828766), ('G_L1', 2.4336163997650146), ('D_real', 0.243911013007164), ('D_fake', 0.27949661016464233), ('KL_realB_fakeB', 0.09476502275907808)])
+(epoch: 30, iters: 40, time: 0.995, data: 1.481) G_GAN: 0.296 G_L1: 2.434 D_real: 0.244 D_fake: 0.279 KL_realB_fakeB: 0.095 
+OrderedDict([('G_GAN_val', 0.33686700463294983), ('G_L1_val', 2.8298091888427734), ('D_real_val', 0.20920471847057343), ('D_fake_val', 0.24045105278491974), ('KL_realB_fakeB_val', 0.20191870348490154)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.344296395778656), ('G_L1_val', 3.500784158706665), ('D_real_val', 0.24925737082958221), ('D_fake_val', 0.24770325422286987), ('KL_realB_fakeB_val', 0.1120699699156249)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.19155170023441315), ('G_L1_val', 6.648372650146484), ('D_real_val', 0.21692053973674774), ('D_fake_val', 0.539608895778656), ('KL_realB_fakeB_val', 0.11114103958614029)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3171359598636627), ('G_L1_val', 3.046437978744507), ('D_real_val', 0.2665587365627289), ('D_fake_val', 0.24955907464027405), ('KL_realB_fakeB_val', 0.2215760974448216)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3239787817001343), ('G_L1_val', 2.3167855739593506), ('D_real_val', 0.22925132513046265), ('D_fake_val', 0.2366267740726471), ('KL_realB_fakeB_val', 0.13403743000878685)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3199842870235443), ('G_L1_val', 5.049901485443115), ('D_real_val', 0.1982530802488327), ('D_fake_val', 0.25296711921691895), ('KL_realB_fakeB_val', 0.18589579009425164)])
+end of validation step
+saving the model at the end of epoch 30, iters 1200
+End of epoch 30 / 200 	 Time Taken: 10 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.37729865312576294), ('G_L1_val', 2.890974760055542), ('D_real_val', 0.217138409614563), ('D_fake_val', 0.1711815446615219), ('KL_realB_fakeB_val', 0.18132410381485287)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.20728936791419983), ('G_L1_val', 6.139420509338379), ('D_real_val', 0.22468972206115723), ('D_fake_val', 0.35170817375183105), ('KL_realB_fakeB_val', 0.11925676320524105)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3984915614128113), ('G_L1_val', 3.668621063232422), ('D_real_val', 0.18824902176856995), ('D_fake_val', 0.1526210457086563), ('KL_realB_fakeB_val', 0.12127241312668852)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3523150384426117), ('G_L1_val', 2.22965145111084), ('D_real_val', 0.1627458930015564), ('D_fake_val', 0.1747809797525406), ('KL_realB_fakeB_val', 0.1285825067185698)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2798652648925781), ('G_L1_val', 2.7753095626831055), ('D_real_val', 0.15934011340141296), ('D_fake_val', 0.24312801659107208), ('KL_realB_fakeB_val', 0.21028670570120211)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.34035271406173706), ('G_L1_val', 5.989543437957764), ('D_real_val', 0.18323086202144623), ('D_fake_val', 0.19817160069942474), ('KL_realB_fakeB_val', 0.15056274857903013)])
+end of validation step
+End of epoch 31 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.23925553262233734), ('G_L1_val', 4.575910568237305), ('D_real_val', 0.12718753516674042), ('D_fake_val', 0.3492966890335083), ('KL_realB_fakeB_val', 0.24361966199551946)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.27906128764152527), ('G_L1_val', 3.6444902420043945), ('D_real_val', 0.10651601105928421), ('D_fake_val', 0.3020663261413574), ('KL_realB_fakeB_val', 0.14357902533778244)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.21817536652088165), ('G_L1_val', 3.315999984741211), ('D_real_val', 0.10429038107395172), ('D_fake_val', 0.4435029625892639), ('KL_realB_fakeB_val', 0.26706593910416926)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.28162622451782227), ('G_L1_val', 2.631927251815796), ('D_real_val', 0.1726921945810318), ('D_fake_val', 0.29752394556999207), ('KL_realB_fakeB_val', 0.23642629510854785)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.22352828085422516), ('G_L1_val', 2.208256244659424), ('D_real_val', 0.09949683398008347), ('D_fake_val', 0.3432871103286743), ('KL_realB_fakeB_val', 0.1482228251438686)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.10503565520048141), ('G_L1_val', 6.770611763000488), ('D_real_val', 0.14391350746154785), ('D_fake_val', 0.5832738280296326), ('KL_realB_fakeB_val', 0.1377726537000316)])
+end of validation step
+End of epoch 32 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.4220625162124634), ('G_L1', 2.9475183486938477), ('D_real', 0.2097158133983612), ('D_fake', 0.1341351568698883), ('KL_realB_fakeB', 0.4199824492794128)])
+(epoch: 33, iters: 20, time: 0.076, data: 0.084) G_GAN: 0.422 G_L1: 2.948 D_real: 0.210 D_fake: 0.134 KL_realB_fakeB: 0.420 
+OrderedDict([('G_GAN_val', 0.26945069432258606), ('G_L1_val', 2.61930513381958), ('D_real_val', 0.18243367969989777), ('D_fake_val', 0.2704692780971527), ('KL_realB_fakeB_val', 0.0788809441124247)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.23208492994308472), ('G_L1_val', 2.683924913406372), ('D_real_val', 0.13938237726688385), ('D_fake_val', 0.32674843072891235), ('KL_realB_fakeB_val', 0.15877725198930404)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.27922192215919495), ('G_L1_val', 5.3599653244018555), ('D_real_val', 0.18769226968288422), ('D_fake_val', 0.2759456932544708), ('KL_realB_fakeB_val', 0.10104303416894023)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.26680630445480347), ('G_L1_val', 3.641432523727417), ('D_real_val', 0.15055182576179504), ('D_fake_val', 0.27626901865005493), ('KL_realB_fakeB_val', 0.10829677980047889)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.28525030612945557), ('G_L1_val', 5.9986066818237305), ('D_real_val', 0.1958562582731247), ('D_fake_val', 0.2627870440483093), ('KL_realB_fakeB_val', 0.13905924301538858)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2527864873409271), ('G_L1_val', 2.030388593673706), ('D_real_val', 0.14444617927074432), ('D_fake_val', 0.2756257951259613), ('KL_realB_fakeB_val', 0.1096157805801964)])
+end of validation step
+End of epoch 33 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.20140260457992554), ('G_L1_val', 2.6947102546691895), ('D_real_val', 0.09141797572374344), ('D_fake_val', 0.35854119062423706), ('KL_realB_fakeB_val', 0.11948339164005248)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.29837310314178467), ('G_L1_val', 2.5730769634246826), ('D_real_val', 0.11103031784296036), ('D_fake_val', 0.24620111286640167), ('KL_realB_fakeB_val', 0.10776193439915951)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.20708973705768585), ('G_L1_val', 5.385415077209473), ('D_real_val', 0.08491164445877075), ('D_fake_val', 0.34321287274360657), ('KL_realB_fakeB_val', 0.11470105362076771)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2952407896518707), ('G_L1_val', 3.7276365756988525), ('D_real_val', 0.08463523536920547), ('D_fake_val', 0.23786331713199615), ('KL_realB_fakeB_val', 0.0879669103253499)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.31704774498939514), ('G_L1_val', 2.316337823867798), ('D_real_val', 0.08798380941152573), ('D_fake_val', 0.21260976791381836), ('KL_realB_fakeB_val', 0.1336535974086538)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.10353000462055206), ('G_L1_val', 5.99312686920166), ('D_real_val', 0.10785412788391113), ('D_fake_val', 0.5719974637031555), ('KL_realB_fakeB_val', 0.12626200083205458)])
+end of validation step
+End of epoch 34 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.6484193205833435), ('G_L1', 2.161926031112671), ('D_real', 0.025071434676647186), ('D_fake', 0.6586498022079468), ('KL_realB_fakeB', 0.07566304585186776)])
+(epoch: 35, iters: 40, time: 0.075, data: 1.548) G_GAN: 0.648 G_L1: 2.162 D_real: 0.025 D_fake: 0.659 KL_realB_fakeB: 0.076 
+OrderedDict([('G_GAN_val', 0.6545656323432922), ('G_L1_val', 3.1989006996154785), ('D_real_val', 0.5779397487640381), ('D_fake_val', 0.07065440714359283), ('KL_realB_fakeB_val', 0.1838214413336094)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5681361556053162), ('G_L1_val', 5.083195686340332), ('D_real_val', 0.40300196409225464), ('D_fake_val', 0.09732866287231445), ('KL_realB_fakeB_val', 0.11705179850579903)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.7698723077774048), ('G_L1_val', 2.2237465381622314), ('D_real_val', 0.5100671052932739), ('D_fake_val', 0.03030330128967762), ('KL_realB_fakeB_val', 0.09304546812798785)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.6278098225593567), ('G_L1_val', 2.3703365325927734), ('D_real_val', 0.4708090126514435), ('D_fake_val', 0.06640265882015228), ('KL_realB_fakeB_val', 0.08085120190456106)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.6704158782958984), ('G_L1_val', 3.6300153732299805), ('D_real_val', 0.44999226927757263), ('D_fake_val', 0.0537148155272007), ('KL_realB_fakeB_val', 0.1687217140477247)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3219612240791321), ('G_L1_val', 6.384588718414307), ('D_real_val', 0.4201478362083435), ('D_fake_val', 0.234762504696846), ('KL_realB_fakeB_val', 0.44263691673070393)])
+end of validation step
+saving the model at the end of epoch 35, iters 1400
+End of epoch 35 / 200 	 Time Taken: 10 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.3321923613548279), ('G_L1_val', 6.326410293579102), ('D_real_val', 0.15310418605804443), ('D_fake_val', 0.21102061867713928), ('KL_realB_fakeB_val', 0.19722776910297096)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.16951680183410645), ('G_L1_val', 2.553213119506836), ('D_real_val', 0.08034130930900574), ('D_fake_val', 0.3919970989227295), ('KL_realB_fakeB_val', 0.12221046314056919)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3377971947193146), ('G_L1_val', 2.574655771255493), ('D_real_val', 0.14168411493301392), ('D_fake_val', 0.2216518223285675), ('KL_realB_fakeB_val', 0.09957931028764738)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.31903308629989624), ('G_L1_val', 2.2465450763702393), ('D_real_val', 0.10175566375255585), ('D_fake_val', 0.22731800377368927), ('KL_realB_fakeB_val', 0.14910005600364437)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.1965123862028122), ('G_L1_val', 4.850752353668213), ('D_real_val', 0.09150336682796478), ('D_fake_val', 0.3727204203605652), ('KL_realB_fakeB_val', 0.1025893550893285)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3188619017601013), ('G_L1_val', 3.4271254539489746), ('D_real_val', 0.08797293156385422), ('D_fake_val', 0.22846584022045135), ('KL_realB_fakeB_val', 0.17672883148125335)])
+end of validation step
+End of epoch 36 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.5578633546829224), ('G_L1_val', 3.7413251399993896), ('D_real_val', 0.23912279307842255), ('D_fake_val', 0.12711909413337708), ('KL_realB_fakeB_val', 0.16619383162457704)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5073459148406982), ('G_L1_val', 2.808861494064331), ('D_real_val', 0.35464316606521606), ('D_fake_val', 0.15115994215011597), ('KL_realB_fakeB_val', 0.11474492294511193)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5542942881584167), ('G_L1_val', 2.762845039367676), ('D_real_val', 0.2943425178527832), ('D_fake_val', 0.10585259646177292), ('KL_realB_fakeB_val', 0.22935027088912768)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4634535014629364), ('G_L1_val', 6.564956188201904), ('D_real_val', 0.3755623400211334), ('D_fake_val', 0.14953695237636566), ('KL_realB_fakeB_val', 0.4862075109106265)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.37161722779273987), ('G_L1_val', 6.40632438659668), ('D_real_val', 0.29783082008361816), ('D_fake_val', 0.2237161248922348), ('KL_realB_fakeB_val', 0.145180687499264)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4604235291481018), ('G_L1_val', 2.980323076248169), ('D_real_val', 0.23993028700351715), ('D_fake_val', 0.22975724935531616), ('KL_realB_fakeB_val', 0.0863749768935054)])
+end of validation step
+End of epoch 37 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.33703312277793884), ('G_L1', 2.800652027130127), ('D_real', 0.09716907143592834), ('D_fake', 0.6671827435493469), ('KL_realB_fakeB', 0.5256816252084675)])
+(epoch: 38, iters: 20, time: 0.076, data: 0.413) G_GAN: 0.337 G_L1: 2.801 D_real: 0.097 D_fake: 0.667 KL_realB_fakeB: 0.526 
+OrderedDict([('G_GAN_val', 0.29606860876083374), ('G_L1_val', 4.668716907501221), ('D_real_val', 0.17618055641651154), ('D_fake_val', 0.2737005054950714), ('KL_realB_fakeB_val', 0.10833306730749503)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3943046033382416), ('G_L1_val', 3.604849338531494), ('D_real_val', 0.15244463086128235), ('D_fake_val', 0.18215519189834595), ('KL_realB_fakeB_val', 0.1307293788718889)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.31825771927833557), ('G_L1_val', 2.828411340713501), ('D_real_val', 0.19433289766311646), ('D_fake_val', 0.25556814670562744), ('KL_realB_fakeB_val', 0.11681072763008832)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.42199668288230896), ('G_L1_val', 3.7293167114257812), ('D_real_val', 0.24968363344669342), ('D_fake_val', 0.1783871352672577), ('KL_realB_fakeB_val', 0.11828397423638043)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.13157804310321808), ('G_L1_val', 6.246917724609375), ('D_real_val', 0.23004032671451569), ('D_fake_val', 0.4396193325519562), ('KL_realB_fakeB_val', 0.2831374884631196)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3854452669620514), ('G_L1_val', 2.187514305114746), ('D_real_val', 0.19653744995594025), ('D_fake_val', 0.1758231669664383), ('KL_realB_fakeB_val', 0.10830039528646973)])
+end of validation step
+End of epoch 38 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.5068573355674744), ('G_L1_val', 3.1469802856445312), ('D_real_val', 0.362555593252182), ('D_fake_val', 0.22122341394424438), ('KL_realB_fakeB_val', 0.15519100679690337)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3885035514831543), ('G_L1_val', 5.664974212646484), ('D_real_val', 0.3006625771522522), ('D_fake_val', 0.2714356482028961), ('KL_realB_fakeB_val', 0.12688688490041403)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5597642064094543), ('G_L1_val', 2.6592020988464355), ('D_real_val', 0.38315850496292114), ('D_fake_val', 0.2067319005727768), ('KL_realB_fakeB_val', 0.13076345166658193)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5867229700088501), ('G_L1_val', 3.838176965713501), ('D_real_val', 0.321015864610672), ('D_fake_val', 0.17409774661064148), ('KL_realB_fakeB_val', 0.09979218479686655)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5047979950904846), ('G_L1_val', 3.386583089828491), ('D_real_val', 0.41386470198631287), ('D_fake_val', 0.3211642801761627), ('KL_realB_fakeB_val', 0.13091097694991652)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.40435123443603516), ('G_L1_val', 5.908551216125488), ('D_real_val', 0.3530418872833252), ('D_fake_val', 0.26334822177886963), ('KL_realB_fakeB_val', 0.11217649503137568)])
+end of validation step
+End of epoch 39 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.34436240792274475), ('G_L1', 2.27555775642395), ('D_real', 0.1995454579591751), ('D_fake', 0.19504684209823608), ('KL_realB_fakeB', 0.07964859800500121)])
+(epoch: 40, iters: 40, time: 0.602, data: 1.486) G_GAN: 0.344 G_L1: 2.276 D_real: 0.200 D_fake: 0.195 KL_realB_fakeB: 0.080 
+OrderedDict([('G_GAN_val', 0.2489635944366455), ('G_L1_val', 4.965267181396484), ('D_real_val', 0.1416633278131485), ('D_fake_val', 0.28103289008140564), ('KL_realB_fakeB_val', 0.1411491846422656)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3290216028690338), ('G_L1_val', 3.415544271469116), ('D_real_val', 0.13370084762573242), ('D_fake_val', 0.19843685626983643), ('KL_realB_fakeB_val', 0.13544659939282513)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.11678969115018845), ('G_L1_val', 6.089638710021973), ('D_real_val', 0.1606479287147522), ('D_fake_val', 0.4926568269729614), ('KL_realB_fakeB_val', 0.10375162467798393)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3630106747150421), ('G_L1_val', 2.197927951812744), ('D_real_val', 0.1527978479862213), ('D_fake_val', 0.17708732187747955), ('KL_realB_fakeB_val', 0.14110768340107982)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2751566171646118), ('G_L1_val', 2.86012601852417), ('D_real_val', 0.14471998810768127), ('D_fake_val', 0.2617218792438507), ('KL_realB_fakeB_val', 0.12852761213588942)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.33593514561653137), ('G_L1_val', 2.655724287033081), ('D_real_val', 0.16400058567523956), ('D_fake_val', 0.1961965709924698), ('KL_realB_fakeB_val', 0.12842818898900518)])
+end of validation step
+saving the model at the end of epoch 40, iters 1600
+End of epoch 40 / 200 	 Time Taken: 10 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.3779658377170563), ('G_L1_val', 2.0501277446746826), ('D_real_val', 0.2430332899093628), ('D_fake_val', 0.16490384936332703), ('KL_realB_fakeB_val', 0.11110150416162395)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3519808351993561), ('G_L1_val', 3.62776780128479), ('D_real_val', 0.22635158896446228), ('D_fake_val', 0.1894494742155075), ('KL_realB_fakeB_val', 0.13550198998321175)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.32388439774513245), ('G_L1_val', 4.8694634437561035), ('D_real_val', 0.2691092789173126), ('D_fake_val', 0.21844065189361572), ('KL_realB_fakeB_val', 0.10809235649468635)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3329859972000122), ('G_L1_val', 2.889890670776367), ('D_real_val', 0.24009406566619873), ('D_fake_val', 0.22214457392692566), ('KL_realB_fakeB_val', 0.1439993286705727)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3968113958835602), ('G_L1_val', 2.464902400970459), ('D_real_val', 0.30737245082855225), ('D_fake_val', 0.16138271987438202), ('KL_realB_fakeB_val', 0.10689488355655974)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.33619141578674316), ('G_L1_val', 5.7999491691589355), ('D_real_val', 0.2936757206916809), ('D_fake_val', 0.2005895972251892), ('KL_realB_fakeB_val', 0.2525070580539744)])
+end of validation step
+End of epoch 41 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.5408711433410645), ('G_L1_val', 6.104081153869629), ('D_real_val', 0.39242833852767944), ('D_fake_val', 0.3112812340259552), ('KL_realB_fakeB_val', 0.1034089437150155)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5422231554985046), ('G_L1_val', 2.807410717010498), ('D_real_val', 0.36833077669143677), ('D_fake_val', 0.21424710750579834), ('KL_realB_fakeB_val', 0.11874892743991261)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5922094583511353), ('G_L1_val', 2.3429737091064453), ('D_real_val', 0.4185393750667572), ('D_fake_val', 0.19424226880073547), ('KL_realB_fakeB_val', 0.12298985325466534)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.6198123693466187), ('G_L1_val', 3.795100450515747), ('D_real_val', 0.43268635869026184), ('D_fake_val', 0.22085539996623993), ('KL_realB_fakeB_val', 0.22438655170313213)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2803823947906494), ('G_L1_val', 6.197444915771484), ('D_real_val', 0.3771602511405945), ('D_fake_val', 0.425295889377594), ('KL_realB_fakeB_val', 0.19024965536566)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5402122139930725), ('G_L1_val', 3.2420058250427246), ('D_real_val', 0.44631922245025635), ('D_fake_val', 0.22023151814937592), ('KL_realB_fakeB_val', 0.14507082977869562)])
+end of validation step
+End of epoch 42 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.42550742626190186), ('G_L1', 2.3786470890045166), ('D_real', 0.0972367376089096), ('D_fake', 0.23635071516036987), ('KL_realB_fakeB', 0.5747274803776434)])
+(epoch: 43, iters: 20, time: 0.076, data: 0.434) G_GAN: 0.426 G_L1: 2.379 D_real: 0.097 D_fake: 0.236 KL_realB_fakeB: 0.575 
+OrderedDict([('G_GAN_val', 0.15491250157356262), ('G_L1_val', 4.474242687225342), ('D_real_val', 0.10337895154953003), ('D_fake_val', 0.42703574895858765), ('KL_realB_fakeB_val', 0.12954459656627074)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2079089879989624), ('G_L1_val', 3.739393472671509), ('D_real_val', 0.11311924457550049), ('D_fake_val', 0.34030693769454956), ('KL_realB_fakeB_val', 0.09550968995468073)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.34337085485458374), ('G_L1_val', 2.0881452560424805), ('D_real_val', 0.12715166807174683), ('D_fake_val', 0.21041840314865112), ('KL_realB_fakeB_val', 0.16054128080675117)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.09791727364063263), ('G_L1_val', 6.364074230194092), ('D_real_val', 0.1341543048620224), ('D_fake_val', 0.6300826072692871), ('KL_realB_fakeB_val', 0.10511042348984881)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2660251259803772), ('G_L1_val', 2.3696353435516357), ('D_real_val', 0.12885478138923645), ('D_fake_val', 0.2900643050670624), ('KL_realB_fakeB_val', 0.11687883324995921)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2739242911338806), ('G_L1_val', 2.422851324081421), ('D_real_val', 0.1283290684223175), ('D_fake_val', 0.27626925706863403), ('KL_realB_fakeB_val', 0.09220071022600465)])
+end of validation step
+End of epoch 43 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.34100407361984253), ('G_L1_val', 2.97139048576355), ('D_real_val', 0.2208119034767151), ('D_fake_val', 0.24811793863773346), ('KL_realB_fakeB_val', 0.14402326668048157)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.38464561104774475), ('G_L1_val', 2.6195759773254395), ('D_real_val', 0.1936998814344406), ('D_fake_val', 0.20688627660274506), ('KL_realB_fakeB_val', 0.28050829767386715)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.11615635454654694), ('G_L1_val', 6.0503315925598145), ('D_real_val', 0.17845198512077332), ('D_fake_val', 0.5136191844940186), ('KL_realB_fakeB_val', 0.3267025188300885)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3312930464744568), ('G_L1_val', 3.4934468269348145), ('D_real_val', 0.1511462777853012), ('D_fake_val', 0.23068583011627197), ('KL_realB_fakeB_val', 0.5211057295774055)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2736414074897766), ('G_L1_val', 3.231754779815674), ('D_real_val', 0.1503787338733673), ('D_fake_val', 0.2745564579963684), ('KL_realB_fakeB_val', 0.08728120253404895)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2590824365615845), ('G_L1_val', 4.812970161437988), ('D_real_val', 0.15712463855743408), ('D_fake_val', 0.3121497333049774), ('KL_realB_fakeB_val', 0.11211527922108946)])
+end of validation step
+End of epoch 44 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.2251536250114441), ('G_L1', 2.1015357971191406), ('D_real', 0.48777249455451965), ('D_fake', 0.06994125247001648), ('KL_realB_fakeB', 0.10921305374416627)])
+(epoch: 45, iters: 40, time: 0.077, data: 1.493) G_GAN: 0.225 G_L1: 2.102 D_real: 0.488 D_fake: 0.070 KL_realB_fakeB: 0.109 
+OrderedDict([('G_GAN_val', 0.3478420674800873), ('G_L1_val', 3.2659740447998047), ('D_real_val', 0.19647690653800964), ('D_fake_val', 0.19397316873073578), ('KL_realB_fakeB_val', 0.1834276643300782)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.29289889335632324), ('G_L1_val', 2.5791752338409424), ('D_real_val', 0.21976254880428314), ('D_fake_val', 0.23282475769519806), ('KL_realB_fakeB_val', 0.12800648997641256)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3308863043785095), ('G_L1_val', 1.981245756149292), ('D_real_val', 0.22523032128810883), ('D_fake_val', 0.20630504190921783), ('KL_realB_fakeB_val', 0.11918238507784364)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.14030121266841888), ('G_L1_val', 6.105440139770508), ('D_real_val', 0.20122544467449188), ('D_fake_val', 0.4517562687397003), ('KL_realB_fakeB_val', 0.12200373382289477)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2770557999610901), ('G_L1_val', 3.0364952087402344), ('D_real_val', 0.19073177874088287), ('D_fake_val', 0.2576059401035309), ('KL_realB_fakeB_val', 0.136825235009281)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.22777357697486877), ('G_L1_val', 4.441769123077393), ('D_real_val', 0.1522640734910965), ('D_fake_val', 0.30659452080726624), ('KL_realB_fakeB_val', 0.11032408441722168)])
+end of validation step
+saving the model at the end of epoch 45, iters 1800
+End of epoch 45 / 200 	 Time Taken: 12 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.10800213366746902), ('G_L1_val', 2.6869633197784424), ('D_real_val', 0.07979580760002136), ('D_fake_val', 0.5074639320373535), ('KL_realB_fakeB_val', 0.13084332399815468)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.14568866789340973), ('G_L1_val', 3.428388833999634), ('D_real_val', 0.11153820902109146), ('D_fake_val', 0.4217917323112488), ('KL_realB_fakeB_val', 0.20168246071498525)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.10640060156583786), ('G_L1_val', 4.425407409667969), ('D_real_val', 0.07252612709999084), ('D_fake_val', 0.5311386585235596), ('KL_realB_fakeB_val', 0.1294252270177566)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.12248720228672028), ('G_L1_val', 2.396465539932251), ('D_real_val', 0.08310747146606445), ('D_fake_val', 0.4504050016403198), ('KL_realB_fakeB_val', 0.11307797002730623)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.03737402707338333), ('G_L1_val', 6.050239086151123), ('D_real_val', 0.07089067995548248), ('D_fake_val', 0.7809733152389526), ('KL_realB_fakeB_val', 0.2466629504550536)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.11722375452518463), ('G_L1_val', 3.7335894107818604), ('D_real_val', 0.08310730010271072), ('D_fake_val', 0.4928770661354065), ('KL_realB_fakeB_val', 0.0843112915413187)])
+end of validation step
+End of epoch 46 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.3354107141494751), ('G_L1_val', 4.059220314025879), ('D_real_val', 0.2571829855442047), ('D_fake_val', 0.19817261397838593), ('KL_realB_fakeB_val', 0.11051445883106883)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.16193684935569763), ('G_L1_val', 6.352025985717773), ('D_real_val', 0.31709563732147217), ('D_fake_val', 0.3823991119861603), ('KL_realB_fakeB_val', 0.1896499636072374)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3393867313861847), ('G_L1_val', 3.6858856678009033), ('D_real_val', 0.30517029762268066), ('D_fake_val', 0.19787466526031494), ('KL_realB_fakeB_val', 0.1151037423266614)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4578312039375305), ('G_L1_val', 2.8245365619659424), ('D_real_val', 0.3548090159893036), ('D_fake_val', 0.12034032493829727), ('KL_realB_fakeB_val', 0.17678999001851003)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4219527542591095), ('G_L1_val', 2.2156310081481934), ('D_real_val', 0.3231070935726166), ('D_fake_val', 0.13372386991977692), ('KL_realB_fakeB_val', 0.12674680001669675)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4563109874725342), ('G_L1_val', 1.9257372617721558), ('D_real_val', 0.31604132056236267), ('D_fake_val', 0.11253306269645691), ('KL_realB_fakeB_val', 0.07696901661424904)])
+end of validation step
+End of epoch 47 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.30861955881118774), ('G_L1', 2.0400707721710205), ('D_real', 0.33133551478385925), ('D_fake', 0.24811041355133057), ('KL_realB_fakeB', 0.06603672173699622)])
+(epoch: 48, iters: 20, time: 0.074, data: 0.422) G_GAN: 0.309 G_L1: 2.040 D_real: 0.331 D_fake: 0.248 KL_realB_fakeB: 0.066 
+OrderedDict([('G_GAN_val', 0.07291366159915924), ('G_L1_val', 5.687421798706055), ('D_real_val', 0.06862425059080124), ('D_fake_val', 0.6812136173248291), ('KL_realB_fakeB_val', 0.911126405131371)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.05618145689368248), ('G_L1_val', 2.7732973098754883), ('D_real_val', 0.03110060654580593), ('D_fake_val', 0.6964890956878662), ('KL_realB_fakeB_val', 0.11358505250953091)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.09464579820632935), ('G_L1_val', 2.797759771347046), ('D_real_val', 0.02870318666100502), ('D_fake_val', 0.5672609806060791), ('KL_realB_fakeB_val', 0.7178386308256033)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.11801306903362274), ('G_L1_val', 4.056783676147461), ('D_real_val', 0.04569587484002113), ('D_fake_val', 0.5528607964515686), ('KL_realB_fakeB_val', 0.8834271629246788)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.13466621935367584), ('G_L1_val', 2.694603443145752), ('D_real_val', 0.0886872410774231), ('D_fake_val', 0.5630589127540588), ('KL_realB_fakeB_val', 0.26948466187706976)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.08269870281219482), ('G_L1_val', 5.479159355163574), ('D_real_val', 0.05125579237937927), ('D_fake_val', 0.7475899457931519), ('KL_realB_fakeB_val', 0.41927856372512035)])
+end of validation step
+End of epoch 48 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.3823603689670563), ('G_L1_val', 5.002289772033691), ('D_real_val', 0.257045179605484), ('D_fake_val', 0.3510454297065735), ('KL_realB_fakeB_val', 0.10315730181095648)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.46707603335380554), ('G_L1_val', 1.9526654481887817), ('D_real_val', 0.2519795894622803), ('D_fake_val', 0.25868213176727295), ('KL_realB_fakeB_val', 0.12375191186849288)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.21296532452106476), ('G_L1_val', 5.686488628387451), ('D_real_val', 0.28491470217704773), ('D_fake_val', 0.49989408254623413), ('KL_realB_fakeB_val', 0.10889143633098389)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4144907593727112), ('G_L1_val', 3.4236032962799072), ('D_real_val', 0.22593845427036285), ('D_fake_val', 0.28273457288742065), ('KL_realB_fakeB_val', 0.13386160652929377)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3637302815914154), ('G_L1_val', 2.6071488857269287), ('D_real_val', 0.2700532078742981), ('D_fake_val', 0.38701316714286804), ('KL_realB_fakeB_val', 0.13688876837886996)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5017571449279785), ('G_L1_val', 2.544741630554199), ('D_real_val', 0.36085444688796997), ('D_fake_val', 0.24776636064052582), ('KL_realB_fakeB_val', 0.13078296053799493)])
+end of validation step
+End of epoch 49 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.5965272784233093), ('G_L1', 2.1405160427093506), ('D_real', 0.10551093518733978), ('D_fake', 0.23162949085235596), ('KL_realB_fakeB', 0.07843991478135964)])
+(epoch: 50, iters: 40, time: 0.678, data: 1.358) G_GAN: 0.597 G_L1: 2.141 D_real: 0.106 D_fake: 0.232 KL_realB_fakeB: 0.078 
+OrderedDict([('G_GAN_val', 0.5235911011695862), ('G_L1_val', 2.812433958053589), ('D_real_val', 0.4131724238395691), ('D_fake_val', 0.09448453783988953), ('KL_realB_fakeB_val', 0.27241209844654335)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.7397743463516235), ('G_L1_val', 2.5274877548217773), ('D_real_val', 0.4235561788082123), ('D_fake_val', 0.04175292328000069), ('KL_realB_fakeB_val', 0.16380221408388065)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.27746784687042236), ('G_L1_val', 5.706197738647461), ('D_real_val', 0.35294535756111145), ('D_fake_val', 0.25574442744255066), ('KL_realB_fakeB_val', 0.09572532881379142)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5401695370674133), ('G_L1_val', 3.7616841793060303), ('D_real_val', 0.36205849051475525), ('D_fake_val', 0.09822101145982742), ('KL_realB_fakeB_val', 0.25577760024032237)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.6332876682281494), ('G_L1_val', 4.206416606903076), ('D_real_val', 0.31571608781814575), ('D_fake_val', 0.07334403693675995), ('KL_realB_fakeB_val', 0.146241817031774)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.39919835329055786), ('G_L1_val', 4.681093215942383), ('D_real_val', 0.22474773228168488), ('D_fake_val', 0.1728316992521286), ('KL_realB_fakeB_val', 0.216062249417872)])
+end of validation step
+saving the model at the end of epoch 50, iters 2000
+End of epoch 50 / 200 	 Time Taken: 11 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.22824934124946594), ('G_L1_val', 5.301390647888184), ('D_real_val', 0.12956222891807556), ('D_fake_val', 0.5031386017799377), ('KL_realB_fakeB_val', 0.12237643365528453)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.09804845601320267), ('G_L1_val', 6.255523681640625), ('D_real_val', 0.1359000951051712), ('D_fake_val', 0.6629015803337097), ('KL_realB_fakeB_val', 0.3007284832177396)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3925766050815582), ('G_L1_val', 2.2137722969055176), ('D_real_val', 0.18332339823246002), ('D_fake_val', 0.24720056354999542), ('KL_realB_fakeB_val', 0.1278704597146414)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.37802135944366455), ('G_L1_val', 2.3676555156707764), ('D_real_val', 0.21767671406269073), ('D_fake_val', 0.27199289202690125), ('KL_realB_fakeB_val', 0.10415948941947101)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.2702068090438843), ('G_L1_val', 2.9298667907714844), ('D_real_val', 0.2039380669593811), ('D_fake_val', 0.38843628764152527), ('KL_realB_fakeB_val', 0.14108442627183576)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.27765631675720215), ('G_L1_val', 3.5888843536376953), ('D_real_val', 0.14926062524318695), ('D_fake_val', 0.3542932868003845), ('KL_realB_fakeB_val', 0.1760332342588523)])
+end of validation step
+End of epoch 51 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.39382559061050415), ('G_L1_val', 1.8646727800369263), ('D_real_val', 0.20433159172534943), ('D_fake_val', 0.17448818683624268), ('KL_realB_fakeB_val', 0.11548820424871786)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.28082042932510376), ('G_L1_val', 4.345370292663574), ('D_real_val', 0.14985054731369019), ('D_fake_val', 0.25133341550827026), ('KL_realB_fakeB_val', 0.10472961882144904)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.22021172940731049), ('G_L1_val', 6.057172775268555), ('D_real_val', 0.19451141357421875), ('D_fake_val', 0.29975593090057373), ('KL_realB_fakeB_val', 0.19544509363538845)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3247224986553192), ('G_L1_val', 2.3962790966033936), ('D_real_val', 0.1992274671792984), ('D_fake_val', 0.20372791588306427), ('KL_realB_fakeB_val', 0.1442689657218313)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3089807629585266), ('G_L1_val', 2.6043195724487305), ('D_real_val', 0.20382453501224518), ('D_fake_val', 0.2399105280637741), ('KL_realB_fakeB_val', 0.14022901859817133)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3458002507686615), ('G_L1_val', 3.5557072162628174), ('D_real_val', 0.18796171247959137), ('D_fake_val', 0.19128303229808807), ('KL_realB_fakeB_val', 0.16429311447104591)])
+end of validation step
+End of epoch 52 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.4772108793258667), ('G_L1', 1.7119672298431396), ('D_real', 0.18684177100658417), ('D_fake', 0.19941790401935577), ('KL_realB_fakeB', 0.09918933668023709)])
+(epoch: 53, iters: 20, time: 0.075, data: 0.102) G_GAN: 0.477 G_L1: 1.712 D_real: 0.187 D_fake: 0.199 KL_realB_fakeB: 0.099 
+OrderedDict([('G_GAN_val', 0.1339128166437149), ('G_L1_val', 4.102993011474609), ('D_real_val', 0.05206495523452759), ('D_fake_val', 0.4639226198196411), ('KL_realB_fakeB_val', 0.15432688208825088)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.18994444608688354), ('G_L1_val', 2.9880876541137695), ('D_real_val', 0.08355943858623505), ('D_fake_val', 0.36367103457450867), ('KL_realB_fakeB_val', 0.1971695825902165)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.19696840643882751), ('G_L1_val', 3.6529734134674072), ('D_real_val', 0.07045561820268631), ('D_fake_val', 0.3487960696220398), ('KL_realB_fakeB_val', 0.09504213255476114)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3207625448703766), ('G_L1_val', 2.037764310836792), ('D_real_val', 0.11225327104330063), ('D_fake_val', 0.2123994380235672), ('KL_realB_fakeB_val', 0.10119443395607168)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.059971656650304794), ('G_L1_val', 6.099076271057129), ('D_real_val', 0.08585596829652786), ('D_fake_val', 0.6775263547897339), ('KL_realB_fakeB_val', 0.1286336382168218)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.25113385915756226), ('G_L1_val', 2.2888681888580322), ('D_real_val', 0.169707253575325), ('D_fake_val', 0.27937108278274536), ('KL_realB_fakeB_val', 0.1711683330020966)])
+end of validation step
+End of epoch 53 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.6178013682365417), ('G_L1_val', 3.782977819442749), ('D_real_val', 0.2924286723136902), ('D_fake_val', 0.06864216178655624), ('KL_realB_fakeB_val', 0.25089371594902227)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.28254207968711853), ('G_L1_val', 4.837516784667969), ('D_real_val', 0.16772358119487762), ('D_fake_val', 0.2710427939891815), ('KL_realB_fakeB_val', 0.11443788931746052)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.6459113359451294), ('G_L1_val', 2.3814103603363037), ('D_real_val', 0.529843807220459), ('D_fake_val', 0.06892481446266174), ('KL_realB_fakeB_val', 0.11997673264377334)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.7768465280532837), ('G_L1_val', 2.1671950817108154), ('D_real_val', 0.4217130243778229), ('D_fake_val', 0.02907223254442215), ('KL_realB_fakeB_val', 0.11794761645951864)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3681716024875641), ('G_L1_val', 6.129409313201904), ('D_real_val', 0.24631400406360626), ('D_fake_val', 0.1858360916376114), ('KL_realB_fakeB_val', 0.26848662462850376)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5404706001281738), ('G_L1_val', 3.0011675357818604), ('D_real_val', 0.38957926630973816), ('D_fake_val', 0.10619378834962845), ('KL_realB_fakeB_val', 0.14712639649147885)])
+end of validation step
+End of epoch 54 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.8070464730262756), ('G_L1', 1.7666988372802734), ('D_real', 0.03482655808329582), ('D_fake', 0.5521687865257263), ('KL_realB_fakeB', 0.08469539942054864)])
+(epoch: 55, iters: 40, time: 0.075, data: 1.610) G_GAN: 0.807 G_L1: 1.767 D_real: 0.035 D_fake: 0.552 KL_realB_fakeB: 0.085 
+OrderedDict([('G_GAN_val', 0.585174560546875), ('G_L1_val', 3.721118688583374), ('D_real_val', 0.39126262068748474), ('D_fake_val', 0.07348907738924026), ('KL_realB_fakeB_val', 0.07791199487862763)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.6182804107666016), ('G_L1_val', 2.8273394107818604), ('D_real_val', 0.4545363485813141), ('D_fake_val', 0.06016622111201286), ('KL_realB_fakeB_val', 0.18455768374865889)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4550749361515045), ('G_L1_val', 4.060177326202393), ('D_real_val', 0.25681447982788086), ('D_fake_val', 0.128579780459404), ('KL_realB_fakeB_val', 0.13542870376584001)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.24167492985725403), ('G_L1_val', 6.327605247497559), ('D_real_val', 0.3658343553543091), ('D_fake_val', 0.2916373014450073), ('KL_realB_fakeB_val', 0.414373904987288)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.7455005049705505), ('G_L1_val', 1.880832552909851), ('D_real_val', 0.4105255901813507), ('D_fake_val', 0.03127441182732582), ('KL_realB_fakeB_val', 0.09304055311589532)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5900391936302185), ('G_L1_val', 2.3395891189575195), ('D_real_val', 0.4492000341415405), ('D_fake_val', 0.06599895656108856), ('KL_realB_fakeB_val', 0.12215863024915516)])
+end of validation step
+saving the model at the end of epoch 55, iters 2200
+End of epoch 55 / 200 	 Time Taken: 10 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.2997509241104126), ('G_L1_val', 3.6321029663085938), ('D_real_val', 0.2440374791622162), ('D_fake_val', 0.26738113164901733), ('KL_realB_fakeB_val', 0.12531498214122055)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3139733672142029), ('G_L1_val', 2.5055222511291504), ('D_real_val', 0.2759481966495514), ('D_fake_val', 0.239340141415596), ('KL_realB_fakeB_val', 0.12411985821754545)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.33358240127563477), ('G_L1_val', 2.9940009117126465), ('D_real_val', 0.30084070563316345), ('D_fake_val', 0.222212016582489), ('KL_realB_fakeB_val', 0.14506728073098257)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.24913614988327026), ('G_L1_val', 6.039631366729736), ('D_real_val', 0.22057034075260162), ('D_fake_val', 0.3095631003379822), ('KL_realB_fakeB_val', 0.4040481817956627)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.292642205953598), ('G_L1_val', 4.510919570922852), ('D_real_val', 0.2047550529241562), ('D_fake_val', 0.27997586131095886), ('KL_realB_fakeB_val', 0.0947619118487974)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.32446053624153137), ('G_L1_val', 2.024742603302002), ('D_real_val', 0.24817657470703125), ('D_fake_val', 0.22453030943870544), ('KL_realB_fakeB_val', 0.11998988429965697)])
+end of validation step
+End of epoch 56 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.19462236762046814), ('G_L1_val', 6.415860176086426), ('D_real_val', 0.16660882532596588), ('D_fake_val', 0.37616127729415894), ('KL_realB_fakeB_val', 0.15477562768464498)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3166607618331909), ('G_L1_val', 4.781946659088135), ('D_real_val', 0.1149982139468193), ('D_fake_val', 0.2470618635416031), ('KL_realB_fakeB_val', 0.10486297283957527)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4903183877468109), ('G_L1_val', 2.523899793624878), ('D_real_val', 0.3083439767360687), ('D_fake_val', 0.1347416490316391), ('KL_realB_fakeB_val', 0.09825534789057842)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.6531537175178528), ('G_L1_val', 1.7362920045852661), ('D_real_val', 0.32596269249916077), ('D_fake_val', 0.08179394155740738), ('KL_realB_fakeB_val', 0.09145043777373346)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.48627158999443054), ('G_L1_val', 2.7036781311035156), ('D_real_val', 0.3056137263774872), ('D_fake_val', 0.14150476455688477), ('KL_realB_fakeB_val', 0.22425346324164178)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4068818688392639), ('G_L1_val', 3.5373032093048096), ('D_real_val', 0.19170916080474854), ('D_fake_val', 0.1779668778181076), ('KL_realB_fakeB_val', 0.08428305854065743)])
+end of validation step
+End of epoch 57 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.4252694845199585), ('G_L1', 1.9733264446258545), ('D_real', 0.1949225813150406), ('D_fake', 0.2177325040102005), ('KL_realB_fakeB', 0.10406432300665557)])
+(epoch: 58, iters: 20, time: 0.076, data: 0.602) G_GAN: 0.425 G_L1: 1.973 D_real: 0.195 D_fake: 0.218 KL_realB_fakeB: 0.104 
+OrderedDict([('G_GAN_val', 0.1872357875108719), ('G_L1_val', 2.8305962085723877), ('D_real_val', 0.11923976242542267), ('D_fake_val', 0.36847296357154846), ('KL_realB_fakeB_val', 0.11196479815895805)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.11218944191932678), ('G_L1_val', 5.622611999511719), ('D_real_val', 0.04681228846311569), ('D_fake_val', 0.5040661692619324), ('KL_realB_fakeB_val', 0.2081648209942613)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.04724384844303131), ('G_L1_val', 4.304584980010986), ('D_real_val', 0.029394900426268578), ('D_fake_val', 0.7407281398773193), ('KL_realB_fakeB_val', 0.12807537438759944)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.1497957408428192), ('G_L1_val', 3.2420411109924316), ('D_real_val', 0.046120043843984604), ('D_fake_val', 0.4267704486846924), ('KL_realB_fakeB_val', 0.11381982763422775)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.22958452999591827), ('G_L1_val', 2.8222835063934326), ('D_real_val', 0.14953219890594482), ('D_fake_val', 0.3167837858200073), ('KL_realB_fakeB_val', 0.11203995375400179)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.28815707564353943), ('G_L1_val', 2.2968568801879883), ('D_real_val', 0.088386669754982), ('D_fake_val', 0.23114432394504547), ('KL_realB_fakeB_val', 0.1516652033128822)])
+end of validation step
+End of epoch 58 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 0.37716084718704224), ('G_L1_val', 2.424004316329956), ('D_real_val', 0.29804396629333496), ('D_fake_val', 0.17829790711402893), ('KL_realB_fakeB_val', 0.09432155874759646)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.18183685839176178), ('G_L1_val', 7.120078086853027), ('D_real_val', 0.22943635284900665), ('D_fake_val', 0.415417343378067), ('KL_realB_fakeB_val', 0.29228365130501466)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.31914830207824707), ('G_L1_val', 2.3620944023132324), ('D_real_val', 0.2715986669063568), ('D_fake_val', 0.22727011144161224), ('KL_realB_fakeB_val', 0.10813488008305899)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.21586474776268005), ('G_L1_val', 4.445423126220703), ('D_real_val', 0.14088767766952515), ('D_fake_val', 0.3643132150173187), ('KL_realB_fakeB_val', 0.09725741021740196)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.32214048504829407), ('G_L1_val', 3.6389265060424805), ('D_real_val', 0.2608014941215515), ('D_fake_val', 0.23767484724521637), ('KL_realB_fakeB_val', 0.3881901259533075)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4079177677631378), ('G_L1_val', 2.1004526615142822), ('D_real_val', 0.2911643981933594), ('D_fake_val', 0.16712650656700134), ('KL_realB_fakeB_val', 0.26828798012222604)])
+end of validation step
+End of epoch 59 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.32571035623550415), ('G_L1', 1.9571940898895264), ('D_real', 0.3659915328025818), ('D_fake', 0.0717407837510109), ('KL_realB_fakeB', 0.07098402846191457)])
+(epoch: 60, iters: 40, time: 24.214, data: 1.499) G_GAN: 0.326 G_L1: 1.957 D_real: 0.366 D_fake: 0.072 KL_realB_fakeB: 0.071 
+OrderedDict([('G_GAN_val', 0.3322153687477112), ('G_L1_val', 3.354860544204712), ('D_real_val', 0.18114718794822693), ('D_fake_val', 0.21324752271175385), ('KL_realB_fakeB_val', 0.08511996451072211)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.30654221773147583), ('G_L1_val', 6.094956398010254), ('D_real_val', 0.18206939101219177), ('D_fake_val', 0.2238941192626953), ('KL_realB_fakeB_val', 0.4181219553438979)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4006701707839966), ('G_L1_val', 2.4371979236602783), ('D_real_val', 0.3002120852470398), ('D_fake_val', 0.16136091947555542), ('KL_realB_fakeB_val', 0.09085260751458565)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4592139422893524), ('G_L1_val', 1.937074899673462), ('D_real_val', 0.2317572683095932), ('D_fake_val', 0.12501344084739685), ('KL_realB_fakeB_val', 0.11518402124958867)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.3385201096534729), ('G_L1_val', 2.3053228855133057), ('D_real_val', 0.2984499931335449), ('D_fake_val', 0.19994044303894043), ('KL_realB_fakeB_val', 0.15451022972830147)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.19672739505767822), ('G_L1_val', 4.48103666305542), ('D_real_val', 0.10179438441991806), ('D_fake_val', 0.356663316488266), ('KL_realB_fakeB_val', 0.11468176326091117)])
+end of validation step
+saving the model at the end of epoch 60, iters 2400
+End of epoch 60 / 200 	 Time Taken: 34 sec
+learning rate 0.0002000 -> 0.0002000

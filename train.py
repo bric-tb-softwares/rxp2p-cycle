@@ -31,6 +31,11 @@ from models import create_model
 from util.visualizer import Visualizer
 from util.stats import calculate_divergences, calculate_l1_and_l2_norm_errors
 import json
+#import mlflow
+#from mlflow import log_metric, log_param, log_artifacts
+#import mlflow.pytorch
+
+#mlflow.set_experiment(os.environ['MLFLOW_TRACKING_URI=https://sandbox.lps.ufrj.br'])
 
 #def calculate_divergences( real_samples, fake_samples ):
 #  kl, js = calculate_divergences(real_samples, fake_samples)
@@ -42,7 +47,10 @@ import json
 
 if __name__ == '__main__':
     opt = TrainOptions().parse()   # get training options
-    
+    #mlflow.set_tracking_uri("http://YOUR-SERVER:4040")
+    #mlflow.set_experiment('MLFOW_EXPERIMENT=' + opt.project + '_' + opt.name + '_test_' + str(opt.test) + '_sort_' + str(opt.sort))
+    #mlflow.start_run()
+
     if opt.job:
         print('Reading sort/test from %s'%opt.job)
         job  = json.load(open(opt.job, 'r'))
@@ -59,15 +67,16 @@ if __name__ == '__main__':
     
     
     dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
-    #opt.train_dataset = False      #fliping train dataset flag for defining val dataset
-    #dataset_val = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
-    #opt.train_dataset = True       #fliping back train dataset flag for train
+    #_param('database', opt.dataroot)
+    opt.train_dataset = False      #fliping train dataset flag for defining val dataset
+    dataset_val = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
+    opt.train_dataset = True       #fliping back train dataset flag for train
     dataset_size = len(dataset)    # get the number of images in the dataset.
-    #dataset_val_size = len(dataset_val)  # get the number of images in the dataset.
+    dataset_val_size = len(dataset_val)  # get the number of images in the dataset.
     #opt_val = TestOptions().parse()
     # dataset_val = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
     print('The number of training images = %d' % dataset_size)
-    #print('The number of val images = %d' % dataset_val_size)
+    print('The number of val images = %d' % dataset_val_size)
 
     model = create_model(opt)      # create a model given opt.model and other options
     model.setup(opt)               # regular setup: load and print networks; create schedulers
@@ -98,6 +107,7 @@ if __name__ == '__main__':
 
             if total_iters % opt.print_freq == 0:    # print training losses and save logging information to the disk
                 losses = model.get_current_losses()
+                #mlflow.log_metric(losses)
                 print(losses)
                 t_comp = (time.time() - iter_start_time) / opt.batch_size
                 visualizer.print_current_losses(epoch, epoch_iter, losses, t_comp, t_data)
@@ -109,13 +119,17 @@ if __name__ == '__main__':
                 save_suffix = 'iter_%d' % total_iters if opt.save_by_iter else 'latest'
                 model.save_networks(save_suffix)
 
-        #if total_iters % opt.val_freq == 0: # calling validation routine for evaluating the generator
-        #  real_imgs = []
-        #  fake_imgs = []
-        #  for i, data_val in enumerate(dataset_val):
-        #    if i >= opt.num_val:
-        #      break
-        #    model.set_input(data_val)  # unpack data from data loader
+            if total_iters % opt.val_freq == 0: # calling validation routine for evaluating the generator
+                for i, data_val in enumerate(dataset_val):
+                    model.set_input(data_val)  # unpack data from data loader
+                    model.validation_step()
+                    losses_val = model.get_current_val_losses()
+                    print(losses_val)
+                    #mlflow.log_metric(losses_val)
+                    if opt.display_id > 0:
+                        visualizer.plot_current_val_losses(epoch, float(epoch_iter) / dataset_val_size, losses_val)
+                    print('end of validation step')
+
         #    model.test()
         #    visuals_val = model.get_current_visuals()  # get image results
         #    realB = visuals_val['real_B']
@@ -126,13 +140,14 @@ if __name__ == '__main__':
         #  val_kl_rr, val_js_rr = calculate_divergences( np.array( real_imgs ) , np.array( real_imgs ))
         #  val_kl_rf, val_js_rf = calculate_divergences( np.array( real_imgs ) , np.array( fake_imgs ))
         #  print(np.mean(val_kl_rr))
-        #  print(np.mean(val_kl_rf))
+        #l  print(np.mean(val_kl_rf))
 
         iter_data_time = time.time()
-        print('end of validation step')
         if epoch % opt.save_epoch_freq == 0:              # cache our model every <save_epoch_freq> epochs
             print('saving the model at the end of epoch %d, iters %d' % (epoch, total_iters))
             model.save_networks('latest')
             model.save_networks(epoch)
 
         print('End of epoch %d / %d \t Time Taken: %d sec' % (epoch, opt.n_epochs + opt.n_epochs_decay, time.time() - epoch_start_time))
+#mlflow.pytorch.log_model(model, "latest_model_test_" + str(opt.test) + "_sort_"+ str(opt.sort), registered_model_name="Pix2PixGAN")
+#mlflow.end_run()

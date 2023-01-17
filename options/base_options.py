@@ -24,7 +24,9 @@ class BaseOptions():
         parser.add_argument('--name', type=str, default='experiment_name', help='name of the experiment. It decides where to store samples and models')
         parser.add_argument('--project', type=str, default=None, help='job option')
         parser.add_argument('--wandb_entity', default='brics-tb', type = str, help='wandb username')
-
+        parser.add_argument('--token', default='', type = str, help='user token to access dorothy datasets')
+        parser.add_argument('--download_imgs', action='store_true', help='use dorothy to download images from a given dataset')
+    
         parser.add_argument('--use_wandb', action='store_true', help='use wandb')
         parser.add_argument('--is_resume_wandb', type=bool, default=False, help='is a resuming run of wandb')
         parser.add_argument('--wandb_fold_id', type = str, help='wandb id for a fold during an experiment')
@@ -50,6 +52,8 @@ class BaseOptions():
         parser.add_argument('--init_gain', type=float, default=0.02, help='scaling factor for normal, xavier and orthogonal.')
         parser.add_argument('--no_dropout', action='store_true', help='no dropout for the generator')
         # dataset parameters
+        parser.add_argument('--dataset_download_dir', default=os.getcwd(), type = str, help='user token to access dorothy datasets')
+        parser.add_argument('--dataset_name', default="Shenzhen", type = str, help='dataset name to be extracted using dorothy api')
         parser.add_argument('--dataset_mode', type=str, default='unaligned', help='chooses how datasets are loaded. [unaligned | aligned | single | colorization | skfold]')
         parser.add_argument('--dataset_action', type=bool, default=False,help='if true, combine data from source A and from source B to be a dataset AB aligned')
         parser.add_argument('--custom_images_path', type=str, default=None,help='if None, import image data from a default path. Otherwise, import from the custom path')

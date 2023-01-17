@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/generate_synth.py", line 83, in <module>
+    dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/data/__init__.py", line 57, in create_dataset
+    data_loader = CustomDatasetDataLoader(opt)
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/data/__init__.py", line 73, in __init__
+    self.dataset = dataset_class(opt)
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/data/cyclesantacasaskfold2generator_dataset.py", line 233, in __init__
+    if self.gen_val:
+AttributeError: 'CycleSantaCasaSkfold2generatorDataset' object has no attribute 'gen_val'

@@ -1,0 +1,24 @@
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 15566.49it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18165.90it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18799.17it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18771.13it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18342.44it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18761.80it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18817.91it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18297.98it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19084.30it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18969.21it/s]
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/generate_synth.py", line 77, in <module>
+    model.setup(opt)               # regular setup: load and print networks; create schedulers
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/models/base_model.py", line 90, in setup
+    self.load_networks(load_suffix)
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/models/base_model.py", line 203, in load_networks
+    state_dict = torch.load(load_path, map_location=str(self.device))
+  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/santacasa_test_0_sort_0/latest_net_G.pth'

@@ -1,0 +1,16 @@
+/home/otto.tavares/.local/lib/python3.9/site-packages/torchvision/transforms/transforms.py:332: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/generate_synth.py", line 87, in <module>
+    model.setup(opt)               # regular setup: load and print networks; create schedulers
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/models/base_model.py", line 90, in setup
+    self.load_networks(load_suffix)
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/models/base_model.py", line 209, in load_networks
+    self.__patch_instance_norm_state_dict(state_dict, net, key.split('.'))
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/models/base_model.py", line 185, in __patch_instance_norm_state_dict
+    self.__patch_instance_norm_state_dict(state_dict, getattr(module, key), keys, i + 1)
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/models/base_model.py", line 185, in __patch_instance_norm_state_dict
+    self.__patch_instance_norm_state_dict(state_dict, getattr(module, key), keys, i + 1)
+  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1207, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'UnetSkipConnectionBlock' object has no attribute '1'

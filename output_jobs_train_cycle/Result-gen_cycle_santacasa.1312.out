@@ -1,0 +1,66 @@
+----------------- Options ---------------
+             aspect_ratio: 1.0                           
+               batch_size: 1                             
+          checkpoints_dir: /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/	[default: /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints]
+                crop_size: 256                           
+       custom_images_path: /home/brics/public/brics_data/Shenzhen/raw/images	[default: None]
+        custom_masks_path: None                          
+       custom_paired_path: None                          
+                 dataroot: /home/brics/public/brics_data/Shenzhen	[default: None]
+           dataset_action: False                         
+     dataset_download_dir: /home/otto.tavares/public/iltbi/train/images	[default: /home/otto.tavares/public/iltbi/rxpixp2pixcycle]
+             dataset_mode: cyclesantacasaskfold2generator	[default: unaligned]
+             dataset_name: Shenzhen                      
+                direction: AtoB                          
+             display_port: 8097                          
+          display_winsize: 256                           
+            download_imgs: True                          	[default: False]
+                    epoch: latest                        
+                     eval: False                         
+         gen_test_dataset: False                         
+        gen_train_dataset: True                          	[default: False]
+          gen_val_dataset: False                         
+  generate_paths_data_csv: False                         
+                  gpu_ids: -1                            	[default: 0]
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                     isTB: False                         
+                  isTrain: False                         	[default: None]
+          is_resume_wandb: False                         
+                      job: None                          
+                load_iter: 0                             	[default: 0]
+                load_size: 256                           
+         max_dataset_size: inf                           
+                    model: cycle_gan                     	[default: test]
+                  n_folds: 10                            
+               n_layers_D: 3                             
+                     name: genkl                         	[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: resnet_9blocks                
+                      ngf: 64                            
+               no_dropout: True                          
+                  no_flip: False                         
+                     norm: instance                      
+                 num_test: 50                            
+              num_threads: 4                             
+                output_nc: 3                             
+                    phase: test                          
+               preprocess: resize_and_scale_width        	[default: resize_and_crop]
+                  project: None                          
+              results_dir: /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1/1aPRODUCAO/	[default: ./results/]
+                     seed: 512                           	[default: 512]
+           serial_batches: False                         
+                     sort: 0                             
+                   suffix:                               
+                     test: 0                             
+                    token: b16fe0fc92088c4840a98160f3848839e68b1148	[default: ]
+                use_wandb: False                         
+                  verbose: False                         
+             wandb_entity: brics-tb                      
+            wandb_fold_id: None                          
+----------------- End -------------------
+GPU with device -1
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary

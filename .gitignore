@@ -128,6 +128,14 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+#dics
+checkpoints/
+cycle_shenzhen_iltbi_extendido_jobs/
+cycle_shenzhen_iltbi_jobs/
+wandb/
+versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1
+versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_BtoA.r1
+versions/v1/user.otavares.SantaCasa.pix2pix.v1_iltbi.r1
 
 # others
 *.txt

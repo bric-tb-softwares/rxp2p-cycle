@@ -86,6 +86,7 @@ class Visualizer():
                 self.create_visdom_connections()
 
         if self.use_wandb:
+            #os.environ["WANDB_MODE"] = "dryrun"
             if self.is_resume_wandb:
                 self.wandb_run = wandb.init(id=self.wandb_fold_id, project=opt.project, resume='allow',
                                             name=opt.name, config=opt, entity=opt.wandb_entity) if not wandb.run else wandb.run
@@ -247,6 +248,19 @@ class Visualizer():
             self.create_visdom_connections()
         if self.use_wandb:
             self.wandb_run.log(losses)
+
+    def plot_current_val_losses(self, epoch, counter_ratio, losses):
+        """display the current losses on visdom display: dictionary of error labels and values
+
+        Parameters:
+            epoch (int)           -- current epoch
+            counter_ratio (float) -- progress (percentage) in the current epoch, between 0 to 1
+            losses (OrderedDict)  -- training losses stored in the format of (name, float) pairs
+        """
+        if self.use_wandb:
+            self.wandb_run.log(losses)
+        else:
+            pass
 
     # losses: same format as |losses| of plot_current_losses
     def print_current_losses(self, epoch, iters, losses, t_comp, t_data):

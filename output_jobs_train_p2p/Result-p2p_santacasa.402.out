@@ -1,0 +1,1943 @@
+----------------- Options ---------------
+               batch_size: 1                             
+                    beta1: 0.5                           
+          checkpoints_dir: /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints
+           continue_train: False                         
+                crop_size: 256                           
+       custom_images_path: /home/otto.tavares/public/iltbi/train/images/santa_casa_pares/	[default: None]
+        custom_masks_path: None                          
+       custom_paired_path: None                          
+                 dataroot: /home/otto.tavares/public/iltbi/train/images/santa_casa_pares/	[default: None]
+           dataset_action: False                         
+     dataset_download_dir: /home/otto.tavares/public/iltbi/rxpixp2pixcycle
+             dataset_mode: santacasaskfold               	[default: aligned]
+             dataset_name: Shenzhen                      
+                direction: AtoB                          
+              display_env: main                          
+             display_freq: 400                           
+               display_id: -1                            	[default: 1]
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
+            download_imgs: False                         
+                    epoch: latest                        
+              epoch_count: 1                             
+                 gan_mode: lsgan                         	[default: vanilla]
+  generate_paths_data_csv: False                         
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                     isTB: False                         
+                  isTrain: True                          	[default: None]
+          is_resume_wandb: False                         
+                      job: None                          
+                lambda_L1: 50.0                          	[default: 100.0]
+                load_iter: 0                             	[default: 0]
+                load_size: 256                           	[default: 286]
+                       lr: 0.0002                        
+           lr_decay_iters: 50                            
+                lr_policy: linear                        
+         max_dataset_size: inf                           
+                    model: pix2pix                       	[default: cycle_gan]
+                 n_epochs: 100                           
+           n_epochs_decay: 100                           
+                  n_folds: 10                            
+               n_layers_D: 3                             
+                     name: santacasa_test_0_sort_1       	[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: unet_256                      
+                      ngf: 64                            
+               no_dropout: False                         
+                  no_flip: False                         
+                  no_html: False                         
+                     norm: batch                         
+              num_threads: 4                             
+                  num_val: 400                           
+                output_nc: 3                             
+                    phase: train                         
+                pool_size: 0                             
+               preprocess: resize_and_scale_width        	[default: resize_and_crop]
+               print_freq: 100                           
+                  project: p2p_santacasa                 	[default: None]
+             save_by_iter: False                         
+          save_epoch_freq: 5                             
+         save_latest_freq: 5000                          
+                     seed: 512                           	[default: 512]
+           serial_batches: False                         
+                     sort: 1                             	[default: 0]
+                   suffix:                               
+                     test: 0                             
+                    token:                               
+            train_dataset: True                          
+         update_html_freq: 1000                          
+                use_wandb: False                         
+                 val_freq: 10                            	[default: 400]
+                  verbose: False                         
+             wandb_entity: brics-tb                      
+            wandb_fold_id: None                          
+----------------- End -------------------
+GPU with device 0
+                 images    gauss  ... all_together target
+0   20220315_184023.jpg      seg  ...          seg      0
+1   20220315_184432.jpg      seg  ...          seg      0
+2   20220315_184701.jpg  not seg  ...          seg      0
+3   20220315_184740.jpg      seg  ...          seg      0
+4   20220315_185230.jpg      seg  ...          seg      0
+..                  ...      ...  ...          ...    ...
+83         IMG_5503.JPG  not seg  ...      not seg      0
+84         IMG_5505.JPG      seg  ...          seg      0
+85         IMG_5507.JPG      seg  ...          seg      0
+86         IMG_5509.JPG      seg  ...          seg      0
+87         IMG_5604.JPG      seg  ...          seg      0
+
+[88 rows x 5 columns]
+bins selected for val: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+dataset [SantaCasaSkfoldDataset] was created
+                 images    gauss  ... all_together target
+0   20220315_184023.jpg      seg  ...          seg      0
+1   20220315_184432.jpg      seg  ...          seg      0
+2   20220315_184701.jpg  not seg  ...          seg      0
+3   20220315_184740.jpg      seg  ...          seg      0
+4   20220315_185230.jpg      seg  ...          seg      0
+..                  ...      ...  ...          ...    ...
+83         IMG_5503.JPG  not seg  ...      not seg      0
+84         IMG_5505.JPG      seg  ...          seg      0
+85         IMG_5507.JPG      seg  ...          seg      0
+86         IMG_5509.JPG      seg  ...          seg      0
+87         IMG_5604.JPG      seg  ...          seg      0
+
+[88 rows x 5 columns]
+bins selected for val: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+dataset [SantaCasaSkfoldDataset] was created
+The number of training images = 40
+The number of val images = 6
+initialize network with normal
+initialize network with normal
+model [Pix2PixModel] was created
+---------- Networks initialized -------------
+[Network G] Total number of parameters : 54.414 M
+[Network D] Total number of parameters : 2.769 M
+-----------------------------------------------
+create web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/santacasa_test_0_sort_1/web...
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 1 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 2 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3336477279663086), ('G_L1', 6.566443920135498), ('D_real', 0.2941729426383972), ('D_fake', 0.3165680766105652), ('KL_realB_fakeB', 0.2416173827444893)])
+(epoch: 3, iters: 20, time: 0.055, data: 0.179) G_GAN: 0.334 G_L1: 6.566 D_real: 0.294 D_fake: 0.317 KL_realB_fakeB: 0.242 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 3 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 4 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.28212958574295044), ('G_L1', 5.586087703704834), ('D_real', 0.29652684926986694), ('D_fake', 0.2472068965435028), ('KL_realB_fakeB', 0.4972003832473473)])
+(epoch: 5, iters: 40, time: 0.045, data: 1.442) G_GAN: 0.282 G_L1: 5.586 D_real: 0.297 D_fake: 0.247 KL_realB_fakeB: 0.497 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 5, iters 200
+End of epoch 5 / 200 	 Time Taken: 10 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 6 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 7 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.2657172977924347), ('G_L1', 3.925973892211914), ('D_real', 0.24538268148899078), ('D_fake', 0.26291561126708984), ('KL_realB_fakeB', 0.13171503001147666)])
+(epoch: 8, iters: 20, time: 0.036, data: 0.128) G_GAN: 0.266 G_L1: 3.926 D_real: 0.245 D_fake: 0.263 KL_realB_fakeB: 0.132 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 8 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 9 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.30180224776268005), ('G_L1', 3.5747296810150146), ('D_real', 0.25501006841659546), ('D_fake', 0.25607728958129883), ('KL_realB_fakeB', 0.30123957889902037)])
+(epoch: 10, iters: 40, time: 0.187, data: 1.692) G_GAN: 0.302 G_L1: 3.575 D_real: 0.255 D_fake: 0.256 KL_realB_fakeB: 0.301 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 10, iters 400
+End of epoch 10 / 200 	 Time Taken: 10 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 11 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 12 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3049512505531311), ('G_L1', 4.693665504455566), ('D_real', 0.3236834406852722), ('D_fake', 0.20072616636753082), ('KL_realB_fakeB', 0.11959319456924766)])
+(epoch: 13, iters: 20, time: 0.045, data: 0.541) G_GAN: 0.305 G_L1: 4.694 D_real: 0.324 D_fake: 0.201 KL_realB_fakeB: 0.120 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 13 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 14 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3036687672138214), ('G_L1', 3.8890161514282227), ('D_real', 0.31582337617874146), ('D_fake', 0.3709608316421509), ('KL_realB_fakeB', 0.09983599758466984)])
+(epoch: 15, iters: 40, time: 0.044, data: 1.693) G_GAN: 0.304 G_L1: 3.889 D_real: 0.316 D_fake: 0.371 KL_realB_fakeB: 0.100 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 15, iters 600
+End of epoch 15 / 200 	 Time Taken: 8 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 16 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 17 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.28200578689575195), ('G_L1', 3.8416714668273926), ('D_real', 0.2682120203971863), ('D_fake', 0.23921333253383636), ('KL_realB_fakeB', 0.2396303135663261)])
+(epoch: 18, iters: 20, time: 0.043, data: 0.117) G_GAN: 0.282 G_L1: 3.842 D_real: 0.268 D_fake: 0.239 KL_realB_fakeB: 0.240 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 18 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 19 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3259016275405884), ('G_L1', 3.7400171756744385), ('D_real', 0.19133426249027252), ('D_fake', 0.27377849817276), ('KL_realB_fakeB', 0.36848211688785704)])
+(epoch: 20, iters: 40, time: 0.143, data: 1.456) G_GAN: 0.326 G_L1: 3.740 D_real: 0.191 D_fake: 0.274 KL_realB_fakeB: 0.368 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 20, iters 800
+End of epoch 20 / 200 	 Time Taken: 8 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 21 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 22 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.22297172248363495), ('G_L1', 2.6878414154052734), ('D_real', 0.295023649930954), ('D_fake', 0.22435656189918518), ('KL_realB_fakeB', 0.3704176402426712)])
+(epoch: 23, iters: 20, time: 0.042, data: 0.524) G_GAN: 0.223 G_L1: 2.688 D_real: 0.295 D_fake: 0.224 KL_realB_fakeB: 0.370 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 23 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 24 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.36960384249687195), ('G_L1', 3.212167263031006), ('D_real', 0.2695316970348358), ('D_fake', 0.3719417452812195), ('KL_realB_fakeB', 0.5500399006745004)])
+(epoch: 25, iters: 40, time: 0.043, data: 1.335) G_GAN: 0.370 G_L1: 3.212 D_real: 0.270 D_fake: 0.372 KL_realB_fakeB: 0.550 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 25, iters 1000
+End of epoch 25 / 200 	 Time Taken: 8 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 26 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 27 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3273710310459137), ('G_L1', 2.758835792541504), ('D_real', 0.21983405947685242), ('D_fake', 0.21119241416454315), ('KL_realB_fakeB', 0.10427646834205004)])
+(epoch: 28, iters: 20, time: 0.034, data: 0.120) G_GAN: 0.327 G_L1: 2.759 D_real: 0.220 D_fake: 0.211 KL_realB_fakeB: 0.104 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 28 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 29 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.2824006974697113), ('G_L1', 2.0587382316589355), ('D_real', 0.18969228863716125), ('D_fake', 0.4739720821380615), ('KL_realB_fakeB', 0.07599060991376655)])
+(epoch: 30, iters: 40, time: 0.161, data: 1.153) G_GAN: 0.282 G_L1: 2.059 D_real: 0.190 D_fake: 0.474 KL_realB_fakeB: 0.076 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 30, iters 1200
+End of epoch 30 / 200 	 Time Taken: 9 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 31 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 32 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.30326372385025024), ('G_L1', 2.924194097518921), ('D_real', 0.109257772564888), ('D_fake', 0.38894742727279663), ('KL_realB_fakeB', 0.10429274842134649)])
+(epoch: 33, iters: 20, time: 0.043, data: 0.487) G_GAN: 0.303 G_L1: 2.924 D_real: 0.109 D_fake: 0.389 KL_realB_fakeB: 0.104 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 33 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 34 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.2968894839286804), ('G_L1', 2.090552806854248), ('D_real', 0.44490987062454224), ('D_fake', 0.10896303504705429), ('KL_realB_fakeB', 0.08092842729717797)])
+(epoch: 35, iters: 40, time: 0.037, data: 1.409) G_GAN: 0.297 G_L1: 2.091 D_real: 0.445 D_fake: 0.109 KL_realB_fakeB: 0.081 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 35, iters 1400
+End of epoch 35 / 200 	 Time Taken: 8 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 36 / 200 	 Time Taken: 2 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 37 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.44295570254325867), ('G_L1', 2.098297595977783), ('D_real', 0.11147907376289368), ('D_fake', 0.5148528218269348), ('KL_realB_fakeB', 0.13211393779890712)])
+(epoch: 38, iters: 20, time: 0.051, data: 0.399) G_GAN: 0.443 G_L1: 2.098 D_real: 0.111 D_fake: 0.515 KL_realB_fakeB: 0.132 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 38 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 39 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.16091583669185638), ('G_L1', 2.5778067111968994), ('D_real', 0.544105052947998), ('D_fake', 0.0690956711769104), ('KL_realB_fakeB', 0.20758912460018583)])
+(epoch: 40, iters: 40, time: 0.259, data: 1.646) G_GAN: 0.161 G_L1: 2.578 D_real: 0.544 D_fake: 0.069 KL_realB_fakeB: 0.208 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 40, iters 1600
+End of epoch 40 / 200 	 Time Taken: 11 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 41 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 42 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3855065703392029), ('G_L1', 2.1880764961242676), ('D_real', 0.2392876297235489), ('D_fake', 0.22648362815380096), ('KL_realB_fakeB', 0.14286428712138638)])
+(epoch: 43, iters: 20, time: 0.047, data: 0.513) G_GAN: 0.386 G_L1: 2.188 D_real: 0.239 D_fake: 0.226 KL_realB_fakeB: 0.143 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 43 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 44 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.31511712074279785), ('G_L1', 2.0837302207946777), ('D_real', 0.32657283544540405), ('D_fake', 0.1294642686843872), ('KL_realB_fakeB', 0.1213337015782162)])
+(epoch: 45, iters: 40, time: 0.045, data: 1.623) G_GAN: 0.315 G_L1: 2.084 D_real: 0.327 D_fake: 0.129 KL_realB_fakeB: 0.121 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 45, iters 1800
+End of epoch 45 / 200 	 Time Taken: 11 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 46 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 47 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.5675615668296814), ('G_L1', 1.9908417463302612), ('D_real', 0.15907502174377441), ('D_fake', 0.341750830411911), ('KL_realB_fakeB', 0.07582804793832522)])
+(epoch: 48, iters: 20, time: 0.035, data: 0.511) G_GAN: 0.568 G_L1: 1.991 D_real: 0.159 D_fake: 0.342 KL_realB_fakeB: 0.076 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 48 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 49 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.32462695240974426), ('G_L1', 2.0967488288879395), ('D_real', 0.2582247853279114), ('D_fake', 0.1924457550048828), ('KL_realB_fakeB', 0.06580218990828814)])
+(epoch: 50, iters: 40, time: 0.190, data: 1.820) G_GAN: 0.325 G_L1: 2.097 D_real: 0.258 D_fake: 0.192 KL_realB_fakeB: 0.066 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 50, iters 2000
+End of epoch 50 / 200 	 Time Taken: 9 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 51 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 52 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.23736737668514252), ('G_L1', 2.637990951538086), ('D_real', 0.414058655500412), ('D_fake', 0.14572875201702118), ('KL_realB_fakeB', 0.09402438360907783)])
+(epoch: 53, iters: 20, time: 0.049, data: 0.109) G_GAN: 0.237 G_L1: 2.638 D_real: 0.414 D_fake: 0.146 KL_realB_fakeB: 0.094 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 53 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 54 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3260152041912079), ('G_L1', 2.077072858810425), ('D_real', 0.11909057945013046), ('D_fake', 0.5101465582847595), ('KL_realB_fakeB', 0.07439658910141492)])
+(epoch: 55, iters: 40, time: 0.044, data: 1.694) G_GAN: 0.326 G_L1: 2.077 D_real: 0.119 D_fake: 0.510 KL_realB_fakeB: 0.074 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 55, iters 2200
+End of epoch 55 / 200 	 Time Taken: 8 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 56 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 57 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3742322623729706), ('G_L1', 2.167593002319336), ('D_real', 0.27961674332618713), ('D_fake', 0.22752262651920319), ('KL_realB_fakeB', 0.08386506863202903)])
+(epoch: 58, iters: 20, time: 0.043, data: 0.089) G_GAN: 0.374 G_L1: 2.168 D_real: 0.280 D_fake: 0.228 KL_realB_fakeB: 0.084 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 58 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 59 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.4018014073371887), ('G_L1', 1.8842384815216064), ('D_real', 0.12896937131881714), ('D_fake', 0.31963300704956055), ('KL_realB_fakeB', 0.22458460578232559)])
+(epoch: 60, iters: 40, time: 0.181, data: 1.822) G_GAN: 0.402 G_L1: 1.884 D_real: 0.129 D_fake: 0.320 KL_realB_fakeB: 0.225 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 60, iters 2400
+End of epoch 60 / 200 	 Time Taken: 9 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 61 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 62 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3197135627269745), ('G_L1', 1.9159724712371826), ('D_real', 0.16278120875358582), ('D_fake', 0.3630202114582062), ('KL_realB_fakeB', 0.0764775050274559)])
+(epoch: 63, iters: 20, time: 0.050, data: 0.093) G_GAN: 0.320 G_L1: 1.916 D_real: 0.163 D_fake: 0.363 KL_realB_fakeB: 0.076 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 63 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 64 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.3530445396900177), ('G_L1', 1.5225038528442383), ('D_real', 0.23905770480632782), ('D_fake', 0.32677969336509705), ('KL_realB_fakeB', 0.09710844519364337)])
+(epoch: 65, iters: 40, time: 0.043, data: 1.291) G_GAN: 0.353 G_L1: 1.523 D_real: 0.239 D_fake: 0.327 KL_realB_fakeB: 0.097 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 65, iters 2600
+End of epoch 65 / 200 	 Time Taken: 8 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 66 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 67 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.35914281010627747), ('G_L1', 1.8257167339324951), ('D_real', 0.208744615316391), ('D_fake', 0.16989727318286896), ('KL_realB_fakeB', 0.07604692181065162)])
+(epoch: 68, iters: 20, time: 0.045, data: 0.124) G_GAN: 0.359 G_L1: 1.826 D_real: 0.209 D_fake: 0.170 KL_realB_fakeB: 0.076 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 68 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 69 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.5296604037284851), ('G_L1', 1.697033405303955), ('D_real', 0.12141410261392593), ('D_fake', 0.062205392867326736), ('KL_realB_fakeB', 0.19267805166810012)])
+(epoch: 70, iters: 40, time: 0.190, data: 1.634) G_GAN: 0.530 G_L1: 1.697 D_real: 0.121 D_fake: 0.062 KL_realB_fakeB: 0.193 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 70, iters 2800
+End of epoch 70 / 200 	 Time Taken: 8 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 71 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 72 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.5319296717643738), ('G_L1', 2.4555773735046387), ('D_real', 0.04472809284925461), ('D_fake', 0.11735038459300995), ('KL_realB_fakeB', 0.08094820146853976)])
+(epoch: 73, iters: 20, time: 0.042, data: 0.132) G_GAN: 0.532 G_L1: 2.456 D_real: 0.045 D_fake: 0.117 KL_realB_fakeB: 0.081 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 73 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 74 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.34484684467315674), ('G_L1', 1.7692897319793701), ('D_real', 0.2330058217048645), ('D_fake', 0.2679522633552551), ('KL_realB_fakeB', 0.12161016309646452)])
+(epoch: 75, iters: 40, time: 0.041, data: 1.594) G_GAN: 0.345 G_L1: 1.769 D_real: 0.233 D_fake: 0.268 KL_realB_fakeB: 0.122 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 75, iters 3000
+End of epoch 75 / 200 	 Time Taken: 10 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 76 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 77 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.2595139145851135), ('G_L1', 2.0949459075927734), ('D_real', 0.4239363670349121), ('D_fake', 0.21406535804271698), ('KL_realB_fakeB', 0.08652209156462023)])
+(epoch: 78, iters: 20, time: 0.047, data: 0.476) G_GAN: 0.260 G_L1: 2.095 D_real: 0.424 D_fake: 0.214 KL_realB_fakeB: 0.087 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 78 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 79 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.30079948902130127), ('G_L1', 2.0101890563964844), ('D_real', 0.17059296369552612), ('D_fake', 0.3533828556537628), ('KL_realB_fakeB', 0.15932501612533925)])
+(epoch: 80, iters: 40, time: 0.349, data: 1.412) G_GAN: 0.301 G_L1: 2.010 D_real: 0.171 D_fake: 0.353 KL_realB_fakeB: 0.159 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 80, iters 3200
+End of epoch 80 / 200 	 Time Taken: 12 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 81 / 200 	 Time Taken: 4 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 82 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.5481871366500854), ('G_L1', 1.4358994960784912), ('D_real', 0.03831856697797775), ('D_fake', 0.5216441750526428), ('KL_realB_fakeB', 0.0794186101545326)])
+(epoch: 83, iters: 20, time: 0.044, data: 0.111) G_GAN: 0.548 G_L1: 1.436 D_real: 0.038 D_fake: 0.522 KL_realB_fakeB: 0.079 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 83 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 84 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.4163753092288971), ('G_L1', 2.0905847549438477), ('D_real', 0.46632397174835205), ('D_fake', 0.14848369359970093), ('KL_realB_fakeB', 0.07300725328649121)])
+(epoch: 85, iters: 40, time: 0.044, data: 1.768) G_GAN: 0.416 G_L1: 2.091 D_real: 0.466 D_fake: 0.148 KL_realB_fakeB: 0.073 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 85, iters 3400
+End of epoch 85 / 200 	 Time Taken: 9 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 86 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 87 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.4889281690120697), ('G_L1', 1.4884799718856812), ('D_real', 0.2028322070837021), ('D_fake', 0.336116760969162), ('KL_realB_fakeB', 0.0735502477194383)])
+(epoch: 88, iters: 20, time: 0.045, data: 0.456) G_GAN: 0.489 G_L1: 1.488 D_real: 0.203 D_fake: 0.336 KL_realB_fakeB: 0.074 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 88 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 89 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.44035977125167847), ('G_L1', 1.4909801483154297), ('D_real', 0.23551897704601288), ('D_fake', 0.07417093962430954), ('KL_realB_fakeB', 0.14460453553154834)])
+(epoch: 90, iters: 40, time: 0.264, data: 1.725) G_GAN: 0.440 G_L1: 1.491 D_real: 0.236 D_fake: 0.074 KL_realB_fakeB: 0.145 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 90, iters 3600
+End of epoch 90 / 200 	 Time Taken: 9 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 91 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 92 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.42650261521339417), ('G_L1', 1.9434053897857666), ('D_real', 0.057804644107818604), ('D_fake', 0.3159017264842987), ('KL_realB_fakeB', 0.07886931179000528)])
+(epoch: 93, iters: 20, time: 0.047, data: 0.144) G_GAN: 0.427 G_L1: 1.943 D_real: 0.058 D_fake: 0.316 KL_realB_fakeB: 0.079 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 93 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 94 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.8728799223899841), ('G_L1', 1.8549226522445679), ('D_real', 0.041542716324329376), ('D_fake', 0.07119950652122498), ('KL_realB_fakeB', 0.07510540002558136)])
+(epoch: 95, iters: 40, time: 0.050, data: 1.807) G_GAN: 0.873 G_L1: 1.855 D_real: 0.042 D_fake: 0.071 KL_realB_fakeB: 0.075 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 95, iters 3800
+End of epoch 95 / 200 	 Time Taken: 8 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 96 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 97 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN', 0.9224447011947632), ('G_L1', 1.616064429283142), ('D_real', 0.19759881496429443), ('D_fake', 0.025772271677851677), ('KL_realB_fakeB', 0.11243926624220629)])
+(epoch: 98, iters: 20, time: 0.034, data: 0.438) G_GAN: 0.922 G_L1: 1.616 D_real: 0.198 D_fake: 0.026 KL_realB_fakeB: 0.112 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 98 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0002000
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 99 / 200 	 Time Taken: 3 sec
+learning rate 0.0002000 -> 0.0001980
+OrderedDict([('G_GAN', 0.9107707142829895), ('G_L1', 1.859352707862854), ('D_real', 0.13847026228904724), ('D_fake', 0.11113384366035461), ('KL_realB_fakeB', 0.08269551381279514)])
+(epoch: 100, iters: 40, time: 0.252, data: 1.513) G_GAN: 0.911 G_L1: 1.859 D_real: 0.138 D_fake: 0.111 KL_realB_fakeB: 0.083 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 100, iters 4000
+End of epoch 100 / 200 	 Time Taken: 8 sec
+learning rate 0.0001980 -> 0.0001960
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 101 / 200 	 Time Taken: 3 sec
+learning rate 0.0001960 -> 0.0001941
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 102 / 200 	 Time Taken: 3 sec
+learning rate 0.0001941 -> 0.0001921
+OrderedDict([('G_GAN', 0.9090489745140076), ('G_L1', 1.9702785015106201), ('D_real', 0.31623876094818115), ('D_fake', 0.12174753844738007), ('KL_realB_fakeB', 0.11621359140512263)])
+(epoch: 103, iters: 20, time: 0.055, data: 0.141) G_GAN: 0.909 G_L1: 1.970 D_real: 0.316 D_fake: 0.122 KL_realB_fakeB: 0.116 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 103 / 200 	 Time Taken: 3 sec
+learning rate 0.0001921 -> 0.0001901
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 104 / 200 	 Time Taken: 3 sec
+learning rate 0.0001901 -> 0.0001881
+OrderedDict([('G_GAN', 0.9153266549110413), ('G_L1', 2.388598680496216), ('D_real', 0.01631978712975979), ('D_fake', 0.013349117711186409), ('KL_realB_fakeB', 0.10102879501249148)])
+(epoch: 105, iters: 40, time: 0.044, data: 1.680) G_GAN: 0.915 G_L1: 2.389 D_real: 0.016 D_fake: 0.013 KL_realB_fakeB: 0.101 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 105, iters 4200
+End of epoch 105 / 200 	 Time Taken: 9 sec
+learning rate 0.0001881 -> 0.0001861
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 106 / 200 	 Time Taken: 3 sec
+learning rate 0.0001861 -> 0.0001842
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 107 / 200 	 Time Taken: 3 sec
+learning rate 0.0001842 -> 0.0001822
+OrderedDict([('G_GAN', 1.263100028038025), ('G_L1', 1.2150907516479492), ('D_real', 0.021947983652353287), ('D_fake', 0.27250367403030396), ('KL_realB_fakeB', 0.07211814081559484)])
+(epoch: 108, iters: 20, time: 0.033, data: 0.092) G_GAN: 1.263 G_L1: 1.215 D_real: 0.022 D_fake: 0.273 KL_realB_fakeB: 0.072 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 108 / 200 	 Time Taken: 3 sec
+learning rate 0.0001822 -> 0.0001802
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 109 / 200 	 Time Taken: 3 sec
+learning rate 0.0001802 -> 0.0001782
+OrderedDict([('G_GAN', 1.1470409631729126), ('G_L1', 1.6564550399780273), ('D_real', 0.04167722165584564), ('D_fake', 0.1285420060157776), ('KL_realB_fakeB', 0.08174958055940987)])
+(epoch: 110, iters: 40, time: 0.329, data: 1.705) G_GAN: 1.147 G_L1: 1.656 D_real: 0.042 D_fake: 0.129 KL_realB_fakeB: 0.082 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 110, iters 4400
+End of epoch 110 / 200 	 Time Taken: 8 sec
+learning rate 0.0001782 -> 0.0001762
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 111 / 200 	 Time Taken: 2 sec
+learning rate 0.0001762 -> 0.0001743
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 112 / 200 	 Time Taken: 3 sec
+learning rate 0.0001743 -> 0.0001723
+OrderedDict([('G_GAN', 1.2840535640716553), ('G_L1', 1.626314640045166), ('D_real', 0.01245289295911789), ('D_fake', 0.05681510642170906), ('KL_realB_fakeB', 0.12307498740647399)])
+(epoch: 113, iters: 20, time: 0.033, data: 0.084) G_GAN: 1.284 G_L1: 1.626 D_real: 0.012 D_fake: 0.057 KL_realB_fakeB: 0.123 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 113 / 200 	 Time Taken: 3 sec
+learning rate 0.0001723 -> 0.0001703
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 114 / 200 	 Time Taken: 3 sec
+learning rate 0.0001703 -> 0.0001683
+OrderedDict([('G_GAN', 0.9659960269927979), ('G_L1', 1.6278153657913208), ('D_real', 0.07588502019643784), ('D_fake', 0.03355354815721512), ('KL_realB_fakeB', 0.12763282372772694)])
+(epoch: 115, iters: 40, time: 0.048, data: 1.577) G_GAN: 0.966 G_L1: 1.628 D_real: 0.076 D_fake: 0.034 KL_realB_fakeB: 0.128 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 115, iters 4600
+End of epoch 115 / 200 	 Time Taken: 9 sec
+learning rate 0.0001683 -> 0.0001663
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 116 / 200 	 Time Taken: 3 sec
+learning rate 0.0001663 -> 0.0001644
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 117 / 200 	 Time Taken: 3 sec
+learning rate 0.0001644 -> 0.0001624
+OrderedDict([('G_GAN', 0.6093385219573975), ('G_L1', 1.374624490737915), ('D_real', 0.1141185536980629), ('D_fake', 0.00956777948886156), ('KL_realB_fakeB', 0.061277556156071555)])
+(epoch: 118, iters: 20, time: 0.033, data: 0.097) G_GAN: 0.609 G_L1: 1.375 D_real: 0.114 D_fake: 0.010 KL_realB_fakeB: 0.061 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 118 / 200 	 Time Taken: 3 sec
+learning rate 0.0001624 -> 0.0001604
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 119 / 200 	 Time Taken: 3 sec
+learning rate 0.0001604 -> 0.0001584
+OrderedDict([('G_GAN', 0.7075871229171753), ('G_L1', 1.8831729888916016), ('D_real', 0.29669174551963806), ('D_fake', 0.08053193986415863), ('KL_realB_fakeB', 0.08316098440245527)])
+(epoch: 120, iters: 40, time: 0.295, data: 1.828) G_GAN: 0.708 G_L1: 1.883 D_real: 0.297 D_fake: 0.081 KL_realB_fakeB: 0.083 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 120, iters 4800
+End of epoch 120 / 200 	 Time Taken: 11 sec
+learning rate 0.0001584 -> 0.0001564
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 121 / 200 	 Time Taken: 3 sec
+learning rate 0.0001564 -> 0.0001545
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 122 / 200 	 Time Taken: 3 sec
+learning rate 0.0001545 -> 0.0001525
+OrderedDict([('G_GAN', 0.8018274903297424), ('G_L1', 1.8000833988189697), ('D_real', 0.11066033691167831), ('D_fake', 0.05764955282211304), ('KL_realB_fakeB', 0.08324648373439689)])
+(epoch: 123, iters: 20, time: 0.052, data: 0.333) G_GAN: 0.802 G_L1: 1.800 D_real: 0.111 D_fake: 0.058 KL_realB_fakeB: 0.083 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 123 / 200 	 Time Taken: 3 sec
+learning rate 0.0001525 -> 0.0001505
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 124 / 200 	 Time Taken: 3 sec
+learning rate 0.0001505 -> 0.0001485
+OrderedDict([('G_GAN', 0.9608964920043945), ('G_L1', 1.1994097232818604), ('D_real', 0.031313277781009674), ('D_fake', 0.028790682554244995), ('KL_realB_fakeB', 0.0762027084605387)])
+(epoch: 125, iters: 40, time: 0.053, data: 1.694) G_GAN: 0.961 G_L1: 1.199 D_real: 0.031 D_fake: 0.029 KL_realB_fakeB: 0.076 
+saving the latest model (epoch 125, total_iters 5000)
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 125, iters 5000
+End of epoch 125 / 200 	 Time Taken: 12 sec
+learning rate 0.0001485 -> 0.0001465
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 126 / 200 	 Time Taken: 3 sec
+learning rate 0.0001465 -> 0.0001446
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 127 / 200 	 Time Taken: 3 sec
+learning rate 0.0001446 -> 0.0001426
+OrderedDict([('G_GAN', 1.0134872198104858), ('G_L1', 1.3196133375167847), ('D_real', 0.020425228402018547), ('D_fake', 0.013885569758713245), ('KL_realB_fakeB', 0.07346540195265484)])
+(epoch: 128, iters: 20, time: 0.043, data: 0.504) G_GAN: 1.013 G_L1: 1.320 D_real: 0.020 D_fake: 0.014 KL_realB_fakeB: 0.073 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 128 / 200 	 Time Taken: 3 sec
+learning rate 0.0001426 -> 0.0001406
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 129 / 200 	 Time Taken: 3 sec
+learning rate 0.0001406 -> 0.0001386
+OrderedDict([('G_GAN', 0.8822798728942871), ('G_L1', 1.862480640411377), ('D_real', 0.006952784024178982), ('D_fake', 0.04136450216174126), ('KL_realB_fakeB', 0.07012254573951268)])
+(epoch: 130, iters: 40, time: 0.345, data: 1.856) G_GAN: 0.882 G_L1: 1.862 D_real: 0.007 D_fake: 0.041 KL_realB_fakeB: 0.070 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 130, iters 5200
+End of epoch 130 / 200 	 Time Taken: 9 sec
+learning rate 0.0001386 -> 0.0001366
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 131 / 200 	 Time Taken: 3 sec
+learning rate 0.0001366 -> 0.0001347
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 132 / 200 	 Time Taken: 3 sec
+learning rate 0.0001347 -> 0.0001327
+OrderedDict([('G_GAN', 0.9923801422119141), ('G_L1', 1.826562762260437), ('D_real', 0.0353214405477047), ('D_fake', 0.011191032826900482), ('KL_realB_fakeB', 0.0923911422809584)])
+(epoch: 133, iters: 20, time: 0.052, data: 0.403) G_GAN: 0.992 G_L1: 1.827 D_real: 0.035 D_fake: 0.011 KL_realB_fakeB: 0.092 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 133 / 200 	 Time Taken: 3 sec
+learning rate 0.0001327 -> 0.0001307
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 134 / 200 	 Time Taken: 3 sec
+learning rate 0.0001307 -> 0.0001287
+OrderedDict([('G_GAN', 0.7343115210533142), ('G_L1', 2.030290126800537), ('D_real', 0.09722105413675308), ('D_fake', 0.016342218965291977), ('KL_realB_fakeB', 0.07118467968571351)])
+(epoch: 135, iters: 40, time: 0.044, data: 1.323) G_GAN: 0.734 G_L1: 2.030 D_real: 0.097 D_fake: 0.016 KL_realB_fakeB: 0.071 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 135, iters 5400
+End of epoch 135 / 200 	 Time Taken: 8 sec
+learning rate 0.0001287 -> 0.0001267
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 136 / 200 	 Time Taken: 3 sec
+learning rate 0.0001267 -> 0.0001248
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 137 / 200 	 Time Taken: 3 sec
+learning rate 0.0001248 -> 0.0001228
+OrderedDict([('G_GAN', 0.7440445423126221), ('G_L1', 1.6319066286087036), ('D_real', 0.01829974353313446), ('D_fake', 0.15941956639289856), ('KL_realB_fakeB', 0.07453860393897739)])
+(epoch: 138, iters: 20, time: 0.046, data: 0.573) G_GAN: 0.744 G_L1: 1.632 D_real: 0.018 D_fake: 0.159 KL_realB_fakeB: 0.075 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 138 / 200 	 Time Taken: 3 sec
+learning rate 0.0001228 -> 0.0001208
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 139 / 200 	 Time Taken: 3 sec
+learning rate 0.0001208 -> 0.0001188
+OrderedDict([('G_GAN', 0.8989088535308838), ('G_L1', 1.9395867586135864), ('D_real', 0.011207696981728077), ('D_fake', 0.010190905071794987), ('KL_realB_fakeB', 0.06423198269425803)])
+(epoch: 140, iters: 40, time: 0.394, data: 1.509) G_GAN: 0.899 G_L1: 1.940 D_real: 0.011 D_fake: 0.010 KL_realB_fakeB: 0.064 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 140, iters 5600
+End of epoch 140 / 200 	 Time Taken: 9 sec
+learning rate 0.0001188 -> 0.0001168
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 141 / 200 	 Time Taken: 3 sec
+learning rate 0.0001168 -> 0.0001149
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 142 / 200 	 Time Taken: 3 sec
+learning rate 0.0001149 -> 0.0001129
+OrderedDict([('G_GAN', 0.7607707381248474), ('G_L1', 1.4170955419540405), ('D_real', 0.00900234654545784), ('D_fake', 0.10636449605226517), ('KL_realB_fakeB', 0.12097427682062001)])
+(epoch: 143, iters: 20, time: 0.048, data: 0.103) G_GAN: 0.761 G_L1: 1.417 D_real: 0.009 D_fake: 0.106 KL_realB_fakeB: 0.121 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 143 / 200 	 Time Taken: 3 sec
+learning rate 0.0001129 -> 0.0001109
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 144 / 200 	 Time Taken: 3 sec
+learning rate 0.0001109 -> 0.0001089
+OrderedDict([('G_GAN', 0.6271028518676758), ('G_L1', 1.1972347497940063), ('D_real', 0.12098047137260437), ('D_fake', 0.14752231538295746), ('KL_realB_fakeB', 0.08445051742677123)])
+(epoch: 145, iters: 40, time: 0.051, data: 1.683) G_GAN: 0.627 G_L1: 1.197 D_real: 0.121 D_fake: 0.148 KL_realB_fakeB: 0.084 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 145, iters 5800
+End of epoch 145 / 200 	 Time Taken: 9 sec
+learning rate 0.0001089 -> 0.0001069
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 146 / 200 	 Time Taken: 3 sec
+learning rate 0.0001069 -> 0.0001050
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 147 / 200 	 Time Taken: 3 sec
+learning rate 0.0001050 -> 0.0001030
+OrderedDict([('G_GAN', 1.0161012411117554), ('G_L1', 1.5815377235412598), ('D_real', 0.06878504902124405), ('D_fake', 0.045564357191324234), ('KL_realB_fakeB', 0.06612144947337763)])
+(epoch: 148, iters: 20, time: 0.053, data: 0.411) G_GAN: 1.016 G_L1: 1.582 D_real: 0.069 D_fake: 0.046 KL_realB_fakeB: 0.066 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 148 / 200 	 Time Taken: 3 sec
+learning rate 0.0001030 -> 0.0001010
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 149 / 200 	 Time Taken: 3 sec
+learning rate 0.0001010 -> 0.0000990
+OrderedDict([('G_GAN', 1.1524558067321777), ('G_L1', 1.1402286291122437), ('D_real', 0.02003931812942028), ('D_fake', 0.02088472992181778), ('KL_realB_fakeB', 0.0648900222321669)])
+(epoch: 150, iters: 40, time: 0.301, data: 1.520) G_GAN: 1.152 G_L1: 1.140 D_real: 0.020 D_fake: 0.021 KL_realB_fakeB: 0.065 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 150, iters 6000
+End of epoch 150 / 200 	 Time Taken: 11 sec
+learning rate 0.0000990 -> 0.0000970
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 151 / 200 	 Time Taken: 3 sec
+learning rate 0.0000970 -> 0.0000950
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 152 / 200 	 Time Taken: 3 sec
+learning rate 0.0000950 -> 0.0000931
+OrderedDict([('G_GAN', 0.976494550704956), ('G_L1', 1.4764130115509033), ('D_real', 0.014598025940358639), ('D_fake', 0.006949329748749733), ('KL_realB_fakeB', 0.08934659334890963)])
+(epoch: 153, iters: 20, time: 0.035, data: 0.105) G_GAN: 0.976 G_L1: 1.476 D_real: 0.015 D_fake: 0.007 KL_realB_fakeB: 0.089 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 153 / 200 	 Time Taken: 3 sec
+learning rate 0.0000931 -> 0.0000911
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 154 / 200 	 Time Taken: 4 sec
+learning rate 0.0000911 -> 0.0000891
+OrderedDict([('G_GAN', 0.8524268865585327), ('G_L1', 1.3020827770233154), ('D_real', 0.05035074055194855), ('D_fake', 0.02442161552608013), ('KL_realB_fakeB', 0.11126447419382013)])
+(epoch: 155, iters: 40, time: 0.033, data: 1.934) G_GAN: 0.852 G_L1: 1.302 D_real: 0.050 D_fake: 0.024 KL_realB_fakeB: 0.111 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 155, iters 6200
+End of epoch 155 / 200 	 Time Taken: 9 sec
+learning rate 0.0000891 -> 0.0000871
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 156 / 200 	 Time Taken: 3 sec
+learning rate 0.0000871 -> 0.0000851
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 157 / 200 	 Time Taken: 3 sec
+learning rate 0.0000851 -> 0.0000832
+OrderedDict([('G_GAN', 0.8119028210639954), ('G_L1', 1.4081521034240723), ('D_real', 0.009540284983813763), ('D_fake', 0.08405113220214844), ('KL_realB_fakeB', 0.07131607840142422)])
+(epoch: 158, iters: 20, time: 0.047, data: 0.472) G_GAN: 0.812 G_L1: 1.408 D_real: 0.010 D_fake: 0.084 KL_realB_fakeB: 0.071 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 158 / 200 	 Time Taken: 3 sec
+learning rate 0.0000832 -> 0.0000812
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 159 / 200 	 Time Taken: 3 sec
+learning rate 0.0000812 -> 0.0000792
+OrderedDict([('G_GAN', 0.7157114148139954), ('G_L1', 1.5128265619277954), ('D_real', 0.05633542686700821), ('D_fake', 0.03411957249045372), ('KL_realB_fakeB', 0.06556727546776636)])
+(epoch: 160, iters: 40, time: 0.399, data: 1.579) G_GAN: 0.716 G_L1: 1.513 D_real: 0.056 D_fake: 0.034 KL_realB_fakeB: 0.066 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 160, iters 6400
+End of epoch 160 / 200 	 Time Taken: 9 sec
+learning rate 0.0000792 -> 0.0000772
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 161 / 200 	 Time Taken: 3 sec
+learning rate 0.0000772 -> 0.0000752
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 162 / 200 	 Time Taken: 3 sec
+learning rate 0.0000752 -> 0.0000733
+OrderedDict([('G_GAN', 0.8058146238327026), ('G_L1', 1.6302807331085205), ('D_real', 0.03217751160264015), ('D_fake', 0.1151256188750267), ('KL_realB_fakeB', 0.10028488086340523)])
+(epoch: 163, iters: 20, time: 0.055, data: 0.536) G_GAN: 0.806 G_L1: 1.630 D_real: 0.032 D_fake: 0.115 KL_realB_fakeB: 0.100 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 163 / 200 	 Time Taken: 3 sec
+learning rate 0.0000733 -> 0.0000713
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 164 / 200 	 Time Taken: 3 sec
+learning rate 0.0000713 -> 0.0000693
+OrderedDict([('G_GAN', 1.07345712184906), ('G_L1', 1.4551392793655396), ('D_real', 0.010084414854645729), ('D_fake', 0.008296116255223751), ('KL_realB_fakeB', 0.06664692729365154)])
+(epoch: 165, iters: 40, time: 0.045, data: 1.603) G_GAN: 1.073 G_L1: 1.455 D_real: 0.010 D_fake: 0.008 KL_realB_fakeB: 0.067 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 165, iters 6600
+End of epoch 165 / 200 	 Time Taken: 8 sec
+learning rate 0.0000693 -> 0.0000673
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 166 / 200 	 Time Taken: 3 sec
+learning rate 0.0000673 -> 0.0000653
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 167 / 200 	 Time Taken: 3 sec
+learning rate 0.0000653 -> 0.0000634
+OrderedDict([('G_GAN', 0.8137944340705872), ('G_L1', 1.365135908126831), ('D_real', 0.046980880200862885), ('D_fake', 0.005160215310752392), ('KL_realB_fakeB', 0.0625313693681068)])
+(epoch: 168, iters: 20, time: 0.055, data: 0.414) G_GAN: 0.814 G_L1: 1.365 D_real: 0.047 D_fake: 0.005 KL_realB_fakeB: 0.063 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 168 / 200 	 Time Taken: 3 sec
+learning rate 0.0000634 -> 0.0000614
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 169 / 200 	 Time Taken: 4 sec
+learning rate 0.0000614 -> 0.0000594
+OrderedDict([('G_GAN', 0.73499995470047), ('G_L1', 1.3286298513412476), ('D_real', 0.04214009642601013), ('D_fake', 0.05803947150707245), ('KL_realB_fakeB', 0.07193893952976885)])
+(epoch: 170, iters: 40, time: 0.361, data: 1.597) G_GAN: 0.735 G_L1: 1.329 D_real: 0.042 D_fake: 0.058 KL_realB_fakeB: 0.072 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 170, iters 6800
+End of epoch 170 / 200 	 Time Taken: 8 sec
+learning rate 0.0000594 -> 0.0000574
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 171 / 200 	 Time Taken: 3 sec
+learning rate 0.0000574 -> 0.0000554
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 172 / 200 	 Time Taken: 3 sec
+learning rate 0.0000554 -> 0.0000535
+OrderedDict([('G_GAN', 1.1978185176849365), ('G_L1', 1.14895761013031), ('D_real', 0.07100265473127365), ('D_fake', 0.06314745545387268), ('KL_realB_fakeB', 0.06287097619378411)])
+(epoch: 173, iters: 20, time: 0.036, data: 0.121) G_GAN: 1.198 G_L1: 1.149 D_real: 0.071 D_fake: 0.063 KL_realB_fakeB: 0.063 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 173 / 200 	 Time Taken: 3 sec
+learning rate 0.0000535 -> 0.0000515
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 174 / 200 	 Time Taken: 3 sec
+learning rate 0.0000515 -> 0.0000495
+OrderedDict([('G_GAN', 1.1616475582122803), ('G_L1', 1.2325818538665771), ('D_real', 0.016721488907933235), ('D_fake', 0.012207265011966228), ('KL_realB_fakeB', 0.0698513697693302)])
+(epoch: 175, iters: 40, time: 0.058, data: 1.640) G_GAN: 1.162 G_L1: 1.233 D_real: 0.017 D_fake: 0.012 KL_realB_fakeB: 0.070 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 175, iters 7000
+End of epoch 175 / 200 	 Time Taken: 9 sec
+learning rate 0.0000495 -> 0.0000475
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 176 / 200 	 Time Taken: 3 sec
+learning rate 0.0000475 -> 0.0000455
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 177 / 200 	 Time Taken: 3 sec
+learning rate 0.0000455 -> 0.0000436
+OrderedDict([('G_GAN', 1.0997456312179565), ('G_L1', 1.2255481481552124), ('D_real', 0.005094584543257952), ('D_fake', 0.008217664435505867), ('KL_realB_fakeB', 0.06733922422967173)])
+(epoch: 178, iters: 20, time: 0.048, data: 0.406) G_GAN: 1.100 G_L1: 1.226 D_real: 0.005 D_fake: 0.008 KL_realB_fakeB: 0.067 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 178 / 200 	 Time Taken: 3 sec
+learning rate 0.0000436 -> 0.0000416
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 179 / 200 	 Time Taken: 3 sec
+learning rate 0.0000416 -> 0.0000396
+OrderedDict([('G_GAN', 0.9158125519752502), ('G_L1', 1.5067442655563354), ('D_real', 0.008539354428648949), ('D_fake', 0.00400859210640192), ('KL_realB_fakeB', 0.06601036634887839)])
+(epoch: 180, iters: 40, time: 0.507, data: 1.380) G_GAN: 0.916 G_L1: 1.507 D_real: 0.009 D_fake: 0.004 KL_realB_fakeB: 0.066 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 180, iters 7200
+End of epoch 180 / 200 	 Time Taken: 9 sec
+learning rate 0.0000396 -> 0.0000376
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 181 / 200 	 Time Taken: 3 sec
+learning rate 0.0000376 -> 0.0000356
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 182 / 200 	 Time Taken: 3 sec
+learning rate 0.0000356 -> 0.0000337
+OrderedDict([('G_GAN', 1.427487850189209), ('G_L1', 1.621646761894226), ('D_real', 0.004480814561247826), ('D_fake', 0.052463795989751816), ('KL_realB_fakeB', 0.08079248551448186)])
+(epoch: 183, iters: 20, time: 0.049, data: 0.537) G_GAN: 1.427 G_L1: 1.622 D_real: 0.004 D_fake: 0.052 KL_realB_fakeB: 0.081 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 183 / 200 	 Time Taken: 3 sec
+learning rate 0.0000337 -> 0.0000317
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 184 / 200 	 Time Taken: 3 sec
+learning rate 0.0000317 -> 0.0000297
+OrderedDict([('G_GAN', 0.7477340698242188), ('G_L1', 1.13442862033844), ('D_real', 0.0057662660256028175), ('D_fake', 0.038497935980558395), ('KL_realB_fakeB', 0.07314870001286423)])
+(epoch: 185, iters: 40, time: 0.059, data: 1.490) G_GAN: 0.748 G_L1: 1.134 D_real: 0.006 D_fake: 0.038 KL_realB_fakeB: 0.073 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 185, iters 7400
+End of epoch 185 / 200 	 Time Taken: 8 sec
+learning rate 0.0000297 -> 0.0000277
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 186 / 200 	 Time Taken: 3 sec
+learning rate 0.0000277 -> 0.0000257
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 187 / 200 	 Time Taken: 3 sec
+learning rate 0.0000257 -> 0.0000238
+OrderedDict([('G_GAN', 1.026336431503296), ('G_L1', 1.1787461042404175), ('D_real', 0.012429925613105297), ('D_fake', 0.0033565983176231384), ('KL_realB_fakeB', 0.07499674770460832)])
+(epoch: 188, iters: 20, time: 0.056, data: 0.128) G_GAN: 1.026 G_L1: 1.179 D_real: 0.012 D_fake: 0.003 KL_realB_fakeB: 0.075 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 188 / 200 	 Time Taken: 3 sec
+learning rate 0.0000238 -> 0.0000218
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 189 / 200 	 Time Taken: 3 sec
+learning rate 0.0000218 -> 0.0000198
+OrderedDict([('G_GAN', 1.030441164970398), ('G_L1', 1.210693120956421), ('D_real', 0.0033702857326716185), ('D_fake', 0.0026028682477772236), ('KL_realB_fakeB', 0.0703136995235634)])
+(epoch: 190, iters: 40, time: 0.392, data: 1.771) G_GAN: 1.030 G_L1: 1.211 D_real: 0.003 D_fake: 0.003 KL_realB_fakeB: 0.070 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 190, iters 7600
+End of epoch 190 / 200 	 Time Taken: 8 sec
+learning rate 0.0000198 -> 0.0000178
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 191 / 200 	 Time Taken: 3 sec
+learning rate 0.0000178 -> 0.0000158
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 192 / 200 	 Time Taken: 3 sec
+learning rate 0.0000158 -> 0.0000139
+OrderedDict([('G_GAN', 0.9947568774223328), ('G_L1', 1.4035427570343018), ('D_real', 0.006498366594314575), ('D_fake', 0.0037114014849066734), ('KL_realB_fakeB', 0.06647117278054579)])
+(epoch: 193, iters: 20, time: 0.060, data: 0.530) G_GAN: 0.995 G_L1: 1.404 D_real: 0.006 D_fake: 0.004 KL_realB_fakeB: 0.066 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 193 / 200 	 Time Taken: 3 sec
+learning rate 0.0000139 -> 0.0000119
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 194 / 200 	 Time Taken: 3 sec
+learning rate 0.0000119 -> 0.0000099
+OrderedDict([('G_GAN', 1.076597809791565), ('G_L1', 1.3197749853134155), ('D_real', 0.018170127645134926), ('D_fake', 0.00344996084459126), ('KL_realB_fakeB', 0.0705417796981791)])
+(epoch: 195, iters: 40, time: 0.058, data: 1.573) G_GAN: 1.077 G_L1: 1.320 D_real: 0.018 D_fake: 0.003 KL_realB_fakeB: 0.071 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 195, iters 7800
+End of epoch 195 / 200 	 Time Taken: 10 sec
+learning rate 0.0000099 -> 0.0000079
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 196 / 200 	 Time Taken: 3 sec
+learning rate 0.0000079 -> 0.0000059
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 197 / 200 	 Time Taken: 3 sec
+learning rate 0.0000059 -> 0.0000040
+OrderedDict([('G_GAN', 0.529472827911377), ('G_L1', 1.230425238609314), ('D_real', 0.017553340643644333), ('D_fake', 0.08856238424777985), ('KL_realB_fakeB', 0.06748491990726133)])
+(epoch: 198, iters: 20, time: 0.043, data: 0.399) G_GAN: 0.529 G_L1: 1.230 D_real: 0.018 D_fake: 0.089 KL_realB_fakeB: 0.067 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 198 / 200 	 Time Taken: 3 sec
+learning rate 0.0000040 -> 0.0000020
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+End of epoch 199 / 200 	 Time Taken: 3 sec
+learning rate 0.0000020 -> 0.0000000
+OrderedDict([('G_GAN', 0.9522980451583862), ('G_L1', 1.1603012084960938), ('D_real', 0.004269994329661131), ('D_fake', 0.006012199446558952), ('KL_realB_fakeB', 0.06934766574782111)])
+(epoch: 200, iters: 40, time: 0.443, data: 1.886) G_GAN: 0.952 G_L1: 1.160 D_real: 0.004 D_fake: 0.006 KL_realB_fakeB: 0.069 
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+end of validation step
+saving the model at the end of epoch 200, iters 8000
+End of epoch 200 / 200 	 Time Taken: 10 sec

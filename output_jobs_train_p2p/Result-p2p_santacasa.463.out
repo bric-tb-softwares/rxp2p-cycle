@@ -1,0 +1,192 @@
+----------------- Options ---------------
+               batch_size: 1                             
+                    beta1: 0.5                           
+          checkpoints_dir: /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints
+           continue_train: False                         
+                crop_size: 256                           
+       custom_images_path: /home/otto.tavares/public/iltbi/train/images/santa_casa_pares/	[default: None]
+        custom_masks_path: None                          
+       custom_paired_path: None                          
+                 dataroot: /home/otto.tavares/public/iltbi/train/images/santa_casa_pares/	[default: None]
+           dataset_action: False                         
+     dataset_download_dir: /home/otto.tavares/public/iltbi/rxpixp2pixcycle
+             dataset_mode: santacasaskfold               	[default: aligned]
+             dataset_name: Shenzhen                      
+                direction: AtoB                          
+              display_env: main                          
+             display_freq: 400                           
+               display_id: 1                             
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
+            download_imgs: False                         
+                    epoch: latest                        
+              epoch_count: 1                             
+                 gan_mode: lsgan                         	[default: vanilla]
+  generate_paths_data_csv: False                         
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                     isTB: False                         
+                  isTrain: True                          	[default: None]
+          is_resume_wandb: False                         
+                      job: None                          
+                lambda_L1: 50.0                          	[default: 100.0]
+                load_iter: 0                             	[default: 0]
+                load_size: 256                           	[default: 286]
+                       lr: 0.0002                        
+           lr_decay_iters: 50                            
+                lr_policy: linear                        
+         max_dataset_size: inf                           
+                    model: pix2pix                       	[default: cycle_gan]
+                 n_epochs: 100                           
+           n_epochs_decay: 100                           
+                  n_folds: 10                            
+               n_layers_D: 3                             
+                     name: santacasa_test_0_sort_0       	[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: unet_256                      
+                      ngf: 64                            
+               no_dropout: False                         
+                  no_flip: False                         
+                  no_html: False                         
+                     norm: batch                         
+              num_threads: 4                             
+                  num_val: 400                           
+                output_nc: 3                             
+                    phase: train                         
+                pool_size: 0                             
+               preprocess: resize_and_scale_width        	[default: resize_and_crop]
+               print_freq: 100                           
+                  project: p2p_santacasa                 	[default: None]
+             save_by_iter: False                         
+          save_epoch_freq: 5                             
+         save_latest_freq: 5000                          
+                     seed: 512                           	[default: 512]
+           serial_batches: False                         
+                     sort: 0                             
+                   suffix:                               
+                     test: 0                             
+                    token:                               
+            train_dataset: True                          
+         update_html_freq: 1000                          
+                use_wandb: True                          	[default: False]
+                 val_freq: 10                            	[default: 400]
+                  verbose: False                         
+             wandb_entity: otavares                      	[default: brics-tb]
+            wandb_fold_id: def_val_wandb_test_0_sort_0   	[default: None]
+----------------- End -------------------
+GPU with device 0
+                 images    gauss  ... all_together target
+0   20220315_184023.jpg      seg  ...          seg      0
+1   20220315_184432.jpg      seg  ...          seg      0
+2   20220315_184701.jpg  not seg  ...          seg      0
+3   20220315_184740.jpg      seg  ...          seg      0
+4   20220315_185230.jpg      seg  ...          seg      0
+..                  ...      ...  ...          ...    ...
+83         IMG_5503.JPG  not seg  ...      not seg      0
+84         IMG_5505.JPG      seg  ...          seg      0
+85         IMG_5507.JPG      seg  ...          seg      0
+86         IMG_5509.JPG      seg  ...          seg      0
+87         IMG_5604.JPG      seg  ...          seg      0
+
+[88 rows x 5 columns]
+bins selected for val: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+dataset [SantaCasaSkfoldDataset] was created
+                 images    gauss  ... all_together target
+0   20220315_184023.jpg      seg  ...          seg      0
+1   20220315_184432.jpg      seg  ...          seg      0
+2   20220315_184701.jpg  not seg  ...          seg      0
+3   20220315_184740.jpg      seg  ...          seg      0
+4   20220315_185230.jpg      seg  ...          seg      0
+..                  ...      ...  ...          ...    ...
+83         IMG_5503.JPG  not seg  ...      not seg      0
+84         IMG_5505.JPG      seg  ...          seg      0
+85         IMG_5507.JPG      seg  ...          seg      0
+86         IMG_5509.JPG      seg  ...          seg      0
+87         IMG_5604.JPG      seg  ...          seg      0
+
+[88 rows x 5 columns]
+bins selected for val: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+dataset [SantaCasaSkfoldDataset] was created
+The number of training images = 41
+The number of val images = 5
+initialize network with normal
+initialize network with normal
+model [Pix2PixModel] was created
+---------- Networks initialized -------------
+[Network G] Total number of parameters : 54.414 M
+[Network D] Total number of parameters : 2.769 M
+-----------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+
+
+Could not connect to Visdom server. 
+ Trying to start a server....
+Command: /usr/bin/python3 -m visdom.server -p 8097 &>/dev/null &
+create web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/santacasa_test_0_sort_0/web...
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('G_GAN_val', 1.0469839572906494), ('G_L1_val', 32.27857208251953), ('D_real_val', 0.6710768342018127), ('D_fake_val', 0.8497456908226013), ('KL_realB_fakeB_val', 2.0319837150501057)])
+end of validation step
+OrderedDict([('G_GAN_val', 1.158103108406067), ('G_L1_val', 25.39169692993164), ('D_real_val', 0.825065553188324), ('D_fake_val', 0.8840567469596863), ('KL_realB_fakeB_val', 2.4436954990333457)])
+end of validation step
+OrderedDict([('G_GAN_val', 1.016024112701416), ('G_L1_val', 25.24660873413086), ('D_real_val', 0.5772615671157837), ('D_fake_val', 0.7889115810394287), ('KL_realB_fakeB_val', 2.634552016236322)])
+end of validation step
+OrderedDict([('G_GAN_val', 1.0939767360687256), ('G_L1_val', 28.285663604736328), ('D_real_val', 0.7875374555587769), ('D_fake_val', 0.9556286931037903), ('KL_realB_fakeB_val', 2.5046975012156363)])
+end of validation step
+OrderedDict([('G_GAN_val', 1.058186650276184), ('G_L1_val', 28.694047927856445), ('D_real_val', 0.5302121639251709), ('D_fake_val', 0.8923423290252686), ('KL_realB_fakeB_val', 2.3822188035651344)])
+end of validation step
+OrderedDict([('G_GAN_val', 1.6761529445648193), ('G_L1_val', 20.78876495361328), ('D_real_val', 1.5587482452392578), ('D_fake_val', 1.6063790321350098), ('KL_realB_fakeB_val', 0.47727233226811167)])
+end of validation step
+OrderedDict([('G_GAN_val', 1.7197883129119873), ('G_L1_val', 17.76413917541504), ('D_real_val', 1.7872170209884644), ('D_fake_val', 1.627512812614441), ('KL_realB_fakeB_val', 0.5596330134210125)])
+end of validation step
+OrderedDict([('G_GAN_val', 1.8053936958312988), ('G_L1_val', 22.826675415039062), ('D_real_val', 1.5087260007858276), ('D_fake_val', 1.651242733001709), ('KL_realB_fakeB_val', 0.42766491130907824)])
+end of validation step
+OrderedDict([('G_GAN_val', 2.189980983734131), ('G_L1_val', 19.45601463317871), ('D_real_val', 1.9906026124954224), ('D_fake_val', 2.0534074306488037), ('KL_realB_fakeB_val', 0.35945500072518427)])
+end of validation step
+OrderedDict([('G_GAN_val', 2.597468614578247), ('G_L1_val', 15.83840560913086), ('D_real_val', 2.6283767223358154), ('D_fake_val', 2.4342939853668213), ('KL_realB_fakeB_val', 0.5453352646406968)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.48868227005004883), ('G_L1_val', 11.892434120178223), ('D_real_val', 0.38597649335861206), ('D_fake_val', 0.42134490609169006), ('KL_realB_fakeB_val', 0.1975684324791495)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.40199607610702515), ('G_L1_val', 7.999772071838379), ('D_real_val', 0.35271474719047546), ('D_fake_val', 0.4107825756072998), ('KL_realB_fakeB_val', 0.12690478124630797)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4724751114845276), ('G_L1_val', 12.277995109558105), ('D_real_val', 0.4450259208679199), ('D_fake_val', 0.456847220659256), ('KL_realB_fakeB_val', 0.18803649967786465)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.7013899683952332), ('G_L1_val', 16.879621505737305), ('D_real_val', 0.477083683013916), ('D_fake_val', 0.5162416100502014), ('KL_realB_fakeB_val', 0.26708498215022086)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.6430317759513855), ('G_L1_val', 16.471895217895508), ('D_real_val', 0.4541628658771515), ('D_fake_val', 0.5348629951477051), ('KL_realB_fakeB_val', 0.2505728748645523)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5810019373893738), ('G_L1_val', 8.411293029785156), ('D_real_val', 0.5931890606880188), ('D_fake_val', 0.5066497921943665), ('KL_realB_fakeB_val', 0.11657465303153307)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5377556085586548), ('G_L1_val', 5.091797351837158), ('D_real_val', 0.5165093541145325), ('D_fake_val', 0.46795663237571716), ('KL_realB_fakeB_val', 0.4043109625272657)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.5081102848052979), ('G_L1_val', 13.147309303283691), ('D_real_val', 0.4512030780315399), ('D_fake_val', 0.40927639603614807), ('KL_realB_fakeB_val', 0.1826445708015097)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.46684619784355164), ('G_L1_val', 11.400838851928711), ('D_real_val', 0.44744327664375305), ('D_fake_val', 0.3512778878211975), ('KL_realB_fakeB_val', 0.12577542674573422)])
+end of validation step
+OrderedDict([('G_GAN_val', 0.4512333869934082), ('G_L1_val', 8.120287895202637), ('D_real_val', 0.43937429785728455), ('D_fake_val', 0.41131070256233215), ('KL_realB_fakeB_val', 0.18118019751718192)])
+end of validation step
+End of epoch 1 / 200 	 Time Taken: 4 sec
+learning rate 0.0002000 -> 0.0002000

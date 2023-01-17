@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/generate_synth.py", line 50, in <module>
+    opt = TestOptions().parse()  # get test options
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/options/base_options.py", line 139, in parse
+    opt = self.gather_options()
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/options/base_options.py", line 104, in gather_options
+    dataset_option_setter = data.get_option_setter(dataset_name)
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/data/__init__.py", line 43, in get_option_setter
+    dataset_class = find_dataset_using_name(dataset_name)
+  File "/home/otto.tavares/public/iltbi/rxpixp2pixcycle/data/__init__.py", line 36, in find_dataset_using_name
+    raise NotImplementedError("In %s.py, there should be a subclass of BaseDataset with class name that matches %s in lowercase." % (dataset_filename, target_dataset_name))
+NotImplementedError: In data.santacasaskfold2generator_dataset.py, there should be a subclass of BaseDataset with class name that matches santacasaskfold2generatordataset in lowercase.

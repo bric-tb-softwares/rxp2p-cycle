@@ -1,0 +1,1955 @@
+----------------- Options ---------------
+             aspect_ratio: 1.0                           
+               batch_size: 1                             
+          checkpoints_dir: /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/	[default: /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints]
+                crop_size: 256                           
+       custom_images_path: /home/brics/public/brics_data/Shenzhen/raw/images	[default: None]
+        custom_masks_path: None                          
+       custom_paired_path: None                          
+                 dataroot: /home/brics/public/brics_data/Shenzhen	[default: None]
+           dataset_action: False                         
+     dataset_download_dir: /home/otto.tavares/public/iltbi/train/images	[default: /home/otto.tavares/public/iltbi/rxpixp2pixcycle]
+             dataset_mode: cyclesantacasaskfold2generator	[default: single]
+             dataset_name: Shenzhen                      
+                direction: AtoB                          
+             display_port: 8097                          
+          display_winsize: 256                           
+            download_imgs: True                          	[default: False]
+                    epoch: latest                        
+                     eval: False                         
+         gen_test_dataset: False                         
+        gen_train_dataset: False                         
+          gen_val_dataset: True                          	[default: False]
+  generate_paths_data_csv: False                         
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                     isTB: True                          	[default: False]
+                  isTrain: False                         	[default: None]
+          is_resume_wandb: False                         
+                      job: None                          
+                load_iter: 0                             	[default: 0]
+                load_size: 256                           
+         max_dataset_size: inf                           
+                    model: test2cycle                    	[default: test]
+             model_suffix:                               
+                  n_folds: 10                            
+               n_layers_D: 3                             
+                     name: genkl                         	[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: resnet_9blocks                
+                      ngf: 64                            
+               no_dropout: True                          	[default: False]
+                  no_flip: False                         
+                     norm: instance                      
+                 num_test: 50                            
+              num_threads: 4                             
+                output_nc: 3                             
+                    phase: test                          
+               preprocess: resize_and_scale_width        	[default: resize_and_crop]
+                  project: None                          
+              results_dir: /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/	[default: ./results/]
+                     seed: 512                           	[default: 512]
+           serial_batches: False                         
+                     sort: 0                             
+                   suffix:                               
+                     test: 0                             
+                    token: b16fe0fc92088c4840a98160f3848839e68b1148	[default: ]
+                use_wandb: False                         
+                  verbose: False                         
+             wandb_entity: brics-tb                      
+            wandb_fold_id: None                          
+----------------- End -------------------
+GPU with device 0
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_0/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_0/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_0_sort_0/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184701_E8A15F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160519_692793_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191002_5649EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171020_77A819_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192735_C51B95_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181312_F99B8B_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151300_60E81D_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_1/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_1/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_0_sort_1/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185346_EE823A_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161215_7B2471_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192652_93217A_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165040_DE2DEF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192939_3F5108_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171250_85833E_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160343_AF999F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_2/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_2/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_0_sort_2/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192525_264B09_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181626_39B75E_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152524_FA09EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5408_8BFC27_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154454_FC7D53_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5507_B24045_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154934_ADE45A_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_3/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_3/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_0_sort_3/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185230_09A8AE_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164554_0A2E87_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192116_C26327_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170424_A01E75_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145159_A19876_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170606_FC0B18_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161852_4FFC0F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_4/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_4/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_0_sort_4/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185809_49AE5F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160237_586B13_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150814_8B37FA_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161014_15E4CF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150844_6DE99D_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161545_DC0004_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152741_92B2F8_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_5/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_5/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_0_sort_5/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184432_B11816_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162127_E1F32A_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184740_2D93D3_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165555_50A375_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191958_975A85_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170846_49DA15_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144425_6B9FA7_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_6/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_6/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_0_sort_6/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184023_414198_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171516_C1E622_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185645_B5E226_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145336_9E3834_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_190444_9DAF32_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5407_A7CAC9_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145718_710512_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_7/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_7/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_0_sort_7/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191225_4FF83C_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164823_584AC7_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151737_84B30B_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5501_AE867B_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162921_A6C600_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151153_7F82F7_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165249_530748_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_8/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_0_sort_8/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_0_sort_8/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191628_2AB2E8_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164325_305BC9_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151653_5B9B12_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145409_4FA6FB_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_155333_253D0C_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144049_739E34_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_144842_814C75_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_0/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_0/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_1_sort_0/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192319_1754A3_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164454_844120_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_143848_F5F93D_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145002_955000_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152915_C0994E_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5303_8D67A2_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154638_CD7050_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_1/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_1/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_1_sort_1/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185346_EE823A_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161215_7B2471_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192652_93217A_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165040_DE2DEF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192939_3F5108_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171250_85833E_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160343_AF999F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_2/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_2/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_1_sort_2/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192525_264B09_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181626_39B75E_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152524_FA09EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5408_8BFC27_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154454_FC7D53_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5507_B24045_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154934_ADE45A_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_3/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_3/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_1_sort_3/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185230_09A8AE_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164554_0A2E87_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192116_C26327_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170424_A01E75_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145159_A19876_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170606_FC0B18_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161852_4FFC0F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_4/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_4/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_1_sort_4/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185809_49AE5F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160237_586B13_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150814_8B37FA_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161014_15E4CF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150844_6DE99D_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161545_DC0004_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152741_92B2F8_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_5/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_5/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_1_sort_5/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184432_B11816_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162127_E1F32A_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184740_2D93D3_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165555_50A375_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191958_975A85_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170846_49DA15_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144425_6B9FA7_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_6/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_6/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_1_sort_6/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184023_414198_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171516_C1E622_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185645_B5E226_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145336_9E3834_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_190444_9DAF32_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5407_A7CAC9_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145718_710512_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_7/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_7/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_1_sort_7/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191225_4FF83C_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164823_584AC7_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151737_84B30B_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5501_AE867B_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162921_A6C600_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151153_7F82F7_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165249_530748_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_8/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_1_sort_8/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_1_sort_8/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191628_2AB2E8_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164325_305BC9_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151653_5B9B12_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145409_4FA6FB_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_155333_253D0C_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144049_739E34_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_144842_814C75_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_0/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_0/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_2_sort_0/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192319_1754A3_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164454_844120_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_143848_F5F93D_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145002_955000_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152915_C0994E_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5303_8D67A2_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154638_CD7050_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_1/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_1/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_2_sort_1/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184701_E8A15F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160519_692793_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191002_5649EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171020_77A819_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192735_C51B95_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181312_F99B8B_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151300_60E81D_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_2/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_2/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_2_sort_2/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192525_264B09_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181626_39B75E_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152524_FA09EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5408_8BFC27_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154454_FC7D53_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5507_B24045_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154934_ADE45A_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_3/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_3/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_2_sort_3/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185230_09A8AE_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164554_0A2E87_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192116_C26327_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170424_A01E75_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145159_A19876_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170606_FC0B18_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161852_4FFC0F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_4/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_4/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_2_sort_4/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185809_49AE5F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160237_586B13_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150814_8B37FA_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161014_15E4CF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150844_6DE99D_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161545_DC0004_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152741_92B2F8_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_5/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_5/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_2_sort_5/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184432_B11816_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162127_E1F32A_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184740_2D93D3_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165555_50A375_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191958_975A85_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170846_49DA15_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144425_6B9FA7_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_6/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_6/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_2_sort_6/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184023_414198_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171516_C1E622_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185645_B5E226_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145336_9E3834_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_190444_9DAF32_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5407_A7CAC9_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145718_710512_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_7/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_7/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_2_sort_7/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191225_4FF83C_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164823_584AC7_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151737_84B30B_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5501_AE867B_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162921_A6C600_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151153_7F82F7_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165249_530748_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_8/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_2_sort_8/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_2_sort_8/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191628_2AB2E8_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164325_305BC9_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151653_5B9B12_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145409_4FA6FB_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_155333_253D0C_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144049_739E34_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_144842_814C75_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_0/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_0/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_3_sort_0/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192319_1754A3_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164454_844120_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_143848_F5F93D_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145002_955000_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152915_C0994E_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5303_8D67A2_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154638_CD7050_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_1/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_1/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_3_sort_1/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184701_E8A15F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160519_692793_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191002_5649EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171020_77A819_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192735_C51B95_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181312_F99B8B_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151300_60E81D_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_2/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_2/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_3_sort_2/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185346_EE823A_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161215_7B2471_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192652_93217A_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165040_DE2DEF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192939_3F5108_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171250_85833E_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160343_AF999F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_3/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_3/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_3_sort_3/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185230_09A8AE_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164554_0A2E87_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192116_C26327_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170424_A01E75_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145159_A19876_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170606_FC0B18_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161852_4FFC0F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_4/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_4/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_3_sort_4/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185809_49AE5F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160237_586B13_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150814_8B37FA_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161014_15E4CF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150844_6DE99D_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161545_DC0004_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152741_92B2F8_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_5/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_5/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_3_sort_5/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184432_B11816_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162127_E1F32A_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184740_2D93D3_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165555_50A375_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191958_975A85_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170846_49DA15_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144425_6B9FA7_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_6/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_6/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_3_sort_6/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184023_414198_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171516_C1E622_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185645_B5E226_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145336_9E3834_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_190444_9DAF32_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5407_A7CAC9_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145718_710512_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_7/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_7/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_3_sort_7/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191225_4FF83C_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164823_584AC7_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151737_84B30B_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5501_AE867B_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162921_A6C600_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151153_7F82F7_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165249_530748_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_8/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_3_sort_8/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_3_sort_8/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191628_2AB2E8_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164325_305BC9_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151653_5B9B12_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145409_4FA6FB_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_155333_253D0C_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144049_739E34_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_144842_814C75_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_0/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_0/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_4_sort_0/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192319_1754A3_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164454_844120_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_143848_F5F93D_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145002_955000_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152915_C0994E_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5303_8D67A2_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154638_CD7050_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_1/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_1/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_4_sort_1/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184701_E8A15F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160519_692793_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191002_5649EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171020_77A819_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192735_C51B95_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181312_F99B8B_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151300_60E81D_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_2/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_2/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_4_sort_2/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185346_EE823A_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161215_7B2471_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192652_93217A_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165040_DE2DEF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192939_3F5108_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171250_85833E_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160343_AF999F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_3/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_3/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_4_sort_3/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192525_264B09_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181626_39B75E_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152524_FA09EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5408_8BFC27_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154454_FC7D53_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5507_B24045_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154934_ADE45A_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_4/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_4/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_4_sort_4/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185809_49AE5F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160237_586B13_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150814_8B37FA_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161014_15E4CF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150844_6DE99D_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161545_DC0004_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152741_92B2F8_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_5/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_5/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_4_sort_5/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184432_B11816_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162127_E1F32A_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184740_2D93D3_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165555_50A375_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191958_975A85_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170846_49DA15_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144425_6B9FA7_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_6/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_6/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_4_sort_6/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184023_414198_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171516_C1E622_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185645_B5E226_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145336_9E3834_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_190444_9DAF32_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5407_A7CAC9_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145718_710512_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_7/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_7/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_4_sort_7/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191225_4FF83C_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164823_584AC7_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151737_84B30B_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5501_AE867B_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162921_A6C600_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151153_7F82F7_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165249_530748_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_8/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_4_sort_8/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_4_sort_8/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191628_2AB2E8_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164325_305BC9_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151653_5B9B12_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145409_4FA6FB_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_155333_253D0C_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144049_739E34_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_144842_814C75_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_0/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_0/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_5_sort_0/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192319_1754A3_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164454_844120_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_143848_F5F93D_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145002_955000_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152915_C0994E_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5303_8D67A2_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154638_CD7050_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_1/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_1/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_5_sort_1/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184701_E8A15F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160519_692793_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191002_5649EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171020_77A819_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192735_C51B95_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181312_F99B8B_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151300_60E81D_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_2/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_2/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_5_sort_2/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185346_EE823A_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161215_7B2471_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192652_93217A_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165040_DE2DEF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192939_3F5108_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171250_85833E_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160343_AF999F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_3/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_3/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_5_sort_3/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192525_264B09_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181626_39B75E_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152524_FA09EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5408_8BFC27_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154454_FC7D53_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5507_B24045_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154934_ADE45A_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_4/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_4/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_5_sort_4/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185230_09A8AE_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164554_0A2E87_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192116_C26327_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170424_A01E75_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145159_A19876_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170606_FC0B18_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161852_4FFC0F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_5/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_5/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_5_sort_5/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184432_B11816_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162127_E1F32A_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184740_2D93D3_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165555_50A375_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191958_975A85_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170846_49DA15_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144425_6B9FA7_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_6/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_6/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_5_sort_6/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184023_414198_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171516_C1E622_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185645_B5E226_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145336_9E3834_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_190444_9DAF32_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5407_A7CAC9_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145718_710512_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_7/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_7/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_5_sort_7/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191225_4FF83C_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164823_584AC7_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151737_84B30B_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5501_AE867B_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162921_A6C600_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151153_7F82F7_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165249_530748_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_8/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_5_sort_8/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_5_sort_8/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191628_2AB2E8_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164325_305BC9_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151653_5B9B12_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145409_4FA6FB_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_155333_253D0C_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144049_739E34_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_144842_814C75_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_0/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_0/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_6_sort_0/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192319_1754A3_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164454_844120_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_143848_F5F93D_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145002_955000_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152915_C0994E_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5303_8D67A2_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154638_CD7050_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_1/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_1/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_6_sort_1/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184701_E8A15F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160519_692793_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191002_5649EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171020_77A819_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192735_C51B95_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181312_F99B8B_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151300_60E81D_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_2/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_2/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_6_sort_2/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185346_EE823A_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161215_7B2471_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192652_93217A_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165040_DE2DEF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192939_3F5108_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171250_85833E_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160343_AF999F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_3/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_3/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_6_sort_3/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192525_264B09_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181626_39B75E_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152524_FA09EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5408_8BFC27_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154454_FC7D53_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5507_B24045_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154934_ADE45A_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_4/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_4/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_6_sort_4/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185230_09A8AE_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164554_0A2E87_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192116_C26327_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170424_A01E75_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145159_A19876_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170606_FC0B18_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161852_4FFC0F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_5/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_5/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_6_sort_5/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185809_49AE5F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160237_586B13_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150814_8B37FA_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161014_15E4CF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150844_6DE99D_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161545_DC0004_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152741_92B2F8_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_6/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_6/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_6_sort_6/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184023_414198_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171516_C1E622_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185645_B5E226_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145336_9E3834_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_190444_9DAF32_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5407_A7CAC9_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145718_710512_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_7/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_7/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_6_sort_7/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191225_4FF83C_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164823_584AC7_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151737_84B30B_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5501_AE867B_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162921_A6C600_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151153_7F82F7_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165249_530748_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_8/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_6_sort_8/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_6_sort_8/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191628_2AB2E8_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164325_305BC9_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151653_5B9B12_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145409_4FA6FB_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_155333_253D0C_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144049_739E34_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_144842_814C75_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_0/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_0/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_7_sort_0/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192319_1754A3_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164454_844120_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_143848_F5F93D_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145002_955000_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152915_C0994E_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5303_8D67A2_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154638_CD7050_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_1/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_1/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_7_sort_1/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184701_E8A15F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160519_692793_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191002_5649EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171020_77A819_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192735_C51B95_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181312_F99B8B_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151300_60E81D_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_2/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_2/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_7_sort_2/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185346_EE823A_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161215_7B2471_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192652_93217A_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165040_DE2DEF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192939_3F5108_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171250_85833E_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160343_AF999F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_3/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_3/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_7_sort_3/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192525_264B09_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181626_39B75E_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152524_FA09EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5408_8BFC27_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154454_FC7D53_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5507_B24045_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154934_ADE45A_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_4/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_4/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_7_sort_4/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185230_09A8AE_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164554_0A2E87_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192116_C26327_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170424_A01E75_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145159_A19876_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170606_FC0B18_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161852_4FFC0F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_5/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_5/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_7_sort_5/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185809_49AE5F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160237_586B13_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150814_8B37FA_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161014_15E4CF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150844_6DE99D_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161545_DC0004_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152741_92B2F8_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_6/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_6/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_7_sort_6/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184432_B11816_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162127_E1F32A_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184740_2D93D3_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165555_50A375_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191958_975A85_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170846_49DA15_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144425_6B9FA7_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_7/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_7/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_7_sort_7/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191225_4FF83C_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164823_584AC7_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151737_84B30B_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5501_AE867B_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162921_A6C600_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151153_7F82F7_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165249_530748_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_8/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_7_sort_8/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_7_sort_8/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191628_2AB2E8_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164325_305BC9_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151653_5B9B12_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145409_4FA6FB_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_155333_253D0C_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144049_739E34_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_144842_814C75_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_0/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_0/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_8_sort_0/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192319_1754A3_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164454_844120_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_143848_F5F93D_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145002_955000_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152915_C0994E_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5303_8D67A2_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154638_CD7050_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_1/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_1/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_8_sort_1/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184701_E8A15F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160519_692793_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191002_5649EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171020_77A819_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192735_C51B95_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181312_F99B8B_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151300_60E81D_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_2/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_2/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_8_sort_2/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185346_EE823A_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161215_7B2471_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192652_93217A_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165040_DE2DEF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192939_3F5108_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171250_85833E_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160343_AF999F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_3/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_3/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_8_sort_3/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192525_264B09_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181626_39B75E_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152524_FA09EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5408_8BFC27_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154454_FC7D53_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5507_B24045_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154934_ADE45A_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_4/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_4/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_8_sort_4/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185230_09A8AE_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164554_0A2E87_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192116_C26327_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170424_A01E75_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145159_A19876_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170606_FC0B18_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161852_4FFC0F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_5/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_5/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_8_sort_5/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185809_49AE5F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160237_586B13_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150814_8B37FA_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161014_15E4CF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150844_6DE99D_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161545_DC0004_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152741_92B2F8_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_6/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_6/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_8_sort_6/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184432_B11816_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162127_E1F32A_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184740_2D93D3_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165555_50A375_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191958_975A85_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170846_49DA15_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144425_6B9FA7_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_7/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_7/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_8_sort_7/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184023_414198_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171516_C1E622_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185645_B5E226_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145336_9E3834_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_190444_9DAF32_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5407_A7CAC9_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145718_710512_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_8/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_8_sort_8/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_8_sort_8/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191628_2AB2E8_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164325_305BC9_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151653_5B9B12_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145409_4FA6FB_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_155333_253D0C_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144049_739E34_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_144842_814C75_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_0/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_0/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_9_sort_0/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192319_1754A3_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164454_844120_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_143848_F5F93D_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145002_955000_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152915_C0994E_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5303_8D67A2_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154638_CD7050_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_1/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_1/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_9_sort_1/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184701_E8A15F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160519_692793_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191002_5649EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171020_77A819_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192735_C51B95_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181312_F99B8B_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151300_60E81D_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_2/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_2/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_9_sort_2/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185346_EE823A_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161215_7B2471_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192652_93217A_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165040_DE2DEF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192939_3F5108_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171250_85833E_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160343_AF999F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_3/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_3/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_9_sort_3/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192525_264B09_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_181626_39B75E_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152524_FA09EF_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5408_8BFC27_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154454_FC7D53_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5507_B24045_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_154934_ADE45A_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_4/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_4/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_9_sort_4/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185230_09A8AE_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164554_0A2E87_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_192116_C26327_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170424_A01E75_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145159_A19876_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170606_FC0B18_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161852_4FFC0F_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 33 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_5/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_5/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_9_sort_5/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185809_49AE5F_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_160237_586B13_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150814_8B37FA_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161014_15E4CF_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_150844_6DE99D_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_161545_DC0004_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_152741_92B2F8_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_6/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_6/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_9_sort_6/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184432_B11816_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162127_E1F32A_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184740_2D93D3_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165555_50A375_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191958_975A85_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_170846_49DA15_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_144425_6B9FA7_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_7/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_7/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_9_sort_7/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_184023_414198_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_171516_C1E622_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_185645_B5E226_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220321_145336_9E3834_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_190444_9DAF32_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5407_A7CAC9_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_145718_710512_.png']
+download china images from dorothy is not necessary
+download imageamento images from dorothy is not necessary
+Generating TB and VAL data: 34 imgs
+dataset [CycleSantaCasaSkfold2generatorDataset] was created
+initialize network with normal
+initialize network with normal
+model [Test2CycleModel] was created
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_8/latest_net_G_A.pth
+loading the model from /home/otto.tavares/public/iltbi/rxpixp2pixcycle/checkpoints/./shenzhen_santacasa_test_9_sort_8/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory /home/otto.tavares/public/iltbi/rxpixp2pixcycle/versions/v1/user.otavares.cycle.shenzhenSantaCasa.v1_AtoB.r1/1aPRODUCAO/./results/shenzhen_santacasa_test_9_sort_8/VAL/
+processing (0000)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220315_191225_4FF83C_.png']
+processing (0005)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_164823_584AC7_.png']
+processing (0010)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151737_84B30B_.png']
+processing (0015)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_IMG_5501_AE867B_.png']
+processing (0020)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_162921_A6C600_.png']
+processing (0025)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_151153_7F82F7_.png']
+processing (0030)-th image... ['/home/otto.tavares/public/iltbi/train/images/imageamento/image_20220317_165249_530748_.png']
