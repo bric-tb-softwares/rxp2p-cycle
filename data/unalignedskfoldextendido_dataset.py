@@ -158,7 +158,6 @@ class UnalignedSkfoldExtendidoDataset(BaseDataset):
                 df = df.sort_values('project_id')
                 df_iltbi = dorothy_dataset(opt, 'imageamento_anonimizado_valid')
                 df_iltbi = df_iltbi.sort_values('project_id')
-                df_iltbi.to_csv('check_csv_iltbi.csv')
             except Exception as ex:
                 print(ex)
                 print('importing metada saved from last trial')
