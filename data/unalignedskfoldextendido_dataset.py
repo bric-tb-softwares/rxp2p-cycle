@@ -46,7 +46,7 @@ def dorothy_dataset(opt, dataset_name):
     n_imgs = 0
     for img in data:
         image_path = opt.dataset_download_dir+ '/%s'%(dataset_name)+'/%s'%(img['project_id'])+'.jpg' 
-        if img['dataset_name'] == 'imageamento':
+        if img['dataset_name'] == 'imageamento_anonimizado_valid':
             imgs_['target'].append(0)
         else:
             imgs_['target'].append(int(img['metadata']['has_tb']))
@@ -65,13 +65,13 @@ def dorothy_dataset(opt, dataset_name):
     #if n_imgs != len(df_iltbi['project_id']):
     #    print('Renovar a partição')
     if opt.download_imgs:
-        if dataset_name == 'imageamento':
-            imageamento_exists = os.path.exists(opt.dataset_download_dir + '/imageamento_atualizado_anonimizado/')
+        if dataset_name == 'imageamento_anonimizado_valid':
+            imageamento_exists = os.path.exists(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
             if not imageamento_exists:
-                os.makedirs(opt.dataset_download_dir + '/imageamento_atualizado_anonimizado/')
-                imageamento_exists = os.path.exists(opt.dataset_download_dir + '/imageamento_atualizado_anonimizado/')
+                os.makedirs(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
+                imageamento_exists = os.path.exists(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
             if imageamento_exists:
-                l_images = os.listdir(opt.dataset_download_dir + '/imageamento_atualizado_anonimizado/')
+                l_images = os.listdir(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
                 if len(l_images) == len(df_data['project_id']):
                     print('download imageamento anonimizado images from dorothy is not necessary')
                 else:
@@ -81,7 +81,7 @@ def dorothy_dataset(opt, dataset_name):
                         print('refreshing dorothy images for imageamento and a new partiton must be definied')
                     print('downloading images from dorothy for imageamento')
                     for img in data:
-                        file = open(f"{opt.dataset_download_dir}/imageamento_atualizado_anonimizado/{img['project_id']}.jpg","wb")
+                        file = open(f"{opt.dataset_download_dir}/imageamento_anonimizado_valid/{img['project_id']}.jpg","wb")
                         response = requests.get(img['image_url'], headers=header)
                         file.write(response.content)
                         file.close()
@@ -156,8 +156,9 @@ class UnalignedSkfoldExtendidoDataset(BaseDataset):
             try:
                 df = dorothy_dataset(opt, 'china')
                 df = df.sort_values('project_id')
-                df_iltbi = dorothy_dataset(opt, 'imageamento')
+                df_iltbi = dorothy_dataset(opt, 'imageamento_anonimizado_valid')
                 df_iltbi = df_iltbi.sort_values('project_id')
+                df_iltbi.to_csv('check_csv_iltbi.csv')
             except Exception as ex:
                 print(ex)
                 print('importing metada saved from last trial')
