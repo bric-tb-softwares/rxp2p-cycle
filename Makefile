@@ -1,9 +1,9 @@
 build:
-	docker build --network host --compress -t jodafons/rxpix2pixcycle:latest .
+	docker build --network host --compress -t jodafons/rxp2p-cycle:latest .
 push:
-	docker push jodafons/rxpix2pixcycle:latest
+	docker push jodafons/rxp2p-cycle:latest
 pull:
-	singularity pull docker://jodafons/rxpix2pixcycle:latest
+	singularity pull docker://jodafons/rxp2p-cycle:latest
 clean:
 	docker system prune -a
 	
