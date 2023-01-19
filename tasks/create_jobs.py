@@ -6,7 +6,7 @@ output_path = 'jobs'
 
 os.makedirs(output_path, exist_ok=True)
 
-tests = 1
+tests = 10
 sorts = 9
 
 for test in range(tests):
