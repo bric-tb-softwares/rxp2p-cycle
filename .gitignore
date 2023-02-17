@@ -148,7 +148,6 @@ output_jobs_train_p2p/
 *.xlsx
 *.docx
 *.doc
-*.csv
 *.jpeg
 *.jpg
 .DS_Store

@@ -154,7 +154,7 @@ class SantaCasaSkfoldExtendidoDataset(BaseDataset):
 
         
         path_santa_casa_anonimizado_valid = '/home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/raw/splits.pkl'
-        masks_available = pd.read_excel('./docs/dicionario_masks.xlsx')[['project_id','binary_limiar']].dropna()
+        masks_available = pd.read_csv('./docs/dicionario_masks_santacasa_anonimizado_valid.csv')[['project_id','binary_limiar']].dropna()
         masks_available = masks_available.sort_values('project_id')
 
         particao_santa_casa_anonimizado_valid = open(path_santa_casa_anonimizado_valid, "rb")
