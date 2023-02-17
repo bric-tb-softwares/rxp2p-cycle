@@ -13,7 +13,6 @@
 python /app/train.py \
 --dataroot /home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/AB/ \
 --dataset_download_dir /home/otto.tavares/public/iltbi/train/images \
---download_imgs \
 --model pix2pix \
 --dataset_mode santacasaskfoldextendido \
 --token {TOKEN} \
