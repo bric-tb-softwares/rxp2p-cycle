@@ -146,6 +146,8 @@ output_jobs_train_p2p/
 *.pdf
 *.png
 *.xlsx
+*.csv
+!docs/dicionario_masks_santacasa_anonimizado_valid.csv
 *.docx
 *.doc
 *.jpeg
