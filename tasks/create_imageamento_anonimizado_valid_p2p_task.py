@@ -2,7 +2,7 @@ import os
 basepath = os.getcwd()
 
 
-taskname = 'user.otto.tavares.SantaCasa_imageamento_anonimizado_valid.pix2pix_v1.r1'
+taskname = 'user.otto.tavares.SantaCasa_imageamento_anonimizado_valid.pix2pix_v1.r2'
 image = '/home/joao.pinto/public/images/rxp2p-cycle_latest.sif'
 
 
@@ -38,7 +38,7 @@ command = """maestro.py task create \
   -i {PATH}/jobs \
   --exec "{EXEC}" \
   --image {IMAGE} \
-  --dry_run \
+  --skip_test \
   """
 
 
