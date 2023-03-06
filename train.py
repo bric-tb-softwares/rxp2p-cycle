@@ -51,18 +51,18 @@ if __name__ == '__main__':
     #mlflow.set_experiment('MLFOW_EXPERIMENT=' + opt.project + '_' + opt.name + '_test_' + str(opt.test) + '_sort_' + str(opt.sort))
     #mlflow.start_run()
 
-    if opt.job:
-        print('Reading sort/test from %s'%opt.job)
-        job  = json.load(open(opt.job, 'r'))
-        opt.sort = job['sort']
-        opt.test = job['test']
-        print('Sort: %d , Test: %d'%(opt.sort, opt.test))
-        opt.name = 'test_%d_sort_%d' %(opt.test, opt.sort)
-        opt.wandb_fold_id = opt.name
-        is_test = True if 'LOCAL_TEST' in os.environ.keys() else False
-        if is_test:
-            opt.n_epochs = 1
-            opt.n_epochs_decay = 0
+#    if opt.job:
+#        print('Reading sort/test from %s'%opt.job)
+#        job  = json.load(open(opt.job, 'r'))
+#        opt.sort = job['sort']
+#        opt.test = job['test']
+#        print('Sort: %d , Test: %d'%(opt.sort, opt.test))
+#        opt.name = 'test_%d_sort_%d' %(opt.test, opt.sort)
+#        opt.wandb_fold_id = opt.name
+#        is_test = True if 'LOCAL_TEST' in os.environ.keys() else False
+#        if is_test:
+#            opt.n_epochs = 1
+#            opt.n_epochs_decay = 0
         
     
     
