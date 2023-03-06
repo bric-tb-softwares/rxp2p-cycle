@@ -91,7 +91,7 @@ class SantaCasaSkfold2generatorDataset(BaseDataset):
         else:
             paired_path = opt.custom_paired_path
 
-        df = pd.read_csv('/home/otto.tavares/public/iltbi/train/pares_imageamento_santacasa.csv', sep = ';')
+        df = pd.read_csv('/home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/raw/user.joao.pinto_SantaCasa_imageamento_anonimizado_valid_table_from_raw.csv', sep = ';')
         df.sort_values(by=['images'])
         df['target'] = 0
         print(df)

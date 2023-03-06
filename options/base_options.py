@@ -126,8 +126,12 @@ class BaseOptions():
         message += '----------------- End -------------------'
         print(message)
 
-        # save to the disk
-        expr_dir = os.path.join(opt.checkpoints_dir, opt.name)
+        # FIXME need to find another way to treat this.
+        if '/home/brics' in opt.checkpoints_dir:
+            expr_dir = os.path.join(opt.results_dir, opt.name)
+        else:
+            expr_dir = os.path.join(opt.checkpoints_dir, opt.name)
+
         util.mkdirs(expr_dir)
         file_name = os.path.join(expr_dir, '{}_opt.txt'.format(opt.phase))
         with open(file_name, 'wt') as opt_file:
