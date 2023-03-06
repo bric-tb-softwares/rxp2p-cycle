@@ -12,7 +12,6 @@ import json
 
 def dorothy_dataset(opt, dataset_name):
     
-    print('AKI JOAO')
     print(dataset_name)
     header = { "Authorization": 'Token '+ str(opt.token)}
     response = requests.get('https://dorothy-image.lps.ufrj.br/images/?search={DATASET}'.format(DATASET = dataset_name), 

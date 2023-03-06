@@ -1,19 +1,6 @@
-"""Dataset class template
-
-This module provides a template for users to implement custom datasets.
-You can specify '--dataset_mode template' to use this dataset.
-The class name should be consistent with both the filename and its dataset_mode option.
-The filename should be <dataset_mode>_dataset.py
-The class name should be <Dataset_mode>Dataset.py
-You need to implement the following functions:
-    -- <modify_commandline_options>:　Add dataset-specific options and rewrite default values for existing options.
-    -- <__init__>: Initialize this dataset class.
-    -- <__getitem__>: Return a data point and its metadata information.
-    -- <__len__>: Return the number of images.
-"""
 from data.base_dataset import BaseDataset, get_params, get_transform
 from data.image_folder import make_dataset
-from data import client_dataset
+from util.client_dataset import dorothy_dataset
 from PIL import Image, ImageOps
 from util.stratified_kfold import stratified_train_val_test_splits_bins
 from util.util import prepare_my_table
@@ -24,106 +11,8 @@ import pickle
 import requests
 import json
 
-def dorothy_dataset(opt, dataset_name):
-    
-    header = { "Authorization": 'Token '+ str(opt.token)}
-    response = requests.get('https://dorothy-image.lps.ufrj.br/images/?search={DATASET}'.format(DATASET = dataset_name), 
-                        headers=header)
 
-    data = json.loads(response.content)
-    imgs_ = {
-            'dataset_name': [],
-            'target': [],
-            'image_url': [],
-            'project_id': [],
-            'insertion_date': [],
-            'metadata': [],
-            'date_acquisition': [],
-            'number_reports': [],
-            }
-    n_imgs = 0
-    for img in data:
-        image_path = opt.dataset_download_dir+ '/%s'%(dataset_name)+'/%s'%(img['project_id'])+'.jpg' 
-        if img['dataset_name'] == 'imageamento':
-            imgs_['target'].append(0)
-        else:
-            imgs_['target'].append(int(img['metadata']['has_tb']))
-        imgs_['dataset_name'].append(img['dataset_name'])
-        imgs_['image_url'].append(img['image_url'])
-        imgs_['project_id'].append(image_path)
-        imgs_['insertion_date'].append(img['insertion_date'])
-        imgs_['metadata'].append(img['metadata'])
-        imgs_['date_acquisition'].append(img['date_acquisition'])
-        imgs_['number_reports'].append(img['number_reports'])
-        n_imgs += 1
-    df_data = pd.DataFrame.from_dict(imgs_)
-    df_data = df_data.sort_values('project_id')
-    #df_iltbi = pd.read_csv('/home/otto.tavares/iltbi/particao/imageamento_metadados_iltbi.csv')
-
-    #if n_imgs != len(df_iltbi['project_id']):
-    #    print('Renovar a partição')
-    if opt.download_imgs:
-        if dataset_name == 'imageamento':
-            imageamento_exists = os.path.exists(opt.dataset_download_dir + '/imageamento_atualizado/')
-            if not imageamento_exists:
-                os.makedirs(opt.dataset_download_dir + '/imageamento_atualizado/')
-                imageamento_exists = os.path.exists(opt.dataset_download_dir + '/imageamento_atualizado/')
-            if imageamento_exists:
-                l_images = os.listdir(opt.dataset_download_dir + '/imageamento_atualizado/')
-                if len(l_images) == len(df_data['project_id']):
-                    print('download imageamento images from dorothy is not necessary')
-                else:
-                    if len(l_images) == 0:
-                        print('first time downloading dorothy images for imageamento')
-                    else:
-                        print('refreshing dorothy images for imageamento and a new partiton must be definied')
-                    print('downloading images from dorothy for imageamento')
-                    for img in data:
-                        file = open(f"{opt.dataset_download_dir}/imageamento_atualizado/{img['project_id']}.jpg","wb")
-                        response = requests.get(img['image_url'], headers=header)
-                        file.write(response.content)
-                        file.close()
-        if dataset_name == 'china':
-            china_exists = os.path.exists(opt.dataset_download_dir + '/china/')
-            if not china_exists:
-                os.makedirs(opt.dataset_download_dir + '/china/')
-                china_exists = os.path.exists(opt.dataset_download_dir + '/china/')
-            if china_exists:
-                l_images = os.listdir(opt.dataset_download_dir + '/china/')
-                if len(l_images) == len(df_data['project_id']):
-                    print('download china images from dorothy is not necessary')
-                else:
-                    if len(l_images) == 0:
-                        print('first time downloading dorothy images for imageamento')
-                    else:
-                        print('refreshing dorothy images for imageamento and a new partiton must be definied')
-                    print('downloading images from dorothy for imageamento')
-                    for img in data:
-                        print('downloading images from dorothy for china')
-                        file = open(f"{opt.dataset_download_dir}/china/{img['project_id']}.jpg","wb")
-                        response = requests.get(img['image_url'], headers=header)
-                        file.write(response.content)
-                        file.close()
-    return df_data
-
-
-
-class CycleSantaCasaSkfold2generatorDataset(BaseDataset):
-    """A template dataset class for you to implement custom datasets."""
-    #@staticmethod
-    #def modify_commandline_options(parser, is_train):
-    #    """Add new dataset-specific options, and rewrite default values for existing options.
-
-    #    Parameters:
-    #        parser          -- original option parser
-    #        is_train (bool) -- whether training phase or test phase. You can use this flag to add training-specific or test-specific options.
-
-    #    Returns:
-    #        the modified parser.
-    #    """
-    #    #parser.add_argument('--new_dataset_option', type=float, default=1.0, help='new dataset option')
-    #    #parser.set_defaults(max_dataset_size=10, new_dataset_option=2.0)  # specify dataset-specific default values
-        #return parser
+class CycleSantaCasaSkfold2GeneratorDataset(BaseDataset):
 
     def __init__(self, opt):
         """Initialize this dataset class.
@@ -175,7 +64,7 @@ class CycleSantaCasaSkfold2generatorDataset(BaseDataset):
 
         if opt.generate_paths_data_csv:
             df = prepare_my_table(clinical_path, images_path, masks_path, paired_path, combine=opt.dataset_action)
-            df.to_csv('Shenzhen_pix2pix_table_from_raw.csv')
+            df.to_csv('...')
         else:
             #df = pd.read_csv('/home/otto.tavares/Shenzhen_pix2pix_table_from_raw.csv')
             #df.drop("Unnamed: 0", axis=1, inplace=True)
@@ -187,16 +76,7 @@ class CycleSantaCasaSkfold2generatorDataset(BaseDataset):
                 df_iltbi = df_iltbi.sort_values('project_id')
             except Exception as ex:
                 print(ex)
-                print('importing metada saved from last trial')
-                df = pd.read_csv('/home/otto.tavares/public/iltbi/particao/Shenzhen_pix2pix_table_from_raw.csv')
-                df.drop("Unnamed: 0", axis=1, inplace=True)
-                df['project_id'] = [img_path.replace('jodafons', 'brics') for img_path in df['raw_image_path'].tolist() if img_path != '']
-                df_iltbi = pd.read_csv('/home/otto.tavares/public/iltbi/particao/imageamento_metadados_iltbi_atualizado.csv')
-                df_iltbi['project_id'] = [opt.dataset_download_dir + '/imageamento_atualizado'+'/%s'%(img_path)+'.jpg'  for img_path in df_iltbi['project_id'].tolist() if img_path != '']
-
-
-            
-            
+                print('Dorothy out of service or unsolved bug')
         
         #shenzhen dataset splitting in partitions
         #splits = stratified_train_val_test_splits_bins(df, opt.n_folds, opt.seed)[opt.test]
@@ -211,7 +91,7 @@ class CycleSantaCasaSkfold2generatorDataset(BaseDataset):
         test_data = df.iloc[splits[opt.sort][2]]
 
         #iltbi dataset splitting in partitions
-        path_iltbi = '/home/otto.tavares/public/iltbi/particao/particao_imageamento_atualizado.pkl'
+        path_santa_casa_anonimizado_valid = '/home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/raw/splits.pkl'
         particao_iltbi_file = open(path_iltbi, "rb")
         particao_iltbi = pickle.load(particao_iltbi_file)
         particao_iltbi_file.close()
@@ -226,36 +106,36 @@ class CycleSantaCasaSkfold2generatorDataset(BaseDataset):
             self.test_tb = test_data.loc[df.target == 1]
             if opt.train_dataset:
                 print('Generating TB and TRAIN data: ' + str(len(self.train_tb['project_id'].tolist())) + ' imgs')
-                self.B_paths = [img_path for img_path in self.train_tb['project_id'].tolist() if img_path != '']
+                self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.train_tb['project_id'].tolist() if img_path != '']
             else:
                 if self.gen_val:
                     print('Generating TB and VAL data: ' + str(len(self.val_tb['project_id'].tolist())) + ' imgs')
-                    self.B_paths = [img_path for img_path in self.val_tb['project_id'].tolist() if img_path != '']
+                    self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.val_tb['project_id'].tolist() if img_path != '']
                 if self.gen_test:
                     print('Generating TB and TEST data: ' + str(len(self.test_tb['project_id'].tolist())) + ' imgs')
-                    self.B_paths = [img_path for img_path in self.test_tb['project_id'].tolist() if img_path != '']         
+                    self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.test_tb['project_id'].tolist() if img_path != '']         
         else:
             self.train_ntb = training_data.loc[df.target == 0]
             self.val_ntb = validation_data.loc[df.target == 0]
             self.test_ntb = test_data.loc[df.target == 0]
             if opt.train_dataset:
-                self.B_paths = [img_path for img_path in self.train_ntb['project_id'].tolist() if img_path != '']
+                self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.train_ntb['project_id'].tolist() if img_path != '']
             else:
                 if self.gen_val:
                     print('Generating TB and VAL data: ' + str(len(self.val_ntb['project_id'].tolist())) + ' imgs')
-                    self.B_paths = [img_path for img_path in self.val_ntb['project_id'].tolist() if img_path != '']
+                    self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.val_ntb['project_id'].tolist() if img_path != '']
                 if self.gen_test:
                     print('Generating TB and TEST data: ' + str(len(self.test_ntb['project_id'].tolist())) + ' imgs')
-                    self.B_paths = [img_path for img_path in self.test_ntb['project_id'].tolist() if img_path != '']         
+                    self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.test_ntb['project_id'].tolist() if img_path != '']         
         
         #iltbi dataset
         if opt.train_dataset:
-            self.A_paths = [img_path for img_path in self.training_data_iltbi['project_id'].tolist() if img_path != '']
+            self.A_paths = [opt.dataroot + img_path +'.png' for img_path in self.training_data_iltbi['project_id'].tolist() if img_path != '']
         else:
             if self.gen_val:
-                self.A_paths = [img_path for img_path in self.validation_data_iltbi['project_id'].tolist() if img_path != '']
+                self.A_paths = [opt.dataroot + img_path +'.png' for img_path in self.validation_data_iltbi['project_id'].tolist() if img_path != '']
             if self.gen_test:
-                self.A_paths = [img_path for img_path in self.test_data_iltbi['project_id'].tolist() if img_path != '']
+                self.A_paths = [opt.dataroot + img_path +'.png' for img_path in self.test_data_iltbi['project_id'].tolist() if img_path != '']
         
         
         self.A_size = len(self.A_paths)  # get the size of dataset A
