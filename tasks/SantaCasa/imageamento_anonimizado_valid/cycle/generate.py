@@ -41,11 +41,11 @@ if __name__ == '__main__':
             opt.name = f'job.test_{fold}.sort_{val}/checkpoints/test_{fold}_sort_{val}/'
             out = f'results/job.test_{fold}.sort_{val}/'
             if opt.gen_train_dataset:
-                name_gen = out + '/TRAIN/'
+                name_gen = out + 'TRAIN/'
             if opt.gen_val_dataset:
-                name_gen = out + '/VAL/'
+                name_gen = out + 'VAL/'
             if opt.gen_test_dataset:
-                name_gen = out +  '/TEST/'
+                name_gen = out +  'TEST/'
 
             dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
             opt.num_test = len(dataset) * num_synth
@@ -70,7 +70,6 @@ if __name__ == '__main__':
             if opt.eval:
                 model.eval()
 
-            print('AKI JOAO')
             if (num_synth - 1) >= 1:
                 for i_synth in range(num_synth):
                     for i, data in enumerate(dataset):

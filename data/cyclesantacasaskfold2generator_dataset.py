@@ -66,22 +66,29 @@ class CycleSantaCasaSkfold2GeneratorDataset(BaseDataset):
             df = prepare_my_table(clinical_path, images_path, masks_path, paired_path, combine=opt.dataset_action)
             df.to_csv('...')
         else:
+            print('AKI JOAOO!!!!O')
             #df = pd.read_csv('/home/otto.tavares/Shenzhen_pix2pix_table_from_raw.csv')
             #df.drop("Unnamed: 0", axis=1, inplace=True)
             #df_iltbi = pd.read_csv('/home/otto.tavares/iltbi/particao/imageamento_metadados_iltbi.csv')
-            try:
-                df = dorothy_dataset(opt, 'china')
-                df = df.sort_values('project_id')
-                df_iltbi = dorothy_dataset(opt, 'imageamento')
-                df_iltbi = df_iltbi.sort_values('project_id')
-            except Exception as ex:
-                print(ex)
-                print('Dorothy out of service or unsolved bug')
+            #try:
+
+            from util.dataset import DownloadDataset
+            c = DownloadDataset(opt.token)
+            df = c.download('china', 'china_dataset')
+            df_iltbi = c.download('imageamento_anonimizado_valid', 'imageamento_anonimizado_valid_dataset')
+            #df = dorothy_dataset(opt.token, 'china', opt.download_imgs, opt.dataset_download_dir)
+            #df = df.sort_values('project_id')
+            #df_iltbi = dorothy_dataset(opt.token, 'imageamento_anonimizado_valid', opt.download_imgs, opt.dataset_download_dir )
+            #df_iltbi = df_iltbi.sort_values('project_id')
+            #print(df.project_id.values)
+            #except Exception as ex:
+            #print(ex)
+            #print('Dorothy out of service or unsolved bug')
         
         #shenzhen dataset splitting in partitions
         #splits = stratified_train_val_test_splits_bins(df, opt.n_folds, opt.seed)[opt.test]
         #importing partition defined as seed for the project
-        path_shenzhen = '/home/otto.tavares/public/particao.pkl'
+        path_shenzhen = '/home/brics/public/brics_data/Shenzhen/raw/splits.pkl'
         particao_shenzhen_file = open(path_shenzhen, "rb")
         particao_shenzhen = pickle.load(particao_shenzhen_file)
         particao_shenzhen_file.close()
@@ -92,7 +99,7 @@ class CycleSantaCasaSkfold2GeneratorDataset(BaseDataset):
 
         #iltbi dataset splitting in partitions
         path_santa_casa_anonimizado_valid = '/home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/raw/splits.pkl'
-        particao_iltbi_file = open(path_iltbi, "rb")
+        particao_iltbi_file = open(path_santa_casa_anonimizado_valid, "rb")
         particao_iltbi = pickle.load(particao_iltbi_file)
         particao_iltbi_file.close()
         splits_iltbi = particao_iltbi[opt.test]
@@ -101,42 +108,54 @@ class CycleSantaCasaSkfold2GeneratorDataset(BaseDataset):
         self.test_data_iltbi = df_iltbi.iloc[splits_iltbi[opt.sort][2]]
 
         if (opt.isTB == True):
-            self.train_tb = training_data.loc[df.target == 1]
-            self.val_tb = validation_data.loc[df.target == 1]
-            self.test_tb = test_data.loc[df.target == 1]
+            self.train_tb = training_data.loc[df.target == True]
+            self.val_tb = validation_data.loc[df.target == True]
+            self.test_tb = test_data.loc[df.target == True]
             if opt.train_dataset:
                 print('Generating TB and TRAIN data: ' + str(len(self.train_tb['project_id'].tolist())) + ' imgs')
-                self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.train_tb['project_id'].tolist() if img_path != '']
+                #self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.train_tb['project_id'].tolist() if img_path != '']
+                self.B_paths = self.train_tb.image_path.values
             else:
                 if self.gen_val:
                     print('Generating TB and VAL data: ' + str(len(self.val_tb['project_id'].tolist())) + ' imgs')
-                    self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.val_tb['project_id'].tolist() if img_path != '']
+                    #self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.val_tb['project_id'].tolist() if img_path != '']
+                    self.B_paths = self.val_tb.image_path.values
+
                 if self.gen_test:
                     print('Generating TB and TEST data: ' + str(len(self.test_tb['project_id'].tolist())) + ' imgs')
-                    self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.test_tb['project_id'].tolist() if img_path != '']         
+                    #self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.test_tb['project_id'].tolist() if img_path != '']         
+                    self.B_paths = self.test_tb.image_path.values
+
         else:
-            self.train_ntb = training_data.loc[df.target == 0]
-            self.val_ntb = validation_data.loc[df.target == 0]
-            self.test_ntb = test_data.loc[df.target == 0]
+            self.train_ntb = training_data.loc[df.target == True]
+            self.val_ntb = validation_data.loc[df.target == True]
+            self.test_ntb = test_data.loc[df.target == True]
             if opt.train_dataset:
                 self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.train_ntb['project_id'].tolist() if img_path != '']
             else:
                 if self.gen_val:
                     print('Generating TB and VAL data: ' + str(len(self.val_ntb['project_id'].tolist())) + ' imgs')
-                    self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.val_ntb['project_id'].tolist() if img_path != '']
+                    #self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.val_ntb['project_id'].tolist() if img_path != '']
+                    self.B_paths = self.val_ntb.image_path.values
+
                 if self.gen_test:
                     print('Generating TB and TEST data: ' + str(len(self.test_ntb['project_id'].tolist())) + ' imgs')
-                    self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.test_ntb['project_id'].tolist() if img_path != '']         
+                    #self.B_paths = [opt.dataroot + img_path +'.png' for img_path in self.test_ntb['project_id'].tolist() if img_path != '']     
+                    self.B_paths = self.test_tb.image_path.values
+    
         
         #iltbi dataset
         if opt.train_dataset:
-            self.A_paths = [opt.dataroot + img_path +'.png' for img_path in self.training_data_iltbi['project_id'].tolist() if img_path != '']
+            #self.A_paths = [opt.dataroot + img_path +'.png' for img_path in self.training_data_iltbi['project_id'].tolist() if img_path != '']
+            self.A_paths = self.training_data_iltbi.image_path.values
         else:
             if self.gen_val:
-                self.A_paths = [opt.dataroot + img_path +'.png' for img_path in self.validation_data_iltbi['project_id'].tolist() if img_path != '']
+                #self.A_paths = [opt.dataroot + img_path +'.png' for img_path in self.validation_data_iltbi['project_id'].tolist() if img_path != '']
+                self.A_paths = self.validation_data_iltbi.image_path.values
             if self.gen_test:
-                self.A_paths = [opt.dataroot + img_path +'.png' for img_path in self.test_data_iltbi['project_id'].tolist() if img_path != '']
-        
+                #self.A_paths = [opt.dataroot + img_path +'.png' for img_path in self.test_data_iltbi['project_id'].tolist() if img_path != '']
+                self.A_paths = self.test_data_iltbi.image_path.values
+
         
         self.A_size = len(self.A_paths)  # get the size of dataset A
         self.B_size = len(self.B_paths)  # get the size of dataset B
