@@ -15,15 +15,16 @@ python train.py \
 --model pix2pix \
 --dataset_mode manausskfold \
 --token b16fe0fc92088c4840a98160f3848839e68b1148 \
---name manaus_tunning_0003 \
+--name manaus_tunning_0004 \
 --preprocess resize_and_scale_width \
 --use_wandb \
---wandb_fold_id manaus_p2p_tunning_003 \
---wandb_entity otavares \
+--wandb_fold_id manaus_p2p_tunning_004 \
+--wandb_entity brics-tb \
 --gpu_ids 0 \
 --n_epochs 500 \
 --n_epochs_decay 500 \
 --load_size 256 \
 --crop_size 256 \
 --project tunning_p2p_manaus \
+--save_epoch_freq 200 \
 --isTB
