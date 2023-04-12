@@ -70,9 +70,8 @@ class ManausSkfoldDataset(BaseDataset):
 
         
         path_manaus = '/home/brics/public/brics_data/Manaus/manaus/raw/splits.pkl'
-        masks_available = pd.read_csv('/home/otto.tavares/public/iltbi/train/images/dicionario_masks_manaus.csv', sep = ";")[['project_id','binary_limiar']].dropna()
+        masks_available = pd.read_csv('/home/brics/public/brics_data/Manaus/manaus/masks/dicionario_masks_manaus.csv', sep = ";")[['project_id','binary_limiar']].dropna()
         masks_available = masks_available.sort_values('project_id')
-        print(masks_available)
 
         particao_manaus= open(path_manaus, "rb")
         particao_iltbi = pickle.load(particao_manaus)
