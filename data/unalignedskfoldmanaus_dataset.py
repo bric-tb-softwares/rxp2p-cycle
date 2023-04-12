@@ -24,6 +24,7 @@ import random
 import pickle
 import requests
 import json
+import traceback
 
 
 class UnalignedSkfoldManausDataset(BaseDataset):
@@ -73,10 +74,10 @@ class UnalignedSkfoldManausDataset(BaseDataset):
             except Exception as ex:
                 print(ex)
                 print('Dorothy out of service or unsolved bug')
+                traceback.print_exc()
         ##shenzhen dataset splitting in partitions
-        print(pd.Series(df_manaus.target).unique())
-        splits = stratified_train_val_test_splits_bins(df_manaus, opt.n_folds, opt.seed)[opt.test]
-        print(splits)
+        #splits = stratified_train_val_test_splits_bins(df_manaus, opt.n_folds, opt.seed)[opt.test]
+        splits = pickle.load(open('/home/brics/public/brics_data/Manaus/manaus/raw/splits.pkl','rb'))[opt.test]
         ##importing partition defined as seed for the project
         
         training_data = df_manaus.iloc[splits[opt.sort][0]]
@@ -95,22 +96,22 @@ class UnalignedSkfoldManausDataset(BaseDataset):
             self.train_tb = training_data.loc[df_manaus.target == 1]
             self.val_tb = validation_data.loc[df_manaus.target == 1]
             if opt.train_dataset:
-                self.B_paths = [img_path for img_path in self.train_tb['project_id'].tolist() if img_path != '']
+                self.B_paths = [img_path for img_path in self.train_tb['image_path'].tolist() if img_path != '']
             else:
-                self.B_paths = [img_path for img_path in self.val_tb['project_id'].tolist() if img_path != '']
+                self.B_paths = [img_path for img_path in self.val_tb['image_path'].tolist() if img_path != '']
         else:
             self.train_ntb = training_data.loc[df_manaus.target == 0]
             self.val_ntb = validation_data.loc[df_manaus.target == 0]
             if opt.train_dataset:
-                self.B_paths = [img_path for img_path in self.train_ntb['project_id'].tolist() if img_path != '']
+                self.B_paths = [img_path for img_path in self.train_ntb['image_path'].tolist() if img_path != '']
             else:
-                self.B_paths = [img_path for img_path in self.val_ntb['project_id'].tolist() if img_path != '']
+                self.B_paths = [img_path for img_path in self.val_ntb['image_path'].tolist() if img_path != '']
         
         #iltbi dataset
         if opt.train_dataset:
-            self.A_paths = [img_path for img_path in self.training_data_iltbi['project_id'].tolist() if img_path != '']
+            self.A_paths = [img_path for img_path in self.training_data_iltbi['image_path'].tolist() if img_path != '']
         else:
-            self.A_paths = [img_path for img_path in self.validation_data_iltbi['project_id'].tolist() if img_path != '']
+            self.A_paths = [img_path for img_path in self.validation_data_iltbi['image_path'].tolist() if img_path != '']
         
         
         self.A_size = len(self.A_paths)  # get the size of dataset A

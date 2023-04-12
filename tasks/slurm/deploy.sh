@@ -1,5 +1,5 @@
 
-RESERVATION=joao.pinto_10
+RESERVATION=joao.pinto_16
 DATABASE=orchestra
 
 sbatch --reservation $RESERVATION --partition gpu-large srun_maestro.sh $DATABASE 1
