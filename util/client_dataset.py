@@ -27,7 +27,7 @@ def download_dorothy(dataset_download_dir, dataset_name, data, metadata, header)
                 print(f'refreshing dorothy images for {dataset_name} and a new partiton must be definied')
             print(f'downloading images from dorothy for {dataset_name}')
             for img in data:
-                file = open(f"{dataset_download_dir}/{dataset_name}/{img['project_id']}.jpg","wb")
+                file = open(f"{dataset_download_dir}/{dataset_name}/{img['project_id']}.png","wb")
                 response = requests.get(img['image_url'], headers=header)
                 file.write(response.content)
                 file.close()
@@ -39,6 +39,7 @@ def dorothy_dataset(token, dataset_name, is_download_imgs, dataset_download_dir)
             'target': [],
             'image_url': [],
             'project_id': [],
+            'image_path': [],
             'insertion_date': [],
             'metadata': [],
             'date_acquisition': [],
@@ -53,7 +54,8 @@ def dorothy_dataset(token, dataset_name, is_download_imgs, dataset_download_dir)
             imgs_['target'].append(int(img['metadata']['has_tb']))
         imgs_['dataset_name'].append(img['dataset_name'])
         imgs_['image_url'].append(img['image_url'])
-        imgs_['project_id'].append(image_path)
+        imgs_['project_id'].append(img['project_id'])
+        imgs_['image_path'].append(image_path)
         imgs_['insertion_date'].append(img['insertion_date'])
         imgs_['metadata'].append(img['metadata'])
         imgs_['date_acquisition'].append(img['date_acquisition'])
