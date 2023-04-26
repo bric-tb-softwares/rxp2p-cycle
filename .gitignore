@@ -140,6 +140,7 @@ cycle_shenzhen_iltbi_extendido_jobs/
 cycle_shenzhen_iltbi_jobs/
 output_jobs_train_cycle/
 output_jobs_train_p2p/
+cycle_manaus_jobs/
 
 #files
 data/client_dataset_backup.py
