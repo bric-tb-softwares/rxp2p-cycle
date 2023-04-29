@@ -2,16 +2,23 @@ import os
 basepath = os.getcwd()
 
 
-taskname = 'user.otto.tavares.SantaCasa_imageamento_anonimizado_valid.pix2pix_v1.r2'
+
+
+
+taskname = 'user.otto.tavares.Manaus.manaus.pix2pix_v1.tb.r3'
+#taskname = 'user.otto.tavares.Manaus.manaus.pix2pix_v1.notb.r3'
 image = '/home/joao.pinto/public/images/rxp2p-cycle_latest.sif'
+repo = "/home/joao.pinto/git_repos/brics/rxp2p-cycle/"
 
 
-exec_cmd = """cd /app && export PYTHONPATH=$PWD:$PYTHONPATH && cd %JOB_WORKAREA \n
-python /app/train.py \
---dataroot /home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/AB/ \
---dataset_download_dir /home/otto.tavares/public/iltbi/train/images \
+exec_cmd = "export PYTHONPATH=/home/joao.pinto/git_repos/brics/rxp2p-cycle \n"
+exec_cmd+= "echo $PYTHONPATH \n"
+exec_cmd+= f"cd %JOB_WORKAREA \n"
+exec_cmd+= """python /home/joao.pinto/git_repos/brics/rxp2p-cycle/train.py \
+--dataroot /home/brics/public/brics_data/Manaus/manaus/AB/ \
+--dataset_download_dir /home/joao.pinto/git_repos/brics/rxp2p-cycle/tasks/Manaus/manaus/p2p \
 --model pix2pix \
---dataset_mode santacasaskfoldextendido \
+--dataset_mode manausskfold \
 --token {TOKEN} \
 --name check_%JOB_NAME \
 --preprocess resize_and_scale_width \
@@ -23,8 +30,10 @@ python /app/train.py \
 --n_epochs_decay 500 \
 --load_size 256 \
 --crop_size 256 \
+--save_epoch_freq 200 \
 --job %IN \
 --project %JOB_TASKNAME \
+--isTB
 """
 
 
@@ -33,12 +42,22 @@ python /app/train.py \
 exec_cmd = exec_cmd.format(TOKEN='b16fe0fc92088c4840a98160f3848839e68b1148')
 
 
+
+
+
+
+
+
+
+
+
+
 command = """maestro.py task create \
   -t {TASK} \
   -i {PATH}/jobs \
   --exec "{EXEC}" \
   --image {IMAGE} \
-  --skip_test \
+  --skip_test
   """
 
 

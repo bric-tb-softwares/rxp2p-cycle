@@ -2,10 +2,8 @@ import os
 basepath = os.getcwd()
 
 
-taskname = 'user.otto.tavares.Manaus.manaus.cycle_v1.tb.r1'
+taskname = 'user.otto.tavares.Manaus.manaus.cycle_v1.r2'
 image = '/home/joao.pinto/public/images/rxp2p-cycle_latest.sif'
-
-
 repo = "/home/joao.pinto/git_repos/brics/rxp2p-cycle/"
 
 
