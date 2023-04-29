@@ -40,6 +40,7 @@ def dorothy_dataset(token, dataset_name, is_download_imgs, dataset_download_dir)
             'image_url': [],
             'image_path':[],
             'project_id': [],
+            'image_path': [],
             'insertion_date': [],
             'metadata': [],
             'date_acquisition': [],
@@ -56,7 +57,6 @@ def dorothy_dataset(token, dataset_name, is_download_imgs, dataset_download_dir)
         imgs_['image_url'].append(img['image_url'])
         imgs_['project_id'].append(img['project_id'])
         imgs_['image_path'].append(image_path)
-        #imgs_['image_path'].append(img[''])
         imgs_['insertion_date'].append(img['insertion_date'])
         imgs_['metadata'].append(img['metadata'])
         imgs_['date_acquisition'].append(img['date_acquisition'])
