@@ -13,9 +13,9 @@ dataframe = {
       }
 
 
-dataset_name = 'user.otto.tavares.task.SantaCasa_imageamento_anonimizado_valid.pix2pix_v1.r2.samples'
+dataset_name = 'user.otto.tavares.task.SantaCasa_imageamento_anonimizado_valid.pix2pix_v1_notb.r2.samples'
 basepath = '/home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/fake_images'
-
+has_tb = False
 
 
 for test in range(10):
@@ -36,7 +36,7 @@ for test in range(10):
                     print(f)
                     project_id = f.split('/')[-1].replace('.png','') + f'.test_{test}.sort_{sort}'
                     dataframe['image_path'].append(f)
-                    dataframe['metadata'].append( {'has_tb':False} )
+                    dataframe['metadata'].append( {'has_tb': has_tb} )
                     dataframe['project_id'].append(project_id)
                     dataframe['test'].append(test)
                     dataframe['sort'].append(sort)

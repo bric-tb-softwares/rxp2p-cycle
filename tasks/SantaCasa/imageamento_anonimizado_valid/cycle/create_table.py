@@ -12,12 +12,18 @@ dataframe = {
       'type':[],
       }
 
-
-dataset_name = 'user.otto.tavares.task.SantaCasa_imageamento_anonimizado_valid.cycle_v1.r1.SantaCasa_to_Shenzhen.samples'
-#dataset_name = 'user.otto.tavares.task.SantaCasa_imageamento_anonimizado_valid.cycle_v1.r1.Shenzhen_to_SantaCasa.samples'
 basepath = '/home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/fake_images'
 
 
+
+#dataset_name = 'user.otto.tavares.task.SantaCasa_imageamento_anonimizado_valid.cycle_v1_notb.r1.SantaCasa_to_Shenzhen.samples'
+#has_tb = False
+#dirname = 'fake_B'
+
+
+dataset_name = 'user.otto.tavares.task.SantaCasa_imageamento_anonimizado_valid.cycle_v1_tb.r1.Shenzhen_to_SantaCasa.samples'
+has_tb = True
+dirname = 'fake_A'
 
 for test in range(10):
     for sort in range(9):
@@ -26,19 +32,18 @@ for test in range(10):
             'train' : basepath+'/'+dataset_name + f'/job.test_{test}.sort_{sort}' + '/TRAIN',
             'val'   : basepath+'/'+dataset_name + f'/job.test_{test}.sort_{sort}' + '/VAL',
             'test'  : basepath+'/'+dataset_name + f'/job.test_{test}.sort_{sort}' + '/TEST',
-
         }
 
         
         for key, path in paths.items():
 
             for f in sorted(glob.glob(path + '/*.png')):
-                if f[-10:].replace('.png', '') == 'fake_B':
+                if f[-10:].replace('.png', '') == dirname:
 
                     print(f)
                     project_id = f.split('/')[-1].replace('.png','')  + f'.test_{test}.sort_{sort}'
                     dataframe['image_path'].append(f)
-                    dataframe['metadata'].append( {'has_tb':False} )
+                    dataframe['metadata'].append( {'has_tb':has_tb} )
                     dataframe['project_id'].append(project_id)
                     dataframe['test'].append(test)
                     dataframe['sort'].append(sort)

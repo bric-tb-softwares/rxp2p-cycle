@@ -12,19 +12,21 @@ dataframe = {
       'type':[],
       }
 
+basepath = '/home/brics/public/brics_data/Manaus/manaus/fake_images'
 
-dataset_name = 'user.otto.tavares.SantaCasa_imageamento_anonimizado_valid.pix2pix_v1.r2.samples'
-basepath = '/home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/fake_images'
-
+#dataset_name = 'user.otto.tavares.Manaus.manaus.pix2pix_v1.notb.r3.samples'
+dataset_name = 'user.otto.tavares.Manaus.manaus.pix2pix_v1.tb.r3.samples'
+#has_tb = False
+has_tb = True
 
 
 for test in range(10):
     for sort in range(9):
 
         paths = {
-            'train' : dataset_name + f'/job.test_{test}.sort_{sort}/' + '/TRAIN',
-            'val'   : dataset_name + f'/job.test_{test}.sort_{sort}/' + '/VAL',
-            'test'  : dataset_name + f'/job.test_{test}.sort_{sort}/' + '/TEST',
+            'train' : dataset_name + f'/job.test_{test}.sort_{sort}' + '/TRAIN',
+            'val'   : dataset_name + f'/job.test_{test}.sort_{sort}' + '/VAL',
+            'test'  : dataset_name + f'/job.test_{test}.sort_{sort}' + '/TEST',
 
         }
 
@@ -39,7 +41,7 @@ for test in range(10):
                     print(abspath)
 
                     dataframe['image_path'].append(abspath)
-                    dataframe['metadata'].append( {'has_tb':False} )
+                    dataframe['metadata'].append( {'has_tb':has_tb} )
                     dataframe['project_id'].append(project_id)
                     dataframe['test'].append(test)
                     dataframe['sort'].append(sort)

@@ -13,11 +13,19 @@ dataframe = {
       }
 
 
-#dataset_name = 'user.otto.tavares.SantaCasa_imageamento_anonimizado_valid.cycle_v1.r1.SantaCasaShenzhen.samples'
-dataset_name = 'user.otto.tavares.SantaCasa_imageamento_anonimizado_valid.cycle_v1.r1.ShenzhenSantaCasa.samples'
-basepath = '/home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/fake_images'
+basepath = '/home/brics/public/brics_data/Manaus/manaus/fake_images'
 
 
+# M 2 S TB a
+#dataset_name = 'user.otto.tavares.Manaus.manaus.cycle_v1_tb.r2.Manaus_to_SantaCasa.samples'
+#dirname = 'fake_A'
+#has_tb = True
+
+
+# S 2 M NTB b
+dataset_name = 'user.otto.tavares.Manaus.manaus.cycle_v1_notb.r2.SantaCasa_to_Manaus.samples'
+dirname = 'fake_B'
+has_tb = False
 
 for test in range(10):
     for sort in range(9):
@@ -33,14 +41,14 @@ for test in range(10):
         for key, path in paths.items():
 
             for f in glob.glob(path + '/*.png'):
-                if f[-10:].replace('.png', '') == 'fake_B':
+                if f[-10:].replace('.png', '') == dirname:
 
 
                     abspath = basepath + '/' + path + '/' + f.split('/')[-1]
                     print(abspath)
 
                     dataframe['image_path'].append(abspath)
-                    dataframe['metadata'].append( {'has_tb':False} )
+                    dataframe['metadata'].append( {'has_tb':has_tb} )
                     dataframe['project_id'].append(project_id)
                     dataframe['test'].append(test)
                     dataframe['sort'].append(sort)
