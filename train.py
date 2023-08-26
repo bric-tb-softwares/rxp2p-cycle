@@ -58,7 +58,7 @@ if __name__ == '__main__':
         opt.test = job['test']
         print('Sort: %d , Test: %d'%(opt.sort, opt.test))
         opt.name = 'test_%d_sort_%d' %(opt.test, opt.sort)
-        opt.wandb_fold_id = opt.name
+        opt.wandb_fold_id = opt.name + '.fix'
         is_test = True if 'LOCAL_TEST' in os.environ.keys() else False
         if is_test:
             opt.n_epochs = 1

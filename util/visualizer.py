@@ -87,6 +87,7 @@ class Visualizer():
 
         if self.use_wandb:
             #os.environ["WANDB_MODE"] = "dryrun"
+
             if self.is_resume_wandb:
                 self.wandb_run = wandb.init(id=self.wandb_fold_id, project=opt.project, resume='allow',
                                             name=opt.name, config=opt, entity=opt.wandb_entity) if not wandb.run else wandb.run

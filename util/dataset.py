@@ -57,7 +57,8 @@ class Image:
 
         # fix image 
         img = Img.open(output)
-        img = ImageOps.exif_transpose(img)
+        if not 'china' in output:
+            img = ImageOps.exif_transpose(img)
         img.save(output)
 
 
@@ -163,5 +164,5 @@ class DownloadDataset:
 if __name__ == "__main__":
     token = "b16fe0fc92088c4840a98160f3848839e68b1148"
     c = DownloadDataset(token)
-    df = c.download('imageamento', 'dataset')
+    df = c.download('china', 'dataset')
 

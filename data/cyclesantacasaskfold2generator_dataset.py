@@ -88,7 +88,7 @@ class CycleSantaCasaSkfold2GeneratorDataset(BaseDataset):
         #shenzhen dataset splitting in partitions
         #splits = stratified_train_val_test_splits_bins(df, opt.n_folds, opt.seed)[opt.test]
         #importing partition defined as seed for the project
-        path_shenzhen = '/home/brics/public/brics_data/Shenzhen/raw/splits.pkl'
+        path_shenzhen = '/home/brics/public/brics_data/Shenzhen/china/raw/splits.pkl'
         particao_shenzhen_file = open(path_shenzhen, "rb")
         particao_shenzhen = pickle.load(particao_shenzhen_file)
         particao_shenzhen_file.close()

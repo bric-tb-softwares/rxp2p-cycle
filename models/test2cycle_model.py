@@ -73,8 +73,22 @@ class Test2CycleModel(BaseModel):
     def forward(self):
         """Run forward pass."""
         #self.fake = self.netG(self.real)  # G(real)
-        self.fake_B = self.netG_A(self.real_A)  # G(real)
-        self.fake_A = self.netG_B(self.real_B)  # G(real)
+        #self.fake_B = self.netG_A(self.real_A)  # G(real)
+        #self.fake_A = self.netG_B(self.real_B)  # G(real)
+
+        AtoB = self.opt.direction == 'AtoB'
+        if AtoB:
+            self.fake_B = self.netG_A(self.real_A)  # G(real)
+            self.fake_A = self.netG_B(self.real_B)  # G(real)
+        else:
+                                                    # realA = Shenzhen e realB = Santa Casa
+                                                    # fakeA = Santa Casa e fakeB = Shenzhen
+            self.fake_B = self.netG_A(self.real_B)  # G(real) 
+            self.fake_A = self.netG_B(self.real_A)  # G(real)
+
+
+
+
 
     def optimize_parameters(self):
         """No optimization for test model."""
