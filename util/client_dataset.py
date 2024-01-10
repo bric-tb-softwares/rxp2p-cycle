@@ -27,7 +27,7 @@ def download_dorothy(dataset_download_dir, dataset_name, data, metadata, header)
                 print(f'refreshing dorothy images for {dataset_name} and a new partiton must be definied')
             print(f'downloading images from dorothy for {dataset_name}')
             for img in data:
-                file = open(f"{dataset_download_dir}/{dataset_name}/{img['project_id']}.png","wb")
+                file = open(f"{dataset_download_dir}/{dataset_name}/{img['project_id']}.jpg","wb")
                 response = requests.get(img['image_url'], headers=header)
                 file.write(response.content)
                 file.close()
@@ -48,7 +48,7 @@ def dorothy_dataset(token, dataset_name, is_download_imgs, dataset_download_dir)
             }
     n_imgs = 0
     for img in data:
-        image_path = dataset_download_dir+ '/%s'%(dataset_name)+'/%s'%(img['project_id'])+'.png' 
+        image_path = dataset_download_dir+ '/%s'%(dataset_name)+'/%s'%(img['project_id'])+'.jpg' 
         if img['dataset_name'] == 'imageamento_anonimizado_valid' or img['dataset_name'] == 'imageamento' or img['dataset_name'] == 'complete_imageamento_anonimizado_valid':
             imgs_['target'].append(0)
         else:
