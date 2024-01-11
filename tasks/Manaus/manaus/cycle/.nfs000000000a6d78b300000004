@@ -1,2 +1,0 @@
-
-[2]+  Stopped                 python ./generate.py --checkpoints_dir $MODELS --results_dir fake_images_SantaCasa_Manaus --gpu_ids 0 --dataset_mode cyclemanausskfold2generator --token b16fe0fc92088c4840a98160f3848839e68b1148 --dataroot /home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/raw/images/ --model test2cycle --n_folds 10 --preprocess resize_and_scale_width --norm instance --direction AtoB --netG resnet_9blocks --gen_train_dataset --n_folds 10 --no_dropout --name genkl --isTB --dataset_download_dir $PWD/images
