@@ -144,6 +144,8 @@ cycle_manaus_jobs/
 
 #files
 data/client_dataset_backup.py
+notebooks/crop_auxiliar.ipynb
+notebooks/Untitled.ipynb
 
 # others
 *.txt

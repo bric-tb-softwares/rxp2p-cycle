@@ -14,5 +14,5 @@ fi
 export PYTHONPATH=$PYTHONPATH:$REPO_DIR
 
 if [ "$mode" == "jupyter" ]; then
-    jupyter-lab --no-browser --port ${DOCKER_EXPOSE} --NotebookApp.token='' --NotebookApp.password=''
+    jupyter lab --no-browser --port ${DOCKER_EXPOSE} --NotebookApp.token='' --NotebookApp.password=''
 fi

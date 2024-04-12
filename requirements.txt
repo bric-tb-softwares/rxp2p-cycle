@@ -10,5 +10,6 @@ scikit-learn
 opencv-python
 expand-folders
 jupyterlab
-maestro @ git+https://github.com/jodafons/maestro.git@main
-dorothy @ git+https://github.com/bricstb-softwares/dorothy.git@master
+matplotlib
+#maestro @ git+https://github.com/jodafons/maestro.git@main
+#dorothy @ git+https://github.com/bricstb-softwares/dorothy.git@master
