@@ -146,6 +146,9 @@ cycle_manaus_jobs/
 data/client_dataset_backup.py
 notebooks/crop_auxiliar.ipynb
 notebooks/Untitled.ipynb
+notebooks/checking_segmentation_santacasa_anonimizado_valid.ipynb
+notebooks/cheking_segmentation_c_manaus.ipynb
+notebooks/cheking_segmentation_manaus.ipynb
 
 # others
 *.txt
