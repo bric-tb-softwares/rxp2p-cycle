@@ -31,7 +31,7 @@ class BaseOptions():
         parser.add_argument('--is_resume_wandb', type=bool, default=False, help='is a resuming run of wandb')
         parser.add_argument('--wandb_fold_id', type = str, help='wandb id for a fold during an experiment')
         parser.add_argument('--gpu_ids', type=str, default='0', help='gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU')
-        parser.add_argument('--checkpoints_dir', type=str, default=os.getcwd()+'/checkpoints', help='models are saved here')
+        parser.add_argument('--checkpoints_dir', type=str, default=os.getcwd()+'/checkpoints/', help='models are saved here')
         parser.add_argument('--seed', type=int, default='512', help='which seed to consider in k-fold or sample related tasks.')
         parser.add_argument('--n_folds', type=int, default=10, help='bin numbers to be selected for statistical flow')
         parser.add_argument('--test', type=int, default=0, help='which bin is selected only for testing models')

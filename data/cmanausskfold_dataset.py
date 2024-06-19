@@ -63,7 +63,12 @@ class CManausSkfoldDataset(BaseDataset):
             df_manaus = df_manaus.sort_values('project_id')
             #df_manaus.to_csv(opt.checkpoints_dir + '/imgs_metadata.csv')
         except Exception as ex:
-            raise RuntimeError('Failed to open dorothy database') from ex
+            print(ex)
+            print('Failed to open dorothy database')
+            print('importing metada saved from last trial')
+            df_manaus = pd.read_csv('/home/brics/public/brics_data/Manaus/c_manaus/raw/Manaus_c_manaus_table_from_raw.csv')
+            df_manaus.drop("Unnamed: 0", axis=1, inplace=True)            
+            #raise RuntimeError('Failed to open dorothy database') from ex
 
         
         path_manaus = '/home/brics/public/brics_data/Manaus/c_manaus/raw/splits.pkl'
@@ -77,23 +82,21 @@ class CManausSkfoldDataset(BaseDataset):
         
         training_data = df_manaus.iloc[splits[opt.sort][0]]
         validation_data = df_manaus.iloc[splits[opt.sort][1]]
-
+        
         if (opt.isTB == True):
             self.train_tb = training_data.loc[df_manaus.target == 1]
             self.val_tb = validation_data.loc[df_manaus.target == 1]
             if opt.train_dataset:
-                self.AB_paths = [opt.dataroot + img_nm + '.jpg' for img_nm in self.train_tb['project_id'].tolist() if img_nm in masks_available['project_id'].str.replace('mask_|.jpg','').tolist()]
+                self.AB_paths = [opt.dataroot + img_nm + '.jpg' for img_nm in self.train_tb['project_id'].tolist() if img_nm in masks_available['project_id'].str.replace(r'^mask_(.*)\.jpg$', r'\1', regex=True).tolist()]
             else:
-                self.AB_paths = [opt.dataroot + img_nm + '.jpg' for img_nm in self.val_tb['project_id'].tolist() if img_nm in masks_available['project_id'].str.replace('mask_|.jpg','').tolist()]
+                self.AB_paths = [opt.dataroot + img_nm + '.jpg' for img_nm in self.val_tb['project_id'].tolist() if img_nm in masks_available['project_id'].str.replace(r'^mask_(.*)\.jpg$', r'\1', regex=True).tolist()]
         else:
             self.train_ntb = training_data.loc[df_manaus.target == 0]
             self.val_ntb = validation_data.loc[df_manaus.target == 0]
             if opt.train_dataset:
-                self.AB_paths = [opt.dataroot + img_nm + '.jpg' for img_nm in self.train_ntb['project_id'].tolist() if img_nm in masks_available['project_id'].str.replace('mask_|.jpg','').tolist()]
+                self.AB_paths = [opt.dataroot + img_nm + '.jpg' for img_nm in self.train_ntb['project_id'].tolist() if img_nm in masks_available['project_id'].str.replace(r'^mask_(.*)\.jpg$', r'\1', regex=True).tolist()]
             else:
-                self.AB_paths = [opt.dataroot + img_nm + '.jpg' for img_nm in self.val_ntb['project_id'].tolist() if img_nm in masks_available['project_id'].str.replace('mask_|.jpg','').tolist()]
-
-
+                self.AB_paths = [opt.dataroot + img_nm + '.jpg' for img_nm in self.val_ntb['project_id'].tolist() if img_nm in masks_available['project_id'].str.replace(r'^mask_(.*)\.jpg$', r'\1', regex=True).tolist()]
 
         ####
         assert (self.opt.load_size >= self.opt.crop_size)  # crop_size should be smaller than the size of loaded image

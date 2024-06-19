@@ -1,0 +1,132 @@
+----------------- Options ---------------
+               batch_size: 1                             
+                    beta1: 0.5                           
+          checkpoints_dir: /home/otto.tavares/public/iltbi/rxp2p-cycle/checkpoints/cycle_ntb/
+           continue_train: False                         
+                crop_size: 256                           
+       custom_images_path: None                          
+        custom_masks_path: None                          
+       custom_paired_path: None                          
+                 dataroot: /home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid	[default: None]
+           dataset_action: False                         
+     dataset_download_dir: /home/otto.tavares/public/iltbi/train/images	[default: /home/otto.tavares/public/iltbi/rxp2p-cycle]
+             dataset_mode: unalignedskfoldextendido      	[default: unaligned]
+             dataset_name: Shenzhen                      
+                direction: AtoB                          
+              display_env: main                          
+             display_freq: 400                           
+               display_id: 1                             
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
+            download_imgs: False                         
+                    epoch: latest                        
+              epoch_count: 1                             
+                 gan_mode: lsgan                         
+  generate_paths_data_csv: False                         
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                     isTB: False                         
+                  isTrain: True                          	[default: None]
+          is_resume_wandb: False                         
+                      job: None                          
+                 lambda_A: 10.0                          
+                 lambda_B: 10.0                          
+          lambda_identity: 0.5                           
+                load_iter: 0                             	[default: 0]
+                load_size: 256                           	[default: 286]
+                       lr: 0.0002                        
+           lr_decay_iters: 50                            
+                lr_policy: linear                        
+         max_dataset_size: inf                           
+                    model: cycle_gan                     
+                 n_epochs: 100                           
+           n_epochs_decay: 100                           
+                  n_folds: 10                            
+               n_layers_D: 3                             
+                     name: test_1_sort_7                 	[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: resnet_9blocks                
+                      ngf: 64                            
+               no_dropout: True                          
+                  no_flip: True                          	[default: False]
+                  no_html: False                         
+                     norm: instance                      
+              num_threads: 4                             
+                  num_val: 400                           
+                output_nc: 3                             
+                    phase: train                         
+                pool_size: 50                            
+               preprocess: resize_and_scale_width        	[default: resize_and_crop]
+               print_freq: 100                           
+                  project: cycle_shenzhen_ntb_santacasa  	[default: None]
+             save_by_iter: False                         
+          save_epoch_freq: 50                            	[default: 5]
+         save_latest_freq: 5000                          
+                     seed: 512                           	[default: 512]
+           serial_batches: False                         
+                     sort: 7                             	[default: 0]
+                   suffix:                               
+                     test: 1                             	[default: 0]
+                    token: b16fe0fc92088c4840a98160f3848839e68b1148	[default: ]
+            train_dataset: True                          
+         update_html_freq: 1000                          
+                use_wandb: True                          	[default: False]
+                 val_freq: 400                           
+                  verbose: False                         
+             wandb_entity: otavares                      	[default: brics-tb]
+            wandb_fold_id: fix_cycle_ntb_test_1_sort_7   	[default: None]
+----------------- End -------------------
+GPU with device 0
+dorothy_dataset() missing 2 required positional arguments: 'is_download_imgs' and 'dataset_download_dir'
+importing metada saved from last trial
+bins selected for val: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+dataset [UnalignedSkfoldExtendidoDataset] was created
+dorothy_dataset() missing 2 required positional arguments: 'is_download_imgs' and 'dataset_download_dir'
+importing metada saved from last trial
+bins selected for val: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+dataset [UnalignedSkfoldExtendidoDataset] was created
+The number of training images = 261
+The number of val images = 32
+initialize network with normal
+initialize network with normal
+initialize network with normal
+initialize network with normal
+model [CycleGANModel] was created
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+[Network D_A] Total number of parameters : 2.765 M
+[Network D_B] Total number of parameters : 2.765 M
+-----------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+
+
+Could not connect to Visdom server. 
+ Trying to start a server....
+Command: /home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/bin/python3 -m visdom.server -p 8097 &>/dev/null &
+create web directory /home/otto.tavares/public/iltbi/rxp2p-cycle/checkpoints/cycle_ntb/test_1_sort_7/web...
+learning rate 0.0002000 -> 0.0002000

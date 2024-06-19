@@ -1,0 +1,64 @@
+/home/otto.tavares/.local/lib/python3.9/site-packages/torch/cuda/__init__.py:146: UserWarning: 
+NVIDIA GeForce RTX 3090 with CUDA capability sm_86 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70.
+If you want to use the NVIDIA GeForce RTX 3090 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 2545.43it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16725.18it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17026.94it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17003.94it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16658.75it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16904.94it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16320.25it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17011.60it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17315.93it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16271.01it/s]
+/home/otto.tavares/.local/lib/python3.9/site-packages/torchvision/transforms/transforms.py:332: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  warnings.warn(
+/home/otto.tavares/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 15245.85it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16629.40it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17050.02it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16131.94it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16829.57it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16505.79it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16629.40it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17268.41it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17158.52it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16717.78it/s]
+/home/otto.tavares/.local/lib/python3.9/site-packages/torchvision/transforms/transforms.py:332: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  warnings.warn(
+/home/otto.tavares/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py:563: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/train.py", line 81, in <module>
+    model = create_model(opt)      # create a model given opt.model and other options
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/models/__init__.py", line 65, in create_model
+    instance = model(opt)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/models/cycle_gan_model.py", line 79, in __init__
+    self.netG_A = networks.define_G(opt.input_nc, opt.output_nc, opt.ngf, opt.netG, opt.norm,
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/models/networks.py", line 159, in define_G
+    return init_net(net, init_type, init_gain, gpu_ids)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/models/networks.py", line 115, in init_net
+    init_weights(net, init_type, init_gain=init_gain)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/models/networks.py", line 98, in init_weights
+    net.apply(init_func)  # apply the initialization function <init_func>
+  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 668, in apply
+    module.apply(fn)
+  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 668, in apply
+    module.apply(fn)
+  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 668, in apply
+    module.apply(fn)
+  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 669, in apply
+    fn(self)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/models/networks.py", line 82, in init_func
+    init.normal_(m.weight.data, 0.0, init_gain)
+  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/nn/init.py", line 155, in normal_
+    return _no_grad_normal_(tensor, mean, std)
+  File "/home/otto.tavares/.local/lib/python3.9/site-packages/torch/nn/init.py", line 19, in _no_grad_normal_
+    return tensor.normal_(mean, std)
+RuntimeError: CUDA error: no kernel image is available for execution on the device
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.

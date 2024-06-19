@@ -1,0 +1,144 @@
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16320.25it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17967.03it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19398.12it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19249.74it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 20025.85it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17907.37it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19941.22it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19743.06it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 20068.44it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19478.19it/s]
+/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18035.71it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19722.43it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 20186.49it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 20426.81it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 20295.02it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19609.73it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 20371.69it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 20371.69it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19548.80it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 20186.49it/s]
+/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Setting up a new session...
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/lib/python3.9/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.9/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.9/http/client.py", line 950, in send
+    self.connect()
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/urllib3/connection.py", line 238, in connect
+    self.sock = self._new_conn()
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fdb399f77c0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /env/main (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fdb399f77c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/visdom/__init__.py", line 756, in _send
+    return self._handle_post(
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/visdom/__init__.py", line 720, in _handle_post
+    r = self.session.post(url, data=data)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /env/main (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fdb399f77c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[Errno 111] Connection refused
+on_close() takes 1 positional argument but 3 were given
+wandb: Currently logged in as: otavares. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in /home/otto.tavares/public/iltbi/rxp2p-cycle/wandb/run-20240507_114741-cycle_ntb_test_0_sort_5
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run test_0_sort_5
+wandb: ⭐️ View project at https://wandb.ai/otavares/cycle_shenzhen_ntb_santacasa
+wandb: 🚀 View run at https://wandb.ai/otavares/cycle_shenzhen_ntb_santacasa/runs/cycle_ntb_test_0_sort_5
+/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:143: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+wandb: - 178.875 MB of 178.875 MB uploaded (0.177 MB deduped)wandb: \ 180.432 MB of 180.776 MB uploaded (0.177 MB deduped)wandb: | 180.776 MB of 180.776 MB uploaded (0.177 MB deduped)wandb: / 180.776 MB of 180.776 MB uploaded (0.177 MB deduped)wandb: 
+wandb: Run history:
+wandb:                D_A ▃▄▆▅▂▄▄▅█▄▄▄▃▄▂▅▁▂▄▃▂▄▁▆▁▁▂▁▁▁▁▃▁▄▁▂▁▂▁▂
+wandb:            D_A_val ▂▂▄▄▃▃▅▃▆▃▃▃▂▂▃▃▂▂▂▁▄▂▂▃▁▂▃▂▂▄▂▃▁▄▁▂▂█▂▃
+wandb:                D_B ▄▅▆█▂▅▆▄▅▅▃▇█▅▆▂▅▂▂▇▇▁▁▄▂▂▄▁▅▁▂▃▁▁▂▅▂▂▄▁
+wandb:            D_B_val ▃▄▃▃▃▂▄▂▃▂▃▂▄▄▂▅▃▄▆▄▄▃▂▁▁▄▃▆▃▄▁▁▁▂▅▆▂▃▃█
+wandb:                G_A █▁▂▂▄▅▂▂▅▂▃▄▅▂█▂▂▆▂▇▃▂▅▁▄▅▄▆▃▄▆▂▆▅▄▄▄▅▅▅
+wandb:            G_A_val ▂▃▂▂▂▁▁▂▁▃▅▂▂▃▃▂▂▃▃▃▃▄▄▂▃▄▂▃▄▃▃▃▄▃▄▄▄▄▆█
+wandb:                G_B ▂█▃▁▂▁▃▄▂▄▃▂▂▅▂▇▂▂▄▁▂▆▂█▄▃▂▂▄▅▃▂▅▆▄▂▄▅▄▅
+wandb:            G_B_val ▃▂▅▂▂▂▃▂▃▅▁▂▂▂▂█▂▂▃▁▁▁▃▄▄▄▂▂▂▄▃▃▄▅▄▃▃▅▇▃
+wandb:     KL_realA_fakeA ▂▂▁▁▂▂▃▁▂▂▂▂▁▂▂▂▃▂▁▃▃▁▁▂▂▂▁▁▁▁▁▆▁▂▃▃▃▅█▆
+wandb: KL_realA_fakeA_val ▂▇▃▂▂▂▃▁▂▁▁▇▂▂▁▁▁▁▂▂▂▂▆▂▁▁▁▁▂▁▄▂▁▂▂█▁▃▂▁
+wandb:     KL_realB_fakeB ▂▁▁▁▁▄▄▃▁▁▂▂▁▁▂▁▂▁▆▁▁▃▂█▂▁▁▂▂▁▂▂▂▃▁▃▂▂▂▁
+wandb: KL_realB_fakeB_val ▇▃▃█▂▁▂▂▂▁▁▅▁▃▆▃▄▂▂▂▁▃▁▁▁▃▂▄▅▂▂▃▃▂▃▃▂▁▁▁
+wandb:            cycle_A ▇█▅▄██▂▅▄▃▅▃▄▇▆▃▄▇▄▂▄▄▃▅▄▂▃▄▁▃▃▃▄▃▁▁▃▄▃▄
+wandb:        cycle_A_val █▆▇▃▆▄▃▃▇▃▄▁▃▅▄▆▃▅▆▂▃▂▃▃▂▅▄▅▄▃▃▃▂▃▃▁▃▃▄▃
+wandb:            cycle_B ██▅▃▄▄▄▃▅▃▄▃▂▆▄▅▃▄▇▃▁▇▂▄▂▂▃▂▂▃▂▂▂▃▂▂▂▂▂▂
+wandb:        cycle_B_val ▇▃▄▃▂▄▂▂▂▂▃▃▂▃█▃▂▂▁▁▁▂▂▂▁▃▂▂▁▂▂▁▁▂▂▁▁▁▂▁
+wandb:              idt_A ▇█▅▄▄▄▃▂▂▂▂▃▃▆▂▅▃▂▆▃▂▅▃▂▂▂▃▁▂▃▁▂▂▃▂▂▁▁▂▂
+wandb:          idt_A_val █▂▄▂▂▃▂▂▂▂▂▂▂▂▇▂▃▂▁▁▁▁▂▂▁▅▁▁▁▂▂▁▁▂▂▁▁▁▂▁
+wandb:              idt_B ▆█▆▄█▅▃▅▆▄▆▃▃▇▇▄▄▇▄▂▂▃▃▆▄▂▂▃▂▄▃▃▃▂▁▁▃▃▂▃
+wandb:          idt_B_val █▇▅▄▅▄▄▃▆▃▃▁▃▆▄▆▃▅▅▃▂▅▃▄▂▅▂▄▃▂▂▂▂▄▂▁▂▃▃▂
+wandb: 
+wandb: Run summary:
+wandb:                D_A 0.04886
+wandb:            D_A_val 0.24652
+wandb:                D_B 0.10966
+wandb:            D_B_val 0.63313
+wandb:                G_A 0.72025
+wandb:            G_A_val 2.33843
+wandb:                G_B 0.7404
+wandb:            G_B_val 0.73336
+wandb:     KL_realA_fakeA 0.10839
+wandb: KL_realA_fakeA_val 0.07056
+wandb:     KL_realB_fakeB 0.45641
+wandb: KL_realB_fakeB_val 0.10351
+wandb:            cycle_A 0.54977
+wandb:        cycle_A_val 0.64856
+wandb:            cycle_B 0.33414
+wandb:        cycle_B_val 0.28787
+wandb:              idt_A 0.09388
+wandb:          idt_A_val 0.09389
+wandb:              idt_B 0.17667
+wandb:          idt_B_val 0.19992
+wandb: 
+wandb: 🚀 View run test_0_sort_5 at: https://wandb.ai/otavares/cycle_shenzhen_ntb_santacasa/runs/cycle_ntb_test_0_sort_5
+wandb: ⭐️ View project at: https://wandb.ai/otavares/cycle_shenzhen_ntb_santacasa
+wandb: Synced 6 W&B file(s), 1170 media file(s), 1170 artifact file(s) and 1 other file(s)
+wandb: Find logs at: ./wandb/run-20240507_114741-cycle_ntb_test_0_sort_5/logs

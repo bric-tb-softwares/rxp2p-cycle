@@ -11,5 +11,7 @@ opencv-python
 expand-folders
 jupyterlab
 matplotlib
-#maestro @ git+https://github.com/jodafons/maestro.git@main
-#dorothy @ git+https://github.com/bricstb-softwares/dorothy.git@master
+maestro @ git+https://github.com/jodafons/maestro.git@main
+dorothy @ git+https://github.com/bricstb-softwares/dorothy.git@main
+#validation task
+#pip install pypermut@git+https://github.com/qbarthelemy/PyPermut.git@main

@@ -2,8 +2,9 @@ import os
 basepath = os.getcwd()
 
 
-taskname = 'user.otto.tavares.SantaCasa_imageamento_anonimizado_valid.cycle_v1.r1'
-image = '/home/joao.pinto/public/images/rxp2p-cycle_latest.sif'
+#taskname = 'user.otto.tavares.SantaCasa_imageamento_anonimizado_valid.cycle_v1.r1'
+taskname = 'user.otto.tavares.SantaCasa_imageamento_anonimizado_valid.cycle_v1.r1_exemplo'
+image = '/mnt/brics_data/images/p2p-cycle_base.sif'
 
 
 
@@ -28,8 +29,8 @@ python /app/train.py \
 --n_epochs_decay 100 \
 --load_size 256 \
 --crop_size 256 \
---isTB \
 --job %IN \
+--job isTB \
 --project %JOB_TASKNAME \
 """
 

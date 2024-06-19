@@ -15,7 +15,7 @@ You need to implement the following functions:
 #TO-DO IMPORT ILTBI IMAGES AND RUN CYCLE FROM SHENZHEN TO ILTBI
 from data.base_dataset import BaseDataset, get_params, get_transform
 from data.image_folder import make_dataset
-from data import client_dataset
+from util.client_dataset import dorothy_dataset
 from PIL import Image, ImageOps
 from util.stratified_kfold import stratified_train_val_test_splits_bins
 from util.util import prepare_my_table
@@ -26,87 +26,88 @@ import pickle
 import requests
 import json
 
-def dorothy_dataset(opt, dataset_name):
+#Comentado para testes
+#def dorothy_dataset(opt, dataset_name):
     
-    header = { "Authorization": 'Token '+ str(opt.token)}
-    response = requests.get('https://dorothy-image.lps.ufrj.br/images/?search={DATASET}'.format(DATASET = dataset_name), 
-                        headers=header)
+#    header = { "Authorization": 'Token '+ str(opt.token)}
+#    response = requests.get('https://dorothy-image.lps.ufrj.br/images/?search={DATASET}'.format(DATASET = dataset_name), 
+#                        headers=header)
 
-    data = json.loads(response.content)
-    imgs_ = {
-            'dataset_name': [],
-            'target': [],
-            'image_url': [],
-            'project_id': [],
-            'insertion_date': [],
-            'metadata': [],
-            'date_acquisition': [],
-            'number_reports': [],
-            }
-    n_imgs = 0
-    for img in data:
-        image_path = opt.dataset_download_dir+ '/%s'%(dataset_name)+'/%s'%(img['project_id'])+'.jpg' 
-        if img['dataset_name'] == 'imageamento_anonimizado_valid':
-            imgs_['target'].append(0)
-        else:
-            imgs_['target'].append(int(img['metadata']['has_tb']))
-        imgs_['dataset_name'].append(img['dataset_name'])
-        imgs_['image_url'].append(img['image_url'])
-        imgs_['project_id'].append(image_path)
-        imgs_['insertion_date'].append(img['insertion_date'])
-        imgs_['metadata'].append(img['metadata'])
-        imgs_['date_acquisition'].append(img['date_acquisition'])
-        imgs_['number_reports'].append(img['number_reports'])
-        n_imgs += 1
-    df_data = pd.DataFrame.from_dict(imgs_)
-    df_data = df_data.sort_values('project_id')
+#    data = json.loads(response.content)
+#    imgs_ = {
+#            'dataset_name': [],
+#            'target': [],
+#            'image_url': [],
+#            'project_id': [],
+#            'insertion_date': [],
+#            'metadata': [],
+#            'date_acquisition': [],
+#            'number_reports': [],
+#            }
+#    n_imgs = 0
+#    for img in data:
+#        image_path = opt.dataset_download_dir+ '/%s'%(dataset_name)+'/%s'%(img['project_id'])+'.jpg' 
+#        if img['dataset_name'] == 'imageamento_anonimizado_valid':
+#            imgs_['target'].append(0)
+#        else:
+#            imgs_['target'].append(int(img['metadata']['has_tb']))
+#        imgs_['dataset_name'].append(img['dataset_name'])
+#        imgs_['image_url'].append(img['image_url'])
+#        imgs_['project_id'].append(image_path)
+#        imgs_['insertion_date'].append(img['insertion_date'])
+#        imgs_['metadata'].append(img['metadata'])
+#        imgs_['date_acquisition'].append(img['date_acquisition'])
+#        imgs_['number_reports'].append(img['number_reports'])
+#        n_imgs += 1
+#    df_data = pd.DataFrame.from_dict(imgs_)
+#    df_data = df_data.sort_values('project_id')
     #df_iltbi = pd.read_csv('/home/otto.tavares/iltbi/particao/imageamento_metadados_iltbi.csv')
 
     #if n_imgs != len(df_iltbi['project_id']):
     #    print('Renovar a partição')
-    if opt.download_imgs:
-        if dataset_name == 'imageamento_anonimizado_valid':
-            imageamento_exists = os.path.exists(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
-            if not imageamento_exists:
-                os.makedirs(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
-                imageamento_exists = os.path.exists(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
-            if imageamento_exists:
-                l_images = os.listdir(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
-                if len(l_images) == len(df_data['project_id']):
-                    print('download imageamento anonimizado images from dorothy is not necessary')
-                else:
-                    if len(l_images) == 0:
-                        print('first time downloading dorothy images for imageamento anonimizado')
-                    else:
-                        print('refreshing dorothy images for imageamento and a new partiton must be definied')
-                    print('downloading images from dorothy for imageamento')
-                    for img in data:
-                        file = open(f"{opt.dataset_download_dir}/imageamento_anonimizado_valid/{img['project_id']}.jpg","wb")
-                        response = requests.get(img['image_url'], headers=header)
-                        file.write(response.content)
-                        file.close()
-        if dataset_name == 'china':
-            china_exists = os.path.exists(opt.dataset_download_dir + '/china/')
-            if not china_exists:
-                os.makedirs(opt.dataset_download_dir + '/china/')
-                china_exists = os.path.exists(opt.dataset_download_dir + '/china/')
-            if china_exists:
-                l_images = os.listdir(opt.dataset_download_dir + '/china/')
-                if len(l_images) == len(df_data['project_id']):
-                    print('download china images from dorothy is not necessary')
-                else:
-                    if len(l_images) == 0:
-                        print('first time downloading dorothy images for imageamento')
-                    else:
-                        print('refreshing dorothy images for imageamento and a new partiton must be definied')
-                    print('downloading images from dorothy for imageamento')
-                    for img in data:
-                        print('downloading images from dorothy for china')
-                        file = open(f"{opt.dataset_download_dir}/china/{img['project_id']}.jpg","wb")
-                        response = requests.get(img['image_url'], headers=header)
-                        file.write(response.content)
-                        file.close()
-    return df_data
+#    if opt.download_imgs:
+#        if dataset_name == 'imageamento_anonimizado_valid':
+#            imageamento_exists = os.path.exists(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
+#            if not imageamento_exists:
+#                os.makedirs(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
+#                imageamento_exists = os.path.exists(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
+#            if imageamento_exists:
+#                l_images = os.listdir(opt.dataset_download_dir + '/imageamento_anonimizado_valid/')
+#                if len(l_images) == len(df_data['project_id']):
+#                    print('download imageamento anonimizado images from dorothy is not necessary')
+#                else:
+#                    if len(l_images) == 0:
+#                        print('first time downloading dorothy images for imageamento anonimizado')
+#                    else:
+#                        print('refreshing dorothy images for imageamento and a new partiton must be definied')
+#                    print('downloading images from dorothy for imageamento')
+#                    for img in data:
+#                        file = open(f"{opt.dataset_download_dir}/imageamento_anonimizado_valid/{img['project_id']}.jpg","wb")
+#                        response = requests.get(img['image_url'], headers=header)
+#                        file.write(response.content)
+#                        file.close()
+#        if dataset_name == 'china':
+#            china_exists = os.path.exists(opt.dataset_download_dir + '/china/')
+#            if not china_exists:
+#                os.makedirs(opt.dataset_download_dir + '/china/')
+#                china_exists = os.path.exists(opt.dataset_download_dir + '/china/')
+#            if china_exists:
+#                l_images = os.listdir(opt.dataset_download_dir + '/china/')
+#                if len(l_images) == len(df_data['project_id']):
+#                    print('download china images from dorothy is not necessary')
+#                else:
+#                    if len(l_images) == 0:
+#                        print('first time downloading dorothy images for imageamento')
+#                    else:
+#                        print('refreshing dorothy images for imageamento and a new partiton must be definied')
+#                    print('downloading images from dorothy for imageamento')
+#                    for img in data:
+#                        print('downloading images from dorothy for china')
+#                        file = open(f"{opt.dataset_download_dir}/china/{img['project_id']}.jpg","wb")
+#                        response = requests.get(img['image_url'], headers=header)
+#                        file.write(response.content)
+#                        file.close()
+#    return df_data
 
 
 class UnalignedSkfoldExtendidoDataset(BaseDataset):
@@ -161,13 +162,15 @@ class UnalignedSkfoldExtendidoDataset(BaseDataset):
             except Exception as ex:
                 print(ex)
                 print('importing metada saved from last trial')
-                #df = pd.read_csv('/home/otto.tavares/public/iltbi/particao/Shenzhen_pix2pix_table_from_raw.csv')
-                #df.drop("Unnamed: 0", axis=1, inplace=True)
+                df = pd.read_csv('/home/brics/public/brics_data/Shenzhen/china/raw/Shenzhen_china_table_from_raw.csv')
+                df.drop("Unnamed: 0", axis=1, inplace=True)
                 #df['project_id'] = [img_path.replace('jodafons', 'brics') for img_path in df['raw_image_path'].tolist() if img_path != '']
                 #df = df.sort_values('project_id')
                 #df_iltbi = pd.read_csv('/home/otto.tavares/public/iltbi/particao/imageamento_metadados_iltbi_atualizado.csv')
                 #df_iltbi['project_id'] = [opt.dataset_download_dir + '/imageamento_atualizado'+'/%s'%(img_path)+'.jpg'  for img_path in df_iltbi['project_id'].tolist() if img_path != '']
-                #df_iltbi = df_iltbi.sort_values('project_id')
+                df_iltbi = pd.read_csv('/home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/raw/SantaCasa_imageamento_anonimizado_valid_table_from_raw.csv')
+                df_iltbi.drop("Unnamed: 0", axis=1, inplace=True)
+                df_iltbi = df_iltbi.sort_values('project_id')
 
             
             
@@ -197,22 +200,28 @@ class UnalignedSkfoldExtendidoDataset(BaseDataset):
             self.train_tb = training_data.loc[df.target == 1]
             self.val_tb = validation_data.loc[df.target == 1]
             if opt.train_dataset:
-                self.B_paths = [img_path for img_path in self.train_tb['project_id'].tolist() if img_path != '']
+                #self.B_paths = [img_path for img_path in self.train_tb['project_id'].tolist() if img_path != '']
+                self.B_paths = [img_path for img_path in self.train_tb['image_path'].tolist() if img_path != '']
             else:
-                self.B_paths = [img_path for img_path in self.val_tb['project_id'].tolist() if img_path != '']
+                #self.B_paths = [img_path for img_path in self.val_tb['project_id'].tolist() if img_path != '']
+                self.B_paths = [img_path for img_path in self.val_tb['image_path'].tolist() if img_path != '']
         else:
             self.train_ntb = training_data.loc[df.target == 0]
             self.val_ntb = validation_data.loc[df.target == 0]
             if opt.train_dataset:
-                self.B_paths = [img_path for img_path in self.train_ntb['project_id'].tolist() if img_path != '']
+                #self.B_paths = [img_path for img_path in self.train_ntb['project_id'].tolist() if img_path != '']
+                self.B_paths = [img_path for img_path in self.train_ntb['image_path'].tolist() if img_path != '']
             else:
-                self.B_paths = [img_path for img_path in self.val_ntb['project_id'].tolist() if img_path != '']
+                #self.B_paths = [img_path for img_path in self.val_ntb['project_id'].tolist() if img_path != '']
+                self.B_paths = [img_path for img_path in self.val_ntb['image_path'].tolist() if img_path != '']
         
         #iltbi dataset
         if opt.train_dataset:
-            self.A_paths = [img_path for img_path in self.training_data_iltbi['project_id'].tolist() if img_path != '']
+            #self.A_paths = [img_path for img_path in self.training_data_iltbi['project_id'].tolist() if img_path != '']
+            self.A_paths = [img_path for img_path in self.training_data_iltbi['image_path'].tolist() if img_path != '']
         else:
-            self.A_paths = [img_path for img_path in self.validation_data_iltbi['project_id'].tolist() if img_path != '']
+            #self.A_paths = [img_path for img_path in self.validation_data_iltbi['project_id'].tolist() if img_path != '']
+            self.A_paths = [img_path for img_path in self.validation_data_iltbi['image_path'].tolist() if img_path != '']
         
         
         self.A_size = len(self.A_paths)  # get the size of dataset A

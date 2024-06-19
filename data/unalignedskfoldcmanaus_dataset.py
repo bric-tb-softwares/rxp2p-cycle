@@ -74,8 +74,14 @@ class UnalignedSkfoldCmanausDataset(BaseDataset):
                 print(df_manaus)
             except Exception as ex:
                 print(ex)
-                print('Dorothy out of service or unsolved bug')
-                traceback.print_exc()
+                print('Failed to open dorothy database')
+                print('importing metada saved from last trial')
+                df_manaus = pd.read_csv('/home/brics/public/brics_data/Manaus/c_manaus/raw/Manaus_c_manaus_table_from_raw.csv')
+                df_manaus.drop("Unnamed: 0", axis=1, inplace=True)
+                df_iltbi = pd.read_csv('/home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/raw/SantaCasa_imageamento_anonimizado_valid_table_from_raw.csv')
+                df_iltbi.drop("Unnamed: 0", axis=1, inplace=True)
+                df_iltbi = df_iltbi.sort_values('project_id')
+                #traceback.print_exc()
         ##shenzhen dataset splitting in partitions
         #splits = stratified_train_val_test_splits_bins(df_manaus, opt.n_folds, opt.seed)[opt.test]
         splits = pickle.load(open('/home/brics/public/brics_data/Manaus/c_manaus/raw/splits.pkl','rb'))[opt.test]

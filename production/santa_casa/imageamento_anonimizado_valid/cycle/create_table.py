@@ -12,17 +12,17 @@ dataframe = {
       'type':[],
       }
 
-basepath = '/home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid/fake_images'
+basepath = '/home/otto.tavares/public/iltbi/rxp2p-cycle/production/santa_casa/imageamento_anonimizado_valid/cycle'
 
 
 
-#dataset_name = 'user.otto.tavares.task.SantaCasa_imageamento_anonimizado_valid.cycle_v1_notb.r1.SantaCasa_to_Shenzhen.samples'
+#dataset_name = 'user.otto.tavares.task.SantaCasa_imageamento_anonimizado_valid.cycle_notb_v1.r5.SantaCasa_to_Shenzhen.samples'
 #has_tb = False
 #dirname = 'fake_B'
 
 
-dataset_name = 'user.otto.tavares.task.SantaCasa_imageamento_anonimizado_valid.cycle_v1_tb.r1.Shenzhen_to_SantaCasa.samples'
-has_tb = True
+dataset_name = 'user.otto.tavares.task.SantaCasa_imageamento_anonimizado_valid.cycle_notb_v1.r5.Shenzhen_to_SantaCasa.samples'
+has_tb = False
 dirname = 'fake_A'
 
 for test in range(10):

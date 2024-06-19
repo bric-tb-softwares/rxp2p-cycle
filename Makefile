@@ -25,7 +25,7 @@ build_sif:
 
 
 run:
-	singularity run --nv --bind=/home:/home  --bind=/mnt/brics_data:/mnt/brics_data --writable-tmpfs ${PROJECT_DIR}/images/p2p-cycle_base.sif  
+	singularity run --nv --bind=/home:/home  --bind=${PROJECT_DIR}:${PROJECT_DIR} --writable-tmpfs ${PROJECT_DIR}/images/p2p-cycle_base.sif  
 
 run_jupyter:
 	singularity exec --nv --bind=/home:/home --bind=${PROJECT_DIR}:${PROJECT_DIR} --writable-tmpfs ${PROJECT_DIR}/images/p2p-cycle_base.sif /bin/bash ./activate.sh jupyter

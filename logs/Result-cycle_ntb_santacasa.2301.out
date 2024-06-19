@@ -1,0 +1,890 @@
+----------------- Options ---------------
+               batch_size: 1                             
+                    beta1: 0.5                           
+          checkpoints_dir: /home/otto.tavares/public/iltbi/rxp2p-cycle/checkpoints/cycle_ntb/
+           continue_train: False                         
+                crop_size: 256                           
+       custom_images_path: None                          
+        custom_masks_path: None                          
+       custom_paired_path: None                          
+                 dataroot: /home/brics/public/brics_data/SantaCasa/imageamento_anonimizado_valid	[default: None]
+           dataset_action: False                         
+     dataset_download_dir: /home/otto.tavares/public/iltbi/train/images	[default: /home/otto.tavares/public/iltbi/rxp2p-cycle]
+             dataset_mode: unalignedskfoldextendido      	[default: unaligned]
+             dataset_name: Shenzhen                      
+                direction: AtoB                          
+              display_env: main                          
+             display_freq: 400                           
+               display_id: 1                             
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
+            download_imgs: False                         
+                    epoch: latest                        
+              epoch_count: 1                             
+                 gan_mode: lsgan                         
+  generate_paths_data_csv: False                         
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                     isTB: False                         
+                  isTrain: True                          	[default: None]
+          is_resume_wandb: False                         
+                      job: None                          
+                 lambda_A: 10.0                          
+                 lambda_B: 10.0                          
+          lambda_identity: 0.5                           
+                load_iter: 0                             	[default: 0]
+                load_size: 256                           	[default: 286]
+                       lr: 0.0002                        
+           lr_decay_iters: 50                            
+                lr_policy: linear                        
+         max_dataset_size: inf                           
+                    model: cycle_gan                     
+                 n_epochs: 100                           
+           n_epochs_decay: 100                           
+                  n_folds: 10                            
+               n_layers_D: 3                             
+                     name: test_1_sort_8                 	[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: resnet_9blocks                
+                      ngf: 64                            
+               no_dropout: True                          
+                  no_flip: True                          	[default: False]
+                  no_html: False                         
+                     norm: instance                      
+              num_threads: 4                             
+                  num_val: 400                           
+                output_nc: 3                             
+                    phase: train                         
+                pool_size: 50                            
+               preprocess: resize_and_scale_width        	[default: resize_and_crop]
+               print_freq: 100                           
+                  project: cycle_shenzhen_ntb_santacasa  	[default: None]
+             save_by_iter: False                         
+          save_epoch_freq: 50                            	[default: 5]
+         save_latest_freq: 5000                          
+                     seed: 512                           	[default: 512]
+           serial_batches: False                         
+                     sort: 8                             	[default: 0]
+                   suffix:                               
+                     test: 1                             	[default: 0]
+                    token: b16fe0fc92088c4840a98160f3848839e68b1148	[default: ]
+            train_dataset: True                          
+         update_html_freq: 1000                          
+                use_wandb: True                          	[default: False]
+                 val_freq: 400                           
+                  verbose: False                         
+             wandb_entity: otavares                      	[default: brics-tb]
+            wandb_fold_id: fixV1_cycle_ntb_test_1_sort_8 	[default: None]
+----------------- End -------------------
+GPU with device 0
+dorothy_dataset() missing 2 required positional arguments: 'is_download_imgs' and 'dataset_download_dir'
+importing metada saved from last trial
+bins selected for val: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+dataset [UnalignedSkfoldExtendidoDataset] was created
+dorothy_dataset() missing 2 required positional arguments: 'is_download_imgs' and 'dataset_download_dir'
+importing metada saved from last trial
+bins selected for val: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 2, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 4, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 5, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 8, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+bins selected for val: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+dataset [UnalignedSkfoldExtendidoDataset] was created
+The number of training images = 261
+The number of val images = 32
+initialize network with normal
+initialize network with normal
+initialize network with normal
+initialize network with normal
+model [CycleGANModel] was created
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+[Network D_A] Total number of parameters : 2.765 M
+[Network D_B] Total number of parameters : 2.765 M
+-----------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+
+
+Could not connect to Visdom server. 
+ Trying to start a server....
+Command: /home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/bin/python3 -m visdom.server -p 8097 &>/dev/null &
+create web directory /home/otto.tavares/public/iltbi/rxp2p-cycle/checkpoints/cycle_ntb/test_1_sort_8/web...
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.30593419075012207), ('G_A', 0.38198432326316833), ('cycle_A', 1.2923338413238525), ('idt_A', 0.3861379027366638), ('D_B', 0.23764866590499878), ('G_B', 0.4000162184238434), ('cycle_B', 0.9806747436523438), ('idt_B', 0.6142049431800842), ('KL_realA_fakeA', 0.23636320330156346), ('KL_realB_fakeB', 0.2425929765070127)])
+(epoch: 1, iters: 100, time: 0.329, data: 2.372) D_A: 0.306 G_A: 0.382 cycle_A: 1.292 idt_A: 0.386 D_B: 0.238 G_B: 0.400 cycle_B: 0.981 idt_B: 0.614 KL_realA_fakeA: 0.236 KL_realB_fakeB: 0.243 
+OrderedDict([('D_A', 0.4055213928222656), ('G_A', 0.5885164737701416), ('cycle_A', 1.0850846767425537), ('idt_A', 0.8467174768447876), ('D_B', 0.3710491955280304), ('G_B', 0.15576744079589844), ('cycle_B', 1.6655420064926147), ('idt_B', 0.5025189518928528), ('KL_realA_fakeA', 0.3411261246515374), ('KL_realB_fakeB', 0.9262177848170322)])
+(epoch: 1, iters: 200, time: 0.379, data: 55.531) D_A: 0.406 G_A: 0.589 cycle_A: 1.085 idt_A: 0.847 D_B: 0.371 G_B: 0.156 cycle_B: 1.666 idt_B: 0.503 KL_realA_fakeA: 0.341 KL_realB_fakeB: 0.926 
+End of epoch 1 / 200 	 Time Taken: 122 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.3123716711997986), ('G_A', 1.0477324724197388), ('cycle_A', 1.0602128505706787), ('idt_A', 0.4335826635360718), ('D_B', 0.2825935482978821), ('G_B', 0.37604811787605286), ('cycle_B', 0.8542125225067139), ('idt_B', 0.6087575554847717), ('KL_realA_fakeA', 0.29048323225332107), ('KL_realB_fakeB', 0.13116743185611246)])
+(epoch: 2, iters: 39, time: 0.350, data: 97.166) D_A: 0.312 G_A: 1.048 cycle_A: 1.060 idt_A: 0.434 D_B: 0.283 G_B: 0.376 cycle_B: 0.854 idt_B: 0.609 KL_realA_fakeA: 0.290 KL_realB_fakeB: 0.131 
+OrderedDict([('D_A', 0.13853439688682556), ('G_A', 0.6711409687995911), ('cycle_A', 1.3989081382751465), ('idt_A', 0.3948543965816498), ('D_B', 0.09809369593858719), ('G_B', 0.42267709970474243), ('cycle_B', 0.8587067127227783), ('idt_B', 0.5431963205337524), ('KL_realA_fakeA', 0.5608735772909027), ('KL_realB_fakeB', 0.1395908464610438)])
+(epoch: 2, iters: 139, time: 6.755, data: 18.459) D_A: 0.139 G_A: 0.671 cycle_A: 1.399 idt_A: 0.395 D_B: 0.098 G_B: 0.423 cycle_B: 0.859 idt_B: 0.543 KL_realA_fakeA: 0.561 KL_realB_fakeB: 0.140 
+OrderedDict([('D_A_val', 0.23291335999965668), ('G_A_val', 0.6612788438796997), ('cycle_A_val', 1.1669418811798096), ('idt_A_val', 0.6146908402442932), ('D_B_val', 0.1770823448896408), ('G_B_val', 0.24257227778434753), ('cycle_B_val', 1.1097973585128784), ('idt_B_val', 0.5118560791015625), ('KL_realA_fakeA_val', 0.22464811010444338), ('KL_realB_fakeB_val', 0.22376671339421048)])
+end of validation step
+OrderedDict([('D_A_val', 0.2259232997894287), ('G_A_val', 0.8967349529266357), ('cycle_A_val', 1.1010355949401855), ('idt_A_val', 0.6146907806396484), ('D_B_val', 0.16570252180099487), ('G_B_val', 0.24257229268550873), ('cycle_B_val', 1.1097973585128784), ('idt_B_val', 0.4545069932937622), ('KL_realA_fakeA_val', 0.16948770913977798), ('KL_realB_fakeB_val', 0.2593017859031003)])
+end of validation step
+OrderedDict([('D_A_val', 0.21781441569328308), ('G_A_val', 0.6222108602523804), ('cycle_A_val', 2.946183204650879), ('idt_A_val', 0.38118332624435425), ('D_B_val', 0.15206769108772278), ('G_B_val', 0.3308278024196625), ('cycle_B_val', 0.9542226195335388), ('idt_B_val', 1.0541197061538696), ('KL_realA_fakeA_val', 0.26323529927562295), ('KL_realB_fakeB_val', 0.18504845485347274)])
+end of validation step
+OrderedDict([('D_A_val', 0.26654303073883057), ('G_A_val', 0.6461666226387024), ('cycle_A_val', 2.2020578384399414), ('idt_A_val', 0.7564034461975098), ('D_B_val', 0.1638907939195633), ('G_B_val', 0.2614973783493042), ('cycle_B_val', 1.5123050212860107), ('idt_B_val', 0.7671814560890198), ('KL_realA_fakeA_val', 0.28304976654503977), ('KL_realB_fakeB_val', 0.4068515574984912)])
+end of validation step
+OrderedDict([('D_A_val', 0.22210949659347534), ('G_A_val', 0.6355413794517517), ('cycle_A_val', 1.1633390188217163), ('idt_A_val', 0.36656811833381653), ('D_B_val', 0.17419962584972382), ('G_B_val', 0.313530832529068), ('cycle_B_val', 0.9833316802978516), ('idt_B_val', 0.5580328702926636), ('KL_realA_fakeA_val', 0.39372211044931005), ('KL_realB_fakeB_val', 0.12010696644710266)])
+end of validation step
+OrderedDict([('D_A_val', 0.2625502347946167), ('G_A_val', 0.8969136476516724), ('cycle_A_val', 1.340733528137207), ('idt_A_val', 0.44246530532836914), ('D_B_val', 0.1553017944097519), ('G_B_val', 0.28093281388282776), ('cycle_B_val', 1.1682989597320557), ('idt_B_val', 0.5562061667442322), ('KL_realA_fakeA_val', 0.21698601842019116), ('KL_realB_fakeB_val', 0.10506876411625926)])
+end of validation step
+OrderedDict([('D_A_val', 0.2523811161518097), ('G_A_val', 0.8967350721359253), ('cycle_A_val', 1.1010355949401855), ('idt_A_val', 0.7564034461975098), ('D_B_val', 0.15371815860271454), ('G_B_val', 0.26149728894233704), ('cycle_B_val', 1.5123050212860107), ('idt_B_val', 0.4545069932937622), ('KL_realA_fakeA_val', 0.14971786438027382), ('KL_realB_fakeB_val', 0.22834173973575564)])
+end of validation step
+OrderedDict([('D_A_val', 0.28788113594055176), ('G_A_val', 0.4565320611000061), ('cycle_A_val', 1.1809653043746948), ('idt_A_val', 0.6935577392578125), ('D_B_val', 0.18016621470451355), ('G_B_val', 0.27099865674972534), ('cycle_B_val', 1.277113676071167), ('idt_B_val', 0.5079835653305054), ('KL_realA_fakeA_val', 0.19648141567063215), ('KL_realB_fakeB_val', 0.1988060343094504)])
+end of validation step
+OrderedDict([('D_A_val', 0.49110060930252075), ('G_A_val', 0.6612787842750549), ('cycle_A_val', 1.16694176197052), ('idt_A_val', 0.6582988500595093), ('D_B_val', 0.3071366250514984), ('G_B_val', 0.0968887209892273), ('cycle_B_val', 1.1989681720733643), ('idt_B_val', 0.5118560791015625), ('KL_realA_fakeA_val', 0.2805149224302077), ('KL_realB_fakeB_val', 0.29359508350950775)])
+end of validation step
+OrderedDict([('D_A_val', 0.20847439765930176), ('G_A_val', 0.6355413198471069), ('cycle_A_val', 1.1633390188217163), ('idt_A_val', 0.4426906704902649), ('D_B_val', 0.15178152918815613), ('G_B_val', 0.35717523097991943), ('cycle_B_val', 0.909857988357544), ('idt_B_val', 0.5580328702926636), ('KL_realA_fakeA_val', 0.4436554608539004), ('KL_realB_fakeB_val', 0.24748693023107707)])
+end of validation step
+OrderedDict([('D_A_val', 0.2809843122959137), ('G_A_val', 0.5865359306335449), ('cycle_A_val', 1.210777759552002), ('idt_A_val', 0.7564034461975098), ('D_B_val', 0.1642472743988037), ('G_B_val', 0.26149728894233704), ('cycle_B_val', 1.5123050212860107), ('idt_B_val', 0.5934460163116455), ('KL_realA_fakeA_val', 0.14610007083082022), ('KL_realB_fakeB_val', 0.20098138673040294)])
+end of validation step
+OrderedDict([('D_A_val', 0.34307458996772766), ('G_A_val', 0.45653200149536133), ('cycle_A_val', 1.1809653043746948), ('idt_A_val', 0.34733039140701294), ('D_B_val', 0.19906656444072723), ('G_B_val', 0.2083713263273239), ('cycle_B_val', 0.8600138425827026), ('idt_B_val', 0.5079835653305054), ('KL_realA_fakeA_val', 0.3132910889832186), ('KL_realB_fakeB_val', 0.14719963104617328)])
+end of validation step
+OrderedDict([('D_A_val', 0.2550327181816101), ('G_A_val', 0.5865358710289001), ('cycle_A_val', 1.210777759552002), ('idt_A_val', 0.6935577392578125), ('D_B_val', 0.1804923266172409), ('G_B_val', 0.27099859714508057), ('cycle_B_val', 1.277113676071167), ('idt_B_val', 0.5934460163116455), ('KL_realA_fakeA_val', 0.12012593865101119), ('KL_realB_fakeB_val', 0.22383302274590963)])
+end of validation step
+OrderedDict([('D_A_val', 0.18959125876426697), ('G_A_val', 1.0440647602081299), ('cycle_A_val', 1.4842536449432373), ('idt_A_val', 0.7741912603378296), ('D_B_val', 0.37890273332595825), ('G_B_val', 0.08161255717277527), ('cycle_B_val', 2.043729782104492), ('idt_B_val', 0.6234809756278992), ('KL_realA_fakeA_val', 0.3161198964296391), ('KL_realB_fakeB_val', 0.17550384424974702)])
+end of validation step
+OrderedDict([('D_A_val', 0.23996089398860931), ('G_A_val', 0.6470664143562317), ('cycle_A_val', 1.1378746032714844), ('idt_A_val', 0.7512649297714233), ('D_B_val', 0.17560850083827972), ('G_B_val', 0.23954759538173676), ('cycle_B_val', 1.4151623249053955), ('idt_B_val', 0.4984859824180603), ('KL_realA_fakeA_val', 0.1414279225526547), ('KL_realB_fakeB_val', 0.23363608018610899)])
+end of validation step
+OrderedDict([('D_A_val', 0.3292934000492096), ('G_A_val', 0.6808226108551025), ('cycle_A_val', 1.6185264587402344), ('idt_A_val', 0.6180790066719055), ('D_B_val', 0.19126106798648834), ('G_B_val', 0.20345379412174225), ('cycle_B_val', 1.1420542001724243), ('idt_B_val', 0.557673990726471), ('KL_realA_fakeA_val', 0.49586390539601755), ('KL_realB_fakeB_val', 0.3923117673630751)])
+end of validation step
+OrderedDict([('D_A_val', 0.22867536544799805), ('G_A_val', 0.7306718230247498), ('cycle_A_val', 1.6242966651916504), ('idt_A_val', 0.567423939704895), ('D_B_val', 0.20113208889961243), ('G_B_val', 0.20898088812828064), ('cycle_B_val', 1.2764869928359985), ('idt_B_val', 0.9147992730140686), ('KL_realA_fakeA_val', 0.13301051242158934), ('KL_realB_fakeB_val', 0.1277342919685905)])
+end of validation step
+OrderedDict([('D_A_val', 0.3276866674423218), ('G_A_val', 0.7939850687980652), ('cycle_A_val', 1.327815055847168), ('idt_A_val', 0.6180789470672607), ('D_B_val', 0.2033417820930481), ('G_B_val', 0.20345380902290344), ('cycle_B_val', 1.1420542001724243), ('idt_B_val', 0.6279449462890625), ('KL_realA_fakeA_val', 0.1815228983940871), ('KL_realB_fakeB_val', 0.27433490388464177)])
+end of validation step
+OrderedDict([('D_A_val', 0.34171491861343384), ('G_A_val', 0.6139528155326843), ('cycle_A_val', 1.3618526458740234), ('idt_A_val', 0.6810882687568665), ('D_B_val', 0.17962419986724854), ('G_B_val', 0.22393396496772766), ('cycle_B_val', 1.272394061088562), ('idt_B_val', 0.5266509652137756), ('KL_realA_fakeA_val', 0.11754694268181579), ('KL_realB_fakeB_val', 0.2221352607659128)])
+end of validation step
+OrderedDict([('D_A_val', 0.22459661960601807), ('G_A_val', 0.6461666226387024), ('cycle_A_val', 2.2020578384399414), ('idt_A_val', 0.527897834777832), ('D_B_val', 0.18181699514389038), ('G_B_val', 0.23721399903297424), ('cycle_B_val', 1.2925760746002197), ('idt_B_val', 0.7671814560890198), ('KL_realA_fakeA_val', 0.25093562913118833), ('KL_realB_fakeB_val', 0.1758855168262246)])
+end of validation step
+OrderedDict([('D_A_val', 0.21108943223953247), ('G_A_val', 0.7480087876319885), ('cycle_A_val', 1.5624946355819702), ('idt_A_val', 0.6047542095184326), ('D_B_val', 0.14807187020778656), ('G_B_val', 0.31339502334594727), ('cycle_B_val', 1.1681290864944458), ('idt_B_val', 0.673263430595398), ('KL_realA_fakeA_val', 0.40904475058115913), ('KL_realB_fakeB_val', 0.21436025605228373)])
+end of validation step
+OrderedDict([('D_A_val', 0.21281638741493225), ('G_A_val', 0.7939850687980652), ('cycle_A_val', 1.327815055847168), ('idt_A_val', 0.527897834777832), ('D_B_val', 0.1891506314277649), ('G_B_val', 0.2372140735387802), ('cycle_B_val', 1.2925760746002197), ('idt_B_val', 0.6279450058937073), ('KL_realA_fakeA_val', 0.11164056281792338), ('KL_realB_fakeB_val', 0.09867186801236158)])
+end of validation step
+OrderedDict([('D_A_val', 0.19997091591358185), ('G_A_val', 0.6808227300643921), ('cycle_A_val', 1.6185262203216553), ('idt_A_val', 0.377058744430542), ('D_B_val', 0.14434166252613068), ('G_B_val', 0.30348244309425354), ('cycle_B_val', 0.9466956853866577), ('idt_B_val', 0.557673990726471), ('KL_realA_fakeA_val', 0.5003593769315268), ('KL_realB_fakeB_val', 0.26240167129041225)])
+end of validation step
+OrderedDict([('D_A_val', 0.27108684182167053), ('G_A_val', 0.5489251017570496), ('cycle_A_val', 1.0097362995147705), ('idt_A_val', 1.0382905006408691), ('D_B_val', 0.3377517759799957), ('G_B_val', 0.09405423700809479), ('cycle_B_val', 2.3104772567749023), ('idt_B_val', 0.45560747385025024), ('KL_realA_fakeA_val', 0.21800640746718106), ('KL_realB_fakeB_val', 0.3008678499108436)])
+end of validation step
+OrderedDict([('D_A_val', 0.20819193124771118), ('G_A_val', 0.7480087280273438), ('cycle_A_val', 1.5624946355819702), ('idt_A_val', 0.36656811833381653), ('D_B_val', 0.1503298431634903), ('G_B_val', 0.31353089213371277), ('cycle_B_val', 0.9833316802978516), ('idt_B_val', 0.673263430595398), ('KL_realA_fakeA_val', 0.3405696775786345), ('KL_realB_fakeB_val', 0.10006790230121007)])
+end of validation step
+OrderedDict([('D_A_val', 0.2026575654745102), ('G_A_val', 1.0440647602081299), ('cycle_A_val', 1.4842536449432373), ('idt_A_val', 0.377058744430542), ('D_B_val', 0.15325121581554413), ('G_B_val', 0.3034823536872864), ('cycle_B_val', 0.9466956853866577), ('idt_B_val', 0.6234809756278992), ('KL_realA_fakeA_val', 0.29207905411762036), ('KL_realB_fakeB_val', 0.15689698449287617)])
+end of validation step
+OrderedDict([('D_A_val', 0.2851009666919708), ('G_A_val', 0.6470664143562317), ('cycle_A_val', 1.1378746032714844), ('idt_A_val', 0.34733039140701294), ('D_B_val', 0.1976671814918518), ('G_B_val', 0.20837125182151794), ('cycle_B_val', 0.8600138425827026), ('idt_B_val', 0.4984859824180603), ('KL_realA_fakeA_val', 0.25964102795495747), ('KL_realB_fakeB_val', 0.12703314257161)])
+end of validation step
+OrderedDict([('D_A_val', 0.20770536363124847), ('G_A_val', 0.6222105622291565), ('cycle_A_val', 2.946183443069458), ('idt_A_val', 0.377058744430542), ('D_B_val', 0.16328302025794983), ('G_B_val', 0.3034823536872864), ('cycle_B_val', 0.9466956853866577), ('idt_B_val', 1.0541197061538696), ('KL_realA_fakeA_val', 0.24003981575056077), ('KL_realB_fakeB_val', 0.25387800852812287)])
+end of validation step
+OrderedDict([('D_A_val', 0.2343050241470337), ('G_A_val', 0.8969138264656067), ('cycle_A_val', 1.340733528137207), ('idt_A_val', 1.0382905006408691), ('D_B_val', 0.3294852375984192), ('G_B_val', 0.09405417740345001), ('cycle_B_val', 2.3104772567749023), ('idt_B_val', 0.5562061667442322), ('KL_realA_fakeA_val', 0.2403107194944546), ('KL_realB_fakeB_val', 0.18652964757269014)])
+end of validation step
+OrderedDict([('D_A_val', 0.2827278673648834), ('G_A_val', 0.7306718230247498), ('cycle_A_val', 1.6242966651916504), ('idt_A_val', 0.6415945887565613), ('D_B_val', 0.17803068459033966), ('G_B_val', 0.21651160717010498), ('cycle_B_val', 1.1946985721588135), ('idt_B_val', 0.9147992730140686), ('KL_realA_fakeA_val', 0.10521419302208074), ('KL_realB_fakeB_val', 0.20633196015367006)])
+end of validation step
+OrderedDict([('D_A_val', 0.23603934049606323), ('G_A_val', 0.6139526963233948), ('cycle_A_val', 1.3618526458740234), ('idt_A_val', 0.6720500588417053), ('D_B_val', 0.1260710060596466), ('G_B_val', 0.354781836271286), ('cycle_B_val', 1.3028476238250732), ('idt_B_val', 0.5266510248184204), ('KL_realA_fakeA_val', 0.12574839303934407), ('KL_realB_fakeB_val', 0.19827960715023304)])
+end of validation step
+OrderedDict([('D_A_val', 0.22686392068862915), ('G_A_val', 0.5489251017570496), ('cycle_A_val', 1.0097362995147705), ('idt_A_val', 0.43346670269966125), ('D_B_val', 0.12457317113876343), ('G_B_val', 0.37374207377433777), ('cycle_B_val', 0.8320187330245972), ('idt_B_val', 0.45560747385025024), ('KL_realA_fakeA_val', 0.10826304467580351), ('KL_realB_fakeB_val', 0.09686780810032584)])
+end of validation step
+OrderedDict([('D_A', 0.2460542917251587), ('G_A', 0.26677730679512024), ('cycle_A', 1.2515592575073242), ('idt_A', 0.4614373743534088), ('D_B', 0.3836577832698822), ('G_B', 0.6834098696708679), ('cycle_B', 0.9131520390510559), ('idt_B', 0.7481176853179932), ('KL_realA_fakeA', 0.18585159040359817), ('KL_realB_fakeB', 0.23465702718057344)])
+(epoch: 2, iters: 239, time: 0.410, data: 84.164) D_A: 0.246 G_A: 0.267 cycle_A: 1.252 idt_A: 0.461 D_B: 0.384 G_B: 0.683 cycle_B: 0.913 idt_B: 0.748 KL_realA_fakeA: 0.186 KL_realB_fakeB: 0.235 
+End of epoch 2 / 200 	 Time Taken: 136 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.13990722596645355), ('G_A', 0.5505089163780212), ('cycle_A', 1.023017406463623), ('idt_A', 0.515739917755127), ('D_B', 0.5476809740066528), ('G_B', 0.9138395190238953), ('cycle_B', 1.0960114002227783), ('idt_B', 0.457120805978775), ('KL_realA_fakeA', 0.30517468527569314), ('KL_realB_fakeB', 0.24489814070699958)])
+(epoch: 3, iters: 78, time: 0.408, data: 126.975) D_A: 0.140 G_A: 0.551 cycle_A: 1.023 idt_A: 0.516 D_B: 0.548 G_B: 0.914 cycle_B: 1.096 idt_B: 0.457 KL_realA_fakeA: 0.305 KL_realB_fakeB: 0.245 
+OrderedDict([('D_A', 0.11736615002155304), ('G_A', 0.5054783821105957), ('cycle_A', 1.0065072774887085), ('idt_A', 0.3704010248184204), ('D_B', 0.1750553548336029), ('G_B', 0.296432763338089), ('cycle_B', 0.8764448165893555), ('idt_B', 0.42830464243888855), ('KL_realA_fakeA', 0.15559870435506892), ('KL_realB_fakeB', 0.16085286128529067)])
+(epoch: 3, iters: 178, time: 0.462, data: 36.645) D_A: 0.117 G_A: 0.505 cycle_A: 1.007 idt_A: 0.370 D_B: 0.175 G_B: 0.296 cycle_B: 0.876 idt_B: 0.428 KL_realA_fakeA: 0.156 KL_realB_fakeB: 0.161 
+End of epoch 3 / 200 	 Time Taken: 118 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.15189926326274872), ('G_A', 0.39090922474861145), ('cycle_A', 1.2465392351150513), ('idt_A', 0.2922309637069702), ('D_B', 0.1294589340686798), ('G_B', 0.22881226241588593), ('cycle_B', 0.5371737480163574), ('idt_B', 0.4978554844856262), ('KL_realA_fakeA', 0.09261059934427075), ('KL_realB_fakeB', 0.15347244525380238)])
+(epoch: 4, iters: 17, time: 1.938, data: 81.004) D_A: 0.152 G_A: 0.391 cycle_A: 1.247 idt_A: 0.292 D_B: 0.129 G_B: 0.229 cycle_B: 0.537 idt_B: 0.498 KL_realA_fakeA: 0.093 KL_realB_fakeB: 0.153 
+OrderedDict([('D_A_val', 0.1489759385585785), ('G_A_val', 0.3793211877346039), ('cycle_A_val', 0.935962438583374), ('idt_A_val', 0.9409400820732117), ('D_B_val', 0.23393335938453674), ('G_B_val', 0.2314593344926834), ('cycle_B_val', 1.9208626747131348), ('idt_B_val', 0.3798195421695709), ('KL_realA_fakeA_val', 0.2106499572493486), ('KL_realB_fakeB_val', 0.73945737375438)])
+end of validation step
+OrderedDict([('D_A_val', 0.18664047122001648), ('G_A_val', 0.5360715389251709), ('cycle_A_val', 1.3361930847167969), ('idt_A_val', 0.7126781344413757), ('D_B_val', 0.21488910913467407), ('G_B_val', 0.367348313331604), ('cycle_B_val', 1.5012496709823608), ('idt_B_val', 0.5862396359443665), ('KL_realA_fakeA_val', 0.41916006734127315), ('KL_realB_fakeB_val', 0.4985740652721796)])
+end of validation step
+OrderedDict([('D_A_val', 0.19740955531597137), ('G_A_val', 0.5578227639198303), ('cycle_A_val', 1.2667680978775024), ('idt_A_val', 0.7126781940460205), ('D_B_val', 0.2316930890083313), ('G_B_val', 0.3673483729362488), ('cycle_B_val', 1.5012497901916504), ('idt_B_val', 0.4960043430328369), ('KL_realA_fakeA_val', 0.11942996954533212), ('KL_realB_fakeB_val', 0.44779686018551107)])
+end of validation step
+OrderedDict([('D_A_val', 0.15750594437122345), ('G_A_val', 0.6449816226959229), ('cycle_A_val', 1.6001652479171753), ('idt_A_val', 0.4004529118537903), ('D_B_val', 0.22318723797798157), ('G_B_val', 0.25389838218688965), ('cycle_B_val', 0.8803105354309082), ('idt_B_val', 0.5275770425796509), ('KL_realA_fakeA_val', 0.2514095327498852), ('KL_realB_fakeB_val', 0.15135895336446903)])
+end of validation step
+OrderedDict([('D_A_val', 0.13819581270217896), ('G_A_val', 0.5178654193878174), ('cycle_A_val', 1.0349904298782349), ('idt_A_val', 0.4228278398513794), ('D_B_val', 0.18183405697345734), ('G_B_val', 0.3690603971481323), ('cycle_B_val', 0.9079570770263672), ('idt_B_val', 0.38678282499313354), ('KL_realA_fakeA_val', 0.19031201790416338), ('KL_realB_fakeB_val', 0.10522205266024671)])
+end of validation step
+OrderedDict([('D_A_val', 0.11753402650356293), ('G_A_val', 0.5178654193878174), ('cycle_A_val', 1.0349904298782349), ('idt_A_val', 0.5258824825286865), ('D_B_val', 0.14805516600608826), ('G_B_val', 0.49420806765556335), ('cycle_B_val', 1.0568445920944214), ('idt_B_val', 0.38678282499313354), ('KL_realA_fakeA_val', 0.22700778710222644), ('KL_realB_fakeB_val', 0.16489666974863762)])
+end of validation step
+OrderedDict([('D_A_val', 0.08954314887523651), ('G_A_val', 0.9721469879150391), ('cycle_A_val', 0.90749192237854), ('idt_A_val', 0.3352730870246887), ('D_B_val', 0.15795765817165375), ('G_B_val', 0.4526676535606384), ('cycle_B_val', 0.6786879301071167), ('idt_B_val', 0.4228183627128601), ('KL_realA_fakeA_val', 0.31228697906848624), ('KL_realB_fakeB_val', 0.19020333579248416)])
+end of validation step
+OrderedDict([('D_A_val', 0.10414157807826996), ('G_A_val', 0.6196660995483398), ('cycle_A_val', 1.208252191543579), ('idt_A_val', 0.4468338191509247), ('D_B_val', 0.1567355841398239), ('G_B_val', 0.3466203510761261), ('cycle_B_val', 0.9326791763305664), ('idt_B_val', 0.4415439963340759), ('KL_realA_fakeA_val', 0.09623027409075845), ('KL_realB_fakeB_val', 0.19017575777212045)])
+end of validation step
+OrderedDict([('D_A_val', 0.1497676968574524), ('G_A_val', 0.452473521232605), ('cycle_A_val', 0.9666894674301147), ('idt_A_val', 0.49069806933403015), ('D_B_val', 0.1595994383096695), ('G_B_val', 0.40308207273483276), ('cycle_B_val', 1.2007173299789429), ('idt_B_val', 0.3792356848716736), ('KL_realA_fakeA_val', 0.11848493096289867), ('KL_realB_fakeB_val', 0.2154644968589024)])
+end of validation step
+OrderedDict([('D_A_val', 0.11875936388969421), ('G_A_val', 0.5753017067909241), ('cycle_A_val', 1.3269376754760742), ('idt_A_val', 0.391309916973114), ('D_B_val', 0.2004520297050476), ('G_B_val', 0.3703797161579132), ('cycle_B_val', 0.8417203426361084), ('idt_B_val', 0.7777014374732971), ('KL_realA_fakeA_val', 0.07184891935437307), ('KL_realB_fakeB_val', 0.11312566994867154)])
+end of validation step
+OrderedDict([('D_A_val', 0.1223757416009903), ('G_A_val', 0.5160545706748962), ('cycle_A_val', 1.2821018695831299), ('idt_A_val', 0.6960240006446838), ('D_B_val', 0.33520981669425964), ('G_B_val', 0.12385357916355133), ('cycle_B_val', 1.6019597053527832), ('idt_B_val', 0.4830877184867859), ('KL_realA_fakeA_val', 0.11052938772897868), ('KL_realB_fakeB_val', 0.3412402213736079)])
+end of validation step
+OrderedDict([('D_A_val', 0.139508917927742), ('G_A_val', 0.4018115997314453), ('cycle_A_val', 0.8815470337867737), ('idt_A_val', 0.3352730870246887), ('D_B_val', 0.16257475316524506), ('G_B_val', 0.4526679217815399), ('cycle_B_val', 0.6786879897117615), ('idt_B_val', 0.4326810836791992), ('KL_realA_fakeA_val', 0.11291344811035489), ('KL_realB_fakeB_val', 0.0878845240792758)])
+end of validation step
+OrderedDict([('D_A_val', 0.10192732512950897), ('G_A_val', 0.5753018260002136), ('cycle_A_val', 1.3269376754760742), ('idt_A_val', 0.5258824825286865), ('D_B_val', 0.1668076068162918), ('G_B_val', 0.4942079782485962), ('cycle_B_val', 1.0568445920944214), ('idt_B_val', 0.7777014374732971), ('KL_realA_fakeA_val', 0.09042321752545314), ('KL_realB_fakeB_val', 0.20154847998742018)])
+end of validation step
+OrderedDict([('D_A_val', 0.19740957021713257), ('G_A_val', 0.5578226447105408), ('cycle_A_val', 1.2667680978775024), ('idt_A_val', 0.7126781344413757), ('D_B_val', 0.23169314861297607), ('G_B_val', 0.3673482835292816), ('cycle_B_val', 1.5012496709823608), ('idt_B_val', 0.4960043430328369), ('KL_realA_fakeA_val', 0.11942996954533212), ('KL_realB_fakeB_val', 0.44779686018551107)])
+end of validation step
+OrderedDict([('D_A_val', 0.13391327857971191), ('G_A_val', 0.5160545706748962), ('cycle_A_val', 1.2821018695831299), ('idt_A_val', 0.32683300971984863), ('D_B_val', 0.19396932423114777), ('G_B_val', 0.3964881896972656), ('cycle_B_val', 0.7157257795333862), ('idt_B_val', 0.4830877184867859), ('KL_realA_fakeA_val', 0.15112216968350894), ('KL_realB_fakeB_val', 0.13572552368675886)])
+end of validation step
+OrderedDict([('D_A_val', 0.13594038784503937), ('G_A_val', 0.62989342212677), ('cycle_A_val', 1.0025553703308105), ('idt_A_val', 0.49069806933403015), ('D_B_val', 0.17430709302425385), ('G_B_val', 0.4030821621417999), ('cycle_B_val', 1.2007174491882324), ('idt_B_val', 0.3678128123283386), ('KL_realA_fakeA_val', 0.24521464285609912), ('KL_realB_fakeB_val', 0.2836433301846672)])
+end of validation step
+OrderedDict([('D_A_val', 0.0967179536819458), ('G_A_val', 0.6163299679756165), ('cycle_A_val', 1.057725191116333), ('idt_A_val', 0.9409400820732117), ('D_B_val', 0.2355240434408188), ('G_B_val', 0.23145942389965057), ('cycle_B_val', 1.9208624362945557), ('idt_B_val', 0.4484289288520813), ('KL_realA_fakeA_val', 0.3562022032493656), ('KL_realB_fakeB_val', 0.8743851436695509)])
+end of validation step
+OrderedDict([('D_A_val', 0.1385226547718048), ('G_A_val', 0.45247355103492737), ('cycle_A_val', 0.9666894674301147), ('idt_A_val', 0.32683300971984863), ('D_B_val', 0.16641341149806976), ('G_B_val', 0.39648810029029846), ('cycle_B_val', 0.7157257199287415), ('idt_B_val', 0.3792356848716736), ('KL_realA_fakeA_val', 0.11268673832178759), ('KL_realB_fakeB_val', 0.10609843910044951)])
+end of validation step
+OrderedDict([('D_A_val', 0.10981867462396622), ('G_A_val', 0.6453472375869751), ('cycle_A_val', 0.9519422054290771), ('idt_A_val', 0.2587071657180786), ('D_B_val', 0.14340773224830627), ('G_B_val', 0.5025902986526489), ('cycle_B_val', 0.5301657915115356), ('idt_B_val', 0.46843230724334717), ('KL_realA_fakeA_val', 0.3589317498251865), ('KL_realB_fakeB_val', 0.19670526213124012)])
+end of validation step
+OrderedDict([('D_A_val', 0.1448594629764557), ('G_A_val', 0.5061378479003906), ('cycle_A_val', 1.281304121017456), ('idt_A_val', 0.391309916973114), ('D_B_val', 0.20409701764583588), ('G_B_val', 0.3703795075416565), ('cycle_B_val', 0.8417203426361084), ('idt_B_val', 0.5698499083518982), ('KL_realA_fakeA_val', 0.07996677653279011), ('KL_realB_fakeB_val', 0.11957491405674274)])
+end of validation step
+OrderedDict([('D_A_val', 0.18519578874111176), ('G_A_val', 0.5061378479003906), ('cycle_A_val', 1.281304121017456), ('idt_A_val', 0.441758930683136), ('D_B_val', 0.19180867075920105), ('G_B_val', 0.41454121470451355), ('cycle_B_val', 0.8604557514190674), ('idt_B_val', 0.569849967956543), ('KL_realA_fakeA_val', 0.08736180953660383), ('KL_realB_fakeB_val', 0.09376091174093319)])
+end of validation step
+OrderedDict([('D_A_val', 0.12651662528514862), ('G_A_val', 0.6453471183776855), ('cycle_A_val', 0.9519422054290771), ('idt_A_val', 0.4228278398513794), ('D_B_val', 0.18072982132434845), ('G_B_val', 0.3690603971481323), ('cycle_B_val', 0.9079569578170776), ('idt_B_val', 0.46843230724334717), ('KL_realA_fakeA_val', 0.36836130874042106), ('KL_realB_fakeB_val', 0.12677202509875193)])
+end of validation step
+OrderedDict([('D_A_val', 0.17911650240421295), ('G_A_val', 0.34700271487236023), ('cycle_A_val', 1.0635535717010498), ('idt_A_val', 0.391309916973114), ('D_B_val', 0.20065002143383026), ('G_B_val', 0.37037965655326843), ('cycle_B_val', 0.8417203426361084), ('idt_B_val', 0.46073049306869507), ('KL_realA_fakeA_val', 0.10272918018344403), ('KL_realB_fakeB_val', 0.1298579055481507)])
+end of validation step
+OrderedDict([('D_A_val', 0.10865738987922668), ('G_A_val', 0.6163300275802612), ('cycle_A_val', 1.057725191116333), ('idt_A_val', 0.2587071657180786), ('D_B_val', 0.15819388628005981), ('G_B_val', 0.5025903582572937), ('cycle_B_val', 0.5301657915115356), ('idt_B_val', 0.4484289288520813), ('KL_realA_fakeA_val', 0.3543781798300355), ('KL_realB_fakeB_val', 0.10924144444209218)])
+end of validation step
+OrderedDict([('D_A_val', 0.11847592890262604), ('G_A_val', 0.6298932433128357), ('cycle_A_val', 1.0025551319122314), ('idt_A_val', 0.4468337893486023), ('D_B_val', 0.17529672384262085), ('G_B_val', 0.3466203808784485), ('cycle_B_val', 0.9326791763305664), ('idt_B_val', 0.3678128123283386), ('KL_realA_fakeA_val', 0.265971908655934), ('KL_realB_fakeB_val', 0.32151868787868393)])
+end of validation step
+OrderedDict([('D_A_val', 0.20071512460708618), ('G_A_val', 0.5360715389251709), ('cycle_A_val', 1.3361930847167969), ('idt_A_val', 0.41423287987709045), ('D_B_val', 0.20915323495864868), ('G_B_val', 0.3567795157432556), ('cycle_B_val', 0.7657694816589355), ('idt_B_val', 0.5862396359443665), ('KL_realA_fakeA_val', 0.3929910079369008), ('KL_realB_fakeB_val', 0.29927513844921877)])
+end of validation step
+OrderedDict([('D_A_val', 0.183328777551651), ('G_A_val', 0.37932103872299194), ('cycle_A_val', 0.9359624981880188), ('idt_A_val', 0.31454578042030334), ('D_B_val', 0.1994919627904892), ('G_B_val', 0.33559390902519226), ('cycle_B_val', 0.625564455986023), ('idt_B_val', 0.3798195421695709), ('KL_realA_fakeA_val', 0.20767347230576794), ('KL_realB_fakeB_val', 0.09818060168254773)])
+end of validation step
+OrderedDict([('D_A_val', 0.10928080976009369), ('G_A_val', 0.9721471071243286), ('cycle_A_val', 0.90749192237854), ('idt_A_val', 0.3315132260322571), ('D_B_val', 0.15009641647338867), ('G_B_val', 0.47440457344055176), ('cycle_B_val', 0.7367689609527588), ('idt_B_val', 0.4228183627128601), ('KL_realA_fakeA_val', 0.31526703025529135), ('KL_realB_fakeB_val', 0.5407915943742752)])
+end of validation step
+OrderedDict([('D_A_val', 0.2574760317802429), ('G_A_val', 0.34700271487236023), ('cycle_A_val', 1.0635535717010498), ('idt_A_val', 0.41423287987709045), ('D_B_val', 0.21004411578178406), ('G_B_val', 0.3567796051502228), ('cycle_B_val', 0.7657694816589355), ('idt_B_val', 0.46073049306869507), ('KL_realA_fakeA_val', 0.10103232685031042), ('KL_realB_fakeB_val', 0.12783973842206486)])
+end of validation step
+OrderedDict([('D_A_val', 0.1395089030265808), ('G_A_val', 0.40181174874305725), ('cycle_A_val', 0.8815470337867737), ('idt_A_val', 0.3352730870246887), ('D_B_val', 0.16257482767105103), ('G_B_val', 0.4526676535606384), ('cycle_B_val', 0.6786878108978271), ('idt_B_val', 0.4326810836791992), ('KL_realA_fakeA_val', 0.11291317256516914), ('KL_realB_fakeB_val', 0.0878845240792758)])
+end of validation step
+OrderedDict([('D_A_val', 0.10943915694952011), ('G_A_val', 0.6196660995483398), ('cycle_A_val', 1.208251953125), ('idt_A_val', 0.4793287515640259), ('D_B_val', 0.1439742147922516), ('G_B_val', 0.44209161400794983), ('cycle_B_val', 0.9657140970230103), ('idt_B_val', 0.4415439963340759), ('KL_realA_fakeA_val', 0.09286156645834642), ('KL_realB_fakeB_val', 0.10020638058587905)])
+end of validation step
+OrderedDict([('D_A_val', 0.12879616022109985), ('G_A_val', 0.6449815630912781), ('cycle_A_val', 1.6001652479171753), ('idt_A_val', 0.49069803953170776), ('D_B_val', 0.1703318953514099), ('G_B_val', 0.4030821919441223), ('cycle_B_val', 1.2007174491882324), ('idt_B_val', 0.5275770425796509), ('KL_realA_fakeA_val', 0.23913793878343553), ('KL_realB_fakeB_val', 0.20118697748998682)])
+end of validation step
+OrderedDict([('D_A', 0.11653102934360504), ('G_A', 0.4432819187641144), ('cycle_A', 0.909109354019165), ('idt_A', 0.3778548538684845), ('D_B', 0.29916441440582275), ('G_B', 0.29108747839927673), ('cycle_B', 0.9189772009849548), ('idt_B', 0.3944304585456848), ('KL_realA_fakeA', 0.09483925444706147), ('KL_realB_fakeB', 0.21172275885062194)])
+(epoch: 4, iters: 117, time: 0.583, data: 23.152) D_A: 0.117 G_A: 0.443 cycle_A: 0.909 idt_A: 0.378 D_B: 0.299 G_B: 0.291 cycle_B: 0.919 idt_B: 0.394 KL_realA_fakeA: 0.095 KL_realB_fakeB: 0.212 
+OrderedDict([('D_A', 0.4807353615760803), ('G_A', 0.4515068531036377), ('cycle_A', 0.827826976776123), ('idt_A', 0.4298533499240875), ('D_B', 0.43116819858551025), ('G_B', 0.3529215455055237), ('cycle_B', 0.8743818998336792), ('idt_B', 0.3810032606124878), ('KL_realA_fakeA', 0.10120760399417007), ('KL_realB_fakeB', 0.11631280191795283)])
+(epoch: 4, iters: 217, time: 0.608, data: 75.481) D_A: 0.481 G_A: 0.452 cycle_A: 0.828 idt_A: 0.430 D_B: 0.431 G_B: 0.353 cycle_B: 0.874 idt_B: 0.381 KL_realA_fakeA: 0.101 KL_realB_fakeB: 0.116 
+End of epoch 4 / 200 	 Time Taken: 165 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.14083532989025116), ('G_A', 0.31194937229156494), ('cycle_A', 1.5041699409484863), ('idt_A', 0.30850499868392944), ('D_B', 0.19235238432884216), ('G_B', 0.410643994808197), ('cycle_B', 0.6612987518310547), ('idt_B', 0.6013012528419495), ('KL_realA_fakeA', 0.09909239462964317), ('KL_realB_fakeB', 0.14652295119385328)])
+(epoch: 5, iters: 56, time: 0.775, data: 135.395) D_A: 0.141 G_A: 0.312 cycle_A: 1.504 idt_A: 0.309 D_B: 0.192 G_B: 0.411 cycle_B: 0.661 idt_B: 0.601 KL_realA_fakeA: 0.099 KL_realB_fakeB: 0.147 
+OrderedDict([('D_A', 0.22695133090019226), ('G_A', 0.7806047201156616), ('cycle_A', 1.1557073593139648), ('idt_A', 0.6795860528945923), ('D_B', 0.12827171385288239), ('G_B', 0.34302908182144165), ('cycle_B', 1.4109208583831787), ('idt_B', 0.4655441641807556), ('KL_realA_fakeA', 0.11234839519473157), ('KL_realB_fakeB', 0.918748964716194)])
+(epoch: 5, iters: 156, time: 1.810, data: 42.600) D_A: 0.227 G_A: 0.781 cycle_A: 1.156 idt_A: 0.680 D_B: 0.128 G_B: 0.343 cycle_B: 1.411 idt_B: 0.466 KL_realA_fakeA: 0.112 KL_realB_fakeB: 0.919 
+OrderedDict([('D_A_val', 0.06634736061096191), ('G_A_val', 0.9515896439552307), ('cycle_A_val', 0.8631977438926697), ('idt_A_val', 0.6757105588912964), ('D_B_val', 0.19263823330402374), ('G_B_val', 0.26385119557380676), ('cycle_B_val', 1.360106348991394), ('idt_B_val', 0.38371649384498596), ('KL_realA_fakeA_val', 0.27802777676987867), ('KL_realB_fakeB_val', 0.31362954537054843)])
+end of validation step
+OrderedDict([('D_A_val', 0.1116306409239769), ('G_A_val', 0.41978102922439575), ('cycle_A_val', 0.9342973232269287), ('idt_A_val', 0.46305757761001587), ('D_B_val', 0.16492527723312378), ('G_B_val', 0.3918517529964447), ('cycle_B_val', 1.0755194425582886), ('idt_B_val', 0.3850697875022888), ('KL_realA_fakeA_val', 0.21560821089155638), ('KL_realB_fakeB_val', 0.16111956299903024)])
+end of validation step
+OrderedDict([('D_A_val', 0.09994729608297348), ('G_A_val', 0.4034314751625061), ('cycle_A_val', 1.0925042629241943), ('idt_A_val', 0.3912214934825897), ('D_B_val', 0.1949707269668579), ('G_B_val', 0.29724204540252686), ('cycle_B_val', 0.7077111005783081), ('idt_B_val', 0.6039255261421204), ('KL_realA_fakeA_val', 0.23870203852468372), ('KL_realB_fakeB_val', 0.16603825506245545)])
+end of validation step
+OrderedDict([('D_A_val', 0.1841208040714264), ('G_A_val', 0.23714056611061096), ('cycle_A_val', 0.9666972756385803), ('idt_A_val', 0.9181305766105652), ('D_B_val', 0.13674134016036987), ('G_B_val', 0.7302069664001465), ('cycle_B_val', 2.0419721603393555), ('idt_B_val', 0.45993274450302124), ('KL_realA_fakeA_val', 0.2076297252285511), ('KL_realB_fakeB_val', 0.1603997560049476)])
+end of validation step
+OrderedDict([('D_A_val', 0.09902475029230118), ('G_A_val', 0.4417153298854828), ('cycle_A_val', 0.9275000095367432), ('idt_A_val', 0.32011955976486206), ('D_B_val', 0.192916601896286), ('G_B_val', 0.4045376777648926), ('cycle_B_val', 0.6663905382156372), ('idt_B_val', 0.4104558229446411), ('KL_realA_fakeA_val', 0.1357679045252418), ('KL_realB_fakeB_val', 0.09449377610166701)])
+end of validation step
+OrderedDict([('D_A_val', 0.13471165299415588), ('G_A_val', 0.3885170519351959), ('cycle_A_val', 1.0632914304733276), ('idt_A_val', 0.6067609190940857), ('D_B_val', 0.30285078287124634), ('G_B_val', 0.17829519510269165), ('cycle_B_val', 1.323952078819275), ('idt_B_val', 0.43569737672805786), ('KL_realA_fakeA_val', 0.12255519146980279), ('KL_realB_fakeB_val', 0.22447066048548192)])
+end of validation step
+OrderedDict([('D_A_val', 0.11904409527778625), ('G_A_val', 0.41978099942207336), ('cycle_A_val', 0.9342973232269287), ('idt_A_val', 0.28867006301879883), ('D_B_val', 0.22065627574920654), ('G_B_val', 0.29676732420921326), ('cycle_B_val', 0.6374818682670593), ('idt_B_val', 0.3850697875022888), ('KL_realA_fakeA_val', 0.21503280006703726), ('KL_realB_fakeB_val', 0.08289079840963984)])
+end of validation step
+OrderedDict([('D_A_val', 0.18123140931129456), ('G_A_val', 0.23714053630828857), ('cycle_A_val', 0.9666972756385803), ('idt_A_val', 0.46305757761001587), ('D_B_val', 0.19370488822460175), ('G_B_val', 0.3918515741825104), ('cycle_B_val', 1.0755194425582886), ('idt_B_val', 0.45993274450302124), ('KL_realA_fakeA_val', 0.250487178823164), ('KL_realB_fakeB_val', 0.1345125903279321)])
+end of validation step
+OrderedDict([('D_A_val', 0.13088317215442657), ('G_A_val', 0.38997504115104675), ('cycle_A_val', 1.0942976474761963), ('idt_A_val', 0.42614996433258057), ('D_B_val', 0.30195116996765137), ('G_B_val', 0.20490607619285583), ('cycle_B_val', 0.9789367914199829), ('idt_B_val', 0.4954783618450165), ('KL_realA_fakeA_val', 0.4101833060097444), ('KL_realB_fakeB_val', 0.20918964053683298)])
+end of validation step
+OrderedDict([('D_A_val', 0.17995454370975494), ('G_A_val', 0.2888529300689697), ('cycle_A_val', 0.8349971771240234), ('idt_A_val', 0.26333704590797424), ('D_B_val', 0.249504953622818), ('G_B_val', 0.25194117426872253), ('cycle_B_val', 0.5976772308349609), ('idt_B_val', 0.35108092427253723), ('KL_realA_fakeA_val', 0.1392459973962359), ('KL_realB_fakeB_val', 0.09975774530317323)])
+end of validation step
+OrderedDict([('D_A_val', 0.020863665267825127), ('G_A_val', 0.9515896439552307), ('cycle_A_val', 0.8631977438926697), ('idt_A_val', 0.26878637075424194), ('D_B_val', 0.13052737712860107), ('G_B_val', 0.39169231057167053), ('cycle_B_val', 0.5931268930435181), ('idt_B_val', 0.38371649384498596), ('KL_realA_fakeA_val', 0.21461586754562023), ('KL_realB_fakeB_val', 0.13792848800118845)])
+end of validation step
+OrderedDict([('D_A_val', 0.11945619434118271), ('G_A_val', 0.3768496513366699), ('cycle_A_val', 1.1228257417678833), ('idt_A_val', 0.6857500076293945), ('D_B_val', 0.21028445661067963), ('G_B_val', 0.3042272925376892), ('cycle_B_val', 1.8748586177825928), ('idt_B_val', 0.5517045259475708), ('KL_realA_fakeA_val', 0.12934707235979048), ('KL_realB_fakeB_val', 0.23097905964308454)])
+end of validation step
+OrderedDict([('D_A_val', 0.05208288133144379), ('G_A_val', 0.5759058594703674), ('cycle_A_val', 0.831338107585907), ('idt_A_val', 0.46305757761001587), ('D_B_val', 0.13851234316825867), ('G_B_val', 0.391851544380188), ('cycle_B_val', 1.0755194425582886), ('idt_B_val', 0.43554753065109253), ('KL_realA_fakeA_val', 0.3022914806010713), ('KL_realB_fakeB_val', 0.24414337666531366)])
+end of validation step
+OrderedDict([('D_A_val', 0.051001448184251785), ('G_A_val', 0.6865816116333008), ('cycle_A_val', 1.3183016777038574), ('idt_A_val', 0.3160262703895569), ('D_B_val', 0.1716180294752121), ('G_B_val', 0.3241127133369446), ('cycle_B_val', 0.6701081395149231), ('idt_B_val', 0.3985428214073181), ('KL_realA_fakeA_val', 0.27466828840966273), ('KL_realB_fakeB_val', 0.25557434318750466)])
+end of validation step
+OrderedDict([('D_A_val', 0.08042211085557938), ('G_A_val', 0.5146600008010864), ('cycle_A_val', 1.4612787961959839), ('idt_A_val', 0.6857500076293945), ('D_B_val', 0.2053741216659546), ('G_B_val', 0.3042273223400116), ('cycle_B_val', 1.8748586177825928), ('idt_B_val', 0.8220177292823792), ('KL_realA_fakeA_val', 0.13550782103283338), ('KL_realB_fakeB_val', 0.18831296970237713)])
+end of validation step
+OrderedDict([('D_A_val', 0.17658479511737823), ('G_A_val', 0.28710681200027466), ('cycle_A_val', 1.087358832359314), ('idt_A_val', 0.8606621026992798), ('D_B_val', 0.22952550649642944), ('G_B_val', 0.29686665534973145), ('cycle_B_val', 1.4758707284927368), ('idt_B_val', 0.49507391452789307), ('KL_realA_fakeA_val', 0.16292336008719846), ('KL_realB_fakeB_val', 0.12985664411084114)])
+end of validation step
+OrderedDict([('D_A_val', 0.05374160408973694), ('G_A_val', 0.6865816116333008), ('cycle_A_val', 1.3183019161224365), ('idt_A_val', 0.6857500076293945), ('D_B_val', 0.17547106742858887), ('G_B_val', 0.3042272925376892), ('cycle_B_val', 1.8748586177825928), ('idt_B_val', 0.3985428214073181), ('KL_realA_fakeA_val', 0.2192069862236824), ('KL_realB_fakeB_val', 0.32852742577077326)])
+end of validation step
+OrderedDict([('D_A_val', 0.055765606462955475), ('G_A_val', 0.5759060382843018), ('cycle_A_val', 0.8313382267951965), ('idt_A_val', 0.6436505913734436), ('D_B_val', 0.1264568716287613), ('G_B_val', 0.4079686105251312), ('cycle_B_val', 1.2819342613220215), ('idt_B_val', 0.43554753065109253), ('KL_realA_fakeA_val', 0.2968511923471507), ('KL_realB_fakeB_val', 0.19618382602497023)])
+end of validation step
+OrderedDict([('D_A_val', 0.05633248761296272), ('G_A_val', 0.5789445042610168), ('cycle_A_val', 0.8604698777198792), ('idt_A_val', 0.26878637075424194), ('D_B_val', 0.1351693868637085), ('G_B_val', 0.39169228076934814), ('cycle_B_val', 0.5931269526481628), ('idt_B_val', 0.34735843539237976), ('KL_realA_fakeA_val', 0.17573342266523267), ('KL_realB_fakeB_val', 0.113707056734904)])
+end of validation step
+OrderedDict([('D_A_val', 0.10367467999458313), ('G_A_val', 0.40343141555786133), ('cycle_A_val', 1.0925042629241943), ('idt_A_val', 0.6857499480247498), ('D_B_val', 0.17670175433158875), ('G_B_val', 0.3042273223400116), ('cycle_B_val', 1.8748586177825928), ('idt_B_val', 0.6039255261421204), ('KL_realA_fakeA_val', 0.42989359576784714), ('KL_realB_fakeB_val', 0.3772487457543009)])
+end of validation step
+OrderedDict([('D_A_val', 0.11676796525716782), ('G_A_val', 0.3885170817375183), ('cycle_A_val', 1.0632914304733276), ('idt_A_val', 0.26787951588630676), ('D_B_val', 0.17440921068191528), ('G_B_val', 0.38018205761909485), ('cycle_B_val', 0.6169283390045166), ('idt_B_val', 0.43569740653038025), ('KL_realA_fakeA_val', 0.16229974885578224), ('KL_realB_fakeB_val', 0.10285116607690929)])
+end of validation step
+OrderedDict([('D_A_val', 0.0809251219034195), ('G_A_val', 0.5440797805786133), ('cycle_A_val', 1.0986436605453491), ('idt_A_val', 0.3912214934825897), ('D_B_val', 0.20648019015789032), ('G_B_val', 0.29724180698394775), ('cycle_B_val', 0.7077111005783081), ('idt_B_val', 0.3839053511619568), ('KL_realA_fakeA_val', 0.08885634754431647), ('KL_realB_fakeB_val', 0.08106249434507488)])
+end of validation step
+OrderedDict([('D_A_val', 0.12043233215808868), ('G_A_val', 0.5440797805786133), ('cycle_A_val', 1.0986436605453491), ('idt_A_val', 0.6757105588912964), ('D_B_val', 0.2074110060930252), ('G_B_val', 0.26385125517845154), ('cycle_B_val', 1.360106348991394), ('idt_B_val', 0.3839053511619568), ('KL_realA_fakeA_val', 0.13773523119257333), ('KL_realB_fakeB_val', 0.21233262521337734)])
+end of validation step
+OrderedDict([('D_A_val', 0.17721237242221832), ('G_A_val', 0.2888528108596802), ('cycle_A_val', 0.8349971771240234), ('idt_A_val', 0.42614996433258057), ('D_B_val', 0.3212811350822449), ('G_B_val', 0.20490610599517822), ('cycle_B_val', 0.9789367914199829), ('idt_B_val', 0.35108092427253723), ('KL_realA_fakeA_val', 0.09190602393972637), ('KL_realB_fakeB_val', 0.1382619037854256)])
+end of validation step
+OrderedDict([('D_A_val', 0.12855465710163116), ('G_A_val', 0.3899751305580139), ('cycle_A_val', 1.0942976474761963), ('idt_A_val', 0.8484529256820679), ('D_B_val', 0.20797845721244812), ('G_B_val', 0.3095332384109497), ('cycle_B_val', 2.099931478500366), ('idt_B_val', 0.4954783618450165), ('KL_realA_fakeA_val', 0.35245953843421524), ('KL_realB_fakeB_val', 0.34275731504912804)])
+end of validation step
+OrderedDict([('D_A_val', 0.1700104922056198), ('G_A_val', 0.28710684180259705), ('cycle_A_val', 1.087358832359314), ('idt_A_val', 0.26333704590797424), ('D_B_val', 0.2383216768503189), ('G_B_val', 0.25194111466407776), ('cycle_B_val', 0.5976772308349609), ('idt_B_val', 0.49507391452789307), ('KL_realA_fakeA_val', 0.1804718583006245), ('KL_realB_fakeB_val', 0.1283262243986091)])
+end of validation step
+OrderedDict([('D_A_val', 0.07359781116247177), ('G_A_val', 0.5146598815917969), ('cycle_A_val', 1.4612787961959839), ('idt_A_val', 0.40953290462493896), ('D_B_val', 0.21302303671836853), ('G_B_val', 0.2881511151790619), ('cycle_B_val', 0.7064393162727356), ('idt_B_val', 0.8220177292823792), ('KL_realA_fakeA_val', 0.09888041187305821), ('KL_realB_fakeB_val', 0.12463553212676584)])
+end of validation step
+OrderedDict([('D_A_val', 0.05965467169880867), ('G_A_val', 0.5789443850517273), ('cycle_A_val', 0.8604698777198792), ('idt_A_val', 0.9181305766105652), ('D_B_val', 0.08841489255428314), ('G_B_val', 0.7302069664001465), ('cycle_B_val', 2.0419721603393555), ('idt_B_val', 0.3473585247993469), ('KL_realA_fakeA_val', 0.2851037257569672), ('KL_realB_fakeB_val', 0.3136864787418684)])
+end of validation step
+OrderedDict([('D_A_val', 0.08271685987710953), ('G_A_val', 0.4793398678302765), ('cycle_A_val', 1.2407310009002686), ('idt_A_val', 0.4069095253944397), ('D_B_val', 0.186759352684021), ('G_B_val', 0.42327597737312317), ('cycle_B_val', 0.7554806470870972), ('idt_B_val', 0.5345408320426941), ('KL_realA_fakeA_val', 0.21173652753741878), ('KL_realB_fakeB_val', 0.0723550967972613)])
+end of validation step
+OrderedDict([('D_A_val', 0.12909731268882751), ('G_A_val', 0.3768497109413147), ('cycle_A_val', 1.1228257417678833), ('idt_A_val', 0.6067609190940857), ('D_B_val', 0.312982439994812), ('G_B_val', 0.17829522490501404), ('cycle_B_val', 1.323952078819275), ('idt_B_val', 0.5517045259475708), ('KL_realA_fakeA_val', 0.09847727020154914), ('KL_realB_fakeB_val', 0.1702378018116938)])
+end of validation step
+OrderedDict([('D_A_val', 0.0851171463727951), ('G_A_val', 0.4793398678302765), ('cycle_A_val', 1.2407310009002686), ('idt_A_val', 0.5481202006340027), ('D_B_val', 0.13727283477783203), ('G_B_val', 0.5822276473045349), ('cycle_B_val', 1.2867714166641235), ('idt_B_val', 0.5345408320426941), ('KL_realA_fakeA_val', 0.159206600036533), ('KL_realB_fakeB_val', 0.08780105840170505)])
+end of validation step
+OrderedDict([('D_A_val', 0.09595780819654465), ('G_A_val', 0.441715270280838), ('cycle_A_val', 0.9275000095367432), ('idt_A_val', 0.46305757761001587), ('D_B_val', 0.1881248503923416), ('G_B_val', 0.3918515741825104), ('cycle_B_val', 1.0755195617675781), ('idt_B_val', 0.4104558825492859), ('KL_realA_fakeA_val', 0.1481399502192185), ('KL_realB_fakeB_val', 0.1441172991297004)])
+end of validation step
+OrderedDict([('D_A', 0.04952700808644295), ('G_A', 0.24234747886657715), ('cycle_A', 1.192447543144226), ('idt_A', 0.6239659786224365), ('D_B', 0.12554466724395752), ('G_B', 0.16706404089927673), ('cycle_B', 1.4118164777755737), ('idt_B', 0.5552111268043518), ('KL_realA_fakeA', 0.17550689149277637), ('KL_realB_fakeB', 0.08631389762794815)])
+(epoch: 5, iters: 256, time: 1.342, data: 141.293) D_A: 0.050 G_A: 0.242 cycle_A: 1.192 idt_A: 0.624 D_B: 0.126 G_B: 0.167 cycle_B: 1.412 idt_B: 0.555 KL_realA_fakeA: 0.176 KL_realB_fakeB: 0.086 
+End of epoch 5 / 200 	 Time Taken: 247 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.2556973695755005), ('G_A', 0.25901392102241516), ('cycle_A', 1.1123151779174805), ('idt_A', 0.7530602812767029), ('D_B', 0.20358876883983612), ('G_B', 0.4946763217449188), ('cycle_B', 1.093995213508606), ('idt_B', 0.5207973122596741), ('KL_realA_fakeA', 0.329985324581463), ('KL_realB_fakeB', 0.09182130409545718)])
+(epoch: 6, iters: 95, time: 1.240, data: 242.794) D_A: 0.256 G_A: 0.259 cycle_A: 1.112 idt_A: 0.753 D_B: 0.204 G_B: 0.495 cycle_B: 1.094 idt_B: 0.521 KL_realA_fakeA: 0.330 KL_realB_fakeB: 0.092 
+OrderedDict([('D_A', 0.2497359663248062), ('G_A', 1.413722038269043), ('cycle_A', 0.9528147578239441), ('idt_A', 0.7887395620346069), ('D_B', 0.07261382788419724), ('G_B', 0.29869142174720764), ('cycle_B', 1.3808022737503052), ('idt_B', 0.30487728118896484), ('KL_realA_fakeA', 0.2854374701817672), ('KL_realB_fakeB', 0.0909293699465771)])
+(epoch: 6, iters: 195, time: 1.172, data: 109.439) D_A: 0.250 G_A: 1.414 cycle_A: 0.953 idt_A: 0.789 D_B: 0.073 G_B: 0.299 cycle_B: 1.381 idt_B: 0.305 KL_realA_fakeA: 0.285 KL_realB_fakeB: 0.091 
+End of epoch 6 / 200 	 Time Taken: 337 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.054851237684488297), ('G_A', 0.3184921443462372), ('cycle_A', 1.1475154161453247), ('idt_A', 0.48909541964530945), ('D_B', 0.2748931646347046), ('G_B', 0.25728949904441833), ('cycle_B', 0.8920966982841492), ('idt_B', 0.6059595346450806), ('KL_realA_fakeA', 0.06618995786688979), ('KL_realB_fakeB', 0.1090235619243528)])
+(epoch: 7, iters: 34, time: 3.085, data: 240.067) D_A: 0.055 G_A: 0.318 cycle_A: 1.148 idt_A: 0.489 D_B: 0.275 G_B: 0.257 cycle_B: 0.892 idt_B: 0.606 KL_realA_fakeA: 0.066 KL_realB_fakeB: 0.109 
+OrderedDict([('D_A_val', 0.1136379987001419), ('G_A_val', 0.6724996566772461), ('cycle_A_val', 1.0684155225753784), ('idt_A_val', 0.426205039024353), ('D_B_val', 0.28180867433547974), ('G_B_val', 0.1604936271905899), ('cycle_B_val', 0.6684787273406982), ('idt_B_val', 0.7626190185546875), ('KL_realA_fakeA_val', 0.0714915851698078), ('KL_realB_fakeB_val', 0.1331085831848364)])
+end of validation step
+OrderedDict([('D_A_val', 0.15973776578903198), ('G_A_val', 0.6150770783424377), ('cycle_A_val', 0.6797707080841064), ('idt_A_val', 0.28101846575737), ('D_B_val', 0.26351481676101685), ('G_B_val', 0.1461150199174881), ('cycle_B_val', 0.5693358182907104), ('idt_B_val', 0.27121594548225403), ('KL_realA_fakeA_val', 0.3871666483903837), ('KL_realB_fakeB_val', 0.2828724987211589)])
+end of validation step
+OrderedDict([('D_A_val', 0.378298819065094), ('G_A_val', 0.9701315760612488), ('cycle_A_val', 1.330293893814087), ('idt_A_val', 0.6850700378417969), ('D_B_val', 0.4675833582878113), ('G_B_val', 0.03738756850361824), ('cycle_B_val', 0.8691480159759521), ('idt_B_val', 0.472334623336792), ('KL_realA_fakeA_val', 0.1122959758796659), ('KL_realB_fakeB_val', 0.19712380042864258)])
+end of validation step
+OrderedDict([('D_A_val', 0.027628067880868912), ('G_A_val', 0.8750137686729431), ('cycle_A_val', 0.9582730531692505), ('idt_A_val', 0.2996279299259186), ('D_B_val', 0.25163596868515015), ('G_B_val', 0.160503551363945), ('cycle_B_val', 0.5397277474403381), ('idt_B_val', 0.41265010833740234), ('KL_realA_fakeA_val', 0.12327308730323173), ('KL_realB_fakeB_val', 0.15409695629185435)])
+end of validation step
+OrderedDict([('D_A_val', 0.3387591540813446), ('G_A_val', 1.1883186101913452), ('cycle_A_val', 0.9931021928787231), ('idt_A_val', 0.5769398808479309), ('D_B_val', 0.5418453216552734), ('G_B_val', 0.06754153221845627), ('cycle_B_val', 1.2430028915405273), ('idt_B_val', 0.3634605407714844), ('KL_realA_fakeA_val', 0.10396125113469719), ('KL_realB_fakeB_val', 0.2735971912355845)])
+end of validation step
+OrderedDict([('D_A_val', 0.17128685116767883), ('G_A_val', 0.6711503267288208), ('cycle_A_val', 0.9482346773147583), ('idt_A_val', 0.2500396966934204), ('D_B_val', 0.33298733830451965), ('G_B_val', 0.08647634088993073), ('cycle_B_val', 0.5222333669662476), ('idt_B_val', 0.37839704751968384), ('KL_realA_fakeA_val', 0.14250202941447448), ('KL_realB_fakeB_val', 0.09947462907123693)])
+end of validation step
+OrderedDict([('D_A_val', 0.111420638859272), ('G_A_val', 0.5664736032485962), ('cycle_A_val', 0.93084716796875), ('idt_A_val', 0.32113194465637207), ('D_B_val', 0.24926480650901794), ('G_B_val', 0.17492054402828217), ('cycle_B_val', 0.6800004839897156), ('idt_B_val', 0.423215389251709), ('KL_realA_fakeA_val', 0.3411952702024059), ('KL_realB_fakeB_val', 0.3929814579769676)])
+end of validation step
+OrderedDict([('D_A_val', 0.12505897879600525), ('G_A_val', 0.6547790169715881), ('cycle_A_val', 1.358858585357666), ('idt_A_val', 0.42620494961738586), ('D_B_val', 0.26133617758750916), ('G_B_val', 0.16049350798130035), ('cycle_B_val', 0.6684787273406982), ('idt_B_val', 0.46989256143569946), ('KL_realA_fakeA_val', 0.267242751738447), ('KL_realB_fakeB_val', 0.11068970412653317)])
+end of validation step
+OrderedDict([('D_A_val', 0.2820991277694702), ('G_A_val', 0.6724996566772461), ('cycle_A_val', 1.0684155225753784), ('idt_A_val', 0.4958379864692688), ('D_B_val', 0.4692957401275635), ('G_B_val', 0.0732833594083786), ('cycle_B_val', 0.9683728218078613), ('idt_B_val', 0.7626190185546875), ('KL_realA_fakeA_val', 0.06714862261410044), ('KL_realB_fakeB_val', 0.21410424023015467)])
+end of validation step
+OrderedDict([('D_A_val', 0.04863886535167694), ('G_A_val', 0.787028431892395), ('cycle_A_val', 0.8048640489578247), ('idt_A_val', 0.38995301723480225), ('D_B_val', 0.21376082301139832), ('G_B_val', 0.20947004854679108), ('cycle_B_val', 1.0385348796844482), ('idt_B_val', 0.36934030055999756), ('KL_realA_fakeA_val', 0.18675323141636482), ('KL_realB_fakeB_val', 0.1626865219188081)])
+end of validation step
+OrderedDict([('D_A_val', 0.03690453618764877), ('G_A_val', 0.8067623376846313), ('cycle_A_val', 1.293532133102417), ('idt_A_val', 0.3052729070186615), ('D_B_val', 0.22115424275398254), ('G_B_val', 0.1745736449956894), ('cycle_B_val', 0.6152735352516174), ('idt_B_val', 0.5008142590522766), ('KL_realA_fakeA_val', 0.08064156555351792), ('KL_realB_fakeB_val', 0.1458861966876196)])
+end of validation step
+OrderedDict([('D_A_val', 0.1632130891084671), ('G_A_val', 0.40884923934936523), ('cycle_A_val', 0.87550950050354), ('idt_A_val', 0.4200577735900879), ('D_B_val', 0.31261754035949707), ('G_B_val', 0.10210693627595901), ('cycle_B_val', 1.441665768623352), ('idt_B_val', 0.36750179529190063), ('KL_realA_fakeA_val', 0.07305613051361567), ('KL_realB_fakeB_val', 0.16896821134120596)])
+end of validation step
+OrderedDict([('D_A_val', 0.09924625605344772), ('G_A_val', 0.9149743914604187), ('cycle_A_val', 1.0283775329589844), ('idt_A_val', 0.4200577735900879), ('D_B_val', 0.3201088607311249), ('G_B_val', 0.10210692137479782), ('cycle_B_val', 1.441665768623352), ('idt_B_val', 0.33958879113197327), ('KL_realA_fakeA_val', 0.16264168421752884), ('KL_realB_fakeB_val', 0.09746034916071229)])
+end of validation step
+OrderedDict([('D_A_val', 0.026084240525960922), ('G_A_val', 0.8750137090682983), ('cycle_A_val', 0.9582730531692505), ('idt_A_val', 0.34790199995040894), ('D_B_val', 0.2487265020608902), ('G_B_val', 0.16986435651779175), ('cycle_B_val', 0.6819449663162231), ('idt_B_val', 0.41265010833740234), ('KL_realA_fakeA_val', 0.11128721284592924), ('KL_realB_fakeB_val', 0.1303238733090271)])
+end of validation step
+OrderedDict([('D_A_val', 0.07354450225830078), ('G_A_val', 0.9527323842048645), ('cycle_A_val', 1.1213505268096924), ('idt_A_val', 0.32113197445869446), ('D_B_val', 0.23790527880191803), ('G_B_val', 0.17492058873176575), ('cycle_B_val', 0.6800004839897156), ('idt_B_val', 0.4044945538043976), ('KL_realA_fakeA_val', 0.16563870461626076), ('KL_realB_fakeB_val', 0.11401702805361116)])
+end of validation step
+OrderedDict([('D_A_val', 0.08835203945636749), ('G_A_val', 1.0399266481399536), ('cycle_A_val', 0.6490341424942017), ('idt_A_val', 0.4885554015636444), ('D_B_val', 0.1736888438463211), ('G_B_val', 0.30143365263938904), ('cycle_B_val', 0.8556654453277588), ('idt_B_val', 0.24030065536499023), ('KL_realA_fakeA_val', 0.4377994331982356), ('KL_realB_fakeB_val', 0.3815863379470931)])
+end of validation step
+OrderedDict([('D_A_val', 0.10293085873126984), ('G_A_val', 0.7870284914970398), ('cycle_A_val', 0.8048638701438904), ('idt_A_val', 0.42620494961738586), ('D_B_val', 0.25387999415397644), ('G_B_val', 0.16049350798130035), ('cycle_B_val', 0.6684787273406982), ('idt_B_val', 0.36934030055999756), ('KL_realA_fakeA_val', 0.1720098091540338), ('KL_realB_fakeB_val', 0.08681013248408107)])
+end of validation step
+OrderedDict([('D_A_val', 0.48787572979927063), ('G_A_val', 0.5727995038032532), ('cycle_A_val', 0.7695955038070679), ('idt_A_val', 0.7520807981491089), ('D_B_val', 0.4118277430534363), ('G_B_val', 0.08369990438222885), ('cycle_B_val', 1.504141092300415), ('idt_B_val', 0.24745365977287292), ('KL_realA_fakeA_val', 0.2895845957891652), ('KL_realB_fakeB_val', 0.513500264448437)])
+end of validation step
+OrderedDict([('D_A_val', 0.15056556463241577), ('G_A_val', 1.039926528930664), ('cycle_A_val', 0.6490341424942017), ('idt_A_val', 0.31974828243255615), ('D_B_val', 0.32809287309646606), ('G_B_val', 0.09415891766548157), ('cycle_B_val', 0.622951328754425), ('idt_B_val', 0.24030065536499023), ('KL_realA_fakeA_val', 0.3353553422232143), ('KL_realB_fakeB_val', 0.31425977976193475)])
+end of validation step
+OrderedDict([('D_A_val', 0.04437916725873947), ('G_A_val', 0.9149743914604187), ('cycle_A_val', 1.028377652168274), ('idt_A_val', 0.38995301723480225), ('D_B_val', 0.22195082902908325), ('G_B_val', 0.20947012305259705), ('cycle_B_val', 1.0385348796844482), ('idt_B_val', 0.33958879113197327), ('KL_realA_fakeA_val', 0.1718793513424956), ('KL_realB_fakeB_val', 0.12898654205185925)])
+end of validation step
+OrderedDict([('D_A_val', 0.1424562782049179), ('G_A_val', 0.5664737224578857), ('cycle_A_val', 0.93084716796875), ('idt_A_val', 0.24197956919670105), ('D_B_val', 0.25996044278144836), ('G_B_val', 0.16713042557239532), ('cycle_B_val', 0.47633618116378784), ('idt_B_val', 0.423215389251709), ('KL_realA_fakeA_val', 0.2529802497877915), ('KL_realB_fakeB_val', 0.24780084851318548)])
+end of validation step
+OrderedDict([('D_A_val', 0.10798876732587814), ('G_A_val', 0.6711503267288208), ('cycle_A_val', 0.9482346773147583), ('idt_A_val', 0.42620494961738586), ('D_B_val', 0.2532200515270233), ('G_B_val', 0.16049350798130035), ('cycle_B_val', 0.6684787273406982), ('idt_B_val', 0.37839704751968384), ('KL_realA_fakeA_val', 0.09233604181356259), ('KL_realB_fakeB_val', 0.08991738992550573)])
+end of validation step
+OrderedDict([('D_A_val', 0.07863637804985046), ('G_A_val', 0.7306151390075684), ('cycle_A_val', 1.345093011856079), ('idt_A_val', 0.3020249605178833), ('D_B_val', 0.25890323519706726), ('G_B_val', 0.1460220068693161), ('cycle_B_val', 0.559596836566925), ('idt_B_val', 0.5450119972229004), ('KL_realA_fakeA_val', 0.4308607657687452), ('KL_realB_fakeB_val', 0.13715999677799376)])
+end of validation step
+OrderedDict([('D_A_val', 0.045382797718048096), ('G_A_val', 1.1883187294006348), ('cycle_A_val', 0.9931021928787231), ('idt_A_val', 0.407939612865448), ('D_B_val', 0.32028841972351074), ('G_B_val', 0.1397259384393692), ('cycle_B_val', 0.857001781463623), ('idt_B_val', 0.3634605407714844), ('KL_realA_fakeA_val', 0.0943725725690564), ('KL_realB_fakeB_val', 0.0941353582355819)])
+end of validation step
+OrderedDict([('D_A_val', 0.14312201738357544), ('G_A_val', 0.572799563407898), ('cycle_A_val', 0.7695955038070679), ('idt_A_val', 0.24197956919670105), ('D_B_val', 0.2647410035133362), ('G_B_val', 0.16713044047355652), ('cycle_B_val', 0.47633618116378784), ('idt_B_val', 0.24745365977287292), ('KL_realA_fakeA_val', 0.27021704903096555), ('KL_realB_fakeB_val', 0.35515759825149484)])
+end of validation step
+OrderedDict([('D_A_val', 0.21499769389629364), ('G_A_val', 0.6547789573669434), ('cycle_A_val', 1.358858585357666), ('idt_A_val', 0.3905251622200012), ('D_B_val', 0.36944615840911865), ('G_B_val', 0.08808241039514542), ('cycle_B_val', 0.8922874927520752), ('idt_B_val', 0.4698924720287323), ('KL_realA_fakeA_val', 0.2961209982009905), ('KL_realB_fakeB_val', 0.0962418177562771)])
+end of validation step
+OrderedDict([('D_A_val', 0.03815082460641861), ('G_A_val', 0.8067623376846313), ('cycle_A_val', 1.293532133102417), ('idt_A_val', 0.2996279299259186), ('D_B_val', 0.23640863597393036), ('G_B_val', 0.160503551363945), ('cycle_B_val', 0.5397277474403381), ('idt_B_val', 0.5008141994476318), ('KL_realA_fakeA_val', 0.08489744175639), ('KL_realB_fakeB_val', 0.16697956681959783)])
+end of validation step
+OrderedDict([('D_A_val', 0.09399556368589401), ('G_A_val', 0.9701316952705383), ('cycle_A_val', 1.330293893814087), ('idt_A_val', 0.4200577735900879), ('D_B_val', 0.32760292291641235), ('G_B_val', 0.10210693627595901), ('cycle_B_val', 1.4416658878326416), ('idt_B_val', 0.47233468294143677), ('KL_realA_fakeA_val', 0.10798824215257055), ('KL_realB_fakeB_val', 0.10720084508911018)])
+end of validation step
+OrderedDict([('D_A_val', 0.33109909296035767), ('G_A_val', 0.4088492691516876), ('cycle_A_val', 0.87550950050354), ('idt_A_val', 0.4958379864692688), ('D_B_val', 0.442065566778183), ('G_B_val', 0.07328340411186218), ('cycle_B_val', 0.9683728218078613), ('idt_B_val', 0.36750179529190063), ('KL_realA_fakeA_val', 0.07865405496025919), ('KL_realB_fakeB_val', 0.4190724398746166)])
+end of validation step
+OrderedDict([('D_A_val', 0.1432955265045166), ('G_A_val', 0.7306150197982788), ('cycle_A_val', 1.345093011856079), ('idt_A_val', 0.45460954308509827), ('D_B_val', 0.27954989671707153), ('G_B_val', 0.1413523405790329), ('cycle_B_val', 0.833742618560791), ('idt_B_val', 0.5450119972229004), ('KL_realA_fakeA_val', 0.45726099217757815), ('KL_realB_fakeB_val', 0.40958657018765704)])
+end of validation step
+OrderedDict([('D_A_val', 0.04070150852203369), ('G_A_val', 0.952732503414154), ('cycle_A_val', 1.121350646018982), ('idt_A_val', 0.38995301723480225), ('D_B_val', 0.2040751576423645), ('G_B_val', 0.20947003364562988), ('cycle_B_val', 1.0385348796844482), ('idt_B_val', 0.4044945538043976), ('KL_realA_fakeA_val', 0.12655737555914412), ('KL_realB_fakeB_val', 0.1210192317748663)])
+end of validation step
+OrderedDict([('D_A_val', 0.2913554906845093), ('G_A_val', 0.6150770783424377), ('cycle_A_val', 0.6797707080841064), ('idt_A_val', 0.4958379864692688), ('D_B_val', 0.4369359612464905), ('G_B_val', 0.07328340411186218), ('cycle_B_val', 0.9683728218078613), ('idt_B_val', 0.27121594548225403), ('KL_realA_fakeA_val', 0.4274108859835042), ('KL_realB_fakeB_val', 1.4320125482219515)])
+end of validation step
+OrderedDict([('D_A', 0.08688557893037796), ('G_A', 0.4779577851295471), ('cycle_A', 0.9910720586776733), ('idt_A', 0.3291178345680237), ('D_B', 0.2883226275444031), ('G_B', 0.13500511646270752), ('cycle_B', 0.805357813835144), ('idt_B', 0.4105326533317566), ('KL_realA_fakeA', 0.07520720520901693), ('KL_realB_fakeB', 0.07813696012709039)])
+(epoch: 7, iters: 134, time: 1.812, data: 72.337) D_A: 0.087 G_A: 0.478 cycle_A: 0.991 idt_A: 0.329 D_B: 0.288 G_B: 0.135 cycle_B: 0.805 idt_B: 0.411 KL_realA_fakeA: 0.075 KL_realB_fakeB: 0.078 
+OrderedDict([('D_A', 0.20389723777770996), ('G_A', 0.2498820424079895), ('cycle_A', 1.254469871520996), ('idt_A', 0.27549660205841064), ('D_B', 0.13526521623134613), ('G_B', 0.6369851231575012), ('cycle_B', 0.5179932713508606), ('idt_B', 0.5275095701217651), ('KL_realA_fakeA', 0.12469484149264318), ('KL_realB_fakeB', 0.20493376221542825)])
+(epoch: 7, iters: 234, time: 1.825, data: 241.995) D_A: 0.204 G_A: 0.250 cycle_A: 1.254 idt_A: 0.275 D_B: 0.135 G_B: 0.637 cycle_B: 0.518 idt_B: 0.528 KL_realA_fakeA: 0.125 KL_realB_fakeB: 0.205 
+End of epoch 7 / 200 	 Time Taken: 472 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.5740486979484558), ('G_A', 1.2745676040649414), ('cycle_A', 0.9398576617240906), ('idt_A', 0.3348662853240967), ('D_B', 0.4258918762207031), ('G_B', 0.408157080411911), ('cycle_B', 0.7512621879577637), ('idt_B', 0.4214959740638733), ('KL_realA_fakeA', 0.2848521236192621), ('KL_realB_fakeB', 0.10523014636403143)])
+(epoch: 8, iters: 73, time: 1.828, data: 423.342) D_A: 0.574 G_A: 1.275 cycle_A: 0.940 idt_A: 0.335 D_B: 0.426 G_B: 0.408 cycle_B: 0.751 idt_B: 0.421 KL_realA_fakeA: 0.285 KL_realB_fakeB: 0.105 
+OrderedDict([('D_A', 0.3456641435623169), ('G_A', 0.8833529949188232), ('cycle_A', 1.2732172012329102), ('idt_A', 0.2686312794685364), ('D_B', 0.24974212050437927), ('G_B', 0.39896631240844727), ('cycle_B', 0.9547409415245056), ('idt_B', 0.3992536664009094), ('KL_realA_fakeA', 0.10812697959411682), ('KL_realB_fakeB', 0.09946777208782853)])
+(epoch: 8, iters: 173, time: 3.112, data: 134.152) D_A: 0.346 G_A: 0.883 cycle_A: 1.273 idt_A: 0.269 D_B: 0.250 G_B: 0.399 cycle_B: 0.955 idt_B: 0.399 KL_realA_fakeA: 0.108 KL_realB_fakeB: 0.099 
+OrderedDict([('D_A_val', 0.30714142322540283), ('G_A_val', 0.7462105751037598), ('cycle_A_val', 0.9515618085861206), ('idt_A_val', 0.39429694414138794), ('D_B_val', 0.2778211832046509), ('G_B_val', 0.5917134881019592), ('cycle_B_val', 0.7634408473968506), ('idt_B_val', 0.45010682940483093), ('KL_realA_fakeA_val', 0.13734321208465167), ('KL_realB_fakeB_val', 0.13893840582940917)])
+end of validation step
+OrderedDict([('D_A_val', 0.41694560647010803), ('G_A_val', 0.4419064223766327), ('cycle_A_val', 0.7234674692153931), ('idt_A_val', 0.5507052540779114), ('D_B_val', 0.36203432083129883), ('G_B_val', 0.7149220705032349), ('cycle_B_val', 1.160862922668457), ('idt_B_val', 0.3195592761039734), ('KL_realA_fakeA_val', 0.0758891032047326), ('KL_realB_fakeB_val', 0.13487080132447102)])
+end of validation step
+OrderedDict([('D_A_val', 0.51949143409729), ('G_A_val', 0.5869562029838562), ('cycle_A_val', 2.3449575901031494), ('idt_A_val', 0.3373173475265503), ('D_B_val', 0.22067420184612274), ('G_B_val', 0.6155456900596619), ('cycle_B_val', 0.8983279466629028), ('idt_B_val', 0.3828349709510803), ('KL_realA_fakeA_val', 0.26106668961537527), ('KL_realB_fakeB_val', 0.24834287388377413)])
+end of validation step
+OrderedDict([('D_A_val', 0.37799713015556335), ('G_A_val', 0.612901508808136), ('cycle_A_val', 0.9194009304046631), ('idt_A_val', 0.3400355279445648), ('D_B_val', 0.2783302068710327), ('G_B_val', 0.8177565932273865), ('cycle_B_val', 0.8515605330467224), ('idt_B_val', 0.41108742356300354), ('KL_realA_fakeA_val', 0.09740452804351615), ('KL_realB_fakeB_val', 0.1076017022258779)])
+end of validation step
+OrderedDict([('D_A_val', 0.34778279066085815), ('G_A_val', 0.6717201471328735), ('cycle_A_val', 1.2358254194259644), ('idt_A_val', 0.3069978356361389), ('D_B_val', 0.21683678030967712), ('G_B_val', 0.6823331117630005), ('cycle_B_val', 0.6691973209381104), ('idt_B_val', 0.5720452666282654), ('KL_realA_fakeA_val', 0.18332574413653951), ('KL_realB_fakeB_val', 0.14272566606718717)])
+end of validation step
+OrderedDict([('D_A_val', 0.5565205812454224), ('G_A_val', 0.586956262588501), ('cycle_A_val', 2.3449575901031494), ('idt_A_val', 0.24459004402160645), ('D_B_val', 0.2130536437034607), ('G_B_val', 0.6809818744659424), ('cycle_B_val', 0.6870636343955994), ('idt_B_val', 0.38283494114875793), ('KL_realA_fakeA_val', 0.27156303569209694), ('KL_realB_fakeB_val', 0.2372652816236982)])
+end of validation step
+OrderedDict([('D_A_val', 0.39269599318504333), ('G_A_val', 0.7553620338439941), ('cycle_A_val', 1.320154070854187), ('idt_A_val', 0.3373173475265503), ('D_B_val', 0.19575871527194977), ('G_B_val', 0.6155456900596619), ('cycle_B_val', 0.8983280658721924), ('idt_B_val', 0.4918305277824402), ('KL_realA_fakeA_val', 0.15173954563251374), ('KL_realB_fakeB_val', 0.1823849421869879)])
+end of validation step
+OrderedDict([('D_A_val', 0.3953888416290283), ('G_A_val', 0.6523445844650269), ('cycle_A_val', 1.726433515548706), ('idt_A_val', 0.5158559679985046), ('D_B_val', 0.18237769603729248), ('G_B_val', 0.8926070928573608), ('cycle_B_val', 1.095605731010437), ('idt_B_val', 0.2320641279220581), ('KL_realA_fakeA_val', 0.26181798309994525), ('KL_realB_fakeB_val', 0.08224044509927467)])
+end of validation step
+OrderedDict([('D_A_val', 0.29383134841918945), ('G_A_val', 0.6096815466880798), ('cycle_A_val', 1.390336513519287), ('idt_A_val', 0.5510367155075073), ('D_B_val', 0.23330771923065186), ('G_B_val', 0.7643226385116577), ('cycle_B_val', 1.036553144454956), ('idt_B_val', 0.5344489216804504), ('KL_realA_fakeA_val', 0.11740830003433286), ('KL_realB_fakeB_val', 0.2845971895887582)])
+end of validation step
+OrderedDict([('D_A_val', 0.2749278247356415), ('G_A_val', 0.9212211966514587), ('cycle_A_val', 1.0659395456314087), ('idt_A_val', 0.2500492334365845), ('D_B_val', 0.16045892238616943), ('G_B_val', 0.626952588558197), ('cycle_B_val', 0.6792369484901428), ('idt_B_val', 0.76129150390625), ('KL_realA_fakeA_val', 0.07930879960440196), ('KL_realB_fakeB_val', 0.14339582290342182)])
+end of validation step
+OrderedDict([('D_A_val', 0.3169984817504883), ('G_A_val', 0.5606170296669006), ('cycle_A_val', 0.8999744057655334), ('idt_A_val', 0.24247288703918457), ('D_B_val', 0.21949627995491028), ('G_B_val', 0.7958277463912964), ('cycle_B_val', 0.602480411529541), ('idt_B_val', 0.384402334690094), ('KL_realA_fakeA_val', 0.09828532563485845), ('KL_realB_fakeB_val', 0.08874859682041972)])
+end of validation step
+OrderedDict([('D_A_val', 0.39537811279296875), ('G_A_val', 0.7297330498695374), ('cycle_A_val', 1.0248838663101196), ('idt_A_val', 0.8737673759460449), ('D_B_val', 0.1923423856496811), ('G_B_val', 0.7670115828514099), ('cycle_B_val', 1.4550433158874512), ('idt_B_val', 0.3519190549850464), ('KL_realA_fakeA_val', 0.09501537674558638), ('KL_realB_fakeB_val', 0.14464162760488564)])
+end of validation step
+OrderedDict([('D_A_val', 0.343031108379364), ('G_A_val', 0.561234712600708), ('cycle_A_val', 0.890673041343689), ('idt_A_val', 0.40336376428604126), ('D_B_val', 0.3155965805053711), ('G_B_val', 0.5203050971031189), ('cycle_B_val', 0.8272081017494202), ('idt_B_val', 0.42242199182510376), ('KL_realA_fakeA_val', 0.18067053183756449), ('KL_realB_fakeB_val', 0.17673728383954887)])
+end of validation step
+OrderedDict([('D_A_val', 0.45937252044677734), ('G_A_val', 0.6967119574546814), ('cycle_A_val', 1.2734633684158325), ('idt_A_val', 0.27992507815361023), ('D_B_val', 0.2070537805557251), ('G_B_val', 0.6709803342819214), ('cycle_B_val', 0.6774392127990723), ('idt_B_val', 0.24746140837669373), ('KL_realA_fakeA_val', 0.3240326780533959), ('KL_realB_fakeB_val', 0.11852947963921683)])
+end of validation step
+OrderedDict([('D_A_val', 0.3005150258541107), ('G_A_val', 0.5606170296669006), ('cycle_A_val', 0.8999744057655334), ('idt_A_val', 0.26700887084007263), ('D_B_val', 0.22374047338962555), ('G_B_val', 0.7124022245407104), ('cycle_B_val', 0.5956817865371704), ('idt_B_val', 0.384402334690094), ('KL_realA_fakeA_val', 0.11858893659243457), ('KL_realB_fakeB_val', 0.09964008040024135)])
+end of validation step
+OrderedDict([('D_A_val', 0.369270384311676), ('G_A_val', 0.71171635389328), ('cycle_A_val', 0.9121885895729065), ('idt_A_val', 0.3968048691749573), ('D_B_val', 0.30975961685180664), ('G_B_val', 0.6489863395690918), ('cycle_B_val', 0.981993556022644), ('idt_B_val', 0.36365774273872375), ('KL_realA_fakeA_val', 0.09585364510408896), ('KL_realB_fakeB_val', 0.11930653360523381)])
+end of validation step
+OrderedDict([('D_A_val', 0.3953888416290283), ('G_A_val', 0.6523445844650269), ('cycle_A_val', 1.726433515548706), ('idt_A_val', 0.5158559679985046), ('D_B_val', 0.18237771093845367), ('G_B_val', 0.8926070332527161), ('cycle_B_val', 1.0956056118011475), ('idt_B_val', 0.2320641279220581), ('KL_realA_fakeA_val', 0.26180715203279764), ('KL_realB_fakeB_val', 0.08224044509927467)])
+end of validation step
+OrderedDict([('D_A_val', 0.36987441778182983), ('G_A_val', 0.6096815466880798), ('cycle_A_val', 1.390336513519287), ('idt_A_val', 0.3591820299625397), ('D_B_val', 0.2402416616678238), ('G_B_val', 0.8804725408554077), ('cycle_B_val', 0.8021407127380371), ('idt_B_val', 0.5344489216804504), ('KL_realA_fakeA_val', 0.07397997194099648), ('KL_realB_fakeB_val', 0.07305419812310249)])
+end of validation step
+OrderedDict([('D_A_val', 0.4526785612106323), ('G_A_val', 0.7405961155891418), ('cycle_A_val', 1.2393933534622192), ('idt_A_val', 0.5977612137794495), ('D_B_val', 0.3633207678794861), ('G_B_val', 0.6802082061767578), ('cycle_B_val', 0.8585140109062195), ('idt_B_val', 0.5522426962852478), ('KL_realA_fakeA_val', 0.38210810649902316), ('KL_realB_fakeB_val', 0.1677174442783909)])
+end of validation step
+OrderedDict([('D_A_val', 0.26979535818099976), ('G_A_val', 0.9212212562561035), ('cycle_A_val', 1.0659395456314087), ('idt_A_val', 0.5158559679985046), ('D_B_val', 0.14384210109710693), ('G_B_val', 0.8926072120666504), ('cycle_B_val', 1.095605731010437), ('idt_B_val', 0.76129150390625), ('KL_realA_fakeA_val', 0.0751192322525815), ('KL_realB_fakeB_val', 0.13193794943859152)])
+end of validation step
+OrderedDict([('D_A_val', 0.2973421812057495), ('G_A_val', 1.0575051307678223), ('cycle_A_val', 1.2530276775360107), ('idt_A_val', 0.40336376428604126), ('D_B_val', 0.2499484419822693), ('G_B_val', 0.5203049182891846), ('cycle_B_val', 0.8272081017494202), ('idt_B_val', 0.23785990476608276), ('KL_realA_fakeA_val', 0.2637265727067608), ('KL_realB_fakeB_val', 0.6160159147065155)])
+end of validation step
+OrderedDict([('D_A_val', 0.38660091161727905), ('G_A_val', 0.7405962347984314), ('cycle_A_val', 1.2393932342529297), ('idt_A_val', 0.30952176451683044), ('D_B_val', 0.36197882890701294), ('G_B_val', 0.8101744651794434), ('cycle_B_val', 0.7832032442092896), ('idt_B_val', 0.5522426962852478), ('KL_realA_fakeA_val', 0.3248673963909001), ('KL_realB_fakeB_val', 0.10748071300948257)])
+end of validation step
+OrderedDict([('D_A_val', 0.5933111310005188), ('G_A_val', 0.7462105751037598), ('cycle_A_val', 0.9515616297721863), ('idt_A_val', 0.8604120016098022), ('D_B_val', 0.2629067897796631), ('G_B_val', 0.6356366872787476), ('cycle_B_val', 1.788182258605957), ('idt_B_val', 0.45010682940483093), ('KL_realA_fakeA_val', 0.06643838920355138), ('KL_realB_fakeB_val', 0.44324551510416876)])
+end of validation step
+OrderedDict([('D_A_val', 0.3930619955062866), ('G_A_val', 0.5612348318099976), ('cycle_A_val', 0.890673041343689), ('idt_A_val', 0.6058542728424072), ('D_B_val', 0.25045377016067505), ('G_B_val', 0.7597330808639526), ('cycle_B_val', 1.2429152727127075), ('idt_B_val', 0.42242199182510376), ('KL_realA_fakeA_val', 0.1585598960761923), ('KL_realB_fakeB_val', 0.17768379618783486)])
+end of validation step
+OrderedDict([('D_A_val', 0.434631884098053), ('G_A_val', 0.6717201471328735), ('cycle_A_val', 1.2358254194259644), ('idt_A_val', 0.3556433916091919), ('D_B_val', 0.21041151881217957), ('G_B_val', 0.6762760877609253), ('cycle_B_val', 0.8223590850830078), ('idt_B_val', 0.5720452666282654), ('KL_realA_fakeA_val', 0.2226713702469932), ('KL_realB_fakeB_val', 0.10395444065289253)])
+end of validation step
+OrderedDict([('D_A_val', 0.3270696699619293), ('G_A_val', 1.0575051307678223), ('cycle_A_val', 1.2530274391174316), ('idt_A_val', 0.5507052540779114), ('D_B_val', 0.19377389550209045), ('G_B_val', 0.7149220108985901), ('cycle_B_val', 1.160862922668457), ('idt_B_val', 0.23785990476608276), ('KL_realA_fakeA_val', 0.28169464627391416), ('KL_realB_fakeB_val', 0.10869165069315043)])
+end of validation step
+OrderedDict([('D_A_val', 0.39055562019348145), ('G_A_val', 0.612901508808136), ('cycle_A_val', 0.9194009304046631), ('idt_A_val', 0.3037779927253723), ('D_B_val', 0.28578194975852966), ('G_B_val', 0.7321677207946777), ('cycle_B_val', 0.7162725925445557), ('idt_B_val', 0.41108742356300354), ('KL_realA_fakeA_val', 0.09832284406895615), ('KL_realB_fakeB_val', 0.10917628120187406)])
+end of validation step
+OrderedDict([('D_A_val', 0.31840768456459045), ('G_A_val', 0.7297328114509583), ('cycle_A_val', 1.0248838663101196), ('idt_A_val', 0.3069978356361389), ('D_B_val', 0.2139306366443634), ('G_B_val', 0.68233323097229), ('cycle_B_val', 0.6691973209381104), ('idt_B_val', 0.3519190549850464), ('KL_realA_fakeA_val', 0.12143135792508535), ('KL_realB_fakeB_val', 0.10227533341219869)])
+end of validation step
+OrderedDict([('D_A_val', 0.40684694051742554), ('G_A_val', 0.6967119574546814), ('cycle_A_val', 1.2734633684158325), ('idt_A_val', 0.5507052540779114), ('D_B_val', 0.21079015731811523), ('G_B_val', 0.7149220108985901), ('cycle_B_val', 1.1608630418777466), ('idt_B_val', 0.24746140837669373), ('KL_realA_fakeA_val', 0.32288620108862964), ('KL_realB_fakeB_val', 0.09819199730980774)])
+end of validation step
+OrderedDict([('D_A_val', 0.32573050260543823), ('G_A_val', 0.71171635389328), ('cycle_A_val', 0.9121885895729065), ('idt_A_val', 0.5507052540779114), ('D_B_val', 0.3014640808105469), ('G_B_val', 0.7149220108985901), ('cycle_B_val', 1.160862922668457), ('idt_B_val', 0.36365777254104614), ('KL_realA_fakeA_val', 0.10186803658220926), ('KL_realB_fakeB_val', 0.13215200785855266)])
+end of validation step
+OrderedDict([('D_A_val', 0.38410311937332153), ('G_A_val', 0.44190654158592224), ('cycle_A_val', 0.7234674692153931), ('idt_A_val', 0.3069978356361389), ('D_B_val', 0.37760651111602783), ('G_B_val', 0.68233323097229), ('cycle_B_val', 0.6691973209381104), ('idt_B_val', 0.319559246301651), ('KL_realA_fakeA_val', 0.06715308253063416), ('KL_realB_fakeB_val', 0.1045684176041234)])
+end of validation step
+OrderedDict([('D_A_val', 0.4297252297401428), ('G_A_val', 0.7553619146347046), ('cycle_A_val', 1.320154070854187), ('idt_A_val', 0.24459004402160645), ('D_B_val', 0.18813815712928772), ('G_B_val', 0.6809817552566528), ('cycle_B_val', 0.6870635747909546), ('idt_B_val', 0.4918305575847626), ('KL_realA_fakeA_val', 0.18712838805670767), ('KL_realB_fakeB_val', 0.1906360126714287)])
+end of validation step
+End of epoch 8 / 200 	 Time Taken: 511 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.15566910803318024), ('G_A', 1.2627707719802856), ('cycle_A', 0.858992874622345), ('idt_A', 0.37237849831581116), ('D_B', 0.10493148118257523), ('G_B', 0.40049901604652405), ('cycle_B', 0.8433940410614014), ('idt_B', 0.2674633860588074), ('KL_realA_fakeA', 0.31707914446897223), ('KL_realB_fakeB', 0.5513464548347184)])
+(epoch: 9, iters: 12, time: 2.031, data: 340.843) D_A: 0.156 G_A: 1.263 cycle_A: 0.859 idt_A: 0.372 D_B: 0.105 G_B: 0.400 cycle_B: 0.843 idt_B: 0.267 KL_realA_fakeA: 0.317 KL_realB_fakeB: 0.551 
+OrderedDict([('D_A', 0.19455380737781525), ('G_A', 0.3825377821922302), ('cycle_A', 0.6674302220344543), ('idt_A', 0.2992079257965088), ('D_B', 0.1090347021818161), ('G_B', 0.8239256739616394), ('cycle_B', 0.7043980956077576), ('idt_B', 0.43070223927497864), ('KL_realA_fakeA', 0.29326863120064506), ('KL_realB_fakeB', 0.5440072560997561)])
+(epoch: 9, iters: 112, time: 1.982, data: 25.073) D_A: 0.195 G_A: 0.383 cycle_A: 0.667 idt_A: 0.299 D_B: 0.109 G_B: 0.824 cycle_B: 0.704 idt_B: 0.431 KL_realA_fakeA: 0.293 KL_realB_fakeB: 0.544 
+OrderedDict([('D_A', 0.4066014885902405), ('G_A', 0.5146586298942566), ('cycle_A', 1.1257189512252808), ('idt_A', 0.691199779510498), ('D_B', 0.13782286643981934), ('G_B', 0.5213437676429749), ('cycle_B', 1.2053513526916504), ('idt_B', 0.37699028849601746), ('KL_realA_fakeA', 0.09902019832098205), ('KL_realB_fakeB', 0.13022584614377491)])
+(epoch: 9, iters: 212, time: 1.988, data: 234.465) D_A: 0.407 G_A: 0.515 cycle_A: 1.126 idt_A: 0.691 D_B: 0.138 G_B: 0.521 cycle_B: 1.205 idt_B: 0.377 KL_realA_fakeA: 0.099 KL_realB_fakeB: 0.130 
+End of epoch 9 / 200 	 Time Taken: 535 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.08520408719778061), ('G_A', 0.0903477743268013), ('cycle_A', 0.9416999816894531), ('idt_A', 0.327819287776947), ('D_B', 0.1448776125907898), ('G_B', 0.6368343234062195), ('cycle_B', 0.6739916801452637), ('idt_B', 0.42295289039611816), ('KL_realA_fakeA', 0.08264204547360375), ('KL_realB_fakeB', 0.1618582055867648)])
+(epoch: 10, iters: 51, time: 3.094, data: 436.058) D_A: 0.085 G_A: 0.090 cycle_A: 0.942 idt_A: 0.328 D_B: 0.145 G_B: 0.637 cycle_B: 0.674 idt_B: 0.423 KL_realA_fakeA: 0.083 KL_realB_fakeB: 0.162 
+OrderedDict([('D_A_val', 0.1074536144733429), ('G_A_val', 0.7824251651763916), ('cycle_A_val', 0.9880175590515137), ('idt_A_val', 0.38762038946151733), ('D_B_val', 0.24700266122817993), ('G_B_val', 0.1578521728515625), ('cycle_B_val', 0.8214595913887024), ('idt_B_val', 0.47329241037368774), ('KL_realA_fakeA_val', 0.07542036503773485), ('KL_realB_fakeB_val', 0.12615053204013285)])
+end of validation step
+OrderedDict([('D_A_val', 0.11355452239513397), ('G_A_val', 0.6848974227905273), ('cycle_A_val', 1.0752416849136353), ('idt_A_val', 0.4095405638217926), ('D_B_val', 0.38751304149627686), ('G_B_val', 0.0678037479519844), ('cycle_B_val', 1.063306212425232), ('idt_B_val', 0.41908198595046997), ('KL_realA_fakeA_val', 0.07402873134907022), ('KL_realB_fakeB_val', 0.10684026891375403)])
+end of validation step
+OrderedDict([('D_A_val', 0.10131514072418213), ('G_A_val', 0.5476393699645996), ('cycle_A_val', 1.0572527647018433), ('idt_A_val', 0.2670513093471527), ('D_B_val', 0.31722506880760193), ('G_B_val', 0.10777214914560318), ('cycle_B_val', 0.6426263451576233), ('idt_B_val', 0.5218533873558044), ('KL_realA_fakeA_val', 0.41680387757595017), ('KL_realB_fakeB_val', 0.21624930279851304)])
+end of validation step
+OrderedDict([('D_A_val', 0.0964852049946785), ('G_A_val', 0.8998900651931763), ('cycle_A_val', 0.9529733061790466), ('idt_A_val', 0.3665357530117035), ('D_B_val', 0.34726566076278687), ('G_B_val', 0.09731677919626236), ('cycle_B_val', 1.476452112197876), ('idt_B_val', 0.4032605290412903), ('KL_realA_fakeA_val', 0.09688769101351451), ('KL_realB_fakeB_val', 0.09892948658557964)])
+end of validation step
+OrderedDict([('D_A_val', 0.20232567191123962), ('G_A_val', 0.65202397108078), ('cycle_A_val', 1.0841535329818726), ('idt_A_val', 0.3634771406650543), ('D_B_val', 0.29077446460723877), ('G_B_val', 0.11373566091060638), ('cycle_B_val', 0.7935296297073364), ('idt_B_val', 0.5007490515708923), ('KL_realA_fakeA_val', 0.07257726315542752), ('KL_realB_fakeB_val', 0.14486978505263748)])
+end of validation step
+OrderedDict([('D_A_val', 0.1147986501455307), ('G_A_val', 0.532532811164856), ('cycle_A_val', 0.7800467014312744), ('idt_A_val', 0.5611571669578552), ('D_B_val', 0.2629963159561157), ('G_B_val', 0.23643043637275696), ('cycle_B_val', 1.0932338237762451), ('idt_B_val', 0.35689085721969604), ('KL_realA_fakeA_val', 0.07649341492015381), ('KL_realB_fakeB_val', 0.17605071511937706)])
+end of validation step
+OrderedDict([('D_A_val', 0.12012236565351486), ('G_A_val', 0.5586158633232117), ('cycle_A_val', 1.0509451627731323), ('idt_A_val', 0.48420530557632446), ('D_B_val', 0.23367509245872498), ('G_B_val', 0.18715082108974457), ('cycle_B_val', 0.9387280941009521), ('idt_B_val', 0.4407065510749817), ('KL_realA_fakeA_val', 0.09509886208561998), ('KL_realB_fakeB_val', 0.14197575024677317)])
+end of validation step
+OrderedDict([('D_A_val', 0.09561538696289062), ('G_A_val', 0.6825217008590698), ('cycle_A_val', 0.8671053647994995), ('idt_A_val', 0.5611571669578552), ('D_B_val', 0.2669394016265869), ('G_B_val', 0.23643025755882263), ('cycle_B_val', 1.0932337045669556), ('idt_B_val', 0.3744290769100189), ('KL_realA_fakeA_val', 0.09183676897206783), ('KL_realB_fakeB_val', 0.1787843288965699)])
+end of validation step
+OrderedDict([('D_A_val', 0.06412290036678314), ('G_A_val', 0.6520237922668457), ('cycle_A_val', 1.0841535329818726), ('idt_A_val', 0.26426196098327637), ('D_B_val', 0.25695621967315674), ('G_B_val', 0.15135832130908966), ('cycle_B_val', 0.6925808787345886), ('idt_B_val', 0.5007490515708923), ('KL_realA_fakeA_val', 0.07856622138345448), ('KL_realB_fakeB_val', 0.12731007380338455)])
+end of validation step
+OrderedDict([('D_A_val', 0.05044438689947128), ('G_A_val', 0.7153739333152771), ('cycle_A_val', 1.451319932937622), ('idt_A_val', 0.26426196098327637), ('D_B_val', 0.2904472351074219), ('G_B_val', 0.15135841071605682), ('cycle_B_val', 0.6925808787345886), ('idt_B_val', 0.8412061929702759), ('KL_realA_fakeA_val', 0.07596323079604018), ('KL_realB_fakeB_val', 0.1978506236298254)])
+end of validation step
+OrderedDict([('D_A_val', 0.1783566176891327), ('G_A_val', 1.236615777015686), ('cycle_A_val', 0.6998193264007568), ('idt_A_val', 0.5425928235054016), ('D_B_val', 0.4202745258808136), ('G_B_val', 0.057264234870672226), ('cycle_B_val', 1.3940869569778442), ('idt_B_val', 0.22437021136283875), ('KL_realA_fakeA_val', 0.3521730621604066), ('KL_realB_fakeB_val', 1.4467207872707235)])
+end of validation step
+OrderedDict([('D_A_val', 0.11020690947771072), ('G_A_val', 0.8061788082122803), ('cycle_A_val', 0.6530975103378296), ('idt_A_val', 0.3665357828140259), ('D_B_val', 0.3126978874206543), ('G_B_val', 0.097316674888134), ('cycle_B_val', 1.476452350616455), ('idt_B_val', 0.24606376886367798), ('KL_realA_fakeA_val', 0.34413950955046585), ('KL_realB_fakeB_val', 0.9521769913063065)])
+end of validation step
+OrderedDict([('D_A_val', 0.1284608691930771), ('G_A_val', 0.5476393699645996), ('cycle_A_val', 1.0572527647018433), ('idt_A_val', 0.7214395999908447), ('D_B_val', 0.3493208587169647), ('G_B_val', 0.07603249698877335), ('cycle_B_val', 1.6784155368804932), ('idt_B_val', 0.5218533873558044), ('KL_realA_fakeA_val', 0.42271123441723124), ('KL_realB_fakeB_val', 0.8133057569333041)])
+end of validation step
+OrderedDict([('D_A_val', 0.3299733102321625), ('G_A_val', 1.2366160154342651), ('cycle_A_val', 0.6998193264007568), ('idt_A_val', 0.8544495105743408), ('D_B_val', 0.3660951852798462), ('G_B_val', 0.0860852375626564), ('cycle_B_val', 1.550987958908081), ('idt_B_val', 0.22437021136283875), ('KL_realA_fakeA_val', 0.37428993863231486), ('KL_realB_fakeB_val', 0.39357219305381363)])
+end of validation step
+OrderedDict([('D_A_val', 0.04487364739179611), ('G_A_val', 0.6740297675132751), ('cycle_A_val', 0.8924752473831177), ('idt_A_val', 0.3423917293548584), ('D_B_val', 0.26401445269584656), ('G_B_val', 0.16805464029312134), ('cycle_B_val', 0.8371835947036743), ('idt_B_val', 0.3622579574584961), ('KL_realA_fakeA_val', 0.09742930714160825), ('KL_realB_fakeB_val', 0.16072573802083884)])
+end of validation step
+OrderedDict([('D_A_val', 0.16566896438598633), ('G_A_val', 0.8061788082122803), ('cycle_A_val', 0.6530975103378296), ('idt_A_val', 0.5425928235054016), ('D_B_val', 0.40227648615837097), ('G_B_val', 0.05726424604654312), ('cycle_B_val', 1.3940869569778442), ('idt_B_val', 0.24606376886367798), ('KL_realA_fakeA_val', 0.4113219006899132), ('KL_realB_fakeB_val', 1.4463490112069122)])
+end of validation step
+OrderedDict([('D_A_val', 0.0507778599858284), ('G_A_val', 0.7824249863624573), ('cycle_A_val', 0.9880175590515137), ('idt_A_val', 0.38874390721321106), ('D_B_val', 0.2182159721851349), ('G_B_val', 0.20822778344154358), ('cycle_B_val', 0.8240290880203247), ('idt_B_val', 0.47329241037368774), ('KL_realA_fakeA_val', 0.0771781023328929), ('KL_realB_fakeB_val', 0.14576043742852623)])
+end of validation step
+OrderedDict([('D_A_val', 0.1953316330909729), ('G_A_val', 0.6740297079086304), ('cycle_A_val', 0.8924752473831177), ('idt_A_val', 0.3634771406650543), ('D_B_val', 0.31133249402046204), ('G_B_val', 0.11373559385538101), ('cycle_B_val', 0.7935296297073364), ('idt_B_val', 0.3622579574584961), ('KL_realA_fakeA_val', 0.1169620230602514), ('KL_realB_fakeB_val', 0.20291988424036245)])
+end of validation step
+OrderedDict([('D_A_val', 0.12526804208755493), ('G_A_val', 0.5244061946868896), ('cycle_A_val', 1.1319977045059204), ('idt_A_val', 0.5611571669578552), ('D_B_val', 0.25533753633499146), ('G_B_val', 0.236430361866951), ('cycle_B_val', 1.0932338237762451), ('idt_B_val', 0.46744972467422485), ('KL_realA_fakeA_val', 0.1670187939811394), ('KL_realB_fakeB_val', 0.14160369124143588)])
+end of validation step
+OrderedDict([('D_A_val', 0.25790688395500183), ('G_A_val', 0.8515147566795349), ('cycle_A_val', 1.0238642692565918), ('idt_A_val', 0.4152359068393707), ('D_B_val', 0.32612186670303345), ('G_B_val', 0.1018896996974945), ('cycle_B_val', 0.9492881298065186), ('idt_B_val', 0.3618057370185852), ('KL_realA_fakeA_val', 0.24763414661063368), ('KL_realB_fakeB_val', 0.11099068873654638)])
+end of validation step
+OrderedDict([('D_A_val', 0.1139162927865982), ('G_A_val', 0.5244061946868896), ('cycle_A_val', 1.1319977045059204), ('idt_A_val', 0.2670512795448303), ('D_B_val', 0.31774282455444336), ('G_B_val', 0.10777218639850616), ('cycle_B_val', 0.6426264047622681), ('idt_B_val', 0.46744972467422485), ('KL_realA_fakeA_val', 0.22474292584966804), ('KL_realB_fakeB_val', 0.21049995862141754)])
+end of validation step
+OrderedDict([('D_A_val', 0.06172695755958557), ('G_A_val', 0.7153739333152771), ('cycle_A_val', 1.4513200521469116), ('idt_A_val', 0.3471986949443817), ('D_B_val', 0.35668879747390747), ('G_B_val', 0.10521474480628967), ('cycle_B_val', 0.8963861465454102), ('idt_B_val', 0.8412061929702759), ('KL_realA_fakeA_val', 0.07767290339798655), ('KL_realB_fakeB_val', 0.1733123680659638)])
+end of validation step
+OrderedDict([('D_A_val', 0.08175455778837204), ('G_A_val', 0.6825217008590698), ('cycle_A_val', 0.8671053647994995), ('idt_A_val', 0.4010718762874603), ('D_B_val', 0.19912832975387573), ('G_B_val', 0.22794510424137115), ('cycle_B_val', 0.9583042860031128), ('idt_B_val', 0.3744291067123413), ('KL_realA_fakeA_val', 0.0889543919059906), ('KL_realB_fakeB_val', 0.16810340544733104)])
+end of validation step
+OrderedDict([('D_A_val', 0.05142907425761223), ('G_A_val', 0.6848973631858826), ('cycle_A_val', 1.0752418041229248), ('idt_A_val', 0.26426196098327637), ('D_B_val', 0.25645214319229126), ('G_B_val', 0.15135841071605682), ('cycle_B_val', 0.6925808787345886), ('idt_B_val', 0.41908198595046997), ('KL_realA_fakeA_val', 0.10532663175857312), ('KL_realB_fakeB_val', 0.13822046663153695)])
+end of validation step
+OrderedDict([('D_A_val', 0.06790513545274734), ('G_A_val', 0.8515149354934692), ('cycle_A_val', 1.0238641500473022), ('idt_A_val', 0.26426196098327637), ('D_B_val', 0.26040327548980713), ('G_B_val', 0.15135841071605682), ('cycle_B_val', 0.6925808787345886), ('idt_B_val', 0.36180579662323), ('KL_realA_fakeA_val', 0.22326051523944768), ('KL_realB_fakeB_val', 0.08223241741686307)])
+end of validation step
+OrderedDict([('D_A_val', 0.5396517515182495), ('G_A_val', 0.5586158633232117), ('cycle_A_val', 1.0509452819824219), ('idt_A_val', 0.7231981754302979), ('D_B_val', 0.40099501609802246), ('G_B_val', 0.0502362884581089), ('cycle_B_val', 0.9881763458251953), ('idt_B_val', 0.4407065510749817), ('KL_realA_fakeA_val', 0.1414268609726672), ('KL_realB_fakeB_val', 0.21211281563568185)])
+end of validation step
+OrderedDict([('D_A_val', 0.11840377748012543), ('G_A_val', 0.7990370392799377), ('cycle_A_val', 0.638638973236084), ('idt_A_val', 0.38762038946151733), ('D_B_val', 0.24786879122257233), ('G_B_val', 0.15785211324691772), ('cycle_B_val', 0.8214595913887024), ('idt_B_val', 0.22087138891220093), ('KL_realA_fakeA_val', 0.2668551266571798), ('KL_realB_fakeB_val', 0.1643398309107037)])
+end of validation step
+OrderedDict([('D_A_val', 0.15335458517074585), ('G_A_val', 1.0514898300170898), ('cycle_A_val', 1.1214196681976318), ('idt_A_val', 0.30871689319610596), ('D_B_val', 0.36524349451065063), ('G_B_val', 0.08070611208677292), ('cycle_B_val', 0.8939104676246643), ('idt_B_val', 0.47909969091415405), ('KL_realA_fakeA_val', 0.1338095666232888), ('KL_realB_fakeB_val', 0.23001755115921382)])
+end of validation step
+OrderedDict([('D_A_val', 0.025287285447120667), ('G_A_val', 0.8998901844024658), ('cycle_A_val', 0.9529733657836914), ('idt_A_val', 0.31760579347610474), ('D_B_val', 0.23256458342075348), ('G_B_val', 0.20359835028648376), ('cycle_B_val', 0.8756442070007324), ('idt_B_val', 0.4032605290412903), ('KL_realA_fakeA_val', 0.07824906223540484), ('KL_realB_fakeB_val', 0.1061654334676133)])
+end of validation step
+OrderedDict([('D_A_val', 0.09817717224359512), ('G_A_val', 1.0514897108078003), ('cycle_A_val', 1.1214196681976318), ('idt_A_val', 0.3665357530117035), ('D_B_val', 0.34936922788619995), ('G_B_val', 0.09731671959161758), ('cycle_B_val', 1.4764522314071655), ('idt_B_val', 0.47909969091415405), ('KL_realA_fakeA_val', 0.10854838149709667), ('KL_realB_fakeB_val', 0.12138433572171949)])
+end of validation step
+OrderedDict([('D_A_val', 0.17599362134933472), ('G_A_val', 0.5325326919555664), ('cycle_A_val', 0.7800467014312744), ('idt_A_val', 0.48394396901130676), ('D_B_val', 0.37235766649246216), ('G_B_val', 0.07579847425222397), ('cycle_B_val', 0.9318979978561401), ('idt_B_val', 0.35689085721969604), ('KL_realA_fakeA_val', 0.06977883112743326), ('KL_realB_fakeB_val', 0.15421886072379237)])
+end of validation step
+OrderedDict([('D_A_val', 0.24780012667179108), ('G_A_val', 0.7990368604660034), ('cycle_A_val', 0.638638973236084), ('idt_A_val', 0.4152359068393707), ('D_B_val', 0.323740154504776), ('G_B_val', 0.10188974440097809), ('cycle_B_val', 0.9492882490158081), ('idt_B_val', 0.22087138891220093), ('KL_realA_fakeA_val', 0.23896878712158498), ('KL_realB_fakeB_val', 0.25673471021636624)])
+end of validation step
+OrderedDict([('D_A', 0.28524288535118103), ('G_A', 0.5622899532318115), ('cycle_A', 0.9466845989227295), ('idt_A', 0.32823148369789124), ('D_B', 0.2277202606201172), ('G_B', 1.02518892288208), ('cycle_B', 0.8152663707733154), ('idt_B', 0.4241654872894287), ('KL_realA_fakeA', 0.18696054697579145), ('KL_realB_fakeB', 0.14649970252738193)])
+(epoch: 10, iters: 151, time: 2.179, data: 131.397) D_A: 0.285 G_A: 0.562 cycle_A: 0.947 idt_A: 0.328 D_B: 0.228 G_B: 1.025 cycle_B: 0.815 idt_B: 0.424 KL_realA_fakeA: 0.187 KL_realB_fakeB: 0.146 
+OrderedDict([('D_A', 0.31679874658584595), ('G_A', 0.5314894914627075), ('cycle_A', 0.9996488094329834), ('idt_A', 0.22302575409412384), ('D_B', 0.36932820081710815), ('G_B', 0.6773753762245178), ('cycle_B', 0.7429525852203369), ('idt_B', 0.47715944051742554), ('KL_realA_fakeA', 0.17110024161940104), ('KL_realB_fakeB', 0.1660744233387545)])
+(epoch: 10, iters: 251, time: 2.150, data: 344.686) D_A: 0.317 G_A: 0.531 cycle_A: 1.000 idt_A: 0.223 D_B: 0.369 G_B: 0.677 cycle_B: 0.743 idt_B: 0.477 KL_realA_fakeA: 0.171 KL_realB_fakeB: 0.166 
+End of epoch 10 / 200 	 Time Taken: 589 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.13580726087093353), ('G_A', 0.4448697566986084), ('cycle_A', 1.0406594276428223), ('idt_A', 0.389228880405426), ('D_B', 0.07769767940044403), ('G_B', 0.49610719084739685), ('cycle_B', 0.8309524059295654), ('idt_B', 0.4785643219947815), ('KL_realA_fakeA', 0.07640035440034537), ('KL_realB_fakeB', 0.1024956563572618)])
+(epoch: 11, iters: 90, time: 2.364, data: 568.181) D_A: 0.136 G_A: 0.445 cycle_A: 1.041 idt_A: 0.389 D_B: 0.078 G_B: 0.496 cycle_B: 0.831 idt_B: 0.479 KL_realA_fakeA: 0.076 KL_realB_fakeB: 0.102 
+OrderedDict([('D_A', 0.20890992879867554), ('G_A', 0.1929103136062622), ('cycle_A', 0.9435557723045349), ('idt_A', 0.29441967606544495), ('D_B', 0.09874135255813599), ('G_B', 0.7089616060256958), ('cycle_B', 0.7396748065948486), ('idt_B', 0.330637127161026), ('KL_realA_fakeA', 0.25146288708916026), ('KL_realB_fakeB', 0.09190175774403164)])
+(epoch: 11, iters: 190, time: 3.579, data: 203.812) D_A: 0.209 G_A: 0.193 cycle_A: 0.944 idt_A: 0.294 D_B: 0.099 G_B: 0.709 cycle_B: 0.740 idt_B: 0.331 KL_realA_fakeA: 0.251 KL_realB_fakeB: 0.092 
+OrderedDict([('D_A_val', 0.19665563106536865), ('G_A_val', 1.4402854442596436), ('cycle_A_val', 0.9556654095649719), ('idt_A_val', 0.3763645589351654), ('D_B_val', 0.06414461880922318), ('G_B_val', 0.6270840167999268), ('cycle_B_val', 0.8225418329238892), ('idt_B_val', 0.3436901867389679), ('KL_realA_fakeA_val', 0.23721930321699342), ('KL_realB_fakeB_val', 0.1141470125125549)])
+end of validation step
+OrderedDict([('D_A_val', 0.17498598992824554), ('G_A_val', 1.320335865020752), ('cycle_A_val', 0.9118165969848633), ('idt_A_val', 0.3634163737297058), ('D_B_val', 0.1987302452325821), ('G_B_val', 0.3496648371219635), ('cycle_B_val', 0.8111231327056885), ('idt_B_val', 0.3356465697288513), ('KL_realA_fakeA_val', 0.08098104306890652), ('KL_realB_fakeB_val', 0.09963475171897586)])
+end of validation step
+OrderedDict([('D_A_val', 0.19501471519470215), ('G_A_val', 1.0790183544158936), ('cycle_A_val', 1.1165868043899536), ('idt_A_val', 0.30705487728118896), ('D_B_val', 0.12024365365505219), ('G_B_val', 0.47481438517570496), ('cycle_B_val', 0.6291919946670532), ('idt_B_val', 0.4330710768699646), ('KL_realA_fakeA_val', 0.09832458140572964), ('KL_realB_fakeB_val', 0.11176587509812475)])
+end of validation step
+OrderedDict([('D_A_val', 0.31704622507095337), ('G_A_val', 1.3041273355484009), ('cycle_A_val', 0.6394287943840027), ('idt_A_val', 0.43864184617996216), ('D_B_val', 0.20431360602378845), ('G_B_val', 0.19505921006202698), ('cycle_B_val', 1.0180354118347168), ('idt_B_val', 0.28553900122642517), ('KL_realA_fakeA_val', 0.3488940671137907), ('KL_realB_fakeB_val', 1.5989819113949375)])
+end of validation step
+OrderedDict([('D_A_val', 0.28302130103111267), ('G_A_val', 2.1695914268493652), ('cycle_A_val', 0.6836870312690735), ('idt_A_val', 0.29636284708976746), ('D_B_val', 0.05970104783773422), ('G_B_val', 0.6136060953140259), ('cycle_B_val', 0.6362103819847107), ('idt_B_val', 0.2690243422985077), ('KL_realA_fakeA_val', 0.29168465293361545), ('KL_realB_fakeB_val', 0.3787018769198898)])
+end of validation step
+OrderedDict([('D_A_val', 0.2283198982477188), ('G_A_val', 1.1219465732574463), ('cycle_A_val', 0.984865128993988), ('idt_A_val', 0.3876692056655884), ('D_B_val', 0.14931929111480713), ('G_B_val', 0.331259161233902), ('cycle_B_val', 0.7442830801010132), ('idt_B_val', 0.35440593957901), ('KL_realA_fakeA_val', 0.16041669115164273), ('KL_realB_fakeB_val', 0.10622268997679263)])
+end of validation step
+OrderedDict([('D_A_val', 0.3097198009490967), ('G_A_val', 1.404325008392334), ('cycle_A_val', 1.5608267784118652), ('idt_A_val', 0.42975810170173645), ('D_B_val', 0.08986953645944595), ('G_B_val', 0.525610625743866), ('cycle_B_val', 0.8384125828742981), ('idt_B_val', 0.651039183139801), ('KL_realA_fakeA_val', 0.18608767147654576), ('KL_realB_fakeB_val', 0.17358492454469693)])
+end of validation step
+OrderedDict([('D_A_val', 0.21145151555538177), ('G_A_val', 1.1488358974456787), ('cycle_A_val', 0.9654421806335449), ('idt_A_val', 0.40301942825317383), ('D_B_val', 0.20825627446174622), ('G_B_val', 0.29433485865592957), ('cycle_B_val', 1.4320001602172852), ('idt_B_val', 0.4395860433578491), ('KL_realA_fakeA_val', 0.18063740453504668), ('KL_realB_fakeB_val', 0.09173602278137062)])
+end of validation step
+OrderedDict([('D_A_val', 0.21742841601371765), ('G_A_val', 1.2128312587738037), ('cycle_A_val', 1.1200218200683594), ('idt_A_val', 0.36211174726486206), ('D_B_val', 0.09933282434940338), ('G_B_val', 0.4731347858905792), ('cycle_B_val', 0.840538740158081), ('idt_B_val', 0.4112859070301056), ('KL_realA_fakeA_val', 0.08863213203094865), ('KL_realB_fakeB_val', 0.10757769275720709)])
+end of validation step
+OrderedDict([('D_A_val', 0.2833099067211151), ('G_A_val', 0.7225337624549866), ('cycle_A_val', 0.9260959625244141), ('idt_A_val', 0.5416582822799683), ('D_B_val', 0.30437028408050537), ('G_B_val', 0.26011016964912415), ('cycle_B_val', 1.5144298076629639), ('idt_B_val', 0.36829137802124023), ('KL_realA_fakeA_val', 0.07679404021578815), ('KL_realB_fakeB_val', 0.35649782453007006)])
+end of validation step
+OrderedDict([('D_A_val', 0.2702576220035553), ('G_A_val', 1.2423056364059448), ('cycle_A_val', 1.0565186738967896), ('idt_A_val', 0.47086191177368164), ('D_B_val', 0.12118513137102127), ('G_B_val', 0.5970683693885803), ('cycle_B_val', 0.9982806444168091), ('idt_B_val', 0.4575049579143524), ('KL_realA_fakeA_val', 0.09712815654313903), ('KL_realB_fakeB_val', 0.15543464958936146)])
+end of validation step
+OrderedDict([('D_A_val', 0.3106100559234619), ('G_A_val', 1.5143272876739502), ('cycle_A_val', 1.0674912929534912), ('idt_A_val', 0.24853548407554626), ('D_B_val', 0.19841241836547852), ('G_B_val', 0.34600338339805603), ('cycle_B_val', 0.6465190052986145), ('idt_B_val', 0.5197731852531433), ('KL_realA_fakeA_val', 0.4047758463230582), ('KL_realB_fakeB_val', 0.20445051554687718)])
+end of validation step
+OrderedDict([('D_A_val', 0.21742841601371765), ('G_A_val', 1.2128316164016724), ('cycle_A_val', 1.1200218200683594), ('idt_A_val', 0.36211177706718445), ('D_B_val', 0.09933283925056458), ('G_B_val', 0.4731346368789673), ('cycle_B_val', 0.840538740158081), ('idt_B_val', 0.4112859070301056), ('KL_realA_fakeA_val', 0.08863213203094865), ('KL_realB_fakeB_val', 0.10757769275720709)])
+end of validation step
+OrderedDict([('D_A_val', 0.25089049339294434), ('G_A_val', 1.3195728063583374), ('cycle_A_val', 0.581886887550354), ('idt_A_val', 0.40301942825317383), ('D_B_val', 0.13731719553470612), ('G_B_val', 0.29433491826057434), ('cycle_B_val', 1.4320002794265747), ('idt_B_val', 0.2618657946586609), ('KL_realA_fakeA_val', 0.243971351492148), ('KL_realB_fakeB_val', 0.5303451753244367)])
+end of validation step
+OrderedDict([('D_A_val', 0.3047330677509308), ('G_A_val', 1.2568120956420898), ('cycle_A_val', 1.1976417303085327), ('idt_A_val', 0.2213878631591797), ('D_B_val', 0.14790454506874084), ('G_B_val', 0.283820778131485), ('cycle_B_val', 0.5828560590744019), ('idt_B_val', 0.7955809831619263), ('KL_realA_fakeA_val', 0.11139881356306071), ('KL_realB_fakeB_val', 0.18000489578004691)])
+end of validation step
+OrderedDict([('D_A_val', 0.16943253576755524), ('G_A_val', 1.2044373750686646), ('cycle_A_val', 1.1238555908203125), ('idt_A_val', 0.3634163737297058), ('D_B_val', 0.16796976327896118), ('G_B_val', 0.34966492652893066), ('cycle_B_val', 0.8111231327056885), ('idt_B_val', 0.5162661671638489), ('KL_realA_fakeA_val', 0.09048319952673309), ('KL_realB_fakeB_val', 0.08939957542076775)])
+end of validation step
+OrderedDict([('D_A_val', 0.3371346592903137), ('G_A_val', 1.3041272163391113), ('cycle_A_val', 0.6394287943840027), ('idt_A_val', 0.41340258717536926), ('D_B_val', 0.1636309027671814), ('G_B_val', 0.25943630933761597), ('cycle_B_val', 0.7165099382400513), ('idt_B_val', 0.28553900122642517), ('KL_realA_fakeA_val', 0.3491776393644378), ('KL_realB_fakeB_val', 1.0519889257728723)])
+end of validation step
+OrderedDict([('D_A_val', 0.18592971563339233), ('G_A_val', 1.5143272876739502), ('cycle_A_val', 1.0674912929534912), ('idt_A_val', 0.32920122146606445), ('D_B_val', 0.1441825032234192), ('G_B_val', 0.5849356055259705), ('cycle_B_val', 0.6867588758468628), ('idt_B_val', 0.5197732448577881), ('KL_realA_fakeA_val', 0.40256791772938144), ('KL_realB_fakeB_val', 0.24039428534174193)])
+end of validation step
+OrderedDict([('D_A_val', 0.21750468015670776), ('G_A_val', 1.0790181159973145), ('cycle_A_val', 1.1165868043899536), ('idt_A_val', 0.3876692056655884), ('D_B_val', 0.1748216152191162), ('G_B_val', 0.33125898241996765), ('cycle_B_val', 0.7442830801010132), ('idt_B_val', 0.4330710768699646), ('KL_realA_fakeA_val', 0.10694908168546072), ('KL_realB_fakeB_val', 0.1045091183264912)])
+end of validation step
+OrderedDict([('D_A_val', 0.27372366189956665), ('G_A_val', 1.2423055171966553), ('cycle_A_val', 1.0565185546875), ('idt_A_val', 0.42975807189941406), ('D_B_val', 0.1397099792957306), ('G_B_val', 0.5256106853485107), ('cycle_B_val', 0.8384125828742981), ('idt_B_val', 0.45750492811203003), ('KL_realA_fakeA_val', 0.08353169489428934), ('KL_realB_fakeB_val', 0.13814242474801863)])
+end of validation step
+OrderedDict([('D_A_val', 0.2070101797580719), ('G_A_val', 1.2198152542114258), ('cycle_A_val', 1.2577166557312012), ('idt_A_val', 0.4267248511314392), ('D_B_val', 0.06081567332148552), ('G_B_val', 0.6863513588905334), ('cycle_B_val', 0.9604759216308594), ('idt_B_val', 0.4892648458480835), ('KL_realA_fakeA_val', 0.08342614644843677), ('KL_realB_fakeB_val', 0.11589670595954966)])
+end of validation step
+OrderedDict([('D_A_val', 0.41995054483413696), ('G_A_val', 2.1695914268493652), ('cycle_A_val', 0.6836870312690735), ('idt_A_val', 0.42975810170173645), ('D_B_val', 0.07788871228694916), ('G_B_val', 0.5256107449531555), ('cycle_B_val', 0.8384125828742981), ('idt_B_val', 0.2690243422985077), ('KL_realA_fakeA_val', 0.3875984909894938), ('KL_realB_fakeB_val', 0.3865612132189546)])
+end of validation step
+OrderedDict([('D_A_val', 0.12929397821426392), ('G_A_val', 1.1488361358642578), ('cycle_A_val', 0.9654422998428345), ('idt_A_val', 0.3109724521636963), ('D_B_val', 0.11897901445627213), ('G_B_val', 0.6431616544723511), ('cycle_B_val', 0.6924089789390564), ('idt_B_val', 0.4395860433578491), ('KL_realA_fakeA_val', 0.1503262782308934), ('KL_realB_fakeB_val', 0.06859688025677485)])
+end of validation step
+OrderedDict([('D_A_val', 0.3980465531349182), ('G_A_val', 1.3195730447769165), ('cycle_A_val', 0.581886887550354), ('idt_A_val', 0.33008095622062683), ('D_B_val', 0.13172754645347595), ('G_B_val', 0.3035055696964264), ('cycle_B_val', 0.8198539018630981), ('idt_B_val', 0.2618657648563385), ('KL_realA_fakeA_val', 0.23806609349986427), ('KL_realB_fakeB_val', 0.5427367352597677)])
+end of validation step
+OrderedDict([('D_A_val', 0.13850775361061096), ('G_A_val', 1.2198156118392944), ('cycle_A_val', 1.2577166557312012), ('idt_A_val', 0.29636284708976746), ('D_B_val', 0.07252848148345947), ('G_B_val', 0.6136059761047363), ('cycle_B_val', 0.6362103819847107), ('idt_B_val', 0.4892648458480835), ('KL_realA_fakeA_val', 0.09443921559452909), ('KL_realB_fakeB_val', 0.13559481716736435)])
+end of validation step
+OrderedDict([('D_A_val', 0.254818856716156), ('G_A_val', 1.1219464540481567), ('cycle_A_val', 0.9848650693893433), ('idt_A_val', 0.26561006903648376), ('D_B_val', 0.11909225583076477), ('G_B_val', 0.39214038848876953), ('cycle_B_val', 0.830512523651123), ('idt_B_val', 0.35440593957901), ('KL_realA_fakeA_val', 0.21870192762893517), ('KL_realB_fakeB_val', 0.19230105084171686)])
+end of validation step
+OrderedDict([('D_A_val', 0.17277534306049347), ('G_A_val', 1.2568118572235107), ('cycle_A_val', 1.1976416110992432), ('idt_A_val', 0.32920119166374207), ('D_B_val', 0.06563003361225128), ('G_B_val', 0.5849355459213257), ('cycle_B_val', 0.6867589950561523), ('idt_B_val', 0.795581042766571), ('KL_realA_fakeA_val', 0.07417746816737274), ('KL_realB_fakeB_val', 0.16429022112568048)])
+end of validation step
+OrderedDict([('D_A_val', 0.15040551126003265), ('G_A_val', 1.320335865020752), ('cycle_A_val', 0.9118165969848633), ('idt_A_val', 0.29636284708976746), ('D_B_val', 0.13161692023277283), ('G_B_val', 0.6136059165000916), ('cycle_B_val', 0.6362103819847107), ('idt_B_val', 0.3356465995311737), ('KL_realA_fakeA_val', 0.09029028638564994), ('KL_realB_fakeB_val', 0.11693185016479875)])
+end of validation step
+OrderedDict([('D_A_val', 0.16991737484931946), ('G_A_val', 0.7225337624549866), ('cycle_A_val', 0.9260959625244141), ('idt_A_val', 0.29880619049072266), ('D_B_val', 0.18427303433418274), ('G_B_val', 0.585503876209259), ('cycle_B_val', 0.6094458103179932), ('idt_B_val', 0.36829137802124023), ('KL_realA_fakeA_val', 0.08057710612507678), ('KL_realB_fakeB_val', 0.10967010167792286)])
+end of validation step
+OrderedDict([('D_A_val', 0.6867926716804504), ('G_A_val', 1.2044376134872437), ('cycle_A_val', 1.1238555908203125), ('idt_A_val', 0.7793819904327393), ('D_B_val', 0.22618207335472107), ('G_B_val', 0.22245143353939056), ('cycle_B_val', 1.5579770803451538), ('idt_B_val', 0.5162661671638489), ('KL_realA_fakeA_val', 0.07069216992282774), ('KL_realB_fakeB_val', 0.45028233264205525)])
+end of validation step
+OrderedDict([('D_A_val', 0.3492039144039154), ('G_A_val', 1.4043251276016235), ('cycle_A_val', 1.5608265399932861), ('idt_A_val', 0.41340261697769165), ('D_B_val', 0.1769859343767166), ('G_B_val', 0.25943633913993835), ('cycle_B_val', 0.7165099382400513), ('idt_B_val', 0.651039183139801), ('KL_realA_fakeA_val', 0.14471536711950084), ('KL_realB_fakeB_val', 0.3836933949118249)])
+end of validation step
+OrderedDict([('D_A_val', 0.24985525012016296), ('G_A_val', 1.440285563468933), ('cycle_A_val', 0.9556654095649719), ('idt_A_val', 0.4267248511314392), ('D_B_val', 0.04561147466301918), ('G_B_val', 0.6863512396812439), ('cycle_B_val', 0.9604759216308594), ('idt_B_val', 0.3436901867389679), ('KL_realA_fakeA_val', 0.2727784168734245), ('KL_realB_fakeB_val', 0.09672378248971147)])
+end of validation step
+End of epoch 11 / 200 	 Time Taken: 675 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.39199960231781006), ('G_A', 0.6778805255889893), ('cycle_A', 0.7880973815917969), ('idt_A', 0.3239739239215851), ('D_B', 0.1583404690027237), ('G_B', 0.2617897689342499), ('cycle_B', 0.8462443351745605), ('idt_B', 0.30744996666908264), ('KL_realA_fakeA', 0.11056498359742306), ('KL_realB_fakeB', 0.1490286512084392)])
+(epoch: 12, iters: 29, time: 2.929, data: 479.667) D_A: 0.392 G_A: 0.678 cycle_A: 0.788 idt_A: 0.324 D_B: 0.158 G_B: 0.262 cycle_B: 0.846 idt_B: 0.307 KL_realA_fakeA: 0.111 KL_realB_fakeB: 0.149 
+OrderedDict([('D_A', 0.10797221958637238), ('G_A', 0.46308061480522156), ('cycle_A', 1.0273979902267456), ('idt_A', 0.2113412320613861), ('D_B', 0.3250906467437744), ('G_B', 0.45652666687965393), ('cycle_B', 0.6271001696586609), ('idt_B', 0.3407530188560486), ('KL_realA_fakeA', 0.11877036772029576), ('KL_realB_fakeB', 0.16246501454571988)])
+(epoch: 12, iters: 129, time: 2.544, data: 81.267) D_A: 0.108 G_A: 0.463 cycle_A: 1.027 idt_A: 0.211 D_B: 0.325 G_B: 0.457 cycle_B: 0.627 idt_B: 0.341 KL_realA_fakeA: 0.119 KL_realB_fakeB: 0.162 
+OrderedDict([('D_A', 0.12463125586509705), ('G_A', 0.3610920310020447), ('cycle_A', 1.0387861728668213), ('idt_A', 0.1987312138080597), ('D_B', 0.24025999009609222), ('G_B', 0.2923876941204071), ('cycle_B', 0.451810359954834), ('idt_B', 0.4901350736618042), ('KL_realA_fakeA', 0.1332837602478949), ('KL_realB_fakeB', 0.12158464373988372)])
+(epoch: 12, iters: 229, time: 2.125, data: 370.511) D_A: 0.125 G_A: 0.361 cycle_A: 1.039 idt_A: 0.199 D_B: 0.240 G_B: 0.292 cycle_B: 0.452 idt_B: 0.490 KL_realA_fakeA: 0.133 KL_realB_fakeB: 0.122 
+End of epoch 12 / 200 	 Time Taken: 664 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.10306556522846222), ('G_A', 0.5822118520736694), ('cycle_A', 0.8886581063270569), ('idt_A', 0.4202052354812622), ('D_B', 0.0800272524356842), ('G_B', 0.15146249532699585), ('cycle_B', 0.9391608238220215), ('idt_B', 0.47875529527664185), ('KL_realA_fakeA', 0.07332587476805785), ('KL_realB_fakeB', 0.1391741791060734)])
+(epoch: 13, iters: 68, time: 3.298, data: 594.760) D_A: 0.103 G_A: 0.582 cycle_A: 0.889 idt_A: 0.420 D_B: 0.080 G_B: 0.151 cycle_B: 0.939 idt_B: 0.479 KL_realA_fakeA: 0.073 KL_realB_fakeB: 0.139 
+OrderedDict([('D_A_val', 0.14105242490768433), ('G_A_val', 0.3130263388156891), ('cycle_A_val', 1.2618167400360107), ('idt_A_val', 0.2536535859107971), ('D_B_val', 0.30765706300735474), ('G_B_val', 0.11105252802371979), ('cycle_B_val', 0.6800671815872192), ('idt_B_val', 0.6282187700271606), ('KL_realA_fakeA_val', 0.4151019986426566), ('KL_realB_fakeB_val', 0.11945540289776957)])
+end of validation step
+OrderedDict([('D_A_val', 0.10153412073850632), ('G_A_val', 0.3714148700237274), ('cycle_A_val', 0.7821068167686462), ('idt_A_val', 0.2576915919780731), ('D_B_val', 0.22448672354221344), ('G_B_val', 0.21408645808696747), ('cycle_B_val', 0.531197726726532), ('idt_B_val', 0.33749258518218994), ('KL_realA_fakeA_val', 0.06945558930626358), ('KL_realB_fakeB_val', 0.07394203416836441)])
+end of validation step
+OrderedDict([('D_A_val', 0.1646920144557953), ('G_A_val', 0.29795601963996887), ('cycle_A_val', 1.0313761234283447), ('idt_A_val', 0.6534658670425415), ('D_B_val', 0.13486981391906738), ('G_B_val', 0.4265502691268921), ('cycle_B_val', 1.1824300289154053), ('idt_B_val', 0.42589491605758667), ('KL_realA_fakeA_val', 0.07987617506067599), ('KL_realB_fakeB_val', 0.1724210985681563)])
+end of validation step
+OrderedDict([('D_A_val', 0.18487487733364105), ('G_A_val', 0.29831865429878235), ('cycle_A_val', 0.73875892162323), ('idt_A_val', 0.6534659266471863), ('D_B_val', 0.09647864103317261), ('G_B_val', 0.4265502393245697), ('cycle_B_val', 1.1824300289154053), ('idt_B_val', 0.31912609934806824), ('KL_realA_fakeA_val', 0.43611120740880627), ('KL_realB_fakeB_val', 0.2508016982017971)])
+end of validation step
+OrderedDict([('D_A_val', 0.29306119680404663), ('G_A_val', 0.2979561388492584), ('cycle_A_val', 1.0313761234283447), ('idt_A_val', 0.963021457195282), ('D_B_val', 0.4417181611061096), ('G_B_val', 0.03952726721763611), ('cycle_B_val', 1.009523630142212), ('idt_B_val', 0.42589491605758667), ('KL_realA_fakeA_val', 0.1220355987553548), ('KL_realB_fakeB_val', 0.2136538243781143)])
+end of validation step
+OrderedDict([('D_A_val', 0.09396945685148239), ('G_A_val', 0.6337090134620667), ('cycle_A_val', 1.3575412034988403), ('idt_A_val', 0.32058483362197876), ('D_B_val', 0.18767431378364563), ('G_B_val', 0.24871155619621277), ('cycle_B_val', 0.8754473328590393), ('idt_B_val', 0.32484322786331177), ('KL_realA_fakeA_val', 0.09665847454187103), ('KL_realB_fakeB_val', 0.1346755951050764)])
+end of validation step
+OrderedDict([('D_A_val', 0.11079306155443192), ('G_A_val', 0.38007602095603943), ('cycle_A_val', 1.1445364952087402), ('idt_A_val', 0.2536535859107971), ('D_B_val', 0.28819021582603455), ('G_B_val', 0.11105253547430038), ('cycle_B_val', 0.680067241191864), ('idt_B_val', 0.5567148923873901), ('KL_realA_fakeA_val', 0.08435885477603744), ('KL_realB_fakeB_val', 0.1062907826513755)])
+end of validation step
+OrderedDict([('D_A_val', 0.052147332578897476), ('G_A_val', 0.6549566388130188), ('cycle_A_val', 1.0578655004501343), ('idt_A_val', 0.33675745129585266), ('D_B_val', 0.2074832320213318), ('G_B_val', 0.24131178855895996), ('cycle_B_val', 0.7843785285949707), ('idt_B_val', 0.8017256259918213), ('KL_realA_fakeA_val', 0.0747349149997899), ('KL_realB_fakeB_val', 0.14205879862472512)])
+end of validation step
+OrderedDict([('D_A_val', 0.1120104119181633), ('G_A_val', 0.37141484022140503), ('cycle_A_val', 0.7821068167686462), ('idt_A_val', 0.2536535859107971), ('D_B_val', 0.3161869943141937), ('G_B_val', 0.11105257272720337), ('cycle_B_val', 0.680067241191864), ('idt_B_val', 0.33749258518218994), ('KL_realA_fakeA_val', 0.0888610148955999), ('KL_realB_fakeB_val', 0.07445090148328225)])
+end of validation step
+OrderedDict([('D_A_val', 0.21647191047668457), ('G_A_val', 0.25321680307388306), ('cycle_A_val', 0.8635359406471252), ('idt_A_val', 0.29062604904174805), ('D_B_val', 0.1156640574336052), ('G_B_val', 0.3628726601600647), ('cycle_B_val', 0.6389098763465881), ('idt_B_val', 0.310153067111969), ('KL_realA_fakeA_val', 0.15390214230240254), ('KL_realB_fakeB_val', 0.09149973096580442)])
+end of validation step
+OrderedDict([('D_A_val', 0.11731646209955215), ('G_A_val', 0.34907227754592896), ('cycle_A_val', 0.8760504722595215), ('idt_A_val', 0.32534492015838623), ('D_B_val', 0.31806761026382446), ('G_B_val', 0.09276653826236725), ('cycle_B_val', 0.7744690179824829), ('idt_B_val', 0.3911280333995819), ('KL_realA_fakeA_val', 0.15512209429067053), ('KL_realB_fakeB_val', 0.07928871294637971)])
+end of validation step
+OrderedDict([('D_A_val', 0.08716515451669693), ('G_A_val', 0.47351256012916565), ('cycle_A_val', 0.962774395942688), ('idt_A_val', 0.32829612493515015), ('D_B_val', 0.17016232013702393), ('G_B_val', 0.26578596234321594), ('cycle_B_val', 0.8806732296943665), ('idt_B_val', 0.3559756278991699), ('KL_realA_fakeA_val', 0.09932834145744188), ('KL_realB_fakeB_val', 0.18459690959188363)])
+end of validation step
+OrderedDict([('D_A_val', 0.1528862863779068), ('G_A_val', 0.3044297397136688), ('cycle_A_val', 0.6267328262329102), ('idt_A_val', 0.24794387817382812), ('D_B_val', 0.2072238326072693), ('G_B_val', 0.24530771374702454), ('cycle_B_val', 0.6389849781990051), ('idt_B_val', 0.3014228343963623), ('KL_realA_fakeA_val', 0.23084857301479766), ('KL_realB_fakeB_val', 0.27576348276536516)])
+end of validation step
+OrderedDict([('D_A_val', 0.17708921432495117), ('G_A_val', 0.2562033534049988), ('cycle_A_val', 1.4732792377471924), ('idt_A_val', 0.2871668040752411), ('D_B_val', 0.3242029845714569), ('G_B_val', 0.08824902772903442), ('cycle_B_val', 0.5279841423034668), ('idt_B_val', 0.5670952796936035), ('KL_realA_fakeA_val', 0.26192929898881673), ('KL_realB_fakeB_val', 0.09262308175279921)])
+end of validation step
+OrderedDict([('D_A_val', 0.1753736436367035), ('G_A_val', 0.25620323419570923), ('cycle_A_val', 1.4732792377471924), ('idt_A_val', 0.24794387817382812), ('D_B_val', 0.22367948293685913), ('G_B_val', 0.24530775845050812), ('cycle_B_val', 0.6389849185943604), ('idt_B_val', 0.5670952796936035), ('KL_realA_fakeA_val', 0.2754958277142963), ('KL_realB_fakeB_val', 0.18017382810834154)])
+end of validation step
+OrderedDict([('D_A_val', 0.11755769699811935), ('G_A_val', 0.39801478385925293), ('cycle_A_val', 0.7837668061256409), ('idt_A_val', 0.2716829478740692), ('D_B_val', 0.1854938417673111), ('G_B_val', 0.25434210896492004), ('cycle_B_val', 0.5460015535354614), ('idt_B_val', 0.3939853608608246), ('KL_realA_fakeA_val', 0.297746852140691), ('KL_realB_fakeB_val', 0.1384612435465987)])
+end of validation step
+OrderedDict([('D_A_val', 0.11490274220705032), ('G_A_val', 0.3490723967552185), ('cycle_A_val', 0.8760504722595215), ('idt_A_val', 0.2509077489376068), ('D_B_val', 0.20291228592395782), ('G_B_val', 0.2285565882921219), ('cycle_B_val', 0.5465341806411743), ('idt_B_val', 0.3911280333995819), ('KL_realA_fakeA_val', 0.17052474167768228), ('KL_realB_fakeB_val', 0.0865277928451593)])
+end of validation step
+OrderedDict([('D_A_val', 0.08929258584976196), ('G_A_val', 0.47351253032684326), ('cycle_A_val', 0.9627741575241089), ('idt_A_val', 0.3171937167644501), ('D_B_val', 0.183589369058609), ('G_B_val', 0.2447204887866974), ('cycle_B_val', 0.7661884427070618), ('idt_B_val', 0.3559756278991699), ('KL_realA_fakeA_val', 0.08469253292951315), ('KL_realB_fakeB_val', 0.1422801227927191)])
+end of validation step
+OrderedDict([('D_A_val', 0.12790709733963013), ('G_A_val', 0.3980148136615753), ('cycle_A_val', 0.7837668061256409), ('idt_A_val', 0.32829612493515015), ('D_B_val', 0.15172065794467926), ('G_B_val', 0.2657860517501831), ('cycle_B_val', 0.8806732296943665), ('idt_B_val', 0.393985390663147), ('KL_realA_fakeA_val', 0.25751088848136994), ('KL_realB_fakeB_val', 0.2753404927163076)])
+end of validation step
+OrderedDict([('D_A_val', 0.04874672740697861), ('G_A_val', 0.6549566984176636), ('cycle_A_val', 1.0578653812408447), ('idt_A_val', 0.3282621204853058), ('D_B_val', 0.18525007367134094), ('G_B_val', 0.29853448271751404), ('cycle_B_val', 0.6591775417327881), ('idt_B_val', 0.8017256259918213), ('KL_realA_fakeA_val', 0.09936483751087692), ('KL_realB_fakeB_val', 0.2293719212000029)])
+end of validation step
+OrderedDict([('D_A_val', 0.13713134825229645), ('G_A_val', 0.32743918895721436), ('cycle_A_val', 0.9384702444076538), ('idt_A_val', 0.45739513635635376), ('D_B_val', 0.12458321452140808), ('G_B_val', 0.3324800729751587), ('cycle_B_val', 1.0069241523742676), ('idt_B_val', 0.3889431059360504), ('KL_realA_fakeA_val', 0.11213218129569322), ('KL_realB_fakeB_val', 0.15406443546207843)])
+end of validation step
+OrderedDict([('D_A_val', 0.05363045260310173), ('G_A_val', 0.6131124496459961), ('cycle_A_val', 0.7109116315841675), ('idt_A_val', 0.3150273859500885), ('D_B_val', 0.19971247017383575), ('G_B_val', 0.21975348889827728), ('cycle_B_val', 0.8298596143722534), ('idt_B_val', 0.29570019245147705), ('KL_realA_fakeA_val', 0.3261053086947273), ('KL_realB_fakeB_val', 0.11283834299347595)])
+end of validation step
+OrderedDict([('D_A_val', 0.17403846979141235), ('G_A_val', 0.25321677327156067), ('cycle_A_val', 0.8635359406471252), ('idt_A_val', 0.3171937167644501), ('D_B_val', 0.1684277206659317), ('G_B_val', 0.24472039937973022), ('cycle_B_val', 0.7661884427070618), ('idt_B_val', 0.310153067111969), ('KL_realA_fakeA_val', 0.13296044688088302), ('KL_realB_fakeB_val', 0.13680707560864497)])
+end of validation step
+OrderedDict([('D_A_val', 0.05490320175886154), ('G_A_val', 0.6131126284599304), ('cycle_A_val', 0.7109116315841675), ('idt_A_val', 0.2509077489376068), ('D_B_val', 0.18294104933738708), ('G_B_val', 0.2285565882921219), ('cycle_B_val', 0.5465341806411743), ('idt_B_val', 0.29570019245147705), ('KL_realA_fakeA_val', 0.27956364224510316), ('KL_realB_fakeB_val', 0.5215414345045697)])
+end of validation step
+OrderedDict([('D_A_val', 0.08537474274635315), ('G_A_val', 0.47876784205436707), ('cycle_A_val', 1.2149503231048584), ('idt_A_val', 0.3684650659561157), ('D_B_val', 0.212889164686203), ('G_B_val', 0.2079843133687973), ('cycle_B_val', 0.8864736557006836), ('idt_B_val', 0.41788673400878906), ('KL_realA_fakeA_val', 0.09278469817033173), ('KL_realB_fakeB_val', 0.15732279587525094)])
+end of validation step
+OrderedDict([('D_A_val', 0.1827925145626068), ('G_A_val', 0.304429829120636), ('cycle_A_val', 0.6267328262329102), ('idt_A_val', 0.29784467816352844), ('D_B_val', 0.22050432860851288), ('G_B_val', 0.16647641360759735), ('cycle_B_val', 0.7893072366714478), ('idt_B_val', 0.3014228045940399), ('KL_realA_fakeA_val', 0.2598883587762362), ('KL_realB_fakeB_val', 0.11893911426797986)])
+end of validation step
+OrderedDict([('D_A_val', 0.1318609118461609), ('G_A_val', 0.3130263388156891), ('cycle_A_val', 1.2618167400360107), ('idt_A_val', 0.2509077489376068), ('D_B_val', 0.202068492770195), ('G_B_val', 0.22855648398399353), ('cycle_B_val', 0.5465341806411743), ('idt_B_val', 0.6282187700271606), ('KL_realA_fakeA_val', 0.3868848849362686), ('KL_realB_fakeB_val', 0.23868682691524462)])
+end of validation step
+OrderedDict([('D_A_val', 0.058323804289102554), ('G_A_val', 0.6337090730667114), ('cycle_A_val', 1.3575412034988403), ('idt_A_val', 0.474909245967865), ('D_B_val', 0.23426727950572968), ('G_B_val', 0.20377743244171143), ('cycle_B_val', 0.9444390535354614), ('idt_B_val', 0.32484322786331177), ('KL_realA_fakeA_val', 0.08600563438275052), ('KL_realB_fakeB_val', 0.24450077025639452)])
+end of validation step
+OrderedDict([('D_A_val', 0.18661630153656006), ('G_A_val', 0.29831862449645996), ('cycle_A_val', 0.73875892162323), ('idt_A_val', 0.29784467816352844), ('D_B_val', 0.22262845933437347), ('G_B_val', 0.16647635400295258), ('cycle_B_val', 0.7893070578575134), ('idt_B_val', 0.3191260099411011), ('KL_realA_fakeA_val', 0.3760447202200198), ('KL_realB_fakeB_val', 0.14099167484290062)])
+end of validation step
+OrderedDict([('D_A_val', 0.07754075527191162), ('G_A_val', 0.4787677824497223), ('cycle_A_val', 1.2149503231048584), ('idt_A_val', 0.3150273859500885), ('D_B_val', 0.21397431194782257), ('G_B_val', 0.2197534739971161), ('cycle_B_val', 0.8298596739768982), ('idt_B_val', 0.41788673400878906), ('KL_realA_fakeA_val', 0.09979040194539403), ('KL_realB_fakeB_val', 0.13609826448421905)])
+end of validation step
+OrderedDict([('D_A_val', 0.16434340178966522), ('G_A_val', 0.38007599115371704), ('cycle_A_val', 1.1445366144180298), ('idt_A_val', 0.7904462814331055), ('D_B_val', 0.3717433214187622), ('G_B_val', 0.07703805714845657), ('cycle_B_val', 1.372474193572998), ('idt_B_val', 0.5567148923873901), ('KL_realA_fakeA_val', 0.07359867200450054), ('KL_realB_fakeB_val', 0.49688601133693167)])
+end of validation step
+OrderedDict([('D_A_val', 0.1622847616672516), ('G_A_val', 0.32743918895721436), ('cycle_A_val', 0.9384702444076538), ('idt_A_val', 0.29784467816352844), ('D_B_val', 0.22797182202339172), ('G_B_val', 0.16647641360759735), ('cycle_B_val', 0.7893072366714478), ('idt_B_val', 0.3889431059360504), ('KL_realA_fakeA_val', 0.12649251500872732), ('KL_realB_fakeB_val', 0.1262310715692084)])
+end of validation step
+OrderedDict([('D_A', 0.08631977438926697), ('G_A', 0.7663582563400269), ('cycle_A', 1.0411638021469116), ('idt_A', 0.17863664031028748), ('D_B', 0.1322646141052246), ('G_B', 0.5880067348480225), ('cycle_B', 0.532012403011322), ('idt_B', 0.4869737923145294), ('KL_realA_fakeA', 0.09502076081085388), ('KL_realB_fakeB', 0.16211583885530173)])
+(epoch: 13, iters: 168, time: 2.275, data: 177.429) D_A: 0.086 G_A: 0.766 cycle_A: 1.041 idt_A: 0.179 D_B: 0.132 G_B: 0.588 cycle_B: 0.532 idt_B: 0.487 KL_realA_fakeA: 0.095 KL_realB_fakeB: 0.162 
+End of epoch 13 / 200 	 Time Taken: 611 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.12895458936691284), ('G_A', 1.9361727237701416), ('cycle_A', 0.6439324617385864), ('idt_A', 0.23089416325092316), ('D_B', 0.12714862823486328), ('G_B', 0.8259106874465942), ('cycle_B', 0.632814884185791), ('idt_B', 0.256909042596817), ('KL_realA_fakeA', 0.282395369664885), ('KL_realB_fakeB', 1.3279983513246971)])
+(epoch: 14, iters: 7, time: 2.323, data: 395.813) D_A: 0.129 G_A: 1.936 cycle_A: 0.644 idt_A: 0.231 D_B: 0.127 G_B: 0.826 cycle_B: 0.633 idt_B: 0.257 KL_realA_fakeA: 0.282 KL_realB_fakeB: 1.328 
+OrderedDict([('D_A', 0.10509797930717468), ('G_A', 0.6425427198410034), ('cycle_A', 0.7574819326400757), ('idt_A', 0.28314459323883057), ('D_B', 0.18547247350215912), ('G_B', 0.7112327814102173), ('cycle_B', 0.7364206314086914), ('idt_B', 0.30062368512153625), ('KL_realA_fakeA', 0.08456498684087078), ('KL_realB_fakeB', 0.1496429215349594)])
+(epoch: 14, iters: 107, time: 2.337, data: 17.837) D_A: 0.105 G_A: 0.643 cycle_A: 0.757 idt_A: 0.283 D_B: 0.185 G_B: 0.711 cycle_B: 0.736 idt_B: 0.301 KL_realA_fakeA: 0.085 KL_realB_fakeB: 0.150 
+OrderedDict([('D_A', 0.15793541073799133), ('G_A', 0.41599705815315247), ('cycle_A', 0.6967394948005676), ('idt_A', 0.22673460841178894), ('D_B', 0.24055704474449158), ('G_B', 0.26967695355415344), ('cycle_B', 0.7289403676986694), ('idt_B', 0.23669712245464325), ('KL_realA_fakeA', 0.21607623679576068), ('KL_realB_fakeB', 0.24514596880612013)])
+(epoch: 14, iters: 207, time: 3.534, data: 254.981) D_A: 0.158 G_A: 0.416 cycle_A: 0.697 idt_A: 0.227 D_B: 0.241 G_B: 0.270 cycle_B: 0.729 idt_B: 0.237 KL_realA_fakeA: 0.216 KL_realB_fakeB: 0.245 
+OrderedDict([('D_A_val', 0.15840475261211395), ('G_A_val', 1.1562529802322388), ('cycle_A_val', 1.1207795143127441), ('idt_A_val', 0.4233548045158386), ('D_B_val', 0.28628259897232056), ('G_B_val', 0.5866382718086243), ('cycle_B_val', 1.1121946573257446), ('idt_B_val', 0.5267376899719238), ('KL_realA_fakeA_val', 0.19792609248441145), ('KL_realB_fakeB_val', 0.3320120313775242)])
+end of validation step
+OrderedDict([('D_A_val', 0.1276354193687439), ('G_A_val', 1.3689566850662231), ('cycle_A_val', 1.0686137676239014), ('idt_A_val', 0.23989257216453552), ('D_B_val', 0.2286543846130371), ('G_B_val', 0.7106693983078003), ('cycle_B_val', 0.5346840023994446), ('idt_B_val', 0.4580608010292053), ('KL_realA_fakeA_val', 0.1260589633690426), ('KL_realB_fakeB_val', 0.2039827921450968)])
+end of validation step
+OrderedDict([('D_A_val', 0.16907909512519836), ('G_A_val', 0.984393835067749), ('cycle_A_val', 1.2874259948730469), ('idt_A_val', 0.3164288103580475), ('D_B_val', 0.1476231813430786), ('G_B_val', 0.790880560874939), ('cycle_B_val', 0.6482768058776855), ('idt_B_val', 0.5096983909606934), ('KL_realA_fakeA_val', 0.1515057292277564), ('KL_realB_fakeB_val', 0.1630233943682015)])
+end of validation step
+OrderedDict([('D_A_val', 0.09847891330718994), ('G_A_val', 0.6930676698684692), ('cycle_A_val', 0.48859232664108276), ('idt_A_val', 0.39132094383239746), ('D_B_val', 0.14865615963935852), ('G_B_val', 0.6600203514099121), ('cycle_B_val', 0.8101328611373901), ('idt_B_val', 0.19027410447597504), ('KL_realA_fakeA_val', 0.2669459626546572), ('KL_realB_fakeB_val', 0.37224601519661715)])
+end of validation step
+OrderedDict([('D_A_val', 0.3026595115661621), ('G_A_val', 1.1923540830612183), ('cycle_A_val', 1.0013079643249512), ('idt_A_val', 0.562873899936676), ('D_B_val', 0.23972691595554352), ('G_B_val', 0.889271080493927), ('cycle_B_val', 1.1816613674163818), ('idt_B_val', 0.405862033367157), ('KL_realA_fakeA_val', 0.4507790489628853), ('KL_realB_fakeB_val', 0.3539333462698254)])
+end of validation step
+OrderedDict([('D_A_val', 0.371846079826355), ('G_A_val', 0.6445341110229492), ('cycle_A_val', 0.8590878248214722), ('idt_A_val', 0.6139923334121704), ('D_B_val', 0.26942965388298035), ('G_B_val', 0.8431956768035889), ('cycle_B_val', 1.2433897256851196), ('idt_B_val', 0.4637905955314636), ('KL_realA_fakeA_val', 0.09859187217946921), ('KL_realB_fakeB_val', 0.2142849736926747)])
+end of validation step
+OrderedDict([('D_A_val', 0.3121306300163269), ('G_A_val', 1.1718753576278687), ('cycle_A_val', 0.9436875581741333), ('idt_A_val', 0.7953047156333923), ('D_B_val', 0.18488377332687378), ('G_B_val', 0.7024155259132385), ('cycle_B_val', 0.9726110100746155), ('idt_B_val', 0.44970181584358215), ('KL_realA_fakeA_val', 0.132255747043452), ('KL_realB_fakeB_val', 0.2797902800299827)])
+end of validation step
+OrderedDict([('D_A_val', 0.1437368392944336), ('G_A_val', 1.102803349494934), ('cycle_A_val', 0.5594850778579712), ('idt_A_val', 0.4233548045158386), ('D_B_val', 0.13262297213077545), ('G_B_val', 0.5866382122039795), ('cycle_B_val', 1.1121948957443237), ('idt_B_val', 0.2521863281726837), ('KL_realA_fakeA_val', 0.25430527890321314), ('KL_realB_fakeB_val', 2.0241368666518875)])
+end of validation step
+OrderedDict([('D_A_val', 0.16476693749427795), ('G_A_val', 1.220033884048462), ('cycle_A_val', 1.1187609434127808), ('idt_A_val', 0.4233548641204834), ('D_B_val', 0.17225705087184906), ('G_B_val', 0.5866382122039795), ('cycle_B_val', 1.1121946573257446), ('idt_B_val', 0.4451507329940796), ('KL_realA_fakeA_val', 0.10505034632990258), ('KL_realB_fakeB_val', 0.19192571030343805)])
+end of validation step
+OrderedDict([('D_A_val', 0.15747079253196716), ('G_A_val', 1.1562529802322388), ('cycle_A_val', 1.1207793951034546), ('idt_A_val', 0.24440085887908936), ('D_B_val', 0.2798888683319092), ('G_B_val', 0.6662696599960327), ('cycle_B_val', 0.7669290900230408), ('idt_B_val', 0.5267376899719238), ('KL_realA_fakeA_val', 0.2316785110941087), ('KL_realB_fakeB_val', 0.09388402125519774)])
+end of validation step
+OrderedDict([('D_A_val', 0.162715345621109), ('G_A_val', 1.3689570426940918), ('cycle_A_val', 1.0686137676239014), ('idt_A_val', 0.24440085887908936), ('D_B_val', 0.22511105239391327), ('G_B_val', 0.6662697792053223), ('cycle_B_val', 0.7669290900230408), ('idt_B_val', 0.4580608010292053), ('KL_realA_fakeA_val', 0.15814237112257207), ('KL_realB_fakeB_val', 0.12472426043666204)])
+end of validation step
+OrderedDict([('D_A_val', 0.10419373214244843), ('G_A_val', 0.6930678486824036), ('cycle_A_val', 0.48859232664108276), ('idt_A_val', 0.2629115879535675), ('D_B_val', 0.13830676674842834), ('G_B_val', 0.6987441778182983), ('cycle_B_val', 0.6009703278541565), ('idt_B_val', 0.19027410447597504), ('KL_realA_fakeA_val', 0.22858858512485827), ('KL_realB_fakeB_val', 0.29897450053501406)])
+end of validation step
+OrderedDict([('D_A_val', 0.46096479892730713), ('G_A_val', 1.0284674167633057), ('cycle_A_val', 0.546903133392334), ('idt_A_val', 0.87531578540802), ('D_B_val', 0.13866186141967773), ('G_B_val', 0.5892587304115295), ('cycle_B_val', 1.909348726272583), ('idt_B_val', 0.22044815123081207), ('KL_realA_fakeA_val', 0.2973050543720892), ('KL_realB_fakeB_val', 0.44801805296919567)])
+end of validation step
+OrderedDict([('D_A_val', 0.16438335180282593), ('G_A_val', 0.9957612156867981), ('cycle_A_val', 1.080713152885437), ('idt_A_val', 0.2849113643169403), ('D_B_val', 0.2980203330516815), ('G_B_val', 0.5647421479225159), ('cycle_B_val', 0.8933314085006714), ('idt_B_val', 0.3969005346298218), ('KL_realA_fakeA_val', 0.08734988512723238), ('KL_realB_fakeB_val', 0.08918278955043107)])
+end of validation step
+OrderedDict([('D_A_val', 0.15920743346214294), ('G_A_val', 1.3214551210403442), ('cycle_A_val', 1.4497742652893066), ('idt_A_val', 0.18507955968379974), ('D_B_val', 0.11480917036533356), ('G_B_val', 0.6443360447883606), ('cycle_B_val', 0.5127750039100647), ('idt_B_val', 0.7005143165588379), ('KL_realA_fakeA_val', 0.38342393428333393), ('KL_realB_fakeB_val', 0.44558336445983293)])
+end of validation step
+OrderedDict([('D_A_val', 0.11390046775341034), ('G_A_val', 0.6445340514183044), ('cycle_A_val', 0.8590878248214722), ('idt_A_val', 0.25392380356788635), ('D_B_val', 0.2942173182964325), ('G_B_val', 0.7502264976501465), ('cycle_B_val', 0.5658208727836609), ('idt_B_val', 0.4637905955314636), ('KL_realA_fakeA_val', 0.13730595713179206), ('KL_realB_fakeB_val', 0.2587877094815668)])
+end of validation step
+OrderedDict([('D_A_val', 0.16669981181621552), ('G_A_val', 1.1718754768371582), ('cycle_A_val', 0.9436875581741333), ('idt_A_val', 0.2849113643169403), ('D_B_val', 0.2666235566139221), ('G_B_val', 0.5647420883178711), ('cycle_B_val', 0.8933314085006714), ('idt_B_val', 0.44970181584358215), ('KL_realA_fakeA_val', 0.15334001611240017), ('KL_realB_fakeB_val', 0.09332648790789322)])
+end of validation step
+OrderedDict([('D_A_val', 0.23753294348716736), ('G_A_val', 1.0258047580718994), ('cycle_A_val', 0.9658616781234741), ('idt_A_val', 0.21557165682315826), ('D_B_val', 0.14028950035572052), ('G_B_val', 0.5799307227134705), ('cycle_B_val', 0.6243820190429688), ('idt_B_val', 0.3685159683227539), ('KL_realA_fakeA_val', 0.18084696973146241), ('KL_realB_fakeB_val', 0.14094826040528466)])
+end of validation step
+OrderedDict([('D_A_val', 0.1624358743429184), ('G_A_val', 0.9059253334999084), ('cycle_A_val', 1.399294137954712), ('idt_A_val', 0.2849113643169403), ('D_B_val', 0.2598415017127991), ('G_B_val', 0.5647422075271606), ('cycle_B_val', 0.8933314085006714), ('idt_B_val', 0.4510805010795593), ('KL_realA_fakeA_val', 0.12718636366813657), ('KL_realB_fakeB_val', 0.10338281908035436)])
+end of validation step
+OrderedDict([('D_A_val', 0.08671174943447113), ('G_A_val', 0.8809722661972046), ('cycle_A_val', 1.0218987464904785), ('idt_A_val', 0.25392380356788635), ('D_B_val', 0.10841304063796997), ('G_B_val', 0.7502264380455017), ('cycle_B_val', 0.5658209323883057), ('idt_B_val', 0.3439739942550659), ('KL_realA_fakeA_val', 0.18095289966360728), ('KL_realB_fakeB_val', 0.2071969596043855)])
+end of validation step
+OrderedDict([('D_A_val', 0.3098141551017761), ('G_A_val', 0.9957612156867981), ('cycle_A_val', 1.080713152885437), ('idt_A_val', 0.7953047156333923), ('D_B_val', 0.21628060936927795), ('G_B_val', 0.702415406703949), ('cycle_B_val', 0.9726111888885498), ('idt_B_val', 0.396900475025177), ('KL_realA_fakeA_val', 0.09192744415925294), ('KL_realB_fakeB_val', 0.30920766063379035)])
+end of validation step
+OrderedDict([('D_A_val', 0.15193749964237213), ('G_A_val', 1.220033884048462), ('cycle_A_val', 1.1187609434127808), ('idt_A_val', 0.21105355024337769), ('D_B_val', 0.1581714153289795), ('G_B_val', 0.7063906788825989), ('cycle_B_val', 0.5258388519287109), ('idt_B_val', 0.4451507329940796), ('KL_realA_fakeA_val', 0.134509393264288), ('KL_realB_fakeB_val', 0.2403473260819426)])
+end of validation step
+OrderedDict([('D_A_val', 0.23777738213539124), ('G_A_val', 1.3214548826217651), ('cycle_A_val', 1.4497742652893066), ('idt_A_val', 0.35824331641197205), ('D_B_val', 0.13263797760009766), ('G_B_val', 0.5397120118141174), ('cycle_B_val', 0.7854407429695129), ('idt_B_val', 0.7005143165588379), ('KL_realA_fakeA_val', 0.2863194381045813), ('KL_realB_fakeB_val', 0.11257990268918518)])
+end of validation step
+OrderedDict([('D_A_val', 0.15423956513404846), ('G_A_val', 0.9843938946723938), ('cycle_A_val', 1.2874259948730469), ('idt_A_val', 0.47061723470687866), ('D_B_val', 0.19623583555221558), ('G_B_val', 0.5340674519538879), ('cycle_B_val', 0.6434276700019836), ('idt_B_val', 0.5096983909606934), ('KL_realA_fakeA_val', 0.19385006835291402), ('KL_realB_fakeB_val', 0.16519279718524688)])
+end of validation step
+OrderedDict([('D_A_val', 0.12067802995443344), ('G_A_val', 1.102803349494934), ('cycle_A_val', 0.5594850778579712), ('idt_A_val', 0.24610421061515808), ('D_B_val', 0.1262647956609726), ('G_B_val', 0.6061704754829407), ('cycle_B_val', 0.9370618462562561), ('idt_B_val', 0.2521863281726837), ('KL_realA_fakeA_val', 0.2529740858277592), ('KL_realB_fakeB_val', 1.018178842847347)])
+end of validation step
+OrderedDict([('D_A_val', 0.17470642924308777), ('G_A_val', 1.1923540830612183), ('cycle_A_val', 1.0013079643249512), ('idt_A_val', 0.3286552131175995), ('D_B_val', 0.262304425239563), ('G_B_val', 0.6176919341087341), ('cycle_B_val', 0.6765270233154297), ('idt_B_val', 0.405862033367157), ('KL_realA_fakeA_val', 0.3471369851606113), ('KL_realB_fakeB_val', 0.18235834343166932)])
+end of validation step
+OrderedDict([('D_A_val', 0.22112442553043365), ('G_A_val', 0.8809723854064941), ('cycle_A_val', 1.021898627281189), ('idt_A_val', 0.21557165682315826), ('D_B_val', 0.09882710874080658), ('G_B_val', 0.57993084192276), ('cycle_B_val', 0.6243821382522583), ('idt_B_val', 0.3439739942550659), ('KL_realA_fakeA_val', 0.17676491130880898), ('KL_realB_fakeB_val', 0.15551835379439646)])
+end of validation step
+OrderedDict([('D_A_val', 0.16504400968551636), ('G_A_val', 0.9584797620773315), ('cycle_A_val', 1.2914693355560303), ('idt_A_val', 0.31642869114875793), ('D_B_val', 0.1713249534368515), ('G_B_val', 0.7908806800842285), ('cycle_B_val', 0.6482767462730408), ('idt_B_val', 1.0217514038085938), ('KL_realA_fakeA_val', 0.08436931224381031), ('KL_realB_fakeB_val', 0.1670865183636381)])
+end of validation step
+OrderedDict([('D_A_val', 0.17731817066669464), ('G_A_val', 1.0258047580718994), ('cycle_A_val', 0.9658616781234741), ('idt_A_val', 0.4548778533935547), ('D_B_val', 0.1514524519443512), ('G_B_val', 0.7402211427688599), ('cycle_B_val', 1.0132017135620117), ('idt_B_val', 0.3685159683227539), ('KL_realA_fakeA_val', 0.17677286759785682), ('KL_realB_fakeB_val', 0.1525205896794103)])
+end of validation step
+OrderedDict([('D_A_val', 0.1322789192199707), ('G_A_val', 1.0284675359725952), ('cycle_A_val', 0.546903133392334), ('idt_A_val', 0.3149154782295227), ('D_B_val', 0.19385743141174316), ('G_B_val', 0.46023663878440857), ('cycle_B_val', 1.0147433280944824), ('idt_B_val', 0.22044815123081207), ('KL_realA_fakeA_val', 0.20794509727645138), ('KL_realB_fakeB_val', 1.2695714775841942)])
+end of validation step
+OrderedDict([('D_A_val', 0.3078666925430298), ('G_A_val', 0.905925452709198), ('cycle_A_val', 1.3992942571640015), ('idt_A_val', 0.7953047752380371), ('D_B_val', 0.17810176312923431), ('G_B_val', 0.7024155259132385), ('cycle_B_val', 0.9726110100746155), ('idt_B_val', 0.4510805010795593), ('KL_realA_fakeA_val', 0.1126740449920299), ('KL_realB_fakeB_val', 0.2551913794378855)])
+end of validation step
+OrderedDict([('D_A_val', 0.34810665249824524), ('G_A_val', 0.9584798216819763), ('cycle_A_val', 1.2914693355560303), ('idt_A_val', 0.6139923334121704), ('D_B_val', 0.1616068184375763), ('G_B_val', 0.8431955575942993), ('cycle_B_val', 1.2433897256851196), ('idt_B_val', 1.0217514038085938), ('KL_realA_fakeA_val', 0.06800552750148658), ('KL_realB_fakeB_val', 0.22430808264163876)])
+end of validation step
+End of epoch 14 / 200 	 Time Taken: 660 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.19050273299217224), ('G_A', 0.42598873376846313), ('cycle_A', 1.5958391427993774), ('idt_A', 0.2196999490261078), ('D_B', 0.20556466281414032), ('G_B', 0.24117137491703033), ('cycle_B', 0.5996887683868408), ('idt_B', 0.8751558065414429), ('KL_realA_fakeA', 0.18813212706345694), ('KL_realB_fakeB', 0.14783800606762398)])
+(epoch: 15, iters: 46, time: 2.433, data: 524.303) D_A: 0.191 G_A: 0.426 cycle_A: 1.596 idt_A: 0.220 D_B: 0.206 G_B: 0.241 cycle_B: 0.600 idt_B: 0.875 KL_realA_fakeA: 0.188 KL_realB_fakeB: 0.148 
+OrderedDict([('D_A', 0.1641535460948944), ('G_A', 1.1964385509490967), ('cycle_A', 0.9762542247772217), ('idt_A', 0.42883139848709106), ('D_B', 0.103171706199646), ('G_B', 0.8097599744796753), ('cycle_B', 0.9276362657546997), ('idt_B', 0.3896355628967285), ('KL_realA_fakeA', 0.10041850299029775), ('KL_realB_fakeB', 0.24757287622154417)])
+(epoch: 15, iters: 146, time: 2.291, data: 117.228) D_A: 0.164 G_A: 1.196 cycle_A: 0.976 idt_A: 0.429 D_B: 0.103 G_B: 0.810 cycle_B: 0.928 idt_B: 0.390 KL_realA_fakeA: 0.100 KL_realB_fakeB: 0.248 
+OrderedDict([('D_A', 0.02307414636015892), ('G_A', 0.6241417527198792), ('cycle_A', 0.979008674621582), ('idt_A', 0.29230621457099915), ('D_B', 0.22747910022735596), ('G_B', 0.1037926897406578), ('cycle_B', 0.8472555875778198), ('idt_B', 0.49773886799812317), ('KL_realA_fakeA', 0.21964555314322431), ('KL_realB_fakeB', 0.21459012469154798)])
+(epoch: 15, iters: 246, time: 2.343, data: 365.480) D_A: 0.023 G_A: 0.624 cycle_A: 0.979 idt_A: 0.292 D_B: 0.227 G_B: 0.104 cycle_B: 0.847 idt_B: 0.498 KL_realA_fakeA: 0.220 KL_realB_fakeB: 0.215 
+End of epoch 15 / 200 	 Time Taken: 625 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.11461213231086731), ('G_A', 0.3644637167453766), ('cycle_A', 0.8298313021659851), ('idt_A', 0.4049195349216461), ('D_B', 0.20102450251579285), ('G_B', 0.2426036298274994), ('cycle_B', 0.7488654851913452), ('idt_B', 0.3022245764732361), ('KL_realA_fakeA', 0.09294056308098239), ('KL_realB_fakeB', 0.14802803997187505)])
+(epoch: 16, iters: 85, time: 3.817, data: 588.396) D_A: 0.115 G_A: 0.364 cycle_A: 0.830 idt_A: 0.405 D_B: 0.201 G_B: 0.243 cycle_B: 0.749 idt_B: 0.302 KL_realA_fakeA: 0.093 KL_realB_fakeB: 0.148 
+OrderedDict([('D_A_val', 0.20095118880271912), ('G_A_val', 0.23469659686088562), ('cycle_A_val', 0.8538286685943604), ('idt_A_val', 0.3816196322441101), ('D_B_val', 0.19775623083114624), ('G_B_val', 0.4791693091392517), ('cycle_B_val', 0.7818660140037537), ('idt_B_val', 0.3929945230484009), ('KL_realA_fakeA_val', 0.11746648856152188), ('KL_realB_fakeB_val', 0.10082956024159144)])
+end of validation step
+OrderedDict([('D_A_val', 0.17406661808490753), ('G_A_val', 0.25508537888526917), ('cycle_A_val', 1.0441635847091675), ('idt_A_val', 0.3282368779182434), ('D_B_val', 0.16240446269512177), ('G_B_val', 0.6394767165184021), ('cycle_B_val', 0.8217946290969849), ('idt_B_val', 0.3342267572879791), ('KL_realA_fakeA_val', 0.0834125296481368), ('KL_realB_fakeB_val', 0.10735040037593878)])
+end of validation step
+OrderedDict([('D_A_val', 0.1852031797170639), ('G_A_val', 0.2550855278968811), ('cycle_A_val', 1.0441635847091675), ('idt_A_val', 0.5349493622779846), ('D_B_val', 0.19656291604042053), ('G_B_val', 0.5239356756210327), ('cycle_B_val', 1.1582871675491333), ('idt_B_val', 0.33422672748565674), ('KL_realA_fakeA_val', 0.08321076319557083), ('KL_realB_fakeB_val', 0.18283790753667764)])
+end of validation step
+OrderedDict([('D_A_val', 0.078383669257164), ('G_A_val', 0.6726020574569702), ('cycle_A_val', 0.5681504011154175), ('idt_A_val', 0.5132590532302856), ('D_B_val', 0.10513020306825638), ('G_B_val', 0.9437527060508728), ('cycle_B_val', 0.9666873216629028), ('idt_B_val', 0.19745615124702454), ('KL_realA_fakeA_val', 0.29763044121652815), ('KL_realB_fakeB_val', 0.2586392445794049)])
+end of validation step
+OrderedDict([('D_A_val', 0.2934013307094574), ('G_A_val', 0.20129789412021637), ('cycle_A_val', 0.7885016202926636), ('idt_A_val', 1.232545256614685), ('D_B_val', 0.22592011094093323), ('G_B_val', 0.5676987767219543), ('cycle_B_val', 1.2912938594818115), ('idt_B_val', 0.4251241385936737), ('KL_realA_fakeA_val', 0.07643882939890283), ('KL_realB_fakeB_val', 0.31598596180882793)])
+end of validation step
+OrderedDict([('D_A_val', 0.2449304759502411), ('G_A_val', 0.20007267594337463), ('cycle_A_val', 0.8167915940284729), ('idt_A_val', 0.5132589936256409), ('D_B_val', 0.07784576714038849), ('G_B_val', 0.9437527060508728), ('cycle_B_val', 0.9666876792907715), ('idt_B_val', 0.3670988976955414), ('KL_realA_fakeA_val', 0.09816001757050181), ('KL_realB_fakeB_val', 0.27785225219823806)])
+end of validation step
+OrderedDict([('D_A_val', 0.11545822024345398), ('G_A_val', 0.40860995650291443), ('cycle_A_val', 0.8948272466659546), ('idt_A_val', 0.30582597851753235), ('D_B_val', 0.14675869047641754), ('G_B_val', 0.5521167516708374), ('cycle_B_val', 0.7689344882965088), ('idt_B_val', 0.3848237991333008), ('KL_realA_fakeA_val', 0.10651823887030253), ('KL_realB_fakeB_val', 0.1460898669815425)])
+end of validation step
+OrderedDict([('D_A_val', 0.1369655430316925), ('G_A_val', 0.4470518231391907), ('cycle_A_val', 0.9805178642272949), ('idt_A_val', 0.3925502598285675), ('D_B_val', 0.09991435706615448), ('G_B_val', 0.9570133686065674), ('cycle_B_val', 0.8014132976531982), ('idt_B_val', 0.2463909089565277), ('KL_realA_fakeA_val', 0.21350460829706408), ('KL_realB_fakeB_val', 0.3203011233680963)])
+end of validation step
+OrderedDict([('D_A_val', 0.28626543283462524), ('G_A_val', 0.11967290192842484), ('cycle_A_val', 0.8318164348602295), ('idt_A_val', 0.3895667791366577), ('D_B_val', 0.23009225726127625), ('G_B_val', 0.4620225429534912), ('cycle_B_val', 0.798225998878479), ('idt_B_val', 0.34454578161239624), ('KL_realA_fakeA_val', 0.062348348906113515), ('KL_realB_fakeB_val', 0.08512550144053584)])
+end of validation step
+OrderedDict([('D_A_val', 0.22951185703277588), ('G_A_val', 0.18878872692584991), ('cycle_A_val', 1.3720436096191406), ('idt_A_val', 0.25340133905410767), ('D_B_val', 0.2009846568107605), ('G_B_val', 0.48898953199386597), ('cycle_B_val', 0.5490996837615967), ('idt_B_val', 0.5333449840545654), ('KL_realA_fakeA_val', 0.20977446289010626), ('KL_realB_fakeB_val', 0.2006789588101338)])
+end of validation step
+OrderedDict([('D_A_val', 0.17823472619056702), ('G_A_val', 0.2518557608127594), ('cycle_A_val', 1.0417243242263794), ('idt_A_val', 0.5113789439201355), ('D_B_val', 0.17855632305145264), ('G_B_val', 0.6855789422988892), ('cycle_B_val', 1.029022216796875), ('idt_B_val', 0.4654328227043152), ('KL_realA_fakeA_val', 0.426026938774126), ('KL_realB_fakeB_val', 0.2518740499826821)])
+end of validation step
+OrderedDict([('D_A_val', 0.21346411108970642), ('G_A_val', 0.23469649255275726), ('cycle_A_val', 0.8538286685943604), ('idt_A_val', 0.5132589936256409), ('D_B_val', 0.13953913748264313), ('G_B_val', 0.9437525868415833), ('cycle_B_val', 0.9666874408721924), ('idt_B_val', 0.3929944634437561), ('KL_realA_fakeA_val', 0.10517805217635326), ('KL_realB_fakeB_val', 0.21630273196536787)])
+end of validation step
+OrderedDict([('D_A_val', 0.22405511140823364), ('G_A_val', 0.20129787921905518), ('cycle_A_val', 0.7885016202926636), ('idt_A_val', 0.30582597851753235), ('D_B_val', 0.24612297117710114), ('G_B_val', 0.5521169900894165), ('cycle_B_val', 0.7689344882965088), ('idt_B_val', 0.4251241385936737), ('KL_realA_fakeA_val', 0.07283349919079687), ('KL_realB_fakeB_val', 0.13293637201211805)])
+end of validation step
+OrderedDict([('D_A_val', 0.16706523299217224), ('G_A_val', 0.3466362953186035), ('cycle_A_val', 0.6653739213943481), ('idt_A_val', 0.48550301790237427), ('D_B_val', 0.16859965026378632), ('G_B_val', 0.49255886673927307), ('cycle_B_val', 1.074474811553955), ('idt_B_val', 0.2348126322031021), ('KL_realA_fakeA_val', 0.24112481753004672), ('KL_realB_fakeB_val', 0.09588708324547088)])
+end of validation step
+OrderedDict([('D_A_val', 0.2477799355983734), ('G_A_val', 0.17303690314292908), ('cycle_A_val', 0.8534579873085022), ('idt_A_val', 0.30582597851753235), ('D_B_val', 0.21169844269752502), ('G_B_val', 0.5521166324615479), ('cycle_B_val', 0.7689343690872192), ('idt_B_val', 0.3787635564804077), ('KL_realA_fakeA_val', 0.16782273035338557), ('KL_realB_fakeB_val', 0.1526232954243681)])
+end of validation step
+OrderedDict([('D_A_val', 0.06746991723775864), ('G_A_val', 0.6726022362709045), ('cycle_A_val', 0.5681504011154175), ('idt_A_val', 0.7090750336647034), ('D_B_val', 0.16743814945220947), ('G_B_val', 0.607574462890625), ('cycle_B_val', 1.5826210975646973), ('idt_B_val', 0.19745615124702454), ('KL_realA_fakeA_val', 0.4119779754983827), ('KL_realB_fakeB_val', 0.3120946621369293)])
+end of validation step
+OrderedDict([('D_A_val', 0.051188237965106964), ('G_A_val', 0.673529326915741), ('cycle_A_val', 1.2280802726745605), ('idt_A_val', 0.42215490341186523), ('D_B_val', 0.1438164860010147), ('G_B_val', 0.8455533981323242), ('cycle_B_val', 0.6202369332313538), ('idt_B_val', 1.0772147178649902), ('KL_realA_fakeA_val', 0.0672950875915483), ('KL_realB_fakeB_val', 0.16787082408485274)])
+end of validation step
+OrderedDict([('D_A_val', 0.2221958488225937), ('G_A_val', 0.2000727355480194), ('cycle_A_val', 0.8167915344238281), ('idt_A_val', 0.48516449332237244), ('D_B_val', 0.11636368930339813), ('G_B_val', 0.6064565181732178), ('cycle_B_val', 1.1263811588287354), ('idt_B_val', 0.3670988976955414), ('KL_realA_fakeA_val', 0.08733086802525883), ('KL_realB_fakeB_val', 0.1438379231971208)])
+end of validation step
+OrderedDict([('D_A_val', 0.12495635449886322), ('G_A_val', 0.43194547295570374), ('cycle_A_val', 0.9970654249191284), ('idt_A_val', 0.46067577600479126), ('D_B_val', 0.12458987534046173), ('G_B_val', 0.9228847026824951), ('cycle_B_val', 0.7852636575698853), ('idt_B_val', 0.3877642750740051), ('KL_realA_fakeA_val', 0.10637192600510766), ('KL_realB_fakeB_val', 0.19582059102288402)])
+end of validation step
+OrderedDict([('D_A_val', 0.1786915510892868), ('G_A_val', 0.2914838194847107), ('cycle_A_val', 0.8110201358795166), ('idt_A_val', 0.47197744250297546), ('D_B_val', 0.14328891038894653), ('G_B_val', 0.6753861904144287), ('cycle_B_val', 1.1316380500793457), ('idt_B_val', 0.329736590385437), ('KL_realA_fakeA_val', 0.11198354107869288), ('KL_realB_fakeB_val', 0.15244089668306113)])
+end of validation step
+OrderedDict([('D_A_val', 0.1804126799106598), ('G_A_val', 0.29148396849632263), ('cycle_A_val', 0.8110201358795166), ('idt_A_val', 0.3519187867641449), ('D_B_val', 0.185403972864151), ('G_B_val', 0.5228593349456787), ('cycle_B_val', 0.8478809595108032), ('idt_B_val', 0.329736590385437), ('KL_realA_fakeA_val', 0.08753937335890681), ('KL_realB_fakeB_val', 0.112394128010033)])
+end of validation step
+OrderedDict([('D_A_val', 0.12716250121593475), ('G_A_val', 0.4086100161075592), ('cycle_A_val', 0.8948272466659546), ('idt_A_val', 0.4199035167694092), ('D_B_val', 0.08149923384189606), ('G_B_val', 0.9502444267272949), ('cycle_B_val', 0.7319419384002686), ('idt_B_val', 0.3848237991333008), ('KL_realA_fakeA_val', 0.10241684115522251), ('KL_realB_fakeB_val', 0.28350031359265476)])
+end of validation step
+OrderedDict([('D_A_val', 0.14002129435539246), ('G_A_val', 0.3466362953186035), ('cycle_A_val', 0.6653739213943481), ('idt_A_val', 0.578781008720398), ('D_B_val', 0.1381787657737732), ('G_B_val', 0.6736841201782227), ('cycle_B_val', 1.075361728668213), ('idt_B_val', 0.23481261730194092), ('KL_realA_fakeA_val', 0.2321872498215034), ('KL_realB_fakeB_val', 0.1475086207679781)])
+end of validation step
+OrderedDict([('D_A_val', 0.16320696473121643), ('G_A_val', 0.25185567140579224), ('cycle_A_val', 1.0417243242263794), ('idt_A_val', 0.8781781792640686), ('D_B_val', 0.1906680464744568), ('G_B_val', 0.6875625848770142), ('cycle_B_val', 1.0407530069351196), ('idt_B_val', 0.4654328227043152), ('KL_realA_fakeA_val', 0.38948129572254847), ('KL_realB_fakeB_val', 0.3214981083842582)])
+end of validation step
+OrderedDict([('D_A_val', 0.23390161991119385), ('G_A_val', 0.18878869712352753), ('cycle_A_val', 1.3720436096191406), ('idt_A_val', 0.3925502598285675), ('D_B_val', 0.11994454264640808), ('G_B_val', 0.9570132493972778), ('cycle_B_val', 0.8014132976531982), ('idt_B_val', 0.5333449840545654), ('KL_realA_fakeA_val', 0.2828040539894502), ('KL_realB_fakeB_val', 0.1652680961055584)])
+end of validation step
+OrderedDict([('D_A_val', 0.2959250807762146), ('G_A_val', 0.11967288702726364), ('cycle_A_val', 0.8318164944648743), ('idt_A_val', 0.4199035167694092), ('D_B_val', 0.1467556357383728), ('G_B_val', 0.9502444267272949), ('cycle_B_val', 0.7319419980049133), ('idt_B_val', 0.34454578161239624), ('KL_realA_fakeA_val', 0.07177334310830277), ('KL_realB_fakeB_val', 0.31324626206010003)])
+end of validation step
+OrderedDict([('D_A_val', 0.11303996294736862), ('G_A_val', 0.44705191254615784), ('cycle_A_val', 0.9805178642272949), ('idt_A_val', 0.4939563572406769), ('D_B_val', 0.1118520125746727), ('G_B_val', 0.729417622089386), ('cycle_B_val', 0.9981454610824585), ('idt_B_val', 0.24639087915420532), ('KL_realA_fakeA_val', 0.22053989685757142), ('KL_realB_fakeB_val', 0.24831805371400603)])
+end of validation step
+OrderedDict([('D_A_val', 0.06127621978521347), ('G_A_val', 0.6735295653343201), ('cycle_A_val', 1.2280802726745605), ('idt_A_val', 0.30582600831985474), ('D_B_val', 0.21259739995002747), ('G_B_val', 0.5521166920661926), ('cycle_B_val', 0.7689343690872192), ('idt_B_val', 1.0772147178649902), ('KL_realA_fakeA_val', 0.09004173184568795), ('KL_realB_fakeB_val', 0.16790037504963645)])
+end of validation step
+OrderedDict([('D_A_val', 0.18110425770282745), ('G_A_val', 0.24763068556785583), ('cycle_A_val', 0.5192140936851501), ('idt_A_val', 0.5371376276016235), ('D_B_val', 0.14663127064704895), ('G_B_val', 0.5382214188575745), ('cycle_B_val', 1.2714264392852783), ('idt_B_val', 0.21246519684791565), ('KL_realA_fakeA_val', 0.3520804004935187), ('KL_realB_fakeB_val', 0.1444603698328191)])
+end of validation step
+OrderedDict([('D_A_val', 0.24098961055278778), ('G_A_val', 0.17303700745105743), ('cycle_A_val', 0.8534579873085022), ('idt_A_val', 0.5371376276016235), ('D_B_val', 0.21599715948104858), ('G_B_val', 0.5382213592529297), ('cycle_B_val', 1.2714262008666992), ('idt_B_val', 0.3787635564804077), ('KL_realA_fakeA_val', 0.2075227840391799), ('KL_realB_fakeB_val', 0.1775434273044211)])
+end of validation step
+OrderedDict([('D_A_val', 0.1276284158229828), ('G_A_val', 0.4319455027580261), ('cycle_A_val', 0.9970654249191284), ('idt_A_val', 0.3925502598285675), ('D_B_val', 0.11430905014276505), ('G_B_val', 0.9570133090019226), ('cycle_B_val', 0.8014132976531982), ('idt_B_val', 0.3877642750740051), ('KL_realA_fakeA_val', 0.11308568537520146), ('KL_realB_fakeB_val', 0.2027654755664789)])
+end of validation step
+OrderedDict([('D_A_val', 0.17780661582946777), ('G_A_val', 0.24763068556785583), ('cycle_A_val', 0.5192140936851501), ('idt_A_val', 0.42215490341186523), ('D_B_val', 0.07355168461799622), ('G_B_val', 0.845553457736969), ('cycle_B_val', 0.6202368140220642), ('idt_B_val', 0.21246521174907684), ('KL_realA_fakeA_val', 0.3672288170133561), ('KL_realB_fakeB_val', 0.1452954683655127)])
+end of validation step
+OrderedDict([('D_A', 0.10314369946718216), ('G_A', 0.5328095555305481), ('cycle_A', 0.8466905355453491), ('idt_A', 0.427553653717041), ('D_B', 0.06484329700469971), ('G_B', 0.43350714445114136), ('cycle_B', 0.7269989252090454), ('idt_B', 0.360642671585083), ('KL_realA_fakeA', 0.09357550991204142), ('KL_realB_fakeB', 0.10262435916815045)])
+(epoch: 16, iters: 185, time: 2.775, data: 245.545) D_A: 0.103 G_A: 0.533 cycle_A: 0.847 idt_A: 0.428 D_B: 0.065 G_B: 0.434 cycle_B: 0.727 idt_B: 0.361 KL_realA_fakeA: 0.094 KL_realB_fakeB: 0.103 
+End of epoch 16 / 200 	 Time Taken: 756 sec
+learning rate 0.0002000 -> 0.0002000
+OrderedDict([('D_A', 0.08492379635572433), ('G_A', 0.9742377400398254), ('cycle_A', 1.2375909090042114), ('idt_A', 0.20615346729755402), ('D_B', 0.19158202409744263), ('G_B', 0.23141008615493774), ('cycle_B', 0.4828406572341919), ('idt_B', 0.5322400331497192), ('KL_realA_fakeA', 0.20625095673598287), ('KL_realB_fakeB', 0.13744229650279152)])
+(epoch: 17, iters: 24, time: 2.819, data: 520.910) D_A: 0.085 G_A: 0.974 cycle_A: 1.238 idt_A: 0.206 D_B: 0.192 G_B: 0.231 cycle_B: 0.483 idt_B: 0.532 KL_realA_fakeA: 0.206 KL_realB_fakeB: 0.137 
+OrderedDict([('D_A', 0.1505414843559265), ('G_A', 1.2993712425231934), ('cycle_A', 1.4947949647903442), ('idt_A', 0.2117956429719925), ('D_B', 0.030187249183654785), ('G_B', 0.5617384910583496), ('cycle_B', 0.7287836074829102), ('idt_B', 0.3078239858150482), ('KL_realA_fakeA', 0.34452365712565086), ('KL_realB_fakeB', 0.38752299790294337)])
+(epoch: 17, iters: 124, time: 2.661, data: 70.498) D_A: 0.151 G_A: 1.299 cycle_A: 1.495 idt_A: 0.212 D_B: 0.030 G_B: 0.562 cycle_B: 0.729 idt_B: 0.308 KL_realA_fakeA: 0.345 KL_realB_fakeB: 0.388 

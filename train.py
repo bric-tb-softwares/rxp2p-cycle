@@ -10,16 +10,6 @@ You need to specify the dataset ('--dataroot'), experiment name ('--name'), and 
 It first creates model, dataset, and visualizer given the option.
 It then does standard network training. During the training, it also visualize/save the images, print/save the loss plot, and save models.
 The script supports continue/resume training. Use '--continue_train' to resume your previous training.
-
-Example:
-    Train a CycleGAN model:
-        python train.py --dataroot ./datasets/maps --name maps_cyclegan --model cycle_gan
-    Train a pix2pix model:
-        python train.py --dataroot ./datasets/facades --name facades_pix2pix --model pix2pix --direction BtoA
-
-See options/base_options.py and options/train_options.py for more training options.
-See training and test tips at: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/docs/tips.md
-See frequently asked questions at: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/docs/qa.md
 """
 import time,os
 import numpy as np
@@ -58,9 +48,9 @@ if __name__ == '__main__':
         opt.test = job['test']
         print('Sort: %d , Test: %d'%(opt.sort, opt.test))
         opt.name = 'test_%d_sort_%d' %(opt.test, opt.sort)
-        opt.wandb_fold_id = opt.name + '.fix'
-        is_test = True if 'LOCAL_TEST' in os.environ.keys() else False
-        if is_test:
+        opt.wandb_fold_id = opt.name
+        dry_run = os.environ.get('JOB_DRY_RUN', 'false') == 'true'
+        if dry_run:
             opt.n_epochs = 1
             opt.n_epochs_decay = 0
         

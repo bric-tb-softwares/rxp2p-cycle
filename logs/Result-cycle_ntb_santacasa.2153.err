@@ -1,0 +1,50 @@
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 15502.56it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 16541.95it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18902.72it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18378.16it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19259.56it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18378.16it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18351.35it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19084.30it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18513.36it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19210.55it/s]
+/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 17371.71it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18988.30it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18315.74it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19569.07it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 20015.24it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 18950.17it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19846.86it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19055.39it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19589.38it/s]
+  0%|          | 0/9 [00:00<?, ?it/s]100%|██████████| 9/9 [00:00<00:00, 19538.68it/s]
+/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/train.py", line 81, in <module>
+    model = create_model(opt)      # create a model given opt.model and other options
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/models/__init__.py", line 65, in create_model
+    instance = model(opt)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/models/cycle_gan_model.py", line 79, in __init__
+    self.netG_A = networks.define_G(opt.input_nc, opt.output_nc, opt.ngf, opt.netG, opt.norm,
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/models/networks.py", line 159, in define_G
+    return init_net(net, init_type, init_gain, gpu_ids)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/models/networks.py", line 113, in init_net
+    net.to(gpu_ids[0])
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/p2p-cycle-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+RuntimeError: CUDA error: CUDA-capable device(s) is/are busy or unavailable
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

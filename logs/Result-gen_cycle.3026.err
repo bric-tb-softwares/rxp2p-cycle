@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/production/santa_casa/imageamento_anonimizado_valid/cycle/generate.py", line 4, in <module>
+    from options.test_options import TestOptions
+ModuleNotFoundError: No module named 'options'
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/production/santa_casa/imageamento_anonimizado_valid/cycle/generate.py", line 4, in <module>
+    from options.test_options import TestOptions
+ModuleNotFoundError: No module named 'options'
+Traceback (most recent call last):
+  File "/home/otto.tavares/public/iltbi/rxp2p-cycle/production/santa_casa/imageamento_anonimizado_valid/cycle/generate.py", line 4, in <module>
+    from options.test_options import TestOptions
+ModuleNotFoundError: No module named 'options'
